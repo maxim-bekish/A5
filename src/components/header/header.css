@@ -1,0 +1,81 @@
+.header {
+   margin: 30px auto 60px auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+.mt-21 {
+   margin-top: 21px;
+}
+
+.list-box {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+header p,
+header a {
+   cursor: pointer;
+   font-family: var(--font-inter);
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 16.64px;
+   color: var(--text-gray-dark);
+}
+
+.burger-button {
+   display: flex;
+   align-content: space-between;
+   flex-wrap: wrap;
+   width: 45px;
+   height: 12px;
+}
+
+.burger-button div {
+
+   height: 2px;
+   background-color: var(--text-gray-dark);
+   opacity: .8;
+
+}
+
+.burger-button div:first-child {
+   width: 45px;
+}
+
+.burger-button div:last-child {
+   width: 28px;
+
+}
+
+
+.leasing,
+.nav {
+   display: flex;
+   gap: 40px;
+}
+
+.rt0 {
+   transform: rotate(0deg);
+}
+
+.rt180 {
+   transform: rotate(180deg);
+}
+
+.contacts {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   gap: 20px;
+}
+
+.contacts a {
+   font-family: var(--font-inter);
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 16.64px;
+   color: var(--text-blue);
+}

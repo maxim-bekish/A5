@@ -1,0 +1,21 @@
+:root {
+   --back-blue: rgba(0, 69, 178, 1);
+   --back-white: rgba(255, 255, 255, 1);
+   --back-white-1: rgba(242, 242, 242, 1);
+
+   --text-black: rgba(30, 30, 30, 1);
+   --text-gray-dark: rgba(81, 81, 81, 1);
+   --text-blue: rgba(0, 69, 178, 1);
+   --text-grey-light: rgba(203, 203, 203, 1);
+   --text-white: rgba(242, 242, 242, 1);
+   --text-blue-light: rgba(128, 162, 216, 1);
+   --text-blue-light-max: rgba(178, 199, 232, 1);
+   
+   --line-blue: rgba(0, 69, 178, 1);
+   --line-gray-light: rgba(203, 203, 203, 1);
+   --line-gray: rgba(151, 151, 151, 1);
+   --line-blue-light: rgba(82, 128, 203, 1);
+   
+   --font-inter: Inter Tight, sans-serif;
+   --font-regular: Regular,sans-serif;
+}
