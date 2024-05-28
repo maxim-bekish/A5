@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/src/components/main-slider/main-slider.css">
 <script src="/src/components/main-slider/index.js"></script>
-<div class="main-slider ">
+<section class="main-slider ">
    <div class="container-main-slider slider">
       <div class="slide background-one slide-active">
          <div class="content">
@@ -67,4 +67,4 @@
          </div>
       </div>
    </div>
-</div>
+</section>

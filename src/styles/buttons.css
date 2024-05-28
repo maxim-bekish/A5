@@ -7,6 +7,7 @@
     font-weight: 500;
     line-height: 21.78px;
     border: 1px solid rgba(0, 0, 0, 0);
+    padding: 19px 0;
  }
 
  .button-white {
@@ -16,7 +17,7 @@
 
  .button-blue {
     background-color: var(--back-blue);
-    color: var(--text-white);
+    color: var(--white);
  }
 
  .button-outline {
