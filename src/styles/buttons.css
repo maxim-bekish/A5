@@ -1,55 +1,55 @@
-button {
-   box-sizing: border-box;
-   width: 100%;
-   border-radius: 2px;
-   font-family: var(--font-inter);
-   font-size: 18px;
-   font-weight: 500;
-   line-height: 21.78px;
-   border: 1px solid rgba(0, 0, 0, 0);
-}
+ .button {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 2px;
+    font-family: var(--font-inter);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    border: 1px solid rgba(0, 0, 0, 0);
+ }
 
-.button-white {
-   background-color: var(--back-white);
-   color: var(--text-blue);
-}
+ .button-white {
+    background-color: var(--back-white);
+    color: var(--text-blue);
+ }
 
-.button-blue {
-   background-color: var(--back-blue);
-   color: var(--text-white);
-}
+ .button-blue {
+    background-color: var(--back-blue);
+    color: var(--text-white);
+ }
 
-.button-outline {
-   background-color: var(--back-white);
-   color: var(--text-blue);
-   border: 1px solid var(--line-blue);
-}
+ .button-outline {
+    background-color: var(--back-white);
+    color: var(--text-blue);
+    border: 1px solid var(--line-blue);
+ }
 
-.button-white:hover {
-   background-color: rgba(231, 231, 231, 1);
-}
+ .button-white:hover {
+    background-color: rgba(231, 231, 231, 1);
+ }
 
-.button-blue:hover,
-.button-outline:hover {
-   background-color: rgba(0, 63, 162, 1);
-}
+ .button-blue:hover,
+ .button-outline:hover {
+    background-color: rgba(0, 63, 162, 1);
+ }
 
-.button-white:active {
-   background-color: rgba(215, 215, 215, 1);
-}
+ .button-white:active {
+    background-color: rgba(215, 215, 215, 1);
+ }
 
-.button-blue:active,
-.button-outline:active {
-   background-color: rgba(0, 55, 142, 1);
-}
+ .button-blue:active,
+ .button-outline:active {
+    background-color: rgba(0, 55, 142, 1);
+ }
 
-.button-white:disabled {
-   color: var(--line-gray);
-   background: var(--line-gray);
-}
+ .button-white:disabled {
+    color: var(--line-gray);
+    background: var(--line-gray);
+ }
 
-.button-blue:disabled,
-.button-outline:disabled {
-   color: var(--line-gray);
-   background-color: rgba(215, 215, 215, 1);
-}
+ .button-blue:disabled,
+ .button-outline:disabled {
+    color: var(--line-gray);
+    background-color: rgba(215, 215, 215, 1);
+ }

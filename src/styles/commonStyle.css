@@ -1,10 +1,20 @@
-.container {
+body {
    max-width: 1920px;
-   width: 100%;
    margin: 0 auto;
+}
+
+.container {
+   width: 100%;
    padding: 0 80px;
 }
 
 .pointer {
    cursor: pointer;
+}
+
+button {
+   cursor: pointer;
+   background-color: none;
+   border: 0;
+   outline: 0;
 }

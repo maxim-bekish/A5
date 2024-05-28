@@ -1,17 +1,21 @@
 <?php
-function listHeader($name, $isSelect = false)
+require_once $_SERVER['DOCUMENT_ROOT'] . '/src/config/path.php';
+
+function listHeader($name)
 {
-  $logoPath = "/src/assets/images/svg/logo.svg";
   ?>
-  <div class="list-box">
-    <p>
-      <?php echo ($name); ?>
-    </p>
-    <?php if ($isSelect): ?>
-      <svg class="pointer" class="rt0" width="14" height="9" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
-        <use href="<?php echo htmlspecialchars($logoPath); ?>#icon-arrow-down"></use>
+  <div class="select w264px">
+    <div class="select-head d-flex align-items-center justify-content-between">
+      <p> <?php echo ($name); ?></p>
+      <svg class="pointer rt0" width="14" height="9" viewBox="0 0 14 9">
+        <use href="<?php echo SVG_PATH; ?>#icon-arrow-down"></use>
       </svg>
-    <?php endif; ?>
+    </div>
+    <ul class="select-list" style="display: none">
+      <li class="select-item select-item-active">Доставка</li>
+      <li class="select-item"> Самовывоз</li>
+      <li class="select-item"> Доставка Строймаркет</li>
+    </ul>
   </div>
   <?php
 }
@@ -22,7 +26,7 @@ function listHeader($name, $isSelect = false)
 <header class="container header">
   <div class="logo">
     <svg width="151" height="107" viewBox="0 0 151 107" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <use href="/src/assets/images/svg/logo.svg#icon-logo"></use>
+      <use href="<?php echo SVG_PATH; ?>#icon-logo"></use>
     </svg>
   </div>
   <div class="burger-button mt-21">
@@ -31,13 +35,13 @@ function listHeader($name, $isSelect = false)
   </div>
   <div class="leasing mt-21">
     <?php
-    listHeader("О лизинге", true);
-    listHeader("Программы лизинга", true);
+    listHeader("О лизинге");
+    listHeader("Программы лизинга");
     ?>
   </div>
   <div class="nav mt-21">
     <?php
-    listHeader("Клиентам", true);
+    listHeader("Клиентам");
     ?>
     <a href="#">Программы лизинга</a>
     <a href="#">Калькулятор</a>

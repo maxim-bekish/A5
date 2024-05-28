@@ -9,12 +9,6 @@
    margin-top: 21px;
 }
 
-.list-box {
-   display: flex;
-   align-items: center;
-   gap: 10px;
-}
-
 header p,
 header a {
    cursor: pointer;
@@ -79,3 +73,63 @@ header a {
    line-height: 16.64px;
    color: var(--text-blue);
 }
+
+
+/*------select-custom------*/
+
+.select {
+   display: block;
+   position: relative;
+
+}
+
+.select-head {
+   display: flex;
+   align-items: center;
+   font-family: var(--font-inter);
+   font-size: 14px;
+   font-size: 16px;
+   font-weight: 500;
+   gap: 10px;
+   width: 100%;
+}
+
+
+
+.select-list {
+   background: #fff;
+
+ 
+   display: flex;
+   flex-direction: column;
+   left: 0;
+   margin: 0;
+   padding: 0;
+   position: absolute;
+   right: 0;
+   top: 100%;
+   z-index: 1000;
+
+}
+
+.select-list .select-item {
+   color: #000;
+cursor: pointer;
+   font-family: var(--font-inter);
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 20px;
+   list-style-type: none;
+   padding: 4px;
+   position: relative;
+}
+
+
+.select-list .select-item:hover {
+   background-color: rgba(224, 229, 231, 0.5);
+}
+
+.select-list .select-item-active {
+   color: red;
+}
+/*------select-custom------*/
