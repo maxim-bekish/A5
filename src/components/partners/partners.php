@@ -25,7 +25,9 @@
       <button type="button" class="button button-blue">Подобрать</button>
    </div>
    <!-- todo create slider -->
-   <div></div>
+   <?php
+   include 'src/components/custom-slider/custom-slider.php';
+   ?>
 
 
 </section>

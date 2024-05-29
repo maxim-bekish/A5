@@ -10,5 +10,13 @@
    <symbol id="icon-arrow-down" width="14" height="9" viewBox="0 0 14 9" fill="none">
       <path d="M13 1L7 7L1 1" stroke="#515151" stroke-width="2" />
    </symbol>
+   <symbol id="icon-arrow-left-circle" width="50" height="50" viewBox="0 0 50 50" fill="none">
+      <circle cx="25" cy="25" r="24" stroke="#0045B2" stroke-width="2" />
+      <path d="M27.7719 16.6667L19 25.4387L27.7719 34.2106" stroke="#0045B2" stroke-width="2" />
+   </symbol>
+   <symbol id="icon-arrow-left-circle-hover" width="50" height="50" viewBox="0 0 50 50" fill="none">
+      <circle cx="25" cy="25" r="25" fill="#0045B2" />
+      <path d="M27.7719 16.6667L19 25.4387L27.7719 34.2106" stroke="white" stroke-width="2" />
+   </symbol>
 
 </svg>

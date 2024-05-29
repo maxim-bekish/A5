@@ -1,0 +1,28 @@
+.custom-slider .buttons {
+   display: flex;
+   gap: 20px;
+   max-width: 120px;
+}
+
+.custom-slider .buttons button {
+   width: 50px;
+   height: 50px;
+}
+
+.custom-slider .buttons button:last-child {
+   transform: rotate(180deg);
+}
+
+.container-custom-slider {
+   display: flex;
+   gap: 40px;
+}
+
+.custom-slide {
+   width: 410px;
+   height: 410px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: var(--back-gray-light);
+}

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/src/components/main-slider/main-slider.css">
+<link rel="stylesheet" href="/src/components/main-slider/index.css">
 <script src="/src/components/main-slider/index.js"></script>
 <section class="main-slider ">
    <div class="container-main-slider slider">

@@ -12,12 +12,6 @@ body {
    cursor: pointer;
 }
 
-button {
-   cursor: pointer;
-   background-color: none;
-   border: 0;
-   outline: 0;
-}
 
 h3 {
    font-family: var(--font-inter);
