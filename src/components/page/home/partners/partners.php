@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="/src/components/page/home/partners/index.css">
-
 <section class="partners-box container">
    <div class="partners-content">
       <h3>

@@ -8,11 +8,11 @@
    padding: 80px;
 }
 
-.slide-active .www {
+.slide-active .additional-text {
    display: none;
 }
 
-.www {
+.additional-text {
    display: flex;
    align-items: flex-end;
    text-wrap: nowrap;
@@ -21,7 +21,7 @@
    padding: 0 0 50px 25px;
 }
 
-.www p {
+.additional-text p {
    color: var(--white);
    font-family: var(--font-inter);
    font-size: 30px;
@@ -110,18 +110,18 @@
    background-color: black;
 }
 
-.background-one .www {
+.background-one .additional-text {
    background-color: rgba(0, 78, 200, 1);
 }
 
-.background-two .www {
+.background-two .additional-text {
    background-color: rgba(0, 69, 178, 1);
 }
 
-.background-three .www {
+.background-three .additional-text {
    background-color: rgba(0, 58, 149, 1);
 }
 
-.background-four .www {
+.background-four .additional-text {
    background-color: rgba(0, 48, 124, 1);
 }

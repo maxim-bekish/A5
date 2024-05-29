@@ -12,7 +12,7 @@
             </div>
             <button type="button">подробнее</button>
          </div>
-         <div class="www">
+         <div class="additional-text">
             <p>
                Лизинг транспорта, <br>техники
             </p>
@@ -28,7 +28,7 @@
             </div>
             <button type="button">подробнее</button>
          </div>
-         <div class="www">
+         <div class="additional-text">
             <p>
                Лизинг медицинского оборудования <br> по програме минтор
             </p>
@@ -44,7 +44,7 @@
             </div>
             <button type="button">подробнее</button>
          </div>
-         <div class="www">
+         <div class="additional-text">
             <p>
                Льготы для предпринимателей <br> на лизинг сельхоз техники
             </p>
@@ -60,7 +60,7 @@
             </div>
             <button type="button">подробнее</button>
          </div>
-         <div class="www">
+         <div class="additional-text">
             <p>
                Текст меньшей <br> важности
             </p>
