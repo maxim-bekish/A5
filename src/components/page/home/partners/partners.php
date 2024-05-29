@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="/src/components/partners/index.css">
+<link rel="stylesheet" href="/src/components/page/home/partners/index.css">
+
 <section class="partners-box container">
    <div class="partners-content">
       <h3>
@@ -24,11 +25,43 @@
       </div>
       <button type="button" class="button button-blue">Подобрать</button>
    </div>
-   <!-- todo create slider -->
    <?php
-   include 'src/components/custom-slider/custom-slider.php';
+   $slides = array(
+      array(
+         "image" => "zoomlin.svg",
+         "alt" => "Zoomlin Logo"
+      ),
+      array(
+         "image" => "translift.svg",
+         "alt" => "Translift Logo"
+      ),
+      array(
+         "image" => "medizina.svg",
+         "alt" => "Medizina Logo"
+      ),
+      array(
+         "image" => "jood.svg",
+         "alt" => "Jood Logo"
+      ),
+      array(
+         "image" => "agrolider.svg",
+         "alt" => "Agrolider Logo"
+      ),
+      array(
+         "image" => "agrodoc.svg",
+         "alt" => "Agrodoc Logo"
+      ),
+      array(
+         "image" => "rustorg.svg",
+         "alt" => "Rustorg Logo"
+      ),
+      array(
+         "image" => "pkuspt.svg",
+         "alt" => "Pkuspt Logo"
+      )
+   );
+   include 'src/components/ui/custom-slider/custom-slider.php';
    ?>
 
-
 </section>
-<script src="/src/components/partners/index.js"></script>
+<script src="/src/components/page/home/partners/index.js"></script>

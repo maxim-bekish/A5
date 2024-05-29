@@ -91,22 +91,22 @@
 }
 
 .background-one {
-   background-image: url('./../../assets/images/img/main-slider/step-one.jpeg');
+   background-image: url('/src/assets/images/img/main-slider/step-one.jpeg');
 
 }
 
 .background-two {
-   background-image: url('./../../assets/images/img/main-slider/step-two.jpeg');
+   background-image: url('/src/assets/images/img/main-slider/step-two.jpeg');
    background-color: rgba(0, 0, 0, 0.733);
 }
 
 .background-three {
-   background-image: url('./../../assets/images/img/main-slider/step-three.jpeg');
+   background-image: url('/src/assets/images/img/main-slider/step-three.jpeg');
    background-color: black;
 }
 
 .background-four {
-   background-image: url('./../../assets/images/img/main-slider/step-four.jpeg');
+   background-image: url('/src/assets/images/img/main-slider/step-four.jpeg');
    background-color: black;
 }
 

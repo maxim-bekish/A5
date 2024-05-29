@@ -8,7 +8,7 @@ function listHeader($name)
     <div class="select-head d-flex align-items-center justify-content-between">
       <p> <?php echo ($name); ?></p>
       <svg class="pointer rt0" width="14" height="9" viewBox="0 0 14 9">
-        <use href="<?php echo SVG_PATH; ?>#icon-arrow-down"></use>
+        <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
       </svg>
     </div>
     <ul class="select-list" style="display: none">
@@ -26,7 +26,7 @@ function listHeader($name)
 <header class="container header">
   <div class="logo">
     <svg width="151" height="107" viewBox="0 0 151 107" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <use href="<?php echo SVG_PATH; ?>#icon-logo"></use>
+      <use href="<?php echo SVG_PATH; ?>icons.svg#icon-logo"></use>
     </svg>
   </div>
   <div class="burger-button mt-21">

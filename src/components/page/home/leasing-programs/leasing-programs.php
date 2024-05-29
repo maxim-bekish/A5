@@ -12,7 +12,7 @@ $people = [
 ];
 
 ?>
-<link rel="stylesheet" href="/src/components/leasing-programs/index.css">
+<link rel="stylesheet" href="/src/components/page/home/leasing-programs/index.css">
 <section class="leasing-programs-box container">
    <h3>Программы лизинга</h3>
    <div class="leasing-programs-content">
@@ -60,4 +60,4 @@ $people = [
       </div>
    </div>
 </section>
-<script src="/src/components/leasing-programs/index.js"></script>
+<script src="/src/components/page/home/leasing-programs/index.js"></script>

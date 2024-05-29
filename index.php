@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,16 @@
    <link rel="stylesheet" href="src/styles/commonStyle.css">
    <link rel="stylesheet" href="src/styles/root.css">
 </head>
+
 <body>
 
-<?php include 'src/components/header/header.php'; ?>
-<?php include 'src/components/main/main.php'; ?>
-<?php include 'src/components/footer/footer.php'; ?>
+   <?php
+   require_once $_SERVER['DOCUMENT_ROOT'] . '/src/config/path.php';
+   include 'src/components/header/header.php';
+   include 'src/components/page/home/main/main.php';
+   include 'src/components/footer/footer.php';
+   ?>
 
 </body>
+
 </html>
