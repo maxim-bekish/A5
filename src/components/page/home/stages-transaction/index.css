@@ -1,0 +1,37 @@
+.stages-transaction-box {
+   width: 50%;
+}
+
+.stages-transaction-content-item {
+   display: flex;
+   align-items: center;
+   height: 110px;
+}
+
+.stages-transaction-content-item h4 {
+   font-family: var(--font-inter);
+   font-size: 35px;
+   font-weight: 400;
+   line-height: 36.43px;
+   text-align: left;
+   color: rgba(0, 69, 178, 1);
+}
+
+.stages-transaction-content-item h4,
+.stages-transaction-content-item p {
+   width: 50%;
+}
+
+.stages-transaction-content hr {
+   margin: 0;
+}
+
+.stages-transaction {
+   display: flex;
+   justify-content: space-between;
+}
+
+.stages-transaction-box button {
+   margin-top: 60px;
+   max-width: 330px;
+}

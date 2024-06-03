@@ -20,6 +20,6 @@
    --line-gray: rgba(151, 151, 151, 1);
    --line-blue-light: rgba(82, 128, 203, 1);
 
-   --font-inter: Inter Tight, sans-serif;
+   --font-inter: "Inter Tight", sans-serif;
    --font-regular: Regular, sans-serif;
 }

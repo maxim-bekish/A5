@@ -1,7 +1,8 @@
 <script src="/src/components/ui/calculator/index.js"></script>
+
 <link rel="stylesheet" href="/src/components/ui/calculator/index.css">
 
-<section class="calculator">
+<section class="calculator-range">
    <div class=" calculator-item contract-price">
       <div class="item-header">
          <p>
@@ -59,10 +60,10 @@
          </p>
       </div>
    </div>
-   <div class=" calculator-item last payment">
+   <div class=" calculator-item last-payment">
       <div class="item-header">
          <p>
-            Стоимость лизингового договора
+         Последний платеж
          </p>
          <p class='value' id="value4"></p>
       </div>

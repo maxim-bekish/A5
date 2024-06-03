@@ -1,7 +1,20 @@
 .partners-content {
-   padding: 160px 0 0 450px;
    display: flex;
    flex-direction: column;
+}
+
+.partners-box .box-up {
+   display: flex;
+   gap: 40px;
+}
+
+.box-up>p {
+   margin-top: 14px;
+   min-width: 410px;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 20.82px;
+   text-align: left;
 }
 
 .partners-content p {
@@ -35,3 +48,55 @@
 .partners-content button {
    max-width: 410px;
 }
+
+/* slider */
+.partners-box .custom-slider .buttons {
+   display: flex;
+   gap: 20px;
+   max-width: 120px;
+}
+
+.partners-box .custom-slider .buttons button {
+   width: 50px;
+   height: 50px;
+}
+
+.partners-box .custom-slider .buttons button:last-child {
+   transform: rotate(180deg);
+}
+
+.partners-box .custom-slider {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.partners-box .custom-slider-two {
+   flex-direction: column-reverse;
+   align-items: end;
+}
+
+.partners-box .custom-slider .box-slider {
+   position: relative;
+   height: 410px;
+   width: 100%;
+   overflow: hidden;
+}
+
+.partners-box .container-custom-slider {
+   position: absolute;
+   top: 0px;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-column-gap: 40px;
+}
+
+.partners-box .custom-slide {
+   width: 410px;
+   height: 410px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--back-gray-light);
+}
+/* slider */
