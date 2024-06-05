@@ -124,7 +124,7 @@ function listHeader($data)
     <div class="contacts mt-21">
       <a href="tel:+73452999999">7 (3452) 99 99 99</a>
       <a href="#">Задать вопрос</a>
-      <a href="#">Контакты</a>
+      <a href="#" class="toggle-button">Контакты</a>
     </div>
   </section>
 </header>

@@ -1,0 +1,265 @@
+.popup-contacts .checkbox label {
+   color: rgba(151, 151, 151, 1);
+}
+
+.popup-contacts .checkbox label:hover {
+   color: rgba(81, 81, 81, 1);
+}
+
+.popup-contacts {
+   background-color: rgba(242, 242, 242, 1);
+   padding: 75px 45px 35px 45px;
+   max-width: 640px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   max-height: 960px;
+   height: 100vh;
+}
+
+.popup-contacts .popup-contacts-closed {
+   position: absolute;
+   top: 36px;
+   right: 27px;
+}
+
+.popup-contacts .popup-contacts-title h3 {
+   font-family: Inter Tight;
+   font-size: 30px;
+   font-weight: 400;
+   line-height: 31.22px;
+   text-align: left;
+   color: rgba(81, 81, 81, 1);
+}
+
+/* radio button */
+
+.popup-contacts .popup-contacts-radio {
+   display: flex;
+   gap: 40px;
+}
+
+.radio-button {
+   display: flex;
+   align-items: center;
+
+}
+
+.custom-radio {
+   position: relative;
+   padding-left: 26px;
+   cursor: pointer;
+   font-size: 18px;
+   user-select: none;
+}
+
+.custom-radio input[type="radio"] {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+}
+
+.custom-radio input[type="radio"]:checked~.radio-checkmark::after {
+   display: block;
+}
+
+.custom-radio input[type="radio"]:checked~.radio-checkmark {
+   border: 2px solid rgba(0, 69, 178, 1);
+}
+
+.custom-radio span {
+   vertical-align: middle;
+}
+
+.custom-radio .radio-checkmark {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 20px;
+   width: 20px;
+   background-color: #fff;
+   border: 2px solid rgba(151, 151, 151, 1);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/* radio hover внутрений круг */
+.custom-radio:hover input[type="radio"]~.radio-checkmark::before {
+   display: block;
+   background-color: rgba(151, 151, 151, 0.2);
+}
+
+/* radio hover+checked внутрений круг */
+.custom-radio:hover input[type="radio"]:checked~.radio-checkmark::before {
+   display: block;
+   background-color: rgba(0, 69, 178, 0.1);
+}
+
+/* radio checked+disabled  сам элемент*/
+.custom-radio input[type="radio"]:checked:disabled~.radio-checkmark {
+   display: block;
+   border: 2px solid rgba(203, 203, 203, 1);
+}
+
+/* radio checked+disabled внутрений круг */
+.custom-radio input[type="radio"]:checked:disabled~.radio-checkmark::after {
+   background-color: rgba(203, 203, 203, 1)
+}
+
+/* radio checked+disabled+hover  внешний груг*/
+.custom-radio:hover input[type="radio"]:checked:disabled~.radio-checkmark::before {
+   background-color: rgba(203, 203, 203, 0);
+}
+
+/* radio checked  сам элемент*/
+.custom-radio input[type="radio"]:disabled~.radio-checkmark {
+   display: block;
+   border: 2px solid rgba(203, 203, 203, 1);
+}
+
+/* radio checked внутрений круг */
+.custom-radio input[type="radio"]:disabled~.radio-checkmark::after {
+   background-color: rgba(203, 203, 203, 1)
+}
+
+/* radio checked+hover  внешний груг*/
+.custom-radio:hover input[type="radio"]:disabled~.radio-checkmark::before {
+   background-color: rgba(203, 203, 203, 0);
+}
+
+.custom-radio .radio-checkmark::after {
+   content: "";
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   position: absolute;
+   display: none;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background-color: rgba(0, 69, 178, 1);
+}
+
+.custom-radio .radio-checkmark::before {
+   content: "";
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   position: absolute;
+   display: none;
+   width: 32px;
+   height: 32px;
+   border-radius: 50%;
+}
+
+.custom-radio .text-html {
+   color: rgba(81, 81, 81, 1);
+   font-family: Inter Tight;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 20.8px;
+   text-align: left;
+}
+
+/* radio button */
+
+.max-w-462px {
+   max-width: 462px;
+}
+
+.popup-contacts-tel a {
+   font-family: Inter Tight;
+   font-size: 50px;
+   font-weight: 500;
+   line-height: 52.04px;
+   color: rgba(0, 69, 178, 1);
+}
+
+.popup-contacts-contacts {
+   display: flex;
+   justify-content: space-between;
+}
+
+.popup-contacts-contacts h5 {
+   color: rgba(151, 151, 151, 1);
+   margin-bottom: 20px;
+}
+
+.popup-contacts-contacts p,
+.popup-contacts-contacts a,
+.popup-contacts-contacts-network a,
+.popup-contacts-contacts h5,
+.popup-contacts-newsletter p {
+   font-family: Inter Tight;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 18.72px;
+
+}
+
+.popup-contacts-contacts p,
+.popup-contacts-contacts a,
+.popup-contacts-contacts-network a {
+   color: rgba(0, 69, 178, 1);
+}
+
+.popup-contacts-contacts a:hover,
+.popup-contacts-contacts-network a:hover,
+.popup-contacts-tel a:hover {
+   text-decoration: underline;
+}
+
+.popup-contacts-contacts-office .working-hours {
+   margin: 24px 0 30px 0;
+}
+
+.popup-contacts-contacts-network a {
+   display: block;
+   margin-bottom: 20px;
+}
+
+.popup-contacts-map {
+   border: 1px solid black;
+   width: 550px;
+   height: 290px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-transform: uppercase;
+}
+
+.popup-contacts-newsletter p {
+   color: rgba(81, 81, 81, 1);
+}
+
+.popup-contacts-newsletter-form {
+   display: flex;
+   gap: 20px;
+   margin: 20px 0 10px 0;
+}
+
+.popup-contacts-newsletter-form input {
+   box-sizing: border-box;
+   border: 0;
+   border-bottom: 1px solid rgba(151, 151, 151, 1);
+   width: 100%;
+   background: none;
+   font-family: Inter Tight;
+   font-size: 16px;
+   outline: none !important;
+   font-weight: 400;
+   line-height: 19.36px;
+   color: rgba(151, 151, 151, 1);
+}
+
+.popup-contacts-newsletter .popup-contacts-newsletter-form .button {
+   max-width: 175px;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 19.36px;
+   padding: 15px 0;
+
+}

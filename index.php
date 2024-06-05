@@ -17,14 +17,20 @@
 </head>
 
 <body>
+   <div class="app">
+      <div class="contentpop">
+         <?php
+         require_once $_SERVER['DOCUMENT_ROOT'] . '/src/config/path.php';
+         include 'src/components/header/header.php';
+         include 'src/components/page/home/main.php';
+         include 'src/components/footer/footer.php';
+         ?>
+      </div>
 
-   <?php
-   require_once $_SERVER['DOCUMENT_ROOT'] . '/src/config/path.php';
-   include 'src/components/header/header.php';
-   include 'src/components/page/home/main/main.php';
-   include 'src/components/footer/footer.php';
-   ?>
-
+      <?php
+      include 'src/components/ui/popUpContacts/popUpContacts.php';
+      ?>
+   </div>
 </body>
 
 </html>
