@@ -19,12 +19,12 @@ $list = [
    </div>
    <div class="about-company-box-content">
       <div class="box-content-list">
-         <svg class="pointer" width="1072" height="940" viewBox="0 0 1072 940" fill="none">
+         <svg class="pointer" width="1072" height="930" viewBox="0 0 1072 930" fill="none">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-A5"></use>
          </svg>
          <ul class="list">
             <?php foreach ($list as $index => $item): ?>
-               <li class="list-item <?php echo $index === 0 ? 'list-item-active' : ''; ?>">
+               <li class="list-item jsListItemAbout <?php echo $index === 0 ? 'list-item-active' : ''; ?>">
                   <a href="<?php echo htmlspecialchars($item->link); ?>">
                      <?php echo htmlspecialchars($item->title); ?>
                   </a>

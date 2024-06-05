@@ -1,16 +1,31 @@
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   transition: top 0.3s;
+   display: flex;
+   justify-content: center;
+   z-index: 9999;
+}
+
 .header {
-   margin: 30px auto 60px auto;
+
+   max-width: 1920px;
+   background-color: #fff;
+   padding: 30px 80px 60px 80px;
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
+
 }
 
 .mt-21 {
    margin-top: 21px;
 }
 
-header p,
-header a {
+.header p,
+.header a {
    cursor: pointer;
    font-family: var(--font-inter);
    font-size: 16px;
@@ -99,7 +114,7 @@ header a {
 .select-list {
    background: #fff;
 
- 
+
    display: flex;
    flex-direction: column;
    left: 0;
@@ -114,7 +129,7 @@ header a {
 
 .select-list .select-item {
    color: #000;
-cursor: pointer;
+   cursor: pointer;
    font-family: var(--font-inter);
    font-size: 16px;
    font-weight: 500;
@@ -132,4 +147,5 @@ cursor: pointer;
 .select-list .select-item-active {
    color: red;
 }
+
 /*------select-custom------*/

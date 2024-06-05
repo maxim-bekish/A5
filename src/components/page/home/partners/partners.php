@@ -32,37 +32,88 @@
    <?php
    $slides = array(
       array(
-         "image" => "zoomlin.svg",
+         "image" => "1-zoomlin.svg",
          "alt" => "Zoomlin Logo"
       ),
       array(
-         "image" => "translift.svg",
+         "image" => "2-translift.svg",
          "alt" => "Translift Logo"
       ),
       array(
-         "image" => "medizina.svg",
+         "image" => "3-medizina.svg",
          "alt" => "Medizina Logo"
       ),
       array(
-         "image" => "jood.svg",
+         "image" => "4-jood.svg",
          "alt" => "Jood Logo"
       ),
+
       array(
-         "image" => "agrolider.svg",
+         "image" => "5-agrolider.svg",
          "alt" => "Agrolider Logo"
       ),
       array(
-         "image" => "agrodoc.svg",
+         "image" => "6-agrodoc.svg",
          "alt" => "Agrodoc Logo"
       ),
       array(
-         "image" => "rustorg.svg",
+         "image" => "7-rustorg.svg",
          "alt" => "Rustorg Logo"
       ),
       array(
-         "image" => "pkuspt.svg",
+         "image" => "8-pkuspt.svg",
          "alt" => "Pkuspt Logo"
-      )
+      ),
+      array(
+         "image" => "9-UralSpecTrans.svg",
+         "alt" => "UralSpecTrans Logo"
+      ),
+      array(
+         "image" => "10-geocentr.svg",
+         "alt" => "geocentr Logo"
+      ),
+      array(
+         "image" => "11-LBR.svg",
+         "alt" => "LBR Logo"
+      ),
+      array(
+         "image" => "12-gorci.svg",
+         "alt" => "gorci Logo"
+      ),
+
+      array(
+         "image" => "13-pесо.svg",
+         "alt" => "pесо Logo"
+      ),
+      array(
+         "image" => "14-ingostrah.svg",
+         "alt" => "ingostrah Logo"
+      ),
+      array(
+         "image" => "15-jugiria.svg",
+         "alt" => "jugiria Logo"
+      ),
+      array(
+         "image" => "16-sogaz.svg",
+         "alt" => "sogaz Logo"
+      ),
+      array(
+         "image" => "17-energogrant.svg",
+         "alt" => "energogrant Logo"
+      ),
+      array(
+         "image" => "18-bsk.svg",
+         "alt" => "bsk Logo"
+      ),
+      array(
+         "image" => "19-alfa.svg",
+         "alt" => "alfa Logo"
+      ),
+      array(
+         "image" => "20-mezcentr.svg",
+         "alt" => "mezcentr Logo"
+      ),
+
    );
    ?>
 

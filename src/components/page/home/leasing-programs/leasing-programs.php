@@ -1,6 +1,6 @@
 <?php
 
-$people = [
+$listTitle = [
    (object) ['title' => 'Легковой автотранспорт', 'link' => '#', 'id' => 1],
    (object) ['title' => 'Грузовой автотранспорт', 'link' => '#', 'id' => 2],
    (object) ['title' => 'Спецтехника', 'link' => '#', 'id' => 3],
@@ -11,25 +11,28 @@ $people = [
    (object) ['title' => 'Недвижимость', 'link' => '#', 'id' => 8],
 ];
 
+
 ?>
+<script src="/src/components/page/home/leasing-programs/index.js"></script>
 <link rel="stylesheet" href="/src/components/page/home/leasing-programs/index.css">
 <section class="leasing-programs-box mt-160px container">
    <h3 class="title-page-h3">Программы лизинга</h3>
-   <div class="leasing-programs-content">
+   <div id="js-leasing-programs" class="leasing-programs-content">
       <ul class="list">
-         <?php foreach ($people as $index => $item): ?>
-            <li class="list-item <?php echo $index === 0 ? 'list-item-active' : ''; ?>">
-               <a href="<?php echo htmlspecialchars($item->link); ?>">
-                  <?php echo htmlspecialchars($item->title); ?>
-               </a>
+         <?php foreach ($listTitle as $index => $item): ?>
+            <li id="<?php echo ($item->id); ?>" class="list-item jsListItemProgram <?php echo $index === 0 ? 'list-item-active' : ''; ?>">
+            <?php echo htmlspecialchars($item->title); ?>
             </li>
          <?php endforeach; ?>
       </ul>
+
       <div class="leasing-programs">
          <div class='leasing-content'>
             <div class="leasing-row">
                <div class="leasing-title">
-                  <h4>1 — 5 лет</h4>
+                  <h4 id="js-leasing-term">
+                     <!--1 — 5 лет-->
+                  </h4>
                   <p>Срок лизинга</p>
                </div>
                <p>
@@ -38,26 +41,34 @@ $people = [
             </div>
             <div class="leasing-row">
                <div class="leasing-title">
-                  <h4>от 5%</h4>
+                  <h4 id="js-leasing-prepaid">
+                     <!--от 5%-->
+                  </h4>
                   <p>Аванс по договору</p>
                </div>
                <p>
                   Размер аванса коррелируется с суммой финансирования, предметом лизинга, объёмом поставок и
                   экономическими показателями клиента.
                </p>
-               <p>
-                  Легковые автомобили в лизинг для юридических лиц
-                  и ИП.
+               <p id="js-leasing-info">
+                  <!--Легковые автомобили в лизинг для юридических лиц
+                  и ИП.-->
                </p>
             </div>
             <div class="leasing-button">
-               <button class="button button-white">Подробнее</button>
+               <a id="js-leasing-link" href="" target="_blank" rel="noopener noreferrer">
+               <button class="button button-white">
+                     Подробнее
+                  </button>
+               </a>
             </div>
          </div>
          <div class="leasing-img">
-            <img src="<?php echo IMG_PATH; ?>leasing-car.jpeg" alt="auto">
+            <img id="js-leasing-img" src="" alt="auto">
          </div>
       </div>
-   </div>
+
+
+
+      </di>
 </section>
-<script src="/src/components/page/home/leasing-programs/index.js"></script>

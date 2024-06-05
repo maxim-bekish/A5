@@ -59,8 +59,11 @@
    font-weight: 400;
    line-height: 24px;
 }
-
-.slide .content button {
+.main-slider-details{
+   display: none;
+}
+.slide-active:hover .content .main-slider-details {
+   display: block;
    background-color: var(--white);
    border-radius: 50%;
    width: 91px;

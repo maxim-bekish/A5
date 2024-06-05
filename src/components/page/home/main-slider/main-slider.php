@@ -10,7 +10,7 @@
                </h2>
                <p>Минимальный аванс, любая стоимость</p>
             </div>
-            <button type="button">подробнее</button>
+            <button class="main-slider-details" type="button">подробнее</button>
          </div>
          <div class="additional-text">
             <p>
@@ -26,7 +26,7 @@
                </h2>
                <p>с экспресс-оценкой организации</p>
             </div>
-            <button type="button">подробнее</button>
+            <button class="main-slider-details" type="button">подробнее</button>
          </div>
          <div class="additional-text">
             <p>
@@ -42,7 +42,7 @@
                </h2>
                <p>с учётом сезонности</p>
             </div>
-            <button type="button">подробнее</button>
+            <button class="main-slider-details" type="button">подробнее</button>
          </div>
          <div class="additional-text">
             <p>
@@ -58,7 +58,7 @@
                </h2>
                <p>по региональной программе Тюменской области </p>
             </div>
-            <button type="button">подробнее</button>
+            <button class="main-slider-details" type="button">подробнее</button>
          </div>
          <div class="additional-text">
             <p>

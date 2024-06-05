@@ -1,5 +1,5 @@
 .stages-transaction-box {
-   width: 50%;
+   width: calc(50% - 20px);
 }
 
 .stages-transaction-content-item {

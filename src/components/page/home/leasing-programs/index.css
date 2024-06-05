@@ -18,7 +18,8 @@
    border-left: 1px solid var(--line-blue);
 }
 
-.list .list-item a {
+.list .list-item {
+   cursor: pointer;
    color: var(--text-gray-dark);
    font-family: var(--font-inter);
    font-size: 18px;
@@ -26,7 +27,11 @@
    line-height: 21.78px;
 }
 
-.list .list-item-active a {
+#js-leasing-info {
+   min-height: 76px;
+}
+
+.list .list-item-active {
    text-decoration: underline;
    color: var(--text-blue);
 }
@@ -49,6 +54,7 @@
    padding: 50px;
    display: flex;
    flex-direction: column;
+   justify-content: space-between;
    gap: 70px;
 }
 

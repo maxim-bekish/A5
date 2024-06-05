@@ -21,8 +21,7 @@
          "title" => "Свидетельство о членстве Ассоциаций кредитных организаций Тюменской области",
          "date" => "23.10.2023",
          "image" => null,
-         "text" => 'Ассоциация 
-         кредитных организаций тюменской области',
+         "text" => "Ассоциация \n кредитных организаций \n тюменской области",
          "href" => 'file.pdf'
       ),
       array(
@@ -33,7 +32,7 @@
          "href" => 'file.pdf'
       ),
       array(
-         "title" => "Благодарственное письмо от ООО «СК Согласие»",
+         "title" => "Благодарственное письмо \n от ООО «СК Согласие»",
          "date" => null,
          "image" => "logo5.png",
          "text" => null,
@@ -58,34 +57,35 @@
       <div class="box-slider">
          <div class="container-custom-slider">
 
-
             <?php
             foreach ($slides as $slide) {
-               $imagePath = !empty($slide["image"]) ? SVG_PATH . 'slider-thanks/' . $slide["image"] : 'default-image.svg';
+               $imagePath = !empty($slide["image"]) ? SVG_PATH . 'slider-thanks/' . $slide["image"] : null;
                $altText = !empty($slide["title"]) ? $slide["title"] : 'Изображение';
                $title = !empty($slide["title"]) ? $slide["title"] : '';
-               $date = !empty($slide["date"]) ? $slide["date"] : '';
-               $text = !empty($slide["text"]) ? $slide["text"] : '';
+               $date = !empty($slide["date"]) ? $slide["date"] : null;
+               $text = !empty($slide["text"]) ? $slide["text"] : null;
                $href = !empty($slide["href"]) ? $slide["href"] : '#';
 
-               echo '<div class="custom-slide">';
+               echo '<div class="custom-slide">
+                        <div class="custom-slide-header">';
                if ($title) {
                   echo '<p class="title">' . htmlspecialchars($title) . '</p>';
                }
                if ($date) {
                   echo '<p class="date">' . htmlspecialchars($date) . '</p>';
                }
+               echo '</div> <div class="custom-slide-main">';
                if ($imagePath) {
                   echo '<img src="' . $imagePath . '" alt="' . htmlspecialchars($altText) . '">';
                }
                if ($text) {
                   echo '<p class="text">' . htmlspecialchars($text) . '</p>';
                }
-               echo '<a href="' . htmlspecialchars($href) . '">
-                          <svg class="pointer" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-eye"></use>
-                          </svg>
-                          </a>';
+               echo '</div> <a target="_blank" href="' . htmlspecialchars($href) . '">
+                        <svg class="pointer" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                           <use href="' . SVG_PATH . 'icons.svg#icon-eye"></use>
+                        </svg>
+                     </a>';
                echo '</div>';
             }
             ?>
