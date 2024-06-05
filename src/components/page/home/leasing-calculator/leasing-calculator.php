@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/src/components/page/home/leasing-calculator/index.css">
-<section class="leasing-calculator mt-160px container">
+<section id="home-calculator" class="leasing-calculator mt-160px container">
    <h3 class="title-page-h3">Калькулятор лизинга</h3>
    <div class="leasing-calculator-box">
       <div class="leasing-calculator-title">
