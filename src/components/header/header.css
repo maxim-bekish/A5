@@ -89,6 +89,10 @@ header {
    color: var(--text-blue);
 }
 
+.contacts a:hover {
+   text-decoration: underline;
+}
+
 
 /*------select-custom------*/
 

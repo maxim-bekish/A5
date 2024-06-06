@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/src/components/footer/index.css">
-<!--<script src="/src/components/footer/index.js"></script>-->
+<script src="src/components/footer/index.js"></script>
 <footer class="footer-box mt-160px ">
    <section class="footer-up container">
       <div class="footer-up-column">
@@ -11,22 +11,41 @@
             на выгодных условиях
          </h3>
       </div>
-      <form class="footer-up-column">
+
+      <form class="js-myForm footer-up-column">
          <h4>Получите бесплатную <br> консультацию</h4>
-         <div class="form-items">
-            <input class="form-item" name="name" placeholder="Ваше имя" type="text" required>
-            <input class="form-item" name="email" placeholder="email" type="email" required>
-            <input type="tel" class="form-item" name="phone" placeholder="Телефон"
-               pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-            <input class="form-item" name="company" placeholder="Компания" type="text">
+         <div class="form-items-50 ">
+            <div class="form-group">
+               <input name="name" id="name" type="text" placeholder="" required>
+               <label for="name">Ваше имя</label>
+            </div>
+            <div class="form-group">
+               <input name="email" id="email" type="email" placeholder="" required>
+               <label for="email">Email</label>
+            </div>
+            <div class="form-group">
+               <input name="phone" id="phone" type="tel" placeholder=""
+                  pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+               <label for="phone">Телефон</label>
+            </div>
+            <div class="form-group">
+               <input name="company" id="company" type="text" placeholder="">
+               <label for="company">Компания</label>
+            </div>
          </div>
+
+
          <div class="checkbox">
             <input class="custom-checkbox " type="checkbox" id="option-one">
-            <label class="" for="option-one">
+            <label for="option-one">
                Согласен с политикой конфиденциальности
             </label>
          </div>
-         <button class="button button-white " type="submit">Получить предложение</button>
+
+
+         <button class="button button-white js-submitBtn" type="button">
+            Получить предложение
+         </button>
       </form>
 
    </section>

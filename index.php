@@ -11,9 +11,12 @@
    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet">
    <link rel="stylesheet" href="src/styles/reset.css">
-   <link rel="stylesheet" href="src/styles/buttons.css">
-   <link rel="stylesheet" href="src/styles/commonStyle.css">
    <link rel="stylesheet" href="src/styles/root.css">
+   <link rel="stylesheet" href="src/styles/commonStyle.css">
+   <link rel="stylesheet" href="src/styles/buttons.css">
+   <link rel="stylesheet" href="src/styles/forms.css">
+   <link rel="stylesheet" href="src/styles/forms.css">
+   <script src="index.js"></script>
 </head>
 
 <body>
@@ -29,6 +32,7 @@
 
       <?php
       include 'src/components/ui/popUpContacts/popUpContacts.php';
+      include 'src/components/ui/popUpAsk/popUpAsk.php';
       ?>
    </div>
 </body>

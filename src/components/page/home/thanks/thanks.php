@@ -43,14 +43,20 @@
    ?>
    <section class="custom-slider">
       <div class="buttons ">
-         <button class="js-thanks-slider-prev" type="button">
-            <svg class="pointer rt0" width="50" height="50" viewBox="0 0 50 50">
+         <button class="js-thanks-slider-prev button-visible" type="button">
+            <svg  class="no-hover" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
+            <svg  class="hover" width="50" height="50" viewBox="0 0 50 50">
+               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle-hover"></use>
+            </svg>
          </button>
-         <button class="js-thanks-slider-next" type="button">
-            <svg class="pointer rt0" width="50" height="50" viewBox="0 0 50 50">
+         <button class="js-thanks-slider-next button-visible" type="button">
+            <svg  class="no-hover" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
+            </svg>
+            <svg  class="hover"width="50" height="50" viewBox="0 0 50 50">
+               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle-hover"></use>
             </svg>
          </button>
       </div>

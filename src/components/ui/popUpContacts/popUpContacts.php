@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/src/components/ui/popUpContacts/index.css">
 <script src="/src/components/ui/popUpContacts/index.js"></script>
-<section class="sidebar" >
+<section class="sidebar">
    <div class="popup-contacts">
       <button class="popup-contacts-closed">
          <svg width="32" height="32" viewBox="0 0 32 32">
@@ -53,16 +53,29 @@
          <p class="max-w-462px">
             Подпишись, чтобы быть в курсе последних новостей А5
          </p>
-         <div class="popup-contacts-newsletter-form">
-            <input type="gmail" placeholder="Email">
-            <button class="button button-blue ">Подписаться</button>
-         </div>
-         <div class="checkbox">
-            <input class="custom-checkbox " type="checkbox" id="option-two">
-            <label for="option-two">
-               Согласен с политикой конфиденциальности
-            </label>
-         </div>
+         <form class="js-myForm-popup-contacts">
+            <div class="popup-contacts-newsletter-form" >
+               <div class="form-items-100 form-gray">
+                  <div class="form-group ">
+                     <input name="email" id="email" type="email" placeholder="" required>
+                     <label for="email">Email</label>
+                  </div>
+               </div>
+               <button class="button button-blue js-submitBtn-popup-contacts">
+                  Подписаться
+               </button>
+            </div>
+
+
+            <div class="checkbox">
+               <input class="custom-checkbox " type="checkbox" id="option-two">
+               <label for="option-two">
+                  Согласен с политикой конфиденциальности
+               </label>
+            </div>
+
+            
+         </form>
       </div>
    </div>
 </section>

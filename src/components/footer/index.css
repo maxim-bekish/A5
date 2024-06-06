@@ -51,34 +51,6 @@
    z-index: 0;
 }
 
-
-.footer-up-column .form-items {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-template-rows: repeat(2, 1fr);
-   grid-column-gap: 40px;
-   grid-row-gap: 30px;
-   max-height: 97px;
-   height: 100%;
-   margin: 25px 0 20px 0;
-}
-
-.form-items .form-item {
-   border: 0;
-   background: none;
-   outline: 0 !important;
-   border-bottom: 1px solid rgba(178, 199, 232, 1)
-}
-
-.form-items .form-item::placeholder,
-.form-items .form-item {
-   font-family: Inter Tight;
-   font-size: 16px;
-   font-weight: 500;
-   line-height: 19.36px;
-   color: rgba(178, 199, 232, 1);
-}
-
 .footer-up-column button {
    max-width: 410px;
    margin-top: 32px;
@@ -108,41 +80,34 @@
    color: #fff;
 }
 
-
-
-
-
-
-
 .footer-list li {
-   position: relative; /* Нужно для позиционирования псевдоэлемента */
+   position: relative;
+   /* Нужно для позиционирования псевдоэлемента */
 }
 
 .footer-list li a {
    text-decoration: none;
-   position: relative; /* Нужно для позиционирования псевдоэлемента */
+   position: relative;
+   /* Нужно для позиционирования псевдоэлемента */
 }
 
 .footer-list li a::after {
    content: '';
    position: absolute;
    width: 0;
-   height: 1px; /* Толщина подчеркивания */
+   height: 1px;
+   /* Толщина подчеркивания */
    bottom: 0;
    left: 0;
-   background-color: #fff; /* Цвет подчеркивания */
+   background-color: #fff;
+   /* Цвет подчеркивания */
    transition: width 1s;
 }
 
 .footer-list li a:hover::after {
-   width: 100%; /* Подчеркивание растягивается до полной ширины */
+   width: 100%;
+   /* Подчеркивание растягивается до полной ширины */
 }
-
-
-
-
-
-
 
 
 .footer-down-column-tel {
@@ -194,126 +159,4 @@
    font-weight: 400;
    line-height: 16.64px;
    color: rgba(255, 255, 255, 1);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* custom-checkbox */
-
-.custom-checkbox {
-   position: absolute;
-   z-index: -1;
-   opacity: 0;
-}
-
-/* для элемента label, связанного с .custom-checkbox */
-.custom-checkbox+label {
-   cursor: pointer;
-   user-select: none;
-   font-size: 16px;
-   font-weight: 500;
-   line-height: 24px;
-   display: flex;
-   align-items: center;
-}
-
-/* создание в label псевдоэлемента before со следующими стилями */
-/* no hover no checked no disabled */
-.custom-checkbox+label::before,
-.custom-checkbox-error+label::before {
-   content: '';
-   box-sizing: border-box;
-   display: inline-block;
-   width: 16px;
-   height: 16px;
-   margin-right: 6px;
-   border-radius: 4px;
-   background-repeat: no-repeat;
-   background-position: center;
-   color: white;
-   border: 1px solid rgba(151, 151, 151, 1);
-   background-color: white;
-   /*transition: background-color 0.3s, border-color 0.3s;*/
-}
-
-.checkbox label {
-   font-family: Inter Tight;
-   font-size: 14px;
-   font-weight: 400;
-   line-height: 14.56px;
-   text-align: left;
-   color: rgba(178, 199, 232, 1);
-}
-
-/* hover no checked no disabled */
-.custom-checkbox:hover+label::before {
-   border: 1px solid rgba(81, 81, 81, 1);
-}
-
-/* no-hover no checked disabled */
-.custom-checkbox:disabled+label::before {
-   border: 1px solid rgba(203, 203, 203, 1)
-}
-
-/* no-hover checked no-disabled */
-.custom-checkbox:checked+label::before {
-   border: 0;
-   background-color: rgba(82, 128, 203, 1);
-   background-image: url("/src/assets/images/svg/checkbox/ok-white.svg");
-}
-
-/* hover checked no-disabled */
-.custom-checkbox:checked:hover+label::before {
-   border: 0;
-   background-color: rgba(0, 69, 178, 1);
-   background-image: url("/src/assets/images/svg/checkbox/ok-white.svg");
-}
-
-/* no-hover checked disabled */
-.custom-checkbox:checked:disabled+label::before {
-   border: 0;
-   background-color: rgba(242, 242, 242, 1);
-   background-image: url("/src/assets/images/svg/checkbox/ok-gray.svg");
-}
-
-/* error no checked  */
-.custom-checkbox-error+label::before {
-   border: 1px solid rgba(255, 138, 138, 1) !important
-}
-
-/* error  checked */
-.custom-checkbox-error:checked+label::before,
-.custom-checkbox-error:checked:hover+label::before {
-   border: 1px solid rgba(255, 138, 138, 1) !important;
-   background-color: rgba(178, 199, 232, 1) !important;
-}
-
-/* custom-checkbox */
-
-.form-item:target {
-   background-color: black;
 }

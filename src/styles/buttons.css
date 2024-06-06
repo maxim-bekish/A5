@@ -23,7 +23,8 @@ button {
    color: var(--text-blue);
 }
 
-.button-blue {
+.button-blue,
+.button-outline:hover  {
    background-color: var(--back-blue);
    color: var(--white);
 }
@@ -37,6 +38,10 @@ button {
 .button-white:hover {
    background-color: rgba(231, 231, 231, 1);
 }
+
+/*.button-outline:hover {
+   color: white;
+}*/
 
 .button-blue:hover,
 .button-outline:hover {

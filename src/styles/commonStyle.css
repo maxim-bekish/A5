@@ -47,18 +47,30 @@ p {
    /* Блокировка взаимодействия с контентом */
 }
 
-.sidebar {
+.sidebar,
+.sidebar-ask {
    position: absolute;
    top: 0;
    right: -640px;
    transition: right 0.3s ease-in-out;
 }
 
-.sidebar.open {
+.sidebar.open ,
+.sidebar-ask.open {
    right: 0;
 }
 
 .contentpop {
    padding-top: 1px;
    transition: filter 0.3s ease-in-out;
+}
+
+
+.button-visible .hover,
+.button-visible:hover .no-hover {
+   display: none;
+}
+
+.button-visible:hover .hover {
+   display: block;
 }

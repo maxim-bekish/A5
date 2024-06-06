@@ -7,8 +7,5 @@
    include 'src/components/page/home/stages-transaction/stages-transaction.php';
    include 'src/components/page/home/about-company/about-company.php';
    include 'src/components/page/home/thanks/thanks.php';
-   
-  
    ?>
-
 </main>

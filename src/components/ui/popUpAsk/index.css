@@ -1,0 +1,117 @@
+.popup-ask {
+   background-color: rgba(242, 242, 242, 1);
+   padding: 75px 45px 35px 45px;
+   max-width: 640px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   max-height: 960px;
+   height: 100vh;
+}
+
+.popup-ask .popup-ask-closed {
+   position: absolute;
+   top: 36px;
+   right: 27px;
+}
+
+.popup-ask .popup-ask-title h3 {
+   font-family: Inter Tight;
+   font-size: 30px;
+   font-weight: 400;
+   line-height: 31.22px;
+   text-align: left;
+   color: rgba(81, 81, 81, 1);
+}
+
+.popup-ask-tel a {
+   font-family: Inter Tight;
+   font-size: 50px;
+   font-weight: 500;
+   line-height: 52.04px;
+   color: rgba(0, 69, 178, 1);
+}
+
+.popup-ask-ask {
+   display: flex;
+   justify-content: space-between;
+}
+
+.popup-ask-ask h5 {
+   color: rgba(151, 151, 151, 1);
+   margin-bottom: 20px;
+}
+
+.popup-ask-ask p,
+.popup-ask-ask a,
+.popup-ask-ask-network a,
+.popup-ask-ask h5,
+.popup-ask-newsletter p {
+   font-family: Inter Tight;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 18.72px;
+
+}
+
+.popup-ask-ask p,
+.popup-ask-ask a,
+.popup-ask-ask-network a {
+   color: rgba(0, 69, 178, 1);
+}
+
+.popup-ask-ask a:hover,
+.popup-ask-ask-network a:hover,
+.popup-ask-tel a:hover {
+   text-decoration: underline;
+}
+
+.popup-ask-ask-office .working-hours {
+   margin: 24px 0 30px 0;
+}
+
+.popup-ask-ask-network a {
+   display: block;
+   margin-bottom: 20px;
+}
+
+.popup-ask-map {
+   border: 1px solid black;
+   width: 550px;
+   height: 290px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-transform: uppercase;
+}
+
+.popup-ask-newsletter p {
+   color: rgba(81, 81, 81, 1);
+}
+
+.popup-ask-newsletter-form {
+   display: flex;
+   gap: 20px;
+   margin: 20px 0 10px 0;
+   flex-direction: column;
+}
+
+.popup-ask-newsletter-form input::placeholder {
+   font-weight: 400;
+   color: rgba(151, 151, 151, 1);
+}
+
+.popup-ask-newsletter .popup-ask-newsletter-form .button {
+   max-width: 175px;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 19.36px;
+   padding: 15px 0;
+}
+
+.popup-ask-buttons {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
