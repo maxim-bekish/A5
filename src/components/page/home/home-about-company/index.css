@@ -114,6 +114,7 @@
    color: var(--text-blue);
 }
 
+
 @media (max-width: 768px) {
    .about-home__box-title {
       flex-direction: column;

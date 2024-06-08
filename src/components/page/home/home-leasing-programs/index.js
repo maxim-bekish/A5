@@ -68,36 +68,36 @@ const listContent = [
 
 
 $(document).ready(function () {
-    let activeItem = $('.leasing-programs-content .list-item-active').attr('id');
-    let term = $('.leasing-programs #js-leasing-term')
-    let prepaid = $('.leasing-programs #js-leasing-prepaid')
-    let info = $('.leasing-programs #js-leasing-info')
-    let link = $('.leasing-programs #js-leasing-link')
-    let img = $('.leasing-programs #js-leasing-img')
-    let title = $('.mobile-title p')
-    title.text($('.list-item-active').html())
+    let activeItem = $('.leasing-programs__content .leasing-programs__list-item--active').attr('id');
+    let term = $('#js-leasing-term')
+    let prepaid = $(' #js-leasing-prepaid')
+    let info = $(' #js-leasing-info')
+    let link = $(' #js-leasing-link')
+    let img = $(' #js-leasing-img')
+    let title = $('.leasing-programs__mobile-title p')
+    title.text($('.leasing-programs__list-item--active').html())
 
-    
+
     $(".jsListItemProgram").click(function () {
         // Удаляем класс у всех блоков
-        $(".jsListItemProgram").removeClass("list-item-active");
+        $(".jsListItemProgram").removeClass("leasing-programs__list-item--active");
         // Добавляем класс только к текущему блоку
-        $(this).addClass("list-item-active");
+        $(this).addClass("leasing-programs__list-item--active");
         activeItem = $(this).attr("id");
         xxx(activeItem);
     });
 
-    $(".mobile-title").click(function () {
-        $(".list-mobile").toggle();
-        $(".list-header").toggleClass('rt180');
+    $(".leasing-programs__mobile-title").click(function () {
+        $(".leasing-programs__list-mobile").toggle();
+        $(".leasing-programs__list-header").toggleClass('rt180');
         title.toggle();
     });
 
-    $(".list-mobile").click(function () {
+    $(".leasing-programs__list-mobile").click(function () {
         $(this).toggle();
         title.toggle();
-        $(".list-header").toggleClass('rt180');
-        title.text($('.list-item-active').html());
+        $(".leasing-programs__list-header").toggleClass('rt180');
+        title.text($('.leasing-programs__list-item--active').html());
     });
 
 

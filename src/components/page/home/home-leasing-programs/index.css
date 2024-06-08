@@ -1,16 +1,16 @@
-.leasing-programs-box {
+.leasing-programs {
    display: flex;
    flex-direction: column;
    gap: 60px;
 }
 
-.leasing-programs-content {
+.leasing-programs__content {
    display: flex;
    justify-content: space-between;
    position: relative;
 }
 
-.list {
+.leasing-programs__list {
    height: 100%;
    display: flex;
    flex-direction: column;
@@ -19,38 +19,61 @@
    border-left: 1px solid var(--line-blue);
 }
 
-.list .list-item {
+.leasing-programs__list-item {
    cursor: pointer;
    color: var(--text-gray-dark);
    font-family: var(--font-inter);
-   font-size: 18px;
-   font-weight: 400;
-   line-height: 21.78px;
+
 }
 
-#js-leasing-info {
-   min-height: 76px;
-}
-
-.list .list-item-active {
+.leasing-programs__list-item--active {
    text-decoration: underline;
    color: var(--text-blue);
 }
 
-.leasing-programs {
+.leasing-programs__mobile-select {
+   display: none;
+}
+
+.leasing-programs__mobile-title {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.leasing-programs__list-header {
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+
+.leasing-programs__icon-rt180 {
+   transition: transform 0.3s;
+}
+
+.leasing-programs__icon-rt180.active {
+   transform: rotate(180deg);
+}
+
+.leasing-programs__list-mobile {
+   display: none;
+   padding: 10px 10px 0 10px;
+
+   /*flex-direction: column;*/
+   width: 100%;
+}
+
+.leasing-programs__list-mobile li {
+   margin-bottom: 20px;
+}
+
+.leasing-programs__details {
    max-height: 826px;
    max-width: 1310px;
    display: flex;
 }
 
-.leasing-img img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   object-position: center;
-}
-
-.leasing-content {
+.leasing-programs__content-wrapper {
    max-width: 560px;
    background-color: var(--back-blue);
    padding: 50px;
@@ -60,13 +83,19 @@
    gap: 70px;
 }
 
-.leasing-row {
+.leasing-programs__row {
    display: flex;
    flex-direction: column;
    gap: 40px;
 }
 
-.leasing-title h4 {
+.leasing-programs__title-wrapper {
+   display: flex;
+   flex-direction: column;
+}
+
+.leasing-programs__term,
+.leasing-programs__prepaid {
    font-family: var(--font-inter);
    font-size: 40px;
    font-weight: 500;
@@ -75,15 +104,8 @@
    margin-bottom: 10px;
 }
 
-.leasing-title p {
-   font-family: var(--font-inter);
-   font-size: 18px;
-   font-weight: 400;
-   line-height: 18px;
-   color: var(--white);
-}
-
-.leasing-row>p {
+.leasing-programs__title-wrapper p,
+.leasing-programs__row>p {
    font-family: var(--font-inter);
    font-size: 18px;
    font-weight: 400;
@@ -91,85 +113,89 @@
    color: var(--white);
 }
 
-.mobil-select {
-   display: none;
+.leasing-programs__button-wrapper {
+   text-align: center;
 }
 
-@media(max-width:768px) {
-   .leasing-programs {
+.leasing-programs__img-wrapper img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+
+#js-leasing-info {
+   min-height: 76px;
+}
+
+@media(max-width: 768px) {
+   .leasing-programs__details {
       max-height: 636px;
       min-height: 636px;
       max-width: 100%;
    }
 
-   .mobil-select {
+   .leasing-programs__mobile-select {
       position: absolute;
       display: block;
       border-radius: 2px;
       border: 1px solid gray;
       background: white;
       width: 94%;
+      min-height: 45px;
       transform: translate(3%, -60px);
       margin: 0 auto;
    }
 
-   .list {
+   .leasing-programs__list {
       display: none;
    }
 
-   .leasing-programs-content {
+   .leasing-programs__content {
       flex-direction: column;
       margin-top: 60px;
    }
 
-   .leasing-programs-box {
-      padding: 0 !important;
-   }
-
-   .leasing-programs-box h3 {
+   .leasing-programs__title {
       padding: 0 20px;
    }
 
-   .leasing-content {
+   .leasing-programs__content-wrapper {
       padding: 40px 20px;
       gap: 30px;
    }
 
-   .leasing-content .leasing-row {
+   .leasing-programs__row {
       gap: 30px;
    }
 
-   .leasing-title h4 {
+   .leasing-programs__term,
+   .leasing-programs__prepaid {
       font-size: 30px;
       line-height: 36.3px;
    }
 
-   .leasing-row>p,
-   .leasing-title p {
+   .leasing-programs__row>p,
+   .leasing-programs__title-wrapper p {
       font-size: 16px;
       line-height: 19.36px;
    }
 
-   .list-header {
+   .leasing-programs__list-header {
       position: absolute;
       top: 15px;
       right: 10px;
       z-index: 99;
    }
 
-   .mobil-select p {
-      padding: 12px 20px;
+   .leasing-programs__list-item--active,
+   .leasing-programs__mobile-title p {
+      text-decoration: none;
    }
 
-   .list-mobile {
-      display: none;
-      flex-direction: column;
-      border-top: 0px !important;
-      width: 100%;
-   }
-
-   .list-mobile .list-item-active,
-   .mobile-title p {
+   .leasing-programs__mobile-title p {
       color: var(--text-blue);
+      padding: 10px;
+      text-decoration: none;
    }
 }

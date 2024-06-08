@@ -106,7 +106,6 @@
    fill: #fff;
    stroke: #0045B2;
    transition: all 200ms ease;
-
 }
 
 .slider__button:hover .slider__icon {

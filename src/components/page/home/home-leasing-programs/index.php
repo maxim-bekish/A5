@@ -15,42 +15,45 @@ $listTitle = [
 ?>
 <script src="/src/components/page/home/home-leasing-programs/index.js"></script>
 <link rel="stylesheet" href="/src/components/page/home/home-leasing-programs/index.css">
-<section class="leasing-programs-box mt-160px container">
-   <h3 class="title-page-h3">Программы лизинга</h3>
-   <div id="js-leasing-programs" class="leasing-programs-content">
-      <ul class="list">
+<section class="leasing-programs mt-160px container">
+   <h3 class="leasing-programs__title title-page-h3">Программы лизинга</h3>
+   <div id="js-leasing-programs" class="leasing-programs__content">
+      <ul class="leasing-programs__list">
          <?php foreach ($listTitle as $index => $item): ?>
-            <li id="<?php echo ($item->id); ?>"
-               class="list-item jsListItemProgram <?php echo $index === 0 ? 'list-item-active' : ''; ?>">
-               <?php echo htmlspecialchars($item->title); ?>
+            <li>
+               <p id="<?php echo ($item->id); ?>"
+                  class="leasing-programs__list-item jsListItemProgram <?php echo $index === 0 ? 'leasing-programs__list-item--active' : ''; ?>">
+                  <?php echo htmlspecialchars($item->title); ?>
+               </p>
             </li>
          <?php endforeach; ?>
       </ul>
-      <div class="mobil-select">
-         <div class="mobile-title">
+      <div class="leasing-programs__mobile-select">
+         <div class="leasing-programs__mobile-title">
             <p></p>
-            <button class="list-header" type="button">
-               <svg class="rt180" width="14px" height="9px" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="leasing-programs__list-header" type="button">
+               <svg class="leasing-programs__icon-rt180" width="14px" height="9px" viewBox="0 0 14 9" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
                </svg>
             </button>
          </div>
-         <ul class="list-mobile">
+         <ul class="leasing-programs__list-mobile">
             <?php foreach ($listTitle as $index => $item): ?>
                <li>
                   <p id="<?php echo ($item->id); ?>"
-                     class="list-item jsListItemProgram <?php echo $index === 0 ? 'list-item-active' : ''; ?>">
+                     class="leasing-programs__list-item jsListItemProgram <?php echo $index === 0 ? 'leasing-programs__list-item--active' : ''; ?>">
                      <?php echo htmlspecialchars($item->title); ?>
                   </p>
                </li>
             <?php endforeach; ?>
          </ul>
       </div>
-      <div class="leasing-programs">
-         <div class='leasing-content'>
-            <div class="leasing-row">
-               <div class="leasing-title">
-                  <h4 id="js-leasing-term">
+      <div class="leasing-programs__details">
+         <div class='leasing-programs__content-wrapper'>
+            <div class="leasing-programs__row">
+               <div class="leasing-programs__title-wrapper">
+                  <h4 id="js-leasing-term" class="leasing-programs__term">
                      <!--1 — 5 лет-->
                   </h4>
                   <p>Срок лизинга</p>
@@ -59,9 +62,9 @@ $listTitle = [
                   График платежей настраивается индивидуально и зависит от особенностей бизнеса.
                </p>
             </div>
-            <div class="leasing-row">
-               <div class="leasing-title">
-                  <h4 id="js-leasing-prepaid">
+            <div class="leasing-programs__row">
+               <div class="leasing-programs__title-wrapper">
+                  <h4 id="js-leasing-prepaid" class="leasing-programs__prepaid">
                      <!--от 5%-->
                   </h4>
                   <p>Аванс по договору</p>
@@ -75,7 +78,7 @@ $listTitle = [
                   и ИП.-->
                </p>
             </div>
-            <div class="leasing-button">
+            <div class="leasing-programs__button-wrapper">
                <a id="js-leasing-link" href="" target="_blank" rel="noopener noreferrer">
                   <button class="button button--white">
                      Подробнее
@@ -83,12 +86,9 @@ $listTitle = [
                </a>
             </div>
          </div>
-         <div class="leasing-img">
+         <div class="leasing-programs__img-wrapper">
             <img id="js-leasing-img" src="" alt="auto">
          </div>
       </div>
-
-
-
-      </di>
+   </div>
 </section>
