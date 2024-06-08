@@ -10,14 +10,13 @@ header {
 }
 
 .header {
-
    max-width: 1920px;
    background-color: #fff;
-   padding: 30px 80px 60px 80px;
+   padding-top: 30px;
+   padding-bottom: 80px;
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
-
 }
 
 .mt-21 {
@@ -43,11 +42,9 @@ header {
 }
 
 .burger-button div {
-
    height: 2px;
    background-color: var(--text-gray-dark);
    opacity: .8;
-
 }
 
 .burger-button div:first-child {
@@ -56,7 +53,13 @@ header {
 
 .burger-button div:last-child {
    width: 28px;
+}
 
+.logo {
+   max-width: 151px;
+   max-height: 106px;
+   min-width: 151px;
+   min-height: 106px;
 }
 
 
@@ -74,14 +77,15 @@ header {
    transform: rotate(180deg);
 }
 
-.contacts {
+.contacts-header {
    display: flex;
    flex-direction: column;
    align-items: flex-end;
    gap: 20px;
 }
 
-.contacts a {
+.contacts-header button a,
+.contacts-header button p {
    font-family: var(--font-inter);
    font-size: 16px;
    font-weight: 400;
@@ -89,7 +93,8 @@ header {
    color: var(--text-blue);
 }
 
-.contacts a:hover {
+.contacts-header button a:hover,
+.contacts-header button p:hover {
    text-decoration: underline;
 }
 
@@ -163,7 +168,6 @@ header {
    text-wrap: nowrap;
 }
 
-
 .select-list .select-item:hover {
    color: rgba(0, 69, 178, 1);
    text-decoration: underline;
@@ -172,3 +176,158 @@ header {
 
 
 /*------select-custom------*/
+
+
+
+/* burger-menu */
+.burger-menu {
+
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 69, 178, 1);
+   padding: 225px 120px 45px 120px;
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+body .js-flex {
+   display: flex;
+}
+
+.burger-menu ul {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.burger-menu .burger-menu-box {
+   display: flex;
+   justify-content: space-between;
+}
+
+
+
+.burger-menu ul li a {
+   font-family: Inter Tight;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 19.2px;
+   color: rgba(178, 199, 232, 1);
+}
+
+.burger-menu-box .burger-tel {
+   font-family: Inter Tight;
+   font-size: 40px;
+   font-weight: 500;
+   line-height: 41.6px;
+   color: rgba(255, 255, 255, 1);
+}
+
+.burger-menu-network {
+   display: flex;
+   gap: 10px;
+}
+
+.burger-menu-network a .hover,
+.burger-menu-network a:hover .no-hover {
+   display: none;
+}
+
+.burger-menu-network a:hover .hover {
+   display: block;
+}
+
+.burger-menu-network a:hover {
+   background-color: #fff;
+}
+
+.burger-menu-network a {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   justify-content: center;
+   width: 42px;
+   height: 42px;
+   border: 1px solid #fffF;
+   box-sizing: border-box;
+}
+
+.item-title {
+   font-family: Inter Tight;
+   font-size: 18px;
+   font-weight: 600;
+   line-height: 18px;
+   color: rgba(255, 255, 255, 1);
+}
+
+.item-box {
+   position: relative;
+   /* Нужно для позиционирования псевдоэлемента */
+}
+
+.item-box .item-content {
+   text-decoration: none;
+   position: relative;
+   /* Нужно для позиционирования псевдоэлемента */
+}
+
+.item-box .item-content::after {
+   content: '';
+   position: absolute;
+   width: 0;
+   height: 1px;
+   /* Толщина подчеркивания */
+   bottom: 0;
+   left: 0;
+   background-color: #fff;
+   /* Цвет подчеркивания */
+   transition: width 1s;
+}
+
+.item-box .item-content:hover::after {
+   width: 100%;
+   /* Подчеркивание растягивается до полной ширины */
+}
+
+.burger-menu .button-closed {
+   top: 52px;
+   position: absolute;
+   left: 43px;
+}
+
+
+
+@media(max-width:768px) {
+
+   .leasing,
+   .nav {
+      display: none;
+   }
+
+   .burger-button {
+      order: 1;
+   }
+
+   .logo {
+      order: 2;
+      max-width: 115px;
+      min-width: 115px;
+      max-height: 81px;
+      min-height: 81px;
+   }
+
+   .contacts-header {
+      order: 3;
+   }
+
+   .header {
+      max-width: 768px;
+      padding-bottom: 50px;
+   }
+
+.mt-21 {
+   margin-top: 0px;
+}
+}

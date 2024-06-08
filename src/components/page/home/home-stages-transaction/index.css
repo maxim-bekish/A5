@@ -35,3 +35,22 @@
    margin-top: 60px;
    max-width: 330px;
 }
+
+@media(max-width:768px) {
+   .stages-transaction {
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   .stages-transaction-box {
+      width: 100%;
+   }
+
+   .stages-transaction-content-item h4 {
+      font-size: 24px;
+      line-height: 24.98px;
+   }
+   .stages-transaction-box button {
+      margin-top: 50px;
+   }
+}

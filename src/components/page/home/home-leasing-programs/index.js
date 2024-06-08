@@ -74,13 +74,32 @@ $(document).ready(function () {
     let info = $('.leasing-programs #js-leasing-info')
     let link = $('.leasing-programs #js-leasing-link')
     let img = $('.leasing-programs #js-leasing-img')
+    let title = $('.mobile-title p')
+    title.text($('.list-item-active').html())
+
+    
     $(".jsListItemProgram").click(function () {
         // Удаляем класс у всех блоков
         $(".jsListItemProgram").removeClass("list-item-active");
         // Добавляем класс только к текущему блоку
         $(this).addClass("list-item-active");
-        xxx($(this).attr("id"));
+        activeItem = $(this).attr("id");
+        xxx(activeItem);
     });
+
+    $(".mobile-title").click(function () {
+        $(".list-mobile").toggle();
+        $(".list-header").toggleClass('rt180');
+        title.toggle();
+    });
+
+    $(".list-mobile").click(function () {
+        $(this).toggle();
+        title.toggle();
+        $(".list-header").toggleClass('rt180');
+        title.text($('.list-item-active').html());
+    });
+
 
     function xxx(leasing) {
         term.text(listContent[leasing - 1].term);
@@ -91,4 +110,6 @@ $(document).ready(function () {
         img.attr('src', `src/assets/images/img/leasing-programs/${listContent[leasing - 1].img}`);
     }
     xxx(activeItem)
+
+
 });

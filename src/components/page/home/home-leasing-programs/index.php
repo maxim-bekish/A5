@@ -13,19 +13,39 @@ $listTitle = [
 
 
 ?>
-<script src="/src/components/page/home/leasing-programs/index.js"></script>
-<link rel="stylesheet" href="/src/components/page/home/leasing-programs/index.css">
+<script src="/src/components/page/home/home-leasing-programs/index.js"></script>
+<link rel="stylesheet" href="/src/components/page/home/home-leasing-programs/index.css">
 <section class="leasing-programs-box mt-160px container">
    <h3 class="title-page-h3">Программы лизинга</h3>
    <div id="js-leasing-programs" class="leasing-programs-content">
       <ul class="list">
          <?php foreach ($listTitle as $index => $item): ?>
-            <li id="<?php echo ($item->id); ?>" class="list-item jsListItemProgram <?php echo $index === 0 ? 'list-item-active' : ''; ?>">
-            <?php echo htmlspecialchars($item->title); ?>
+            <li id="<?php echo ($item->id); ?>"
+               class="list-item jsListItemProgram <?php echo $index === 0 ? 'list-item-active' : ''; ?>">
+               <?php echo htmlspecialchars($item->title); ?>
             </li>
          <?php endforeach; ?>
       </ul>
-
+      <div class="mobil-select">
+         <div class="mobile-title">
+            <p></p>
+            <button class="list-header" type="button">
+               <svg class="rt180" width="14px" height="9px" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
+               </svg>
+            </button>
+         </div>
+         <ul class="list-mobile">
+            <?php foreach ($listTitle as $index => $item): ?>
+               <li>
+                  <p id="<?php echo ($item->id); ?>"
+                     class="list-item jsListItemProgram <?php echo $index === 0 ? 'list-item-active' : ''; ?>">
+                     <?php echo htmlspecialchars($item->title); ?>
+                  </p>
+               </li>
+            <?php endforeach; ?>
+         </ul>
+      </div>
       <div class="leasing-programs">
          <div class='leasing-content'>
             <div class="leasing-row">
@@ -57,7 +77,7 @@ $listTitle = [
             </div>
             <div class="leasing-button">
                <a id="js-leasing-link" href="" target="_blank" rel="noopener noreferrer">
-               <button class="button button-white">
+                  <button class="button button--white">
                      Подробнее
                   </button>
                </a>

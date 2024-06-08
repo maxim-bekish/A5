@@ -1,6 +1,7 @@
 $(document).ready(function () {
    let slideCount = Math.round($(".partners-box .container-custom-slider").height());
-   let step = -Math.round($(".partners-box .custom-slide").height());
+   let step = -Math.round($(".partners-box .custom-slide").outerHeight());
+   console.log($(".partners-box .custom-slide").height())
    let timeAnimate = 700;
    let isAnimating = false;
 
@@ -27,6 +28,8 @@ $(document).ready(function () {
             $(".partners-box .container-custom-slider").css("top", 0 + "px");
             isAnimating = false;
          } else {
+            console.log(currentTop)
+       
             $(".partners-box .container-custom-slider").animate({ top: (currentTop + step) + "px" }, timeAnimate, function () {
                isAnimating = false;
             });

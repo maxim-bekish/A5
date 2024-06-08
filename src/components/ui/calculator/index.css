@@ -76,3 +76,26 @@
    line-height: 18px;
    color: rgba(151, 151, 151, 1);
 }
+
+@media(max-width:768px) {
+
+   .calculator-range {
+      max-width: 100%;
+      margin: 60px 0 100px 0;
+   }
+
+   .leasing-calculator-title p {
+      line-height: 20px;
+   }
+
+   .calculator-range .item-header .value {
+      font-size: 20px;
+      line-height: 20px;
+   }
+
+   .calculator-range .item-header p,
+   .calculator-range .item-footer p {
+      font-size: 16px;
+      line-height: 16px;
+   }
+}

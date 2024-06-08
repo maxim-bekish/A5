@@ -104,14 +104,14 @@ function listHeader($data)
 <header id="header">
   <section class="container header">
     <div class="logo">
-      <svg width="151" height="107" viewBox="0 0 151 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="100%" height="100%" viewBox="0 0 151 107" fill="none" xmlns="http://www.w3.org/2000/svg">
         <use href="<?php echo SVG_PATH; ?>icons.svg#icon-logo"></use>
       </svg>
     </div>
-    <div class="burger-button mt-21">
+    <button type="button" id="open-burger-menu" class="burger-button mt-21">
       <div></div>
       <div></div>
-    </div>
+    </button>
     <div class="leasing mt-21">
       <div class="select select-program"> <?php listHeader($headerListProgram); ?> </div>
       <div class="select select-leasing"> <?php listHeader($headerListLeasing); ?> </div>
@@ -121,10 +121,126 @@ function listHeader($data)
       <a href="#">Программы лизинга</a>
       <a href="#home-calculator">Калькулятор</a>
     </div>
-    <div class="contacts mt-21">
-      <a href="tel:+73452999999">7 (3452) 99 99 99</a>
-      <a href="#" class="toggle-button-ask" >Задать вопрос</a>
-      <a href="#" class="toggle-button">Контакты</a>
+    <div class="contacts-header mt-21">
+      <button>
+        <a href="tel:+73452999999">7 (3452) 99 99 99</a>
+      </button>
+      <button type="button" class="toggle-button-ask">
+        <p> Задать вопрос</p>
+      </button>
+      <button type="button" class="toggle-button">
+        <p>Контакты</p>
+      </button>
+    </div>
+  </section>
+  <section id="burger-menu" class="burger-menu">
+    <button id="closed-burger-menu" class="button-closed" type="button">
+      <svg width="28" height="28" viewBox="0 0 32 32">
+        <use href="<?php echo SVG_PATH; ?>icons.svg#icon-closed"></use>
+      </svg>
+    </button>
+    <div class="burger-menu-box">
+      <ul>
+        <h5 class="item-title">Главная страница</h5>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Лизинговый калькулятор</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Партнеры</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Этапы сделки</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Контакты</a>
+        </li>
+      </ul>
+      <ul>
+        <h5 class="item-title">О лизинге</h5>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Общие условия</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Субсидии малому <br> и среднему бизнесу</a>
+        </li>
+      </ul>
+      <ul>
+        <h5 class="item-title">Клиентам</h5>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">О компании</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Клиенты и партнеры</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Документы</a>
+        </li>
+      </ul>
+      <ul>
+        <h5 class="item-title">Услуги лизинга</h5>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Легковой автотранспорт</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Грузовой автотранспорт</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Спецтехника</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Оборудование</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Медицинское оборудование</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Ресторанное оборудование</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Б/У продукция</a>
+        </li>
+        <li class="item-box">
+          <a class="item-content" href="#" target="_blank">Недвижимость</a>
+        </li>
+      </ul>
+      <ul>
+        <h5 class="item-title">Каталог изьятой техники</h5>
+      </ul>
+    </div>
+    <div class="burger-menu-box ">
+      <div class="item-box">
+        <a class="burger-tel item-content" href="tel:+73452999999">7 (3452) 99-99-99</a>
+      </div>
+      <div class="burger-menu-network">
+        <a>
+          <svg class="hover" width="20" height="16" viewBox="0 0 20 16">
+            <use href="<?php echo SVG_PATH; ?>icons.svg#icon-telegram-hover"></use>
+          </svg>
+          <svg class="no-hover" width="20" height="16" viewBox="0 0 20 16">
+            <use href="<?php echo SVG_PATH; ?>icons.svg#icon-telegram"></use>
+          </svg>
+        </a>
+
+        <a>
+          <svg class="hover" width="20" height="19" viewBox="0 0 20 19">
+            <use href="<?php echo SVG_PATH; ?>icons.svg#icon-viber-hover"></use>
+          </svg>
+          <svg class="no-hover" width="20" height="19" viewBox="0 0 20 19">
+            <use href="<?php echo SVG_PATH; ?>icons.svg#icon-viber"></use>
+          </svg>
+
+        </a>
+
+        <a>
+          <svg class="hover" width="22" height="12" viewBox="0 0 22 12">
+            <use href="<?php echo SVG_PATH; ?>icons.svg#icon-VK-hover"></use>
+          </svg>
+          <svg class="no-hover" width="22" height="12" viewBox="0 0 22 12">
+            <use href="<?php echo SVG_PATH; ?>icons.svg#icon-VK"></use>
+          </svg>
+        </a>
+
+      </div>
     </div>
   </section>
 </header>

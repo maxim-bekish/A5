@@ -18,13 +18,13 @@ button {
    padding: 19px 0;
 }
 
-.button-white {
+.button--white {
    background-color: var(--back-white);
    color: var(--text-blue);
 }
 
 .button-blue,
-.button-outline:hover  {
+.button-outline:hover {
    background-color: var(--back-blue);
    color: var(--white);
 }
@@ -35,7 +35,7 @@ button {
    border: 1px solid var(--line-blue);
 }
 
-.button-white:hover {
+.button--white:hover {
    background-color: rgba(231, 231, 231, 1);
 }
 
@@ -48,7 +48,7 @@ button {
    background-color: rgba(0, 63, 162, 1);
 }
 
-.button-white:active {
+.button--white:active {
    background-color: rgba(215, 215, 215, 1);
 }
 
@@ -57,7 +57,7 @@ button {
    background-color: rgba(0, 55, 142, 1);
 }
 
-.button-white:disabled {
+.button--white:disabled {
    color: var(--line-gray);
    background: var(--line-gray);
 }
@@ -66,4 +66,12 @@ button {
 .button-outline:disabled {
    color: var(--line-gray);
    background-color: rgba(215, 215, 215, 1);
+}
+
+@media(max-width:768px) {
+   .button {
+      font-size: 16px;
+      line-height: 21.78px;
+      padding: 14px 0;
+   }
 }

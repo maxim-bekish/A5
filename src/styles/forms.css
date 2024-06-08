@@ -25,6 +25,7 @@ form .form-items-100 {
    flex-direction: column;
    gap: 40px;
    width: 100%;
+   margin: 15px 0;
 }
 
 form .form-items-50 {
@@ -274,3 +275,9 @@ form .form-gray {
 }
 
 /* custom-checkbox */
+
+@media(max-width:768px) {
+   form .form-items-50 {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}

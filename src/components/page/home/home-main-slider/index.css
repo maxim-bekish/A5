@@ -59,9 +59,11 @@
    font-weight: 400;
    line-height: 24px;
 }
-.main-slider-details{
+
+.main-slider-details {
    display: none;
 }
+
 .slide-active:hover .content .main-slider-details {
    display: block;
    background-color: var(--white);
@@ -77,7 +79,6 @@
 
 .main-slider .slide-active {
    width: 1530px;
-   height: 763px;
    display: flex;
    align-items: flex-end;
 }
@@ -127,4 +128,26 @@
 
 .background-four .additional-text {
    background-color: rgba(0, 48, 124, 1);
+}
+
+@media(max-width:768px) {
+   .slide .content .content-text h2 {
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 50px;
+   }
+
+   .slide .content {
+      min-width: 622px;
+      padding: 20px 20px 60px 20px;
+   }
+
+   .slide {
+      height: 968px;
+   }
+
+
+   .main-slider-details {
+      display: none !important;
+   }
 }

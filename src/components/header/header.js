@@ -1,7 +1,7 @@
 $(document).ready(function () {
     let lastScrollTop = 0;
     const $header = $('#header');
-    const $main = $('#js-main');
+    const $main = $('.js-main');
 
     function updateHeaderHeight() {
         const headerHeight = $header.outerHeight(); // Получаем полную высоту шапки, включая padding и border
@@ -28,4 +28,14 @@ $(document).ready(function () {
     $(window).on('resize', function () {
         headerHeight = updateHeaderHeight();
     });
+
+    $('#open-burger-menu').click(function () {
+        $('.burger-menu').addClass('js-flex');
+        $('body').css('overflow', 'hidden');
+    });
+    $('#closed-burger-menu').click(function () {
+        $('.burger-menu').removeClass('js-flex');
+        $('body').css('overflow', 'auto');
+    });
+
 });

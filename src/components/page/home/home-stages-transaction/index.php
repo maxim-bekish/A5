@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/src/components/page/home/stages-transaction/index.css">
-<script src="/src/components/page/home/stages-transaction/index.js"></script>
+<link rel="stylesheet" href="/src/components/page/home/home-stages-transaction/index.css">
+<script src="/src/components/page/home/home-stages-transaction/index.js"></script>
 
 <section class="stages-transaction mt-160px container">
    <h3 class="title-page-h3">Этапы сделки</h3>

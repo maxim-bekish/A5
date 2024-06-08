@@ -43,7 +43,7 @@
          </div>
 
 
-         <button class="button button-white js-submitBtn" type="button">
+         <button class="button button--white js-submitBtn" type="button">
             Получить предложение
          </button>
       </form>
@@ -106,113 +106,109 @@
          </section>
       </div>
       <div class="footer-down-column footer-info-list ">
-         <div class="footer-list">
-            <h5>Главная страница</h5>
-            <ul>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Лизинговый калькулятор
-                  </a>
-               </li>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Контакты
-                  </a>
-               </li>
+         <div class="footer-info-list-box">
+            <div class="footer-list">
+               <h5>Главная страница</h5>
+               <ul>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Лизинговый калькулятор
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Контакты
+                     </a>
+                  </li>
 
-            </ul>
-         </div>
-         <div class="footer-list">
-            <h5>Компания</h5>
-            <ul>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     О компании
-                  </a>
-               </li>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Клиенты и партнеры
-                  </a>
-               </li>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Документы
-                  </a>
-               </li>
+               </ul>
+            </div>
+            <div class="footer-list">
+               <h5>Компания</h5>
+               <ul>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        О компании
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Клиенты и партнеры
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Документы
+                     </a>
+                  </li>
 
-            </ul>
+               </ul>
+            </div>
+            <div class="footer-list">
+               <h5>О лизинге</h5>
+               <ul>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Общие условия
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Субсидии
+                     </a>
+                  </li>
+               </ul>
+            </div>
          </div>
-         <div class="footer-list">
-            <h5>О лизинге</h5>
-            <ul>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Общие условия
-                  </a>
-               </li>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Субсидии малому и среднему бизнесу
-                  </a>
-               </li>
-            </ul>
-         </div>
-         <div class="footer-list">
-            <h5>Услуги лизинга</h5>
-            <ul>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Легковой автотранспорт
-                  </a>
-               </li>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Грузовой автотранспорт
-                  </a>
-               </li>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Спецтехника
-                  </a>
-               </li>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Оборудование
-                  </a>
-               </li>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Медицинское оборудование
-                  </a>
-               </li>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Ресторанное оборудование
-                  </a>
-               </li>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Б/У продукция
-                  </a>
-               </li>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     Недвижимость
-                  </a>
-               </li>
-            </ul>
-         </div>
-
-         <div class="footer-list">
-            <h5>Каталог изьятой техники</h5>
-            <!--<ul>
-               <li>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                     
-                  </a>
-               </li>
-            </ul>-->
+         <div class="footer-info-list-box">
+            <div class="footer-list">
+               <h5>Услуги лизинга</h5>
+               <ul>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Легковой автотранспорт
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Грузовой автотранспорт
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Спецтехника
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Оборудование
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Медицинское оборудование
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Ресторанное оборудование
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Б/У продукция
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" target="_blank" rel="noopener noreferrer">
+                        Недвижимость
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="footer-list">
+               <h5>Каталог изьятой техники</h5>
+            </div>
          </div>
 
       </div>

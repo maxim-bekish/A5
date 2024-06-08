@@ -1,7 +1,4 @@
 $(document).ready(function () {
-
-
-
    $('.select').hover(
       function () {
          $(this).addClass('active');
@@ -13,6 +10,4 @@ $(document).ready(function () {
          $(this).find('.select-list').stop(true, true).slideUp(200);
       }
    );
-
-
 })

@@ -26,6 +26,7 @@
          require_once $_SERVER['DOCUMENT_ROOT'] . '/src/config/path.php';
          include 'src/components/header/header.php';
          include 'src/components/page/home/main.php';
+         //include 'src/components/page/about-company/main.php';
          include 'src/components/footer/footer.php';
          ?>
       </div>

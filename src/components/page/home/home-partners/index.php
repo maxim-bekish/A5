@@ -1,35 +1,7 @@
-<link rel="stylesheet" href="/src/components/page/home/partners/index.css">
-<section class="partners-box mt-160px container">
+<link rel="stylesheet" href="/src/components/page/home/home-partners/index.css">
 
-   <div class="box-up">
-      <p>Партнеры</p>
-      <div class="partners-content">
-         <h3 class="title-page-h3">
-            Не нашли нужный вам продукт?
-         </h3>
-         <p>
-            Мы сотрудничаем с более 1000 поставщиками в России, СНГ и странах ближнего востока. Подберём лизинговые
-            условия
-            индивидуально для вас
-         </p>
-         <div class="partners-box-time">
-            <div>
-               <p>25 минут</p>
-               <p>на подбор продукта из нашей базы.</p>
-            </div>
-            <div>
-               <p>До 2-ух дней</p>
-               <p>занимает время на согласование условий предоставлений лизинга с поставщиком.</p>
-            </div>
-            <div>
-               <p>В течение 2-ух дней</p>
-               <p>будет заключён договор.</p>
-            </div>
-         </div>
-         <button type="button" class="button button-blue">Подобрать</button>
-      </div>
-   </div>
-   <?php
+
+<?php
    $slides = array(
       array(
          "image" => "1-zoomlin.svg",
@@ -117,23 +89,51 @@
    );
    ?>
 
+
+<section class="partners-box mt-160px container">
+
+   <div class="box-up">
+      <p>Партнеры</p>
+      <div class="partners-content">
+         <h3 class="title-page-h3">
+            Не нашли нужный вам продукт?
+         </h3>
+         <p>
+            Мы сотрудничаем с более 1000 поставщиками в России, СНГ и странах ближнего востока. Подберём лизинговые
+            условия
+            индивидуально для вас
+         </p>
+         <div class="partners-box-time">
+            <div>
+               <p>25 минут</p>
+               <p>на подбор продукта из нашей базы.</p>
+            </div>
+            <div>
+               <p>До 2-ух дней</p>
+               <p>занимает время на согласование условий предоставлений лизинга с поставщиком.</p>
+            </div>
+            <div>
+               <p>В течение 2-ух дней</p>
+               <p>будет заключён договор.</p>
+            </div>
+         </div>
+         <button type="button" class="button button-blue">Подобрать</button>
+      </div>
+   </div>
+
    <section class="custom-slider">
       <div class="buttons ">
-         <button class="js-partners-slider-prev button-visible" type="button">
-            <svg class="no-hover" width="50" height="50" viewBox="0 0 50 50">
+         <button class=" slider__button js-partners-slider-prev button-visible" type="button">
+            <svg class="slider__icon" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
-            <svg class="hover" width="50" height="50" viewBox="0 0 50 50">
-               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle-hover"></use>
-            </svg>
+      
          </button>
-         <button class="js-partners-slider-next button-visible" type="button">
-            <svg class="no-hover" width="50" height="50" viewBox="0 0 50 50">
+         <button class=" slider__button js-partners-slider-next button-visible" type="button">
+            <svg class="slider__icon" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
-            <svg class="hover" width="50" height="50" viewBox="0 0 50 50">
-               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle-hover"></use>
-            </svg>
+    
          </button>
       </div>
       <div class="box-slider">
@@ -146,4 +146,4 @@
       </div>
    </section>
 </section>
-<script src="/src/components/page/home/partners/index.js"></script>
+<script src="/src/components/page/home/home-partners/index.js"></script>
