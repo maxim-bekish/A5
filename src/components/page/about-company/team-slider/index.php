@@ -35,18 +35,11 @@
    </div>
 </section>
 
+
 <style>
    .all-sliders {
       display: flex;
       gap: 40px;
-   }
-
-   .box-slid {
-      display: flex;
-   }
-
-   .box-slid img {
-      width: 100%;
    }
 
    .custom-slider {
@@ -59,43 +52,42 @@
    }
 
    .custom-slider__line {
-      position: relative;
+      height: 410px;
       display: flex;
-      width: 410px;
-      left: -410px;
+      transition: transform 1s ease;
    }
 
    .custom-slider__line img {
       max-width: 410px;
       width: 100%;
-      height: 410px;
+      height: 100%;
    }
 </style>
 
 <script>
    document.addEventListener('DOMContentLoaded', () => {
       const images = [
-         { id: '1', image: "1-zoomlin.svg", alt: "Zoomlin Logo" },
-         { id: '2', image: "2-translift.svg", alt: "Translift Logo" },
-         { id: '3', image: "3-medizina.svg", alt: "Medizina Logo" },
-         { id: '4', image: "4-jood.svg", alt: "Jood Logo" },
-         { id: '5', image: "5-agrolider.svg", alt: "Agrolider Logo" },
-         { id: '6', image: "6-agrodoc.svg", alt: "Agrodoc Logo" },
-         { id: '7', image: "7-rustorg.svg", alt: "Rustorg Logo" },
-         { id: '8', image: "8-pkuspt.svg", alt: "Pkuspt Logo" },
-         { id: '9', image: "9-UralSpecTrans.svg", alt: "UralSpecTrans Logo" },
-         { id: '10', image: "10-geocentr.svg", alt: "geocentr Logo" },
-         { id: '11', image: "11-LBR.svg", alt: "LBR Logo" },
-         { id: '12', image: "12-gorci.svg", alt: "gorci Logo" },
-         { id: '13', image: "13-pесо.svg", alt: "pесо Logo" },
-         { id: '14', image: "14-ingostrah.svg", alt: "ingostrah Logo" },
-         { id: '15', image: "15-jugiria.svg", alt: "jugiria Logo" },
-         { id: '16', image: "16-sogaz.svg", alt: "sogaz Logo" },
-         { id: '17', image: "17-energogrant.svg", alt: "energogrant Logo" },
-         { id: '18', image: "18-bsk.svg", alt: "bsk Logo" },
-         { id: '19', image: "19-alfa.svg", alt: "alfa Logo" },
-         { id: '20', image: "20-mezcentr.svg", alt: "mezcentr Logo" },
-         { id: '21', image: "21-logo.svg", alt: "mezcentr Logo" },
+         { id: 'home-partner-1', image: "1-zoomlin.svg", alt: "Zoomlin Logo" },
+         { id: 'home-partner-2', image: "2-translift.svg", alt: "Translift Logo" },
+         { id: 'home-partner-3', image: "3-medizina.svg", alt: "Medizina Logo" },
+         { id: 'home-partner-4', image: "4-jood.svg", alt: "Jood Logo" },
+         { id: 'home-partner-5', image: "5-agrolider.svg", alt: "Agrolider Logo" },
+         { id: 'home-partner-6', image: "6-agrodoc.svg", alt: "Agrodoc Logo" },
+         { id: 'home-partner-7', image: "7-rustorg.svg", alt: "Rustorg Logo" },
+         { id: 'home-partner-8', image: "8-pkuspt.svg", alt: "Pkuspt Logo" },
+         { id: 'home-partner-9', image: "9-UralSpecTrans.svg", alt: "UralSpecTrans Logo" },
+         { id: 'home-partner-10', image: "10-geocentr.svg", alt: "geocentr Logo" },
+         { id: 'home-partner-11', image: "11-LBR.svg", alt: "LBR Logo" },
+         { id: 'home-partner-12', image: "12-gorci.svg", alt: "gorci Logo" },
+         { id: 'home-partner-13', image: "13-pесо.svg", alt: "pесо Logo" },
+         { id: 'home-partner-14', image: "14-ingostrah.svg", alt: "ingostrah Logo" },
+         { id: 'home-partner-15', image: "15-jugiria.svg", alt: "jugiria Logo" },
+         { id: 'home-partner-16', image: "16-sogaz.svg", alt: "sogaz Logo" },
+         { id: 'home-partner-17', image: "17-energogrant.svg", alt: "energogrant Logo" },
+         { id: 'home-partner-18', image: "18-bsk.svg", alt: "bsk Logo" },
+         { id: 'home-partner-19', image: "19-alfa.svg", alt: "alfa Logo" },
+         { id: 'home-partner-20', image: "20-mezcentr.svg", alt: "mezcentr Logo" },
+         { id: 'home-partner-21', image: "21-logo.svg", alt: "mezcentr Logo" }
       ];
 
       const slidersData = [
@@ -114,108 +106,80 @@
          }
       });
 
-      const maxStep = Math.ceil(images.length) - 1;
-      let activeImage = 0;
-      const widthOffset = document.querySelector('.custom-slider').clientWidth;
-      let flag = true;
-
       const sliderPlaces = Array.from(document.querySelectorAll('.custom-slider__line'));
-      sliderPlaces.forEach(sliderPlace => {
-         sliderPlace.style.width = 3 * widthOffset + 'px';
-         sliderPlace.style.height = widthOffset + 'px';
-         sliderPlace.style.left = '-' + widthOffset + 'px';
-      });
+      let activeImage = 0;
+      const slideWidth = 410;
+      let isAnimating = false;
 
       const initSlider = () => {
          slidersData.forEach((sliderData, index) => {
             const slide = sliderPlaces[index];
-            createImageElement(slide, sliderData[activeImage].image);
-            nextImageGenerate(sliderData, slide);
-            prevImageGenerate(sliderData, slide);
-         });
-      };
+            const firstImage = sliderData[0];
+            const lastImage = sliderData[sliderData.length - 1];
 
-      const createImageElement = (slide, imageSrc, isBefore = false) => {
-         const img = document.createElement('img');
-         img.src = '/src/assets/images/svg/custom-slider/' + imageSrc;
-         if (isBefore) {
-            slide.prepend(img);
-         } else {
-            slide.append(img);
-         }
-      };
+            // Добавляем последний элемент в начало
+            const firstClone = document.createElement('img');
+            firstClone.src = '/src/assets/images/svg/custom-slider/' + lastImage.image;
+            firstClone.alt = lastImage.alt;
+            slide.append(firstClone);
 
-      const nextImageGenerate = (sliderData, slide) => {
-         let nextImage = activeImage + 1;
-         if (nextImage >= sliderData.length) nextImage = 0;
-         if (sliderData[nextImage]?.image) {
-            createImageElement(slide, sliderData[nextImage].image);
-         } else {
-            const img = document.createElement('div');
-            slide.append(img);
-         }
-      };
-
-      const prevImageGenerate = (sliderData, slide) => {
-         let prevImage = activeImage - 1;
-         if (prevImage < 0) prevImage = sliderData.length - 1;
-         createImageElement(slide, sliderData[prevImage].image, true);
-      };
-
-      const animate = ({ duration, draw, removeElement }) => {
-         const start = performance.now();
-         requestAnimationFrame(function animate(time) {
-            let step = (time - start) / duration;
-            if (step > 1) step = 1;
-            draw(step);
-            if (step < 1) {
-               requestAnimationFrame(animate);
-            } else {
-               removeElement.remove();
-               flag = true;
-            }
-         });
-      };
-
-      const nextSlide = () => {
-         if (!flag) return;
-         flag = false;
-         activeImage++;
-         slidersData.forEach((sliderData, index) => {
-            const slide = sliderPlaces[index];
-            if (activeImage >= sliderData.length) activeImage = 0;
-            nextImageGenerate(sliderData, slide);
-            animate({
-               duration: 1000,
-               draw: progress => {
-                  slide.querySelector('img').style.width = (widthOffset * (1 - progress)) + 'px';
-               },
-               removeElement: slide.querySelector('img')
+            // Добавляем все основные элементы
+            sliderData.forEach(imageData => {
+               const img = document.createElement('img');
+               img.src = '/src/assets/images/svg/custom-slider/' + imageData.image;
+               img.alt = imageData.alt;
+               slide.append(img);
             });
+
+            // Добавляем первый элемент в конец
+            const lastClone = document.createElement('img');
+            lastClone.src = '/src/assets/images/svg/custom-slider/' + firstImage.image;
+            lastClone.alt = firstImage.alt;
+            slide.append(lastClone);
+
+            slide.style.transform = `translateX(${-slideWidth}px)`;
          });
       };
 
-      const prevSlide = () => {
-         if (!flag) return;
-         flag = false;
-         activeImage--;
-         slidersData.forEach((sliderData, index) => {
-            const slide = sliderPlaces[index];
-            if (activeImage < 0) activeImage = sliderData.length - 1;
-            prevImageGenerate(sliderData, slide);
-            animate({
-               duration: 1000,
-               draw: progress => {
-                  slide.querySelector('img').style.width = (widthOffset * progress) + 'px';
-               },
-               removeElement: slide.querySelector('img:last-child')
-            });
+      const moveSlider = (direction) => {
+         if (isAnimating) return; // Не выполнять, если идет анимация
+         isAnimating = true;
+
+         if (direction === 'next') {
+            activeImage++;
+         } else if (direction === 'prev') {
+            activeImage--;
+         }
+
+         sliderPlaces.forEach(slide => {
+            slide.style.transition = 'transform 1s ease';
+            slide.style.transform = `translateX(${-(activeImage + 1) * slideWidth}px)`;
+         });
+
+         sliderPlaces.forEach(slide => {
+            slide.addEventListener('transitionend', () => {
+               if (activeImage >= maxLength) {
+                  activeImage = 0;
+                  sliderPlaces.forEach(slide => {
+                     slide.style.transition = 'none';
+                     slide.style.transform = `translateX(${-slideWidth}px)`;
+                  });
+               } else if (activeImage < 0) {
+                  activeImage = maxLength - 1;
+                  sliderPlaces.forEach(slide => {
+                     slide.style.transition = 'none';
+                     slide.style.transform = `translateX(${-(maxLength) * slideWidth}px)`;
+                  });
+               }
+               isAnimating = false; // Сброс флага по окончании анимации
+            }, { once: true });
          });
       };
+
+      document.querySelector('.next-button').addEventListener('click', () => moveSlider('next'));
+      document.querySelector('.prev-button').addEventListener('click', () => moveSlider('prev'));
 
       initSlider();
-      document.querySelector('.next-button').addEventListener('click', nextSlide);
-      document.querySelector('.prev-button').addEventListener('click', prevSlide);
    });
 </script>
 
