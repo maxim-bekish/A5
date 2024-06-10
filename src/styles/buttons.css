@@ -23,13 +23,13 @@ button {
    color: var(--text-blue);
 }
 
-.button-blue,
-.button-outline:hover {
+.button--blue,
+.button--outline:hover {
    background-color: var(--back-blue);
    color: var(--white);
 }
 
-.button-outline {
+.button--outline {
    background-color: var(--back-white);
    color: var(--text-blue);
    border: 1px solid var(--line-blue);
@@ -39,12 +39,12 @@ button {
    background-color: rgba(231, 231, 231, 1);
 }
 
-/*.button-outline:hover {
+/*.button--outline:hover {
    color: white;
 }*/
 
-.button-blue:hover,
-.button-outline:hover {
+.button--blue:hover,
+.button--outline:hover {
    background-color: rgba(0, 63, 162, 1);
 }
 
@@ -52,8 +52,8 @@ button {
    background-color: rgba(215, 215, 215, 1);
 }
 
-.button-blue:active,
-.button-outline:active {
+.button--blue:active,
+.button--outline:active {
    background-color: rgba(0, 55, 142, 1);
 }
 
@@ -62,8 +62,8 @@ button {
    background: var(--line-gray);
 }
 
-.button-blue:disabled,
-.button-outline:disabled {
+.button--blue:disabled,
+.button--outline:disabled {
    color: var(--line-gray);
    background-color: rgba(215, 215, 215, 1);
 }

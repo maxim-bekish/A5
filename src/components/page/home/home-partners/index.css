@@ -1,15 +1,21 @@
-.partners-content {
+.partners-box__content {
    display: flex;
    flex-direction: column;
 }
 
-.partners-box .box-up {
+.partners-box__up {
    display: flex;
    column-gap: 40px;
    row-gap: 20px;
 }
 
-.box-up>p {
+.partners-box__time-value {
+   font-size: 24px;
+   font-weight: 400;
+   line-height: 29.04px;
+}
+
+.partners-box__title {
    margin-top: 14px;
    min-width: 410px;
    font-size: 20px;
@@ -18,89 +24,83 @@
    text-align: left;
 }
 
-.partners-content p {
+.partners-box__text {
    font-family: var(--font-inter);
    font-size: 24px;
    font-weight: 400;
    line-height: 29.04px;
    color: var(--text-gray-dark);
-}
-
-.slider__icon {
-   fill: #fff;
-   stroke: #0045B2;
-   transition: all 200ms ease;
-
-}
-
-.slider__button:hover .slider__icon {
-   fill: #0045B2;
-   stroke: #fff;
-   --stroke-width: 0;
-   --circle-radius: 25;
-   transition: all 200ms ease;
-}
-
-.partners-content>p {
    margin: 30px 0 40px 0;
 }
 
-.partners-box-time {
+.custom-slider__icon {
+   fill: #fff;
+   stroke: #0045B2;
+   transition: all 200ms ease;
+}
+
+.custom-slider__button:hover .custom-slider__icon {
+   fill: #0045B2;
+   stroke: #fff;
+   transition: all 200ms ease;
+}
+
+
+.partners-box__time {
    display: flex;
    gap: 40px;
    margin-bottom: 60px;
 }
 
-.partners-box-time div {
+.partners-box__time-item {
    width: 410px;
 }
 
-.partners-box-time div p:last-child {
+.partners-box__time-description {
    margin-top: 10px;
    font-size: 18px;
    line-height: 21.78px;
 }
 
-.partners-content button {
+.partners-box__button {
    max-width: 410px;
 }
 
-/* slider */
-.partners-box .custom-slider .buttons {
+
+.custom-slider__buttons {
    display: flex;
    gap: 20px;
    max-width: 120px;
 }
 
-.partners-box .custom-slider .buttons button {
+.custom-slider__button {
    width: 50px;
    height: 50px;
-
 }
 
-.partners-box .custom-slider .buttons button:last-child {
+.custom-slider__button:last-child {
    transform: rotate(180deg);
 }
 
-.partners-box .custom-slider {
+.custom-slider {
    display: flex;
    flex-direction: column;
    gap: 20px;
 }
 
-.partners-box .custom-slider-two {
+.custom-slider--reverse {
    flex-direction: column-reverse;
    align-items: end;
 }
 
-.partners-box .custom-slider .box-slider {
+.custom-slider__box {
    position: relative;
    height: 410px;
    width: 100%;
    overflow: hidden;
 }
 
-.partners-box .container-custom-slider {
+.custom-slider__container {
    position: absolute;
    top: 0px;
    display: grid;
@@ -108,7 +108,7 @@
    grid-column-gap: 40px;
 }
 
-.partners-box .custom-slide {
+.custom-slider__slide {
    width: 410px;
    height: 410px;
    display: flex;
@@ -117,66 +117,67 @@
    background-color: var(--back-gray-light);
 }
 
-/* slider */
 
 @media(max-width:768px) {
 
-   .partners-box .box-up {
+   .partners-box__up {
       flex-direction: column;
       margin-bottom: 70px;
    }
 
-   .partners-content>p {
+   .partners-box__text {
       margin: 20px 0 40px 0;
-   }
-
-   .partners-content p {
       font-size: 20px;
       line-height: 24.2px;
    }
 
-   .partners-box-time div p:last-child {
+   .partners-box__time-description {
       font-size: 18px;
       line-height: 21.78px;
    }
 
-   .partners-box-time div p:last-child {
-      font-size: 16px;
-      line-height: 22.4px;
+   .custom-slider__box {
+
+      height: 261px;
    }
 
    .partners-box-time {
       margin-bottom: 50px;
    }
 
-   .partners-box .custom-slider {
+   .custom-slider {
       align-items: flex-end;
    }
 
-   .partners-box .custom-slider .buttons {
+   .custom-slider__buttons {
       order: 1;
+  
    }
 
 
-   .partners-box .custom-slide {
+   .custom-slider__slide {
       width: 100%;
       height: 261px;
       padding: 23px;
    }
 
-   .partners-box .custom-slider .box-slider {
+   .custom-slider__boxF {
       height: 261px;
    }
 
-   .partners-box .container-custom-slider {
+   .custom-slider__container {
       grid-column-gap: 20px;
       grid-template-columns: repeat(2, 1fr);
+      width: 100%;
    }
 
    .custom-slide img {
       object-fit: scale-down;
    }
 
-
-
+   .custom-slider__slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: scale-down;
+   }
 }
