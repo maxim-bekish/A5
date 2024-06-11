@@ -62,34 +62,30 @@ $slides = [
       <div class="slider__box">
          <div class="slider__container">
             <?php foreach ($slides as $slide): ?>
-               <div class="slider__slide">
+               <div class="slider__slide" data-title="<?php echo htmlspecialchars($slide['name']); ?>"
+                  data-description="<?php echo htmlspecialchars($slide['jobTitle']); ?>">
                   <div class="slider__header">
-
                      <img class="slider__image" src="<?php echo IMG_PATH . htmlspecialchars($slide['image']); ?>"
                         alt="people">
-
                   </div>
-                  <div class="slider__main">
-                     <p class="slider__text"><?php echo nl2br(htmlspecialchars($slide['name'])); ?></p>
-                     <p class="slider__text"><?php echo nl2br(htmlspecialchars($slide['jobTitle'])); ?></p>
-
-                  </div>
-
                </div>
             <?php endforeach; ?>
          </div>
+      </div>
+      <div class="slider__main">
+         <!-- сюда нужно автоматически подставлять данные в зависимости что в слайдере -->
+         <p class="slider__text slider__title"></p>
+         <p class="slider__text slider__description"></p>
       </div>
    </section>
 </section>
 
 
 <style>
-   .first-visible .slider__main {
-      opacity: 1;
+   .slider__main {
       display: flex;
       flex-direction: column;
    }
-
 
    .slider__slide {
       display: flex;
@@ -99,17 +95,16 @@ $slides = [
       width: 560px;
       height: 560px;
       margin-right: 40px;
-
-   }
-
-   .slider__main {
-      opacity: 0;
    }
 
    .slider__buttons {
       display: flex;
       gap: 20px;
       max-width: 120px;
+      z-index: 999;
+      position: absolute;
+      bottom: 75px;
+      left: 600px;
    }
 
    .slider__button {
@@ -122,10 +117,7 @@ $slides = [
    }
 
    .team-slider .slider {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: flex-end;
-      gap: 20px;
+      position: relative;
    }
 
    .slider__box {
@@ -205,7 +197,7 @@ $slides = [
 <script>
    $(document).ready(function () {
       const $sliderContainer = $(".team-slider .slider__container");
-      const $slides = $sliderContainer.children();
+      const $slides = $sliderContainer.children(".slider__slide");
       const slideCount = $slides.length;
       const slideWidth = Math.ceil($(".team-slider .slider__slide").outerWidth()) + 40;
       const step = -slideWidth;
@@ -221,7 +213,7 @@ $slides = [
 
       function updateFirstVisibleSlide() {
          // Пересчитываем $slides после клонирования
-         const currentSlides = $sliderContainer.children();
+         const currentSlides = $sliderContainer.children(".slider__slide");
          currentSlides.removeClass('first-visible');
          const images = currentSlides.find('.slider__header .slider__image');
          images.css('height', '80%'); // Устанавливаем height для всех изображений
@@ -232,6 +224,12 @@ $slides = [
          const firstVisibleSlide = $(currentSlides[firstVisibleIndex]);
          firstVisibleSlide.addClass('first-visible');
          firstVisibleSlide.find('.slider__header .slider__image').css('height', '100%'); // Устанавливаем height для первого видимого изображения
+
+         // Обновляем содержимое .slider__main
+         const title = firstVisibleSlide.data('title');
+         const description = firstVisibleSlide.data('description');
+         $(".slider__main .slider__title").text(title);
+         $(".slider__main .slider__description").text(description);
       }
 
       updateFirstVisibleSlide();
