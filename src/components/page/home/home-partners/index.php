@@ -106,8 +106,6 @@ $slides = array(
       "alt" => "mezcentr Logo",
       "text" => "mezcentr Logo"
    ),
-
-
 );
 ?>
 
