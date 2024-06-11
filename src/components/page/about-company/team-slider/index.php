@@ -1,321 +1,286 @@
 <!--<script src="src/components/page/about-company/team-slider/index.js"></script>-->
 
+
+<?php
+$slides = [
+   [
+      "image" => "people.jpeg",
+      "name" => "Владимир Петров",
+      "jobTitle" => "1Генеральный директор",
+   ],
+   [
+      "image" => "people.jpeg",
+      "name" => "Вася Пупкин",
+      "jobTitle" => "2Генеральный директор",
+   ],
+   [
+      "image" => "people.jpeg",
+      "name" => "Вася Пупкин",
+      "jobTitle" => "3Генеральный директор",
+   ],
+   [
+      "image" => "people.jpeg",
+      "name" => "Вася Пупкин",
+      "jobTitle" => "4Генеральный директор",
+   ],
+   [
+      "image" => "people.jpeg",
+      "name" => "Вася Пупкин",
+      "jobTitle" => "5Генеральный директор",
+   ],
+   [
+      "image" => "people.jpeg",
+      "name" => "Вася Пупкин",
+      "jobTitle" => "6Генеральный директор",
+   ],
+   [
+      "image" => "people.jpeg",
+      "name" => "Вася Пупкин",
+      "jobTitle" => "7Генеральный директор",
+   ],
+];
+?>
+
 <link rel="stylesheet" href="src/components/page/about-company/team-slider/index.css" />
 
 <section class="team-slider container mt-160px">
    <h3 class="team-slider__title title-page-h3">Команда</h3>
 
-   <div class="all-slide">
-      <div class="custom-slider__buttons">
-         <button class="custom-slider__button js-partners-slider-prev button--visible prev-button" type="button">
-            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
+   <section class="slider">
+      <div class="slider__buttons">
+         <button class="slider__button slider__button--prev" type="button">
+            <svg class="slider__icon" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
          </button>
-         <button class="custom-slider__button js-partners-slider-next button--visible next-button" type="button">
-            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
+         <button class="slider__button slider__button--next" type="button">
+            <svg class="slider__icon" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
          </button>
       </div>
-      <div class="all-sliders">
-         <div class="custom-slider">
-            <div id="custom-slider__line--1" class="custom-slider__line">
-            </div>
-         </div>
-         <div class="custom-slider">
-            <div id="custom-slider__line--2" class="custom-slider__line"></div>
-         </div>
-         <div class="custom-slider">
-            <div id="custom-slider__line--3" class="custom-slider__line"></div>
-         </div>
-         <div class="custom-slider">
-            <div id="custom-slider__line--4" class="custom-slider__line"></div>
+      <div class="slider__box">
+         <div class="slider__container">
+            <?php foreach ($slides as $slide): ?>
+               <div class="slider__slide">
+                  <div class="slider__header">
+
+                     <img class="slider__image" src="<?php echo IMG_PATH . htmlspecialchars($slide['image']); ?>"
+                        alt="people">
+
+                  </div>
+                  <div class="slider__main">
+                     <p class="slider__text"><?php echo nl2br(htmlspecialchars($slide['name'])); ?></p>
+                     <p class="slider__text"><?php echo nl2br(htmlspecialchars($slide['jobTitle'])); ?></p>
+
+                  </div>
+
+               </div>
+            <?php endforeach; ?>
          </div>
       </div>
-   </div>
+   </section>
 </section>
 
 
 <style>
-   .all-sliders {
+   .first-visible .slider__main {
+      opacity: 1;
       display: flex;
-      gap: 40px;
+      flex-direction: column;
    }
 
-   .custom-slider {
-      box-sizing: border-box;
-      width: 410px;
-      height: 410px;
+
+   .slider__slide {
+      display: flex;
+      flex-direction: column;
       position: relative;
-      overflow: hidden;
-      margin: 0;
+      box-sizing: border-box;
+      width: 560px;
+      height: 560px;
+      margin-right: 40px;
+
    }
 
-   .custom-slider__line {
-      height: 410px;
+   .slider__main {
+      opacity: 0;
+   }
+
+   .slider__buttons {
       display: flex;
-      transition: transform 1s ease;
+      gap: 20px;
+      max-width: 120px;
    }
 
-   .custom-slider__line img {
-      max-width: 410px;
+   .slider__button {
+      width: 50px;
+      height: 50px;
+   }
+
+   .slider__button--next {
+      transform: rotate(180deg);
+   }
+
+   .team-slider .slider {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      gap: 20px;
+   }
+
+   .slider__box {
+      position: relative;
+      height: 560px;
+      width: 100%;
+      overflow: hidden;
+   }
+
+   .slider__container {
+      position: absolute;
+      top: 0px;
+      display: flex;
+   }
+
+   .slider__header {
+      position: relative;
       width: 100%;
       height: 100%;
    }
+
+   .slider__title {
+      font-family: var(--font-inter);
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 33.6px;
+      color: rgba(81, 81, 81, 1);
+   }
+
+   .slider__image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0px;
+      left: 0px;
+   }
+
+   .slider__text:first-child {
+      font-size: 30px;
+      font-weight: 400;
+      margin: 15px 0 10px 0;
+      line-height: 30px;
+      color: rgba(81, 81, 81, 1);
+   }
+
+   .slider__text:last-child {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      color: rgba(151, 151, 151, 1);
+   }
+
+   .slider__link {
+      bottom: 20px;
+      right: 20px;
+      position: absolute;
+   }
+
+   @media(max-width:768px) {}
+
+   .slider__icon {
+      fill: #fff;
+      stroke: #0045B2;
+      transition: all 200ms ease;
+   }
+
+   .slider__button:hover .slider__icon {
+      fill: #0045B2;
+      stroke: #fff;
+      --stroke-width: 0;
+      --circle-radius: 25;
+      transition: all 200ms ease;
+   }
 </style>
 
 <script>
-   document.addEventListener('DOMContentLoaded', () => {
-      const images = [
-         { id: 'home-partner-01', text: 'home-partner-01', image: "1-zoomlin.svg", alt: "Zoomlin Logo" },
-         { id: 'home-partner-02', text: 'home-partner-02', image: "2-translift.svg", alt: "Translift Logo" },
-         { id: 'home-partner-03', text: 'home-partner-03', image: "3-medizina.svg", alt: "Medizina Logo" },
-         { id: 'home-partner-04', text: 'home-partner-04', image: "4-jood.svg", alt: "Jood Logo" },
-         { id: 'home-partner-05', text: 'home-partner-05', image: "5-agrolider.svg", alt: "Agrolider Logo" },
-         { id: 'home-partner-06', text: 'home-partner-06', image: "6-agrodoc.svg", alt: "Agrodoc Logo" },
-         { id: 'home-partner-07', text: 'home-partner-07', image: "7-rustorg.svg", alt: "Rustorg Logo" },
-         { id: 'home-partner-08', text: 'home-partner-08', image: "8-pkuspt.svg", alt: "Pkuspt Logo" },
-         { id: 'home-partner-09', text: 'home-partner-09', image: "9-UralSpecTrans.svg", alt: "UralSpecTrans Logo" },
-         { id: 'home-partner-10', text: 'home-partner-10', image: "10-geocentr.svg", alt: "geocentr Logo" },
-         { id: 'home-partner-11', text: 'home-partner-11', image: "11-LBR.svg", alt: "LBR Logo" },
-         { id: 'home-partner-12', text: 'home-partner-12', image: "12-gorci.svg", alt: "gorci Logo" },
-         { id: 'home-partner-13', text: 'home-partner-13', image: "13-pесо.svg", alt: "pесо Logo" },
-         { id: 'home-partner-14', text: 'home-partner-14', image: "14-ingostrah.svg", alt: "ingostrah Logo" },
-         { id: 'home-partner-15', text: 'home-partner-15', image: "15-jugiria.svg", alt: "jugiria Logo" },
-         { id: 'home-partner-16', text: 'home-partner-16', image: "16-sogaz.svg", alt: "sogaz Logo" },
-         { id: 'home-partner-17', text: 'home-partner-17', image: "17-energogrant.svg", alt: "energogrant Logo" },
-         { id: 'home-partner-18', text: 'home-partner-18', image: "18-bsk.svg", alt: "bsk Logo" },
-         { id: 'home-partner-19', text: 'home-partner-19', image: "19-alfa.svg", alt: "alfa Logo" },
-         { id: 'home-partner-20', text: 'home-partner-20', image: "20-mezcentr.svg", alt: "mezcentr Logo" },
-         { id: 'home-partner-21', text: 'home-partner-21', image: "21-logo.svg", alt: "mezcentr Logo" }
-      ];
+   $(document).ready(function () {
+      const $sliderContainer = $(".team-slider .slider__container");
+      const $slides = $sliderContainer.children();
+      const slideCount = $slides.length;
+      const slideWidth = Math.ceil($(".team-slider .slider__slide").outerWidth()) + 40;
+      const step = -slideWidth;
+      const timeAnimate = 700;
+      let isAnimating = false;
 
-      const slidersData = [
-         images.filter((_, index) => index % 4 === 0),
-         images.filter((_, index) => index % 4 === 1),
-         images.filter((_, index) => index % 4 === 2),
-         images.filter((_, index) => index % 4 === 3)
-      ];
+      // Копируем первые два слайда и добавляем их в конец контейнера
+      $slides.slice(0, 2).clone().appendTo($sliderContainer);
+      // Копируем последние два слайда и добавляем их в начало контейнера
+      $slides.slice(-2).clone().prependTo($sliderContainer);
 
-      const maxLength = Math.max(...slidersData.map(arr => arr.length));
-      const placeholder = { id: 'placeholder', image: "placeholder.svg", alt: "Placeholder" };
+      $sliderContainer.css("left", -slideWidth * 2 + "px");
 
-      slidersData.forEach(arr => {
-         while (arr.length < maxLength) {
-            arr.push(placeholder);
+      function updateFirstVisibleSlide() {
+         // Пересчитываем $slides после клонирования
+         const currentSlides = $sliderContainer.children();
+         currentSlides.removeClass('first-visible');
+         const images = currentSlides.find('.slider__header .slider__image');
+         images.css('height', '80%'); // Устанавливаем height для всех изображений
+
+         const currentLeft = parseInt($sliderContainer.css("left")) || 0;
+         const firstVisibleIndex = Math.abs(currentLeft) / slideWidth; // Индекс первого видимого слайда
+
+         const firstVisibleSlide = $(currentSlides[firstVisibleIndex]);
+         firstVisibleSlide.addClass('first-visible');
+         firstVisibleSlide.find('.slider__header .slider__image').css('height', '100%'); // Устанавливаем height для первого видимого изображения
+      }
+
+      updateFirstVisibleSlide();
+
+      $(".team-slider .slider__button--prev").click(function () {
+         if (!isAnimating) {
+            isAnimating = true;
+            const currentLeft = parseInt($sliderContainer.css("left")) || 0;
+            const newLeft = currentLeft - step;
+            const currentSlide = $sliderContainer.children().eq(Math.abs(currentLeft / slideWidth)); // Текущий первый видимый слайд
+            const nextSlide = $sliderContainer.children().eq(Math.abs(newLeft / slideWidth));
+
+            currentSlide.find('.slider__header .slider__image').animate({ height: '80%' }, timeAnimate); // Плавное изменение height текущего слайда
+            nextSlide.find('.slider__header .slider__image').css('height', '80%'); // Начальное состояние изображения
+
+            $sliderContainer.animate({ left: newLeft + "px" }, timeAnimate, function () {
+               if (parseInt($sliderContainer.css("left")) >= 0) {
+                  $sliderContainer.css("left", -slideCount * slideWidth + "px");
+               }
+               updateFirstVisibleSlide();
+               isAnimating = false;
+            });
+
+            nextSlide.find('.slider__header .slider__image').animate({ height: '100%' }, timeAnimate); // Плавное изменение height
          }
       });
 
-      const sliderPlaces = Array.from(document.querySelectorAll('.custom-slider__line'));
-      let activeImage = 0;
-      const slideWidth = 410;
-      let isAnimating = false;
+      $(".team-slider .slider__button--next").click(function () {
+         if (!isAnimating) {
+            isAnimating = true;
+            const currentLeft = parseInt($sliderContainer.css("left")) || 0;
+            const newLeft = currentLeft + step;
+            const currentSlide = $sliderContainer.children().eq(Math.abs(currentLeft / slideWidth)); // Текущий первый видимый слайд
+            const nextSlide = $sliderContainer.children().eq(Math.abs(newLeft / slideWidth));
 
-      const initSlider = () => {
-         slidersData.forEach((sliderData, index) => {
-            const slide = sliderPlaces[index];
-            const firstImage = sliderData[0];
-            const lastImage = sliderData[sliderData.length - 1];
+            currentSlide.find('.slider__header .slider__image').animate({ height: '80%' }, timeAnimate); // Плавное изменение height текущего слайда
+            nextSlide.find('.slider__header .slider__image').css('height', '80%'); // Начальное состояние изображения
 
-            // Добавляем последний элемент в начало
-            const firstClone = document.createElement('img');
-            firstClone.src = '/src/assets/images/svg/custom-slider/' + lastImage.image;
-            firstClone.alt = lastImage.alt;
-            slide.append(firstClone);
-
-            // Добавляем все основные элементы
-            sliderData.forEach(imageData => {
-               const img = document.createElement('img');
-               img.src = '/src/assets/images/svg/custom-slider/' + imageData.image;
-               img.alt = imageData.alt;
-               slide.append(img);
+            $sliderContainer.animate({ left: newLeft + "px" }, timeAnimate, function () {
+               if (parseInt($sliderContainer.css("left")) <= -(slideCount + 1) * slideWidth) {
+                  $sliderContainer.css("left", -slideWidth + "px");
+               }
+               updateFirstVisibleSlide();
+               isAnimating = false;
             });
 
-            // Добавляем первый элемент в конец
-            const lastClone = document.createElement('img');
-            lastClone.src = '/src/assets/images/svg/custom-slider/' + firstImage.image;
-            lastClone.alt = firstImage.alt;
-            slide.append(lastClone);
-
-            slide.style.transform = `translateX(${-slideWidth}px)`;
-         });
-      };
-
-      const moveSlider = (direction) => {
-         if (isAnimating) return; // Не выполнять, если идет анимация
-         isAnimating = true;
-
-         if (direction === 'next') {
-            activeImage++;
-         } else if (direction === 'prev') {
-            activeImage--;
+            nextSlide.find('.slider__header .slider__image').animate({ height: '100%' }, timeAnimate); // Плавное изменение height
          }
-
-         sliderPlaces.forEach(slide => {
-            slide.style.transition = 'transform 1s ease';
-            slide.style.transform = `translateX(${-(activeImage + 1) * slideWidth}px)`;
-         });
-
-         sliderPlaces.forEach(slide => {
-            slide.addEventListener('transitionend', () => {
-               if (activeImage >= maxLength) {
-                  activeImage = 0;
-                  sliderPlaces.forEach(slide => {
-                     slide.style.transition = 'none';
-                     slide.style.transform = `translateX(${-slideWidth}px)`;
-                  });
-               } else if (activeImage < 0) {
-                  activeImage = maxLength - 1;
-                  sliderPlaces.forEach(slide => {
-                     slide.style.transition = 'none';
-                     slide.style.transform = `translateX(${-(maxLength) * slideWidth}px)`;
-                  });
-               }
-               isAnimating = false; // Сброс флага по окончании анимации
-            }, { once: true });
-         });
-      };
-
-      document.querySelector('.next-button').addEventListener('click', () => moveSlider('next'));
-      document.querySelector('.prev-button').addEventListener('click', () => moveSlider('prev'));
-
-      initSlider();
+      });
    });
 
 </script>
-
-
-<!--<section class="team-slider container mt-160px">
-   <h3 class="team-slider__title title-page-h3">Команда</h3>
-
-   <div class="sliders">
-      <div class="slider" id="slider1"></div>
-      <div class="slider" id="slider2"></div>
-      <div class="slider" id="slider3"></div>
-      <div class="slider" id="slider4"></div>
-   </div>
-   <div class="controls">
-      <button id="prevAll">Предыдущий</button>
-      <button id="nextAll">Следующий</button>
-   </div>
-</section>
-
-<style>
-   .sliders {
-      display: flex;
-      justify-content: space-around;
-      margin: 20px;
-   }
-
-   .slider {
-      width: 200px;
-      height: 200px;
-      overflow: hidden;
-      border: 1px solid #ccc;
-      position: relative;
-   }
-
-   .slider img {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      transition: left 0.5s ease;
-   }
-
-   .slider img.active {
-      left: 0;
-   }
-
-   .slider img.next {
-      left: 100%;
-   }
-
-   .slider img.prev {
-      left: -100%;
-   }
-
-   .controls {
-      text-align: center;
-      margin-top: 20px;
-   }
-
-   button {
-      padding: 10px 20px;
-      margin: 5px;
-      font-size: 16px;
-   }
-</style>
-
-<script>
-   const slidesTeam = [
-      { id: '1', image: "1-zoomlin.svg", alt: "Zoomlin Logo" },
-      { id: '2', image: "2-translift.svg", alt: "Translift Logo" },
-      { id: '3', image: "3-medizina.svg", alt: "Medizina Logo" },
-      { id: '4', image: "4-jood.svg", alt: "Jood Logo" },
-      { id: '5', image: "5-agrolider.svg", alt: "Agrolider Logo" },
-      { id: '6', image: "6-agrodoc.svg", alt: "Agrodoc Logo" },
-      { id: '7', image: "7-rustorg.svg", alt: "Rustorg Logo" },
-      { id: '8', image: "8-pkuspt.svg", alt: "Pkuspt Logo" },
-      { id: '9', image: "9-UralSpecTrans.svg", alt: "UralSpecTrans Logo" },
-      { id: '10', image: "10-geocentr.svg", alt: "geocentr Logo" },
-      { id: '11', image: "11-LBR.svg", alt: "LBR Logo" },
-      { id: '12', image: "12-gorci.svg", alt: "gorci Logo" },
-      { id: '13', image: "13-pесо.svg", alt: "pесо Logo" },
-      { id: '14', image: "14-ingostrah.svg", alt: "ingostrah Logo" },
-      { id: '15', image: "15-jugiria.svg", alt: "jugiria Logo" },
-      { id: '16', image: "16-sogaz.svg", alt: "sogaz Logo" },
-      { id: '17', image: "17-energogrant.svg", alt: "energogrant Logo" },
-      { id: '18', image: "18-bsk.svg", alt: "bsk Logo" },
-      { id: '19', image: "19-alfa.svg", alt: "alfa Logo" },
-      { id: '20', image: "20-mezcentr.svg", alt: "mezcentr Logo" }
-   ];
-
-   const slidersData = [
-      slidesTeam.filter((_, index) => index % 4 === 0),
-      slidesTeam.filter((_, index) => index % 4 === 1),
-      slidesTeam.filter((_, index) => index % 4 === 2),
-      slidesTeam.filter((_, index) => index % 4 === 3)
-   ];
-
-   $(document).ready(function () {
-
-
-      slidersData.forEach((sliderData, index) => {
-         const slider = $(`#slider${index + 1}`);
-         sliderData.forEach((slide, slideIndex) => {
-            const imgClass = slideIndex === 0 ? 'active' : 'next';
-            slider.append(`<img src="/src/assets/images/svg/custom-slider/${slide.image}" alt="${slide.alt}" class="slide ${imgClass}">`);
-         });
-      });
-
-
-      function changeSlide(slider, direction) {
-         const active = slider.find('.active');
-         let newActive, newClass;
-
-         if (direction === 'next') {
-            newActive = active.next('img').length ? active.next('img') : slider.find('img').first();
-            newClass = 'next';
-         } else {
-            newActive = active.prev('img').length ? active.prev('img') : slider.find('img').last();
-            newClass = 'prev';
-         }
-
-         active.removeClass('active').addClass(direction === 'next' ? 'prev' : 'next');
-         newActive.removeClass(newClass).addClass('active');
-      }
-
-      $('#prevAll').click(function () {
-         $('.slider').each(function () {
-            changeSlide($(this), 'prev');
-         });
-      });
-
-      $('#nextAll').click(function () {
-         $('.slider').each(function () {
-            changeSlide($(this), 'next');
-         });
-      });
-   });
-</script>-->
