@@ -1,6 +1,6 @@
 <!--<script src="src/components/page/about-company/team-slider/index.js"></script>-->
 
-<!--<link rel="stylesheet" href="src/components/page/about-company/team-slider/index.css" />-->
+<link rel="stylesheet" href="src/components/page/about-company/team-slider/index.css" />
 
 <section class="team-slider container mt-160px">
    <h3 class="team-slider__title title-page-h3">Команда</h3>
@@ -20,7 +20,8 @@
       </div>
       <div class="all-sliders">
          <div class="custom-slider">
-            <div id="custom-slider__line--1" class="custom-slider__line"></div>
+            <div id="custom-slider__line--1" class="custom-slider__line">
+            </div>
          </div>
          <div class="custom-slider">
             <div id="custom-slider__line--2" class="custom-slider__line"></div>
@@ -67,27 +68,27 @@
 <script>
    document.addEventListener('DOMContentLoaded', () => {
       const images = [
-         { id: 'home-partner-1', image: "1-zoomlin.svg", alt: "Zoomlin Logo" },
-         { id: 'home-partner-2', image: "2-translift.svg", alt: "Translift Logo" },
-         { id: 'home-partner-3', image: "3-medizina.svg", alt: "Medizina Logo" },
-         { id: 'home-partner-4', image: "4-jood.svg", alt: "Jood Logo" },
-         { id: 'home-partner-5', image: "5-agrolider.svg", alt: "Agrolider Logo" },
-         { id: 'home-partner-6', image: "6-agrodoc.svg", alt: "Agrodoc Logo" },
-         { id: 'home-partner-7', image: "7-rustorg.svg", alt: "Rustorg Logo" },
-         { id: 'home-partner-8', image: "8-pkuspt.svg", alt: "Pkuspt Logo" },
-         { id: 'home-partner-9', image: "9-UralSpecTrans.svg", alt: "UralSpecTrans Logo" },
-         { id: 'home-partner-10', image: "10-geocentr.svg", alt: "geocentr Logo" },
-         { id: 'home-partner-11', image: "11-LBR.svg", alt: "LBR Logo" },
-         { id: 'home-partner-12', image: "12-gorci.svg", alt: "gorci Logo" },
-         { id: 'home-partner-13', image: "13-pесо.svg", alt: "pесо Logo" },
-         { id: 'home-partner-14', image: "14-ingostrah.svg", alt: "ingostrah Logo" },
-         { id: 'home-partner-15', image: "15-jugiria.svg", alt: "jugiria Logo" },
-         { id: 'home-partner-16', image: "16-sogaz.svg", alt: "sogaz Logo" },
-         { id: 'home-partner-17', image: "17-energogrant.svg", alt: "energogrant Logo" },
-         { id: 'home-partner-18', image: "18-bsk.svg", alt: "bsk Logo" },
-         { id: 'home-partner-19', image: "19-alfa.svg", alt: "alfa Logo" },
-         { id: 'home-partner-20', image: "20-mezcentr.svg", alt: "mezcentr Logo" },
-         { id: 'home-partner-21', image: "21-logo.svg", alt: "mezcentr Logo" }
+         { id: 'home-partner-01', text: 'home-partner-01', image: "1-zoomlin.svg", alt: "Zoomlin Logo" },
+         { id: 'home-partner-02', text: 'home-partner-02', image: "2-translift.svg", alt: "Translift Logo" },
+         { id: 'home-partner-03', text: 'home-partner-03', image: "3-medizina.svg", alt: "Medizina Logo" },
+         { id: 'home-partner-04', text: 'home-partner-04', image: "4-jood.svg", alt: "Jood Logo" },
+         { id: 'home-partner-05', text: 'home-partner-05', image: "5-agrolider.svg", alt: "Agrolider Logo" },
+         { id: 'home-partner-06', text: 'home-partner-06', image: "6-agrodoc.svg", alt: "Agrodoc Logo" },
+         { id: 'home-partner-07', text: 'home-partner-07', image: "7-rustorg.svg", alt: "Rustorg Logo" },
+         { id: 'home-partner-08', text: 'home-partner-08', image: "8-pkuspt.svg", alt: "Pkuspt Logo" },
+         { id: 'home-partner-09', text: 'home-partner-09', image: "9-UralSpecTrans.svg", alt: "UralSpecTrans Logo" },
+         { id: 'home-partner-10', text: 'home-partner-10', image: "10-geocentr.svg", alt: "geocentr Logo" },
+         { id: 'home-partner-11', text: 'home-partner-11', image: "11-LBR.svg", alt: "LBR Logo" },
+         { id: 'home-partner-12', text: 'home-partner-12', image: "12-gorci.svg", alt: "gorci Logo" },
+         { id: 'home-partner-13', text: 'home-partner-13', image: "13-pесо.svg", alt: "pесо Logo" },
+         { id: 'home-partner-14', text: 'home-partner-14', image: "14-ingostrah.svg", alt: "ingostrah Logo" },
+         { id: 'home-partner-15', text: 'home-partner-15', image: "15-jugiria.svg", alt: "jugiria Logo" },
+         { id: 'home-partner-16', text: 'home-partner-16', image: "16-sogaz.svg", alt: "sogaz Logo" },
+         { id: 'home-partner-17', text: 'home-partner-17', image: "17-energogrant.svg", alt: "energogrant Logo" },
+         { id: 'home-partner-18', text: 'home-partner-18', image: "18-bsk.svg", alt: "bsk Logo" },
+         { id: 'home-partner-19', text: 'home-partner-19', image: "19-alfa.svg", alt: "alfa Logo" },
+         { id: 'home-partner-20', text: 'home-partner-20', image: "20-mezcentr.svg", alt: "mezcentr Logo" },
+         { id: 'home-partner-21', text: 'home-partner-21', image: "21-logo.svg", alt: "mezcentr Logo" }
       ];
 
       const slidersData = [
@@ -181,6 +182,7 @@
 
       initSlider();
    });
+
 </script>
 
 

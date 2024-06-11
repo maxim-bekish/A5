@@ -23,6 +23,10 @@
    cursor: pointer;
    color: var(--text-gray-dark);
    font-family: var(--font-inter);
+}
+
+.leasing-programs__list-item:hover {
+   color: var(--text-blue);
 
 }
 
