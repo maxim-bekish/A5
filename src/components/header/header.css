@@ -93,10 +93,6 @@ header {
    color: var(--text-blue);
 }
 
-.contacts-header button a:hover,
-.contacts-header button p:hover {
-   text-decoration: underline;
-}
 
 
 /*------select-custom------*/
@@ -108,21 +104,20 @@ header {
 
 
 .select-program {
-   max-width: 171px;
+   width: 171px;
 }
 
 .select-leasing,
 .select-clients {
-   max-width: 96px;
+   width: 96px;
 }
 
-.active .select-head .hover {
-   display: inline;
+.select-head .svg-item {
+   stroke: #515151;
 }
 
-.active .select-head .default,
-.select-head .hover {
-   display: none;
+.active .select-head .svg-item {
+   stroke: #0045B2;
 }
 
 .select-head {
@@ -136,15 +131,13 @@ header {
    width: 100%;
 }
 
-.select-head:hover p {
+.select-head:hover p,
+.active .select-head p,
+.nav .nav__item:hover {
    color: rgba(0, 69, 178, 1) !important;
-   text-decoration: underline;
 }
 
-.active .select-head p {
-   color: rgba(0, 69, 178, 1) !important;
-   text-decoration: underline;
-}
+
 
 .select-list {
    background: #fff;
@@ -170,7 +163,6 @@ header {
 
 .select-list .select-item:hover {
    color: rgba(0, 69, 178, 1);
-   text-decoration: underline;
 }
 
 
@@ -239,6 +231,16 @@ body .js-flex {
    display: block;
 }
 
+.burger-menu-network a:hover .svg_items {
+   fill: #0045B2;
+
+}
+
+.burger-menu-network .svg_items {
+   fill: #fff;
+
+}
+
 .burger-menu-network a:hover {
    background-color: #fff;
 }
@@ -262,33 +264,8 @@ body .js-flex {
    color: rgba(255, 255, 255, 1);
 }
 
-.item-box {
-   position: relative;
-   /* Нужно для позиционирования псевдоэлемента */
-}
-
-.item-box .item-content {
-   text-decoration: none;
-   position: relative;
-   /* Нужно для позиционирования псевдоэлемента */
-}
-
-.item-box .item-content::after {
-   content: '';
-   position: absolute;
-   width: 0;
-   height: 1px;
-   /* Толщина подчеркивания */
-   bottom: 0;
-   left: 0;
-   background-color: #fff;
-   /* Цвет подчеркивания */
-   transition: width 1s;
-}
-
-.item-box .item-content:hover::after {
-   width: 100%;
-   /* Подчеркивание растягивается до полной ширины */
+.item-title a {
+   color: #fff;
 }
 
 .burger-menu .button-closed {

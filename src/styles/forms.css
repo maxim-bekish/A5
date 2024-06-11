@@ -72,7 +72,7 @@ form .form-blue {
    display: block;
    opacity: 1;
    position: absolute;
-   top: 0;
+   top: 15px;
    left: 0;
    font-family: Inter Tight;
    font-size: 16px;
@@ -84,12 +84,14 @@ form .form-blue {
 
 /*hover placeholder*/
 .form-group:hover label {
+
    color: rgba(255, 255, 255, 1);
 }
 
 /* placeholder focus */
 .form-group input:focus~label {
    font-size: 12px;
+   top:0px;
    line-height: 14.56px;
    color: rgba(178, 199, 232, 1);
    transition: all 0.2s linear;

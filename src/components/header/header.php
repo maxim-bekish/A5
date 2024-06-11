@@ -76,19 +76,14 @@ function listHeader($data)
   ?>
   <div class="select-head ">
     <p><?php echo htmlspecialchars($data->title); ?></p>
-    <!--это дефолтное состояние свг-->
-    <svg class="pointer rt0 default" width="14" height="9" viewBox="0 0 14 9">
+    <svg class="pointer rt0 svg-item" width="14" height="9" viewBox="0 0 14 9" fill="none">
       <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
-    </svg>
-    <!--это при ховере свг-->
-    <svg class="pointer rt0 hover" width="14" height="9" viewBox="0 0 14 9">
-      <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down-blue"></use>
     </svg>
   </div>
   <ul class="select-list" style="display: none">
     <?php foreach ($data->list as $item): ?>
-      <li>
-        <a class="select-item"
+      <li class="underline-box">
+        <a class="underline-el underline-el-blue select-item"
           href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
       </li>
     <?php endforeach; ?>
@@ -96,7 +91,6 @@ function listHeader($data)
   <?php
 }
 ?>
-
 
 <link rel="stylesheet" href="/src/components/header/header.css">
 <script src="/src/components/header/header.js"></script>
@@ -118,18 +112,22 @@ function listHeader($data)
     </div>
     <div class="nav mt-21">
       <div class="select select-clients"> <?php listHeader($headerListClients); ?> </div>
-      <a href="#">Программы лизинга</a>
-      <a href="#home-calculator">Калькулятор</a>
+      <div class="underline-box">
+        <a class="nav__item underline-el underline-el-blue" href="#">Программы лизинга</a>
+      </div>
+      <div class="underline-box">
+        <a class="nav__item underline-el underline-el-blue" href="#home-calculator">Калькулятор</a>
+      </div>
     </div>
     <div class="contacts-header mt-21">
-      <button>
-        <a href="tel:+73452999999">7 (3452) 99 99 99</a>
+      <button class="underline-box">
+        <a class="underline-el underline-el-blue" href="tel:+73452999999">7 (3452) 99 99 99</a>
       </button>
-      <button type="button" class="toggle-button-ask">
-        <p> Задать вопрос</p>
+      <button type="button" class="toggle-button-ask underline-box">
+        <p class="underline-el underline-el-blue"> Задать вопрос</p>
       </button>
-      <button type="button" class="toggle-button">
-        <p>Контакты</p>
+      <button type="button" class="toggle-button underline-box">
+        <p class="underline-el underline-el-blue">Контакты</p>
       </button>
     </div>
   </section>
@@ -142,85 +140,86 @@ function listHeader($data)
     <div class="burger-menu-box">
       <ul>
         <h5 class="item-title">Главная страница</h5>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Лизинговый калькулятор</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Лизинговый калькулятор</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Партнеры</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Партнеры</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Этапы сделки</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Этапы сделки</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Контакты</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Контакты</a>
         </li>
       </ul>
       <ul>
         <h5 class="item-title">О лизинге</h5>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Общие условия</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Общие условия</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Субсидии малому <br> и среднему бизнесу</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Субсидии малому <br> и среднему
+            бизнесу</a>
         </li>
       </ul>
       <ul>
         <h5 class="item-title">Клиентам</h5>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">О компании</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">О компании</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Клиенты и партнеры</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Клиенты и партнеры</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Документы</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Документы</a>
         </li>
       </ul>
       <ul>
         <h5 class="item-title">Услуги лизинга</h5>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Легковой автотранспорт</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Легковой автотранспорт</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Грузовой автотранспорт</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Грузовой автотранспорт</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Спецтехника</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Спецтехника</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Оборудование</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Оборудование</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Медицинское оборудование</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Медицинское оборудование</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Ресторанное оборудование</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Ресторанное оборудование</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Б/У продукция</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Б/У продукция</a>
         </li>
-        <li class="item-box">
-          <a class="item-content" href="#" target="_blank">Недвижимость</a>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank">Недвижимость</a>
         </li>
       </ul>
       <ul>
-        <h5 class="item-title">Каталог изьятой техники</h5>
+        <h5 class="item-title underline-box">
+          <a class="underline-el underline-el-white" href="#" target="_blank" rel="noopener noreferrer">
+            Каталог изьятой техники
+          </a>
+        </h5>
       </ul>
     </div>
     <div class="burger-menu-box ">
-      <div class="item-box">
-        <a class="burger-tel item-content" href="tel:+73452999999">7 (3452) 99-99-99</a>
+      <div class="underline-box">
+        <a class="burger-tel underline-el underline-el-white" href="tel:+73452999999">7 (3452) 99-99-99</a>
       </div>
       <div class="burger-menu-network">
         <a>
-          <svg class="hover" width="20" height="16" viewBox="0 0 20 16">
-            <use href="<?php echo SVG_PATH; ?>icons.svg#icon-telegram-hover"></use>
-          </svg>
-          <svg class="no-hover" width="20" height="16" viewBox="0 0 20 16">
+          <svg class="svg_items" width="20" height="16" viewBox="0 0 20 16">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-telegram"></use>
           </svg>
         </a>
-
         <a>
           <svg class="hover" width="20" height="19" viewBox="0 0 20 19">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-viber-hover"></use>
@@ -228,14 +227,9 @@ function listHeader($data)
           <svg class="no-hover" width="20" height="19" viewBox="0 0 20 19">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-viber"></use>
           </svg>
-
         </a>
-
         <a>
-          <svg class="hover" width="22" height="12" viewBox="0 0 22 12">
-            <use href="<?php echo SVG_PATH; ?>icons.svg#icon-VK-hover"></use>
-          </svg>
-          <svg class="no-hover" width="22" height="12" viewBox="0 0 22 12">
+          <svg class="svg_items" width="22" height="12" viewBox="0 0 22 12">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-VK"></use>
           </svg>
         </a>

@@ -20,6 +20,10 @@ body::-webkit-scrollbar {
    margin-top: 160px;
 }
 
+a {
+   text-decoration: none;
+}
+
 .title-page-h3 {
    font-family: var(--font-inter);
    font-size: 70px;

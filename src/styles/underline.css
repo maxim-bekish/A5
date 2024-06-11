@@ -1,0 +1,36 @@
+.underline-box {
+   position: relative;
+   /* Нужно для позиционирования псевдоэлемента */
+}
+
+.underline-box .underline-el {
+   text-decoration: none;
+   position: relative;
+   /* Нужно для позиционирования псевдоэлемента */
+}
+
+.underline-box .underline-el::after {
+   content: '';
+   position: absolute;
+   width: 0;
+   height: 1px;
+   /* Толщина подчеркивания */
+   bottom: 0;
+   left: 0;
+
+   /* Цвет подчеркивания */
+   transition: width 500ms;
+}
+
+.underline-box .underline-el-white::after {
+   background-color: white;
+}
+
+.underline-box .underline-el-blue::after {
+   background-color: var(--text-blue);
+}
+
+.underline-box .underline-el:hover::after {
+   width: 100%;
+   /* Подчеркивание растягивается до полной ширины */
+}

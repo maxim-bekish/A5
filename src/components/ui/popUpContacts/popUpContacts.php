@@ -26,8 +26,8 @@
             </label>
          </div>
       </div>
-      <div class="popup-contacts-tel max-w-462px">
-         <a href="tel:+73452595069">7 (3452) 59-50-69</a>
+      <div class="underline-box popup-contacts-tel max-w-462px">
+         <a class="underline-el underline-el-blue" href="tel:+73452595069">7 (3452) 59-50-69</a>
       </div>
       <div class="popup-contacts-contacts max-w-462px">
          <div class="popup-contacts-contacts-office">
@@ -37,13 +37,21 @@
                корпус 1/7, офис 3/2
             </p>
             <p class="working-hours">9:00 — 18:00</p>
-            <a href="mailto:artfin-t@yandex.ru">artfin-t@yandex.ru</a>
+            <div class="underline-box">
+               <a class="underline-el underline-el-blue" href="mailto:artfin-t@yandex.ru">artfin-t@yandex.ru</a>
+            </div>
          </div>
          <div class="popup-contacts-contacts-network">
             <h5>Соцсети</h5>
-            <a href="#">Telegram</a>
-            <a href="#">Vkontakte</a>
-            <a href="#">WhatsAPP</a>
+            <div class="underline-box">
+               <a class="underline-el underline-el-blue" href="#">Telegram</a>
+            </div>
+            <div class="underline-box">
+               <a class="underline-el underline-el-blue" href="#">Vkontakte</a>
+            </div>
+            <div class="underline-box">
+               <a class="underline-el underline-el-blue" href="#">WhatsAPP</a>
+            </div>
          </div>
       </div>
       <div class="popup-contacts-map">
@@ -54,14 +62,14 @@
             Подпишись, чтобы быть в курсе последних новостей А5
          </p>
          <form class="js-myForm-popup-contacts">
-            <div class="popup-contacts-newsletter-form" >
-               <div class="form-items-100 form-gray">
+            <div class="popup-contacts-newsletter-form">
+               <div class="form-items-100 form-gray input">
                   <div class="form-group ">
                      <input name="email" id="email" type="email" placeholder="" required>
                      <label for="email">Email</label>
                   </div>
                </div>
-               <button class="button button-blue js-submitBtn-popup-contacts">
+               <button class="button button--blue js-submitBtn-popup-contacts">
                   Подписаться
                </button>
             </div>
@@ -74,7 +82,7 @@
                </label>
             </div>
 
-            
+
          </form>
       </div>
    </div>

@@ -21,16 +21,16 @@
          </p>
       </div>
       <div class="popup-ask-buttons">
-         <button type="button" class="button button-outline">
+         <button type="button" class="button button--outline">
             Консультация по лизингу
          </button>
-         <button type="button" class="button button-outline">
+         <button type="button" class="button button--outline">
             Бухгалтерия
          </button>
-         <button type="button" class="button button-outline">
+         <button type="button" class="button button--outline">
             Получить коммерческое предложение
          </button>
-         <button type="button" class="button button-outline">
+         <button type="button" class="button button--outline">
             Стать партнером
          </button>
       </div>
@@ -56,7 +56,7 @@
                   Согласен с политикой конфиденциальности
                </label>
             </div>
-            <button class="button button-blue js-submitBtn-popup-ask">
+            <button class="button button--blue js-submitBtn-popup-ask">
                Отправить
             </button>
          </div>

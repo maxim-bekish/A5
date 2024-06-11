@@ -19,7 +19,7 @@
    <link rel="stylesheet" href="src/styles/commonStyle.css">
    <link rel="stylesheet" href="src/styles/buttons.css">
    <link rel="stylesheet" href="src/styles/forms.css">
-   <link rel="stylesheet" href="src/styles/forms.css">
+   <link rel="stylesheet" href="src/styles/underline.css">
    <script src="index.js"></script>
 </head>
 

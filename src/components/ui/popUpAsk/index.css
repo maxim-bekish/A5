@@ -25,6 +25,10 @@
    color: rgba(81, 81, 81, 1);
 }
 
+.popup-ask .popup-ask-info .text-html {
+   margin: 15px 0 40px 0;
+}
+
 .popup-ask-tel a {
    font-family: Inter Tight;
    font-size: 50px;
@@ -97,6 +101,19 @@
    flex-direction: column;
 }
 
+.js-myForm-popup-ask .popup-ask-newsletter-form {
+   margin: 80px 0 0 0;
+}
+
+.popup-ask-newsletter-form .form-items-100 {
+   margin: 0;
+   gap: 0;
+}
+
+.form-items-100 .form-group:nth-child(2) {
+   margin: 30px 0 60px 0;
+}
+
 .popup-ask-newsletter-form input::placeholder {
    font-weight: 400;
    color: rgba(151, 151, 151, 1);
@@ -114,4 +131,12 @@
    display: flex;
    flex-direction: column;
    gap: 20px;
+}
+
+.popup-ask-buttons .button {
+   height: 50px;
+   font-size: 16px;
+   line-height: 19.36px;
+   padding: 0;
+
 }
