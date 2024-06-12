@@ -27,15 +27,14 @@
       </div>
       <div class="clients-partners-program__content">
          <?php
-         include 'src/components/page/clients/partners-program/index.php';
+         //include 'src/components/page/clients/partners-program/index.php';
+         include 'src/components/page/clients/client-documents/index.php';
          ?>
       </div>
    </section>
    <?php
-   include 'src/components/page/clients/partners-items/index.php';
-   ?>
-   <?php
-   include 'src/components/page/clients/partners/index.php';
+   //include 'src/components/page/clients/partners-items/index.php';
+   //include 'src/components/page/clients/partners/index.php';
    ?>
 </main>
 

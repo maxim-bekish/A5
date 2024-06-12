@@ -96,6 +96,40 @@ img {
    display: block;
 }
 
+
+
+
+
+.view:hover .view__default,
+.view__hover {
+   display: none;
+}
+
+.dowland:hover .dowland__default,
+.dowland__hover {
+   display: none;
+}
+
+.view:hover .view__hover {
+   display: block;
+
+}
+
+.dowland:hover .dowland__hover {
+   display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width:768px) {
    body {
       max-width: 768px;
