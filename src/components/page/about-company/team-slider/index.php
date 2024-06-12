@@ -82,12 +82,12 @@ $slides = [
 
 
 <style>
-   .slider__main {
+   .team-slider .slider__main {
       display: flex;
       flex-direction: column;
    }
 
-   .slider__slide {
+   .team-slider .slider__slide {
       display: flex;
       flex-direction: column;
       position: relative;
@@ -97,7 +97,7 @@ $slides = [
       margin-right: 40px;
    }
 
-   .slider__buttons {
+   .team-slider .slider__buttons {
       display: flex;
       gap: 20px;
       max-width: 120px;
@@ -107,12 +107,12 @@ $slides = [
       left: 600px;
    }
 
-   .slider__button {
+   .team-slider .slider__button {
       width: 50px;
       height: 50px;
    }
 
-   .slider__button--next {
+   .team-slider .slider__button--next {
       transform: rotate(180deg);
    }
 
@@ -120,26 +120,26 @@ $slides = [
       position: relative;
    }
 
-   .slider__box {
+   .team-slider .slider__box {
       position: relative;
       height: 560px;
       width: 100%;
       overflow: hidden;
    }
 
-   .slider__container {
+   .team-slider .slider__container {
       position: absolute;
       top: 0px;
       display: flex;
    }
 
-   .slider__header {
+   .team-slider .slider__header {
       position: relative;
       width: 100%;
       height: 100%;
    }
 
-   .slider__title {
+   .team-slider .slider__title {
       font-family: var(--font-inter);
       font-size: 24px;
       font-weight: 500;
@@ -147,7 +147,7 @@ $slides = [
       color: rgba(81, 81, 81, 1);
    }
 
-   .slider__image {
+   .team-slider .slider__image {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -156,7 +156,7 @@ $slides = [
       left: 0px;
    }
 
-   .slider__text:first-child {
+   .team-slider .slider__text:first-child {
       font-size: 30px;
       font-weight: 400;
       margin: 15px 0 10px 0;
@@ -164,14 +164,14 @@ $slides = [
       color: rgba(81, 81, 81, 1);
    }
 
-   .slider__text:last-child {
+   .team-slider .slider__text:last-child {
       font-size: 20px;
       font-weight: 400;
       line-height: 20px;
       color: rgba(151, 151, 151, 1);
    }
 
-   .slider__link {
+   .team-slider .slider__link {
       bottom: 20px;
       right: 20px;
       position: absolute;
@@ -179,13 +179,13 @@ $slides = [
 
    @media(max-width:768px) {}
 
-   .slider__icon {
+   .team-slider .slider__icon {
       fill: #fff;
       stroke: #0045B2;
       transition: all 200ms ease;
    }
 
-   .slider__button:hover .slider__icon {
+   .team-slider .slider__button:hover .slider__icon {
       fill: #0045B2;
       stroke: #fff;
       --stroke-width: 0;

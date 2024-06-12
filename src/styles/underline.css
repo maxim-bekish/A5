@@ -22,10 +22,12 @@
    transition: width 500ms;
 }
 
+/* цвет линии */
 .underline-box .underline-el-white::after {
    background-color: white;
 }
 
+/* цвет линии */
 .underline-box .underline-el-blue::after {
    background-color: var(--text-blue);
 }

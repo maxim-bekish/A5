@@ -79,8 +79,11 @@ $slides = [
                      <?php endif; ?>
                   </div>
                   <a class="slider__link" target="_blank" href="<?php echo htmlspecialchars($slide['href']); ?>">
-                     <svg class="slider__pointer" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                     <svg class="slider__pointer" width="50" height="50" viewBox="0 0 50 50" fill="none">
                         <use href="<?php echo SVG_PATH; ?>icons.svg#icon-eye"></use>
+                     </svg>
+                     <svg class="slider__pointer--hover" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                        <use href="<?php echo SVG_PATH; ?>icons.svg#icon-eye-hover"></use>
                      </svg>
                   </a>
                </div>
@@ -91,6 +94,15 @@ $slides = [
 </section>
 
 <style>
+   .slider__pointer--hover,
+   .slider__link:hover .slider__pointer {
+      display: none;
+   }
+
+   .slider__link:hover .slider__pointer--hover {
+      display: block;
+   }
+
    .thanks-box {
       display: flex;
       flex-direction: column;
@@ -155,7 +167,7 @@ $slides = [
    .slider__main {
       height: 100%;
       display: flex;
-      justify-content: center; 
+      justify-content: center;
       align-items: center;
    }
 
@@ -185,6 +197,8 @@ $slides = [
    }
 
    .slider__link {
+      height: 50px;
+      width: 50px;
       bottom: 20px;
       right: 20px;
       position: absolute;
