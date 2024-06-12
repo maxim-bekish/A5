@@ -1,110 +1,83 @@
-<!--<link rel="stylesheet" href="/src/components/page/home/home-partners/index.css">
-<script src="/src/components/page/home/home-partners/index.js"></script>-->
-
 <?php
 $slides = array(
    array(
       "image" => "1-zoomlin.svg",
       "alt" => "Zoomlin Logo",
-      "text" => "Zoomlin Logo",
-
    ),
    array(
       "image" => "2-translift.svg",
       "alt" => "Translift Logo",
-      "text" => "Translift Logo"
    ),
    array(
       "image" => "3-medizina.svg",
       "alt" => "Medizina Logo",
-      "text" => "Medizina Logo"
    ),
    array(
       "image" => "4-jood.svg",
       "alt" => "Jood Logo",
-      "text" => "Jood Logo"
    ),
-
    array(
       "image" => "5-agrolider.svg",
       "alt" => "Agrolider Logo",
-      "text" => "Agrolider Logo"
    ),
    array(
       "image" => "6-agrodoc.svg",
       "alt" => "Agrodoc Logo",
-      "text" => "Agrodoc Logo"
    ),
    array(
       "image" => "7-rustorg.svg",
       "alt" => "Rustorg Logo",
-      "text" => "Rustorg Logo"
    ),
    array(
       "image" => "8-pkuspt.svg",
       "alt" => "Pkuspt Logo",
-      "text" => "Pkuspt Logo"
    ),
    array(
       "image" => "9-UralSpecTrans.svg",
       "alt" => "UralSpecTrans Logo",
-      "text" => "UralSpecTrans Logo"
    ),
    array(
       "image" => "10-geocentr.svg",
       "alt" => "geocentr Logo",
-      "text" => "geocentr Logo"
    ),
    array(
       "image" => "11-LBR.svg",
       "alt" => "LBR Logo",
-      "text" => "LBR Logo"
    ),
    array(
       "image" => "12-gorci.svg",
       "alt" => "gorci Logo",
-      "text" => "gorci Logo"
    ),
-
    array(
       "image" => "13-pесо.svg",
       "alt" => "pесо Logo",
-      "text" => "pесо Logo"
    ),
    array(
       "image" => "14-ingostrah.svg",
       "alt" => "ingostrah Logo",
-      "text" => "ingostrah Logo"
    ),
    array(
       "image" => "15-jugiria.svg",
-      "alt" => "jugiria Logo",
-      "text" => "jugiria Logo"
    ),
    array(
       "image" => "16-sogaz.svg",
       "alt" => "sogaz Logo",
-      "text" => "sogaz Logo"
    ),
    array(
       "image" => "17-energogrant.svg",
       "alt" => "energogrant Logo",
-      "text" => "energogrant Logo"
    ),
    array(
       "image" => "18-bsk.svg",
       "alt" => "bsk Logo",
-      "text" => "bsk Logo"
    ),
    array(
       "image" => "19-alfa.svg",
       "alt" => "alfa Logo",
-      "text" => "alfa Logo"
    ),
    array(
       "image" => "20-mezcentr.svg",
       "alt" => "mezcentr Logo",
-      "text" => "mezcentr Logo"
    ),
 );
 ?>
@@ -178,7 +151,6 @@ $slides = array(
                   echo '<div class="slide-item">';
                   echo '<img src="' . SVG_PATH . 'custom-slider/' . $slide["image"] . '" alt="' . $slide["alt"] . '">';
                   // Выводим текст в теге <p>
-                  echo '<p>' . $slide["text"] . '</p>';
                   echo '</div>';
                }
                // Заканчиваем блок слайда

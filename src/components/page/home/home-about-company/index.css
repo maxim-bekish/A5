@@ -72,7 +72,7 @@
 
 .about-home__list,
 .about-home__content-list>div {
-   width: calc(50% - 10px);
+   width: calc(50% - 20px);
 }
 
 .about-home__text {

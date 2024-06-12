@@ -1,5 +1,6 @@
 const listContent = [
     {
+        title: 'Легковой автотранспорт',
         term: '1 — 5 лет',
         prepaid: 'от 5%',
         info: 'Легковые автомобили в лизинг для юридических лиц и ИП.',
@@ -8,6 +9,7 @@ const listContent = [
         id: 1
     },
     {
+        title: 'Грузовой автотранспорт',
         term: '1 — 5 лет',
         prepaid: 'от 5%',
         info: 'Грузовой автотранспорт в лизинг под любые запросы бизнеса.',
@@ -16,6 +18,7 @@ const listContent = [
         id: 2
     },
     {
+        title: 'Спецтехника',
         term: '1 — 5 лет',
         prepaid: 'от 5%',
         info: 'Спецтехника в лизинг поможет развить бизнес и расширить сферу влияния.',
@@ -24,14 +27,16 @@ const listContent = [
         id: 3
     },
     {
+        title: 'Оборудование',
         term: '1 — 5 лет',
-        prepaid: 'от 5%',
+        prepaid: 'от 20%',
         info: 'Оборудование в лизинг — действенный способ модернизации производства.',
         link: '#',
         img: '4-photo.jpg',
         id: 4
     },
     {
+        title: 'Медицинское оборудование',
         term: '12 — 60 мес',
         prepaid: 'от 20%',
         info: 'Медицинское оборудование в лизинг — лёгкий способ усовершенствования оказываемых услуг.',
@@ -40,6 +45,7 @@ const listContent = [
         id: 5
     },
     {
+        title: 'Ресторанное оборудование',
         term: '1 — 5 лет',
         prepaid: 'от 20%',
         info: 'Ресторанное оборудование в лизинг ускорит производительность.',
@@ -48,6 +54,7 @@ const listContent = [
         id: 6
     },
     {
+        title: 'Б/У продукция',
         term: '1 — 3 года',
         prepaid: 'от 20%',
         info: 'Автомобили и оборудование с пробегом до 5 лет в лизинг в хорошем состоянии, выгоднее на 30–40%, чем новые.',
@@ -56,6 +63,7 @@ const listContent = [
         id: 7
     },
     {
+        title: 'Недвижимость',
         term: '1 — 5 лет',
         prepaid: 'от 30%',
         info: 'Недвижимость в лизинг поможет сэкономить на расширении бизнеса.',
@@ -68,16 +76,29 @@ const listContent = [
 
 
 $(document).ready(function () {
+    let ul = $('#js-leasing-title')
+
     let activeItem = $('.leasing-programs__content .leasing-programs__list-item--active').attr('id');
     let term = $('#js-leasing-term')
     let prepaid = $(' #js-leasing-prepaid')
     let info = $(' #js-leasing-info')
     let link = $(' #js-leasing-link')
     let img = $(' #js-leasing-img')
-    let title = $('.leasing-programs__mobile-title p')
-    title.text($('.leasing-programs__list-item--active').html())
+    let titleMobile = $('.leasing-programs__mobile-title p')
+    titleMobile.text($('.leasing-programs__list-item--active').html())
 
-
+    listContent.forEach((el, index) => {
+        let p = $('<p>');
+        let li = $('<li>');
+        p.addClass('leasing-programs__list-item jsListItemProgram')
+        if (index === 0) {
+            p.addClass('leasing-programs__list-item--active');
+        }
+        p.attr('id', el.id)
+        p.text(el.title)
+        li.append(p)
+        ul.append(li)
+    })
     $(".jsListItemProgram").click(function () {
         // Удаляем класс у всех блоков
         $(".jsListItemProgram").removeClass("leasing-programs__list-item--active");
@@ -90,14 +111,14 @@ $(document).ready(function () {
     $(".leasing-programs__mobile-title").click(function () {
         $(".leasing-programs__list-mobile").toggle();
         $(".leasing-programs__list-header").toggleClass('rt180');
-        title.toggle();
+        titleMobile.toggle();
     });
 
     $(".leasing-programs__list-mobile").click(function () {
         $(this).toggle();
-        title.toggle();
+        titleMobile.toggle();
         $(".leasing-programs__list-header").toggleClass('rt180');
-        title.text($('.leasing-programs__list-item--active').html());
+        titleMobile.text($('.leasing-programs__list-item--active').html());
     });
 
 
