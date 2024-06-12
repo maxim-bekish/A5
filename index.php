@@ -20,6 +20,7 @@
    <link rel="stylesheet" href="src/styles/buttons.css">
    <link rel="stylesheet" href="src/styles/forms.css">
    <link rel="stylesheet" href="src/styles/underline.css">
+   <link rel="stylesheet" href="src/styles/bread-crumbs.css">
    <script src="index.js"></script>
 </head>
 
@@ -27,11 +28,14 @@
    <div class="app">
       <div class="contentpop">
          <?php
-         
+
          require_once $_SERVER['DOCUMENT_ROOT'] . '/src/config/path.php';
          include 'src/components/header/header.php';
-         include 'src/components/page/home/main.php';
+
+         //include 'src/components/page/home/main.php';
          //include 'src/components/page/about-company/main.php';
+         include 'src/components/page/clients/main.php';
+
          include 'src/components/footer/footer.php';
          ?>
       </div>
@@ -44,3 +48,11 @@
 </body>
 
 </html>
+
+
+
+<?php
+//require "system/Routing.php";
+//$url = key($_GET);
+//echo $url;
+?>

@@ -126,4 +126,7 @@
    <symbol id="icon-arrow-down">
       <path d="M13 1L7 7L1 1" stroke-width="2" />
    </symbol>
+   <symbol id="icon-arrow-right">
+      <path d="M1 0.5L5.75 5.25L1 10" stroke="#979797" />
+   </symbol>
 </svg>

@@ -1,4 +1,3 @@
-
 .about-company {
    display: flex;
    flex-direction: column;
@@ -23,12 +22,37 @@
    text-align: left;
 }
 
+@keyframes fadeInUp {
+   0% {
+      opacity: 0;
+      transform: translateY(250px);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
 .about-company--big-test {
    font-size: 200px;
    font-weight: 500;
    line-height: 200px;
    text-align: left;
    color: rgba(0, 69, 178, 1);
+   opacity: 0;
+   /* Начальное состояние - невидимый элемент */
+   transform: translateY(250px);
+   /* Начальное состояние - сдвиг вниз */
+   transition: opacity 0s, transform 0s;
+   /* Отключение перехода по умолчанию */
+}
+
+.about-company--big-test--visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: opacity 2s ease-out, transform 2s ease-out;
+   /* Включение плавного перехода */
 }
 
 .about-company__box--up .about-company__content {

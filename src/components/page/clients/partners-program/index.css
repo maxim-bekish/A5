@@ -1,0 +1,37 @@
+.partners-program .partners-program__img {
+   height: 571px;
+}
+
+.partners-program__list {
+   margin: 30px 0 30px 0;
+}
+
+.partners-program .partners-program__img img {
+   height: 100%;
+   object-fit: cover;
+   object-position: top;
+}
+
+.partners-program__title {
+   margin: 30px 0 40px 0;
+   font-size: 70px;
+   line-height: 84px;
+   color: rgba(0, 69, 178, 1);
+}
+
+.partners-program__title--form {
+   font-size: 40px;
+   margin-top: 95px;
+   color: rgba(0, 69, 178, 1);
+   line-height: 48px;
+
+}
+
+.partners-program__form {
+   max-width: 860px;
+}
+
+.partners-program__button {
+   margin-top: 30px;
+   max-width: calc(50% - 20px);
+}
