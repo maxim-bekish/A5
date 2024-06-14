@@ -1,42 +1,41 @@
-<main class="js-main container">
-   <section class="bread-crumbs ">
-      <a href="#">Главная</a>
-      <svg class="bread-crumbs__arrow" fill="none">
-         <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-right"></use>
-      </svg>
-      <a href="#">О лизинге</a>
-   </section>
+<?php
+$activeNavItem = isset($_GET['section']) ? $_GET['section'] : ' ';
+?>
+<section class="clients-partners-program grid_1-3-box container">
+   <div class="clients-partners-program__navigation grid_1-3_1">
+      <h3>О лизинге</h3>
+      <ul>
+         <li>
+            <a href="?section=general-terms" class="<?php if ($activeNavItem === 'general-terms' || $activeNavItem === ' ') echo 'program__navigation--active'; ?>">Общие условия</a>
+         </li>
+         <li>
+            <a href="?section=subsidies" class="<?php if ($activeNavItem === 'subsidies') echo 'program__navigation--active'; ?>">Субсидиии малому и среднему бизнесу</a>
+         </li>
+      </ul>
+   </div>
+   <div class="clients-partners-program__content grid_1-3_3">
+      <img src="<?php echo IMG_PATH; ?>about-leasing/img.png" alt="">
+   </div>
+</section>
 
-   <section class="clients-partners-program grid_1-3-box ">
-      <div class="clients-partners-program__navigation grid_1-3_1">
-         <h3>О лизинге</h3>
-         <ul>
-            <li>
-               <a href="#">
-                  Общие условия
-               </a>
-            </li>
-            <li>
-               <a class="program__navigation--active" href="#">
-                  Субсидиии малому и среднему бизнесу
-               </a>
-            </li>
-         </ul>
-      </div>
-      <div class="clients-partners-program__content grid_1-3_3">
-         <img src="<?php echo IMG_PATH; ?>about-leasing/img.png" alt="">
-      </div>
-   </section>
-   <?php
-   //include 'src\components\page\about-leasing\subsidies\index.php';
-   include 'src\components\page\about-leasing\general-terms\index.php';
-   ?>
-</main>
 
+<?php
+switch ($activeNavItem) {
+   case 'subsidies':
+      include 'src\components\page\about-leasing\subsidies\index.php';
+      break;
+   case 'general-terms':
+      include 'src\components\page\about-leasing\general-terms\index.php';
+      include 'src\components\page\about-leasing\about-calculator-leasing\index.php';
+      include 'src\components\page\about-leasing\about-document\index.php';
+      break;
+   default:
+      include 'src\components\page\about-leasing\general-terms\index.php';
+      break;
+}
+?>
 
 <style>
-
-
    .grid_1-3-box {
       display: grid;
       grid-template-columns: repeat(4, 1fr);

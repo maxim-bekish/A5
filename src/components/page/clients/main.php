@@ -1,60 +1,53 @@
-<main class="js-main">
-   <section class="bread-crumbs container">
-      <a href="#">Главная</a>
-      <svg class="bread-crumbs__arrow" fill="none">
-         <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-right"></use>
-      </svg>
-      <a href="#">Клиентам</a>
-   </section>
+<?php
+$activeNavItem = isset($_GET['section']) ? $_GET['section'] : ' ';
+?>
 
-   <section class="clients-partners-program container">
-      <div class="clients-partners-program__navigation">
-         <h3>Клиентам</h3>
-         <ul>
-            <li>
-               <a href="src/components/page/about-company/main.php">О компании</a>
-            </li>
-            <li>
-               <a class="program__navigation--active" href="#">Клиенты и партнеры</a>
-            </li>
-            <li>
-               <a href="#">Документы</a>
-            </li>
-            <li>
-               <a href="#">Гид по лизингу</a>
-            </li>
-         </ul>
-      </div>
-      <div class="clients-partners-program__content">
-         <?php
-         //клиенты и партнеры
+<section class="clients-partners-program container">
+   <div class="clients-partners-program__navigation">
+      <h3>Клиентам</h3>
+      <ul>
+         <li>
+            <a href="/about-company">О компании</a>
+         </li>
+         <li>
+            <a href="?section=partners" class="<?php if ($activeNavItem === 'partners' || $activeNavItem === ' ') echo 'program__navigation--active'; ?>">Клиенты и партнеры</a>
+         </li>
+         <li>
+            <a href="?section=client-documents" class="<?php if ($activeNavItem === 'client-documents') echo 'program__navigation--active'; ?>">Документы</a>
+         </li>
+         <li>
+            <a href="?section=leasing-guide" class="<?php if ($activeNavItem === 'leasing-guide') echo 'program__navigation--active'; ?>">Гид по лизингу</a>
+         </li>
+      </ul>
+   </div>
 
-         //include 'src/components/page/clients/partners-program/index.php';
+   <div class="clients-partners-program__content">
+      <?php
 
-         //клиенты и партнеры
-         //____________
-         //документы
+      switch ($activeNavItem) {
+         case 'partners':
+            include 'src/components/page/clients/partners-program/index.php';
+            break;
+         case 'client-documents':
+            include 'src/components/page/clients/client-documents/index.php';
+            break;
+         case 'leasing-guide':
+            include 'src/components/page/clients/leasing-guide/index.php';
+            break;
+         default:
+            include 'src/components/page/clients/partners-program/index.php';
+            break;
+      }
+      ?>
+   </div>
+</section>
+<?php
 
-         //include 'src/components/page/clients/client-documents/index.php';
-
-         //документы
-
-         //гид по лизингу
-         
-         include 'src/components/page/clients/leasing-guide/index.php';
-         
-         //гид по лизингу
-         ?>
-      </div>
-   </section>
-   <!--клиенты и партнеры -->
-   <?php
-   //include 'src/components/page/clients/partners-items/index.php';
-   //include 'src/components/page/clients/partners/index.php';
-   ?>
-   <!--клиенты и партнеры-->
-</main>
-
+if ($activeNavItem === 'partners' || $activeNavItem === ' ') {
+   include 'src/components/page/clients/partners-items/index.php';
+   include 'src/components/page/clients/partners/index.php';
+}
+?>
 
 <style>
    .clients-partners-program {

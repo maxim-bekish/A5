@@ -25,6 +25,8 @@ a {
    text-decoration: none;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -51,6 +53,11 @@ span {
    font-size: 18px;
    line-height: 25.2px;
    color: rgba(81, 81, 81, 1);
+}
+
+.p20px {
+   font-size: 20px;
+   line-height: 28px;
 }
 
 img {

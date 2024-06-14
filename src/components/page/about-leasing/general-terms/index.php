@@ -23,7 +23,7 @@ $conditions = [
 ];
 ?>
 
-<section class="grid_1-3-box general-terms-conditions">
+<section class="grid_1-3-box general-terms-conditions container">
    <div class="grid_1-3_1 general-terms-conditions__title">
       <p>
          Условия финансирования

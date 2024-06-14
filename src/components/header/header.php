@@ -43,11 +43,11 @@ $headerListLeasing = (object) [
   'list' => [
     (object) [
       'name' => 'Общие условия',
-      'link' => '#'
+      'link' => 'about-leasing?section=general-terms'
     ],
     (object) [
       'name' => 'Субсидии малому и среднему бизнесу',
-      'link' => '#'
+      'link' => 'about-leasing?section=subsidies'
     ],
   ]
 ];
@@ -56,15 +56,19 @@ $headerListClients = (object) [
   'list' => [
     (object) [
       'name' => 'О компании',
-      'link' => '#'
+      'link' => '/about-company',
     ],
     (object) [
       'name' => 'Клиенты и партнеры',
-      'link' => '#'
+      'link' => '/clients'
     ],
     (object) [
       'name' => 'Документы',
-      'link' => '#'
+      'link' => '/clients?section=client-documents'
+    ],
+    (object) [
+      'name' => 'Гид по лизингу',
+      'link' => '/clients?section=leasing-guide'
     ],
   ]
 ];
@@ -73,7 +77,7 @@ $headerListClients = (object) [
 
 function listHeader($data)
 {
-  ?>
+?>
   <div class="select-head ">
     <p><?php echo htmlspecialchars($data->title); ?></p>
     <svg class="pointer rt0 svg-item" width="14" height="9" viewBox="0 0 14 9" fill="none">
@@ -81,14 +85,13 @@ function listHeader($data)
     </svg>
   </div>
   <ul class="select-list" style="display: none">
-    <?php foreach ($data->list as $item): ?>
+    <?php foreach ($data->list as $item) : ?>
       <li class="underline-box">
-        <a class="underline-el underline-el-blue select-item"
-          href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
+        <a class="underline-el underline-el-blue select-item" href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
       </li>
     <?php endforeach; ?>
   </ul>
-  <?php
+<?php
 }
 ?>
 

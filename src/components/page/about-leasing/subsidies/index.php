@@ -25,7 +25,7 @@ $subsidies = [
 ?>
 
 
-<section class="about-leasing__subsidies">
+<section class="about-leasing__subsidies container">
    <div class="grid_1-3-box">
       <div class="grid_1-3_1"></div>
       <h3 class="title-page-h3 grid_1-3_3">

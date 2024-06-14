@@ -1,45 +1,48 @@
-.bread-crumbs {
+.breadcrumbs {
    display: flex;
    align-items: center;
-   gap: 15px;
    flex-wrap: nowrap;
    margin-bottom: 45px;
 }
 
-.bread-crumbs .bread-crumbs__arrow {
+.breadcrumbs li .breadcrumbs__arrow {
+   margin: 0 15px;
    width: 7px;
    height: 11px;
 }
 
-.bread-crumbs a {
+.breadcrumbs li a {
    font-size: 16px;
    line-height: 19.36px;
    color: rgba(151, 151, 151, 1);
 }
 
-.bread-crumbs a:last-child {
+.breadcrumbs li a:hover {
    color: rgba(81, 81, 81, 1);
 }
 
 @media (max-width:768px) {
-   .bread-crumbs a {
+   .breadcrumbs li a {
       font-size: 14px;
       line-height: 16.94px;
    }
 
-   .bread-crumbs {
+   .breadcrumbs {
       margin-bottom: 35px;
    }
 }
 
 @media (max-width:340px) {
-   .bread-crumbs a {
+   .breadcrumbs li a {
       font-size: 12px;
       line-height: 14.52px;
    }
 
-   .bread-crumbs {
-      gap: 10px;
+   .breadcrumbs li .breadcrumbs__arrow {
+      margin: 0 10px;
+   }
+
+   .breadcrumbs {
       margin-bottom: 30px;
    }
 }
