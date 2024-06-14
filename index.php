@@ -12,8 +12,7 @@
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="src/styles/reset.css">
    <link rel="stylesheet" href="src/styles/root.css">
    <link rel="stylesheet" href="src/styles/commonStyle.css">
@@ -32,9 +31,12 @@
          require_once $_SERVER['DOCUMENT_ROOT'] . '/src/config/path.php';
          include 'src/components/header/header.php';
 
+         //эти файлы нужно настроить рутингом
          //include 'src/components/page/home/main.php';
          //include 'src/components/page/about-company/main.php';
-         include 'src/components/page/clients/main.php';
+         //include 'src/components/page/clients/main.php';
+         //include 'src/components/page/about-leasing/main.php';
+         //до сюдо
 
          include 'src/components/footer/footer.php';
          ?>
@@ -48,11 +50,3 @@
 </body>
 
 </html>
-
-
-
-<?php
-//require "system/Routing.php";
-//$url = key($_GET);
-//echo $url;
-?>

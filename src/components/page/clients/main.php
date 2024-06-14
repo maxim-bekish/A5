@@ -27,15 +27,32 @@
       </div>
       <div class="clients-partners-program__content">
          <?php
+         //клиенты и партнеры
+
          //include 'src/components/page/clients/partners-program/index.php';
-         include 'src/components/page/clients/client-documents/index.php';
+
+         //клиенты и партнеры
+         //____________
+         //документы
+
+         //include 'src/components/page/clients/client-documents/index.php';
+
+         //документы
+
+         //гид по лизингу
+         
+         include 'src/components/page/clients/leasing-guide/index.php';
+         
+         //гид по лизингу
          ?>
       </div>
    </section>
+   <!--клиенты и партнеры -->
    <?php
    //include 'src/components/page/clients/partners-items/index.php';
    //include 'src/components/page/clients/partners/index.php';
    ?>
+   <!--клиенты и партнеры-->
 </main>
 
 

@@ -66,6 +66,7 @@ button {
 .button--outline:disabled {
    color: var(--line-gray);
    background-color: rgba(215, 215, 215, 1);
+   border: 1px solid rgba(215, 215, 215, 1);
 }
 
 @media(max-width:768px) {

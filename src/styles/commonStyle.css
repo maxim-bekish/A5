@@ -8,6 +8,7 @@ body::-webkit-scrollbar {
 }
 
 .container {
+   box-sizing: border-box;
    width: 100%;
    padding: 0 80px;
 }
@@ -121,12 +122,21 @@ img {
 
 
 
+.grid_1-3-box {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-column-gap: 40px;
+   grid-row-gap: 40px;
+}
 
+.grid_1-3_1 {
+   width: 410px;
+   grid-area: 1 / 1 / 2 / 2;
+}
 
-
-
-
-
+.grid_1-3_3 {
+   grid-area: 1 / 2 / 2 / 5;
+}
 
 
 

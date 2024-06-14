@@ -170,17 +170,6 @@ $slides = array(
       flex-direction: column;
    }
 
-   .slide-item img {
-      width: 100%;
-   }
-
-   .slide-item {
-      background: rgba(242, 242, 242, 1);
-      width: 410px;
-      display: flex;
-      flex-direction: column;
-   }
-
    .partners-box__up {
       display: flex;
       column-gap: 40px;
@@ -211,18 +200,17 @@ $slides = array(
       margin: 30px 0 40px 0;
    }
 
-   .custom-slider__icon {
+   .partners-box .custom-slider__icon {
       fill: #fff;
       stroke: #0045B2;
       transition: all 200ms ease;
    }
 
-   .custom-slider__button:hover .custom-slider__icon {
+   .partners-box .custom-slider__button:hover .custom-slider__icon {
       fill: #0045B2;
       stroke: #fff;
       transition: all 200ms ease;
    }
-
 
    .partners-box__time {
       display: flex;
@@ -245,40 +233,40 @@ $slides = array(
    }
 
 
-   .custom-slider__buttons {
+   .partners-box .custom-slider__buttons {
       display: flex;
       gap: 20px;
       max-width: 120px;
    }
 
-   .custom-slider__button {
+   .partners-box .custom-slider__button {
       width: 50px;
       height: 50px;
    }
 
-   .custom-slider__button:last-child {
+   .partners-box .custom-slider__button:last-child {
       transform: rotate(180deg);
    }
 
-   .custom-slider {
+   .partners-box .custom-slider {
       display: flex;
       flex-direction: column;
       gap: 20px;
    }
 
-   .custom-slider--reverse {
+   .partners-box .custom-slider--reverse {
       flex-direction: column-reverse;
       align-items: end;
    }
 
-   .custom-slider__box {
+   .partners-box .custom-slider__box {
       position: relative;
       height: 410px;
       width: 100%;
       overflow: hidden;
    }
 
-   .custom-slider__container {
+   .partners-box .custom-slider__container {
       position: absolute;
       top: 0px;
       width: 100%;
@@ -286,7 +274,7 @@ $slides = array(
       flex-direction: column;
    }
 
-   .custom-slider__slide {
+   .partners-box .custom-slider__slide {
       width: 100%;
       display: flex;
       grid-template-columns: 1fr 1fr;
@@ -294,22 +282,19 @@ $slides = array(
       gap: 40px;
       width: 100%;
       height: 410px;
-
    }
 </style>
 
 
 <script>
-   $(document).ready(function () {
-      // Объявление переменных
+   $(document).ready(function() {
       let $sliderContainer = $(".partners-box .custom-slider__container"); // Селектор контейнера слайдера
       let $slides = $sliderContainer.children(); // Получаем все слайды
       let slideCount = $slides.length; // Количество слайдов
-      let slideHeight = $(".partners-box .custom-slider__slide").outerHeight(); // Высота одного слайда
+      let slideHeight = Math.ceil($(".partners-box .custom-slider__slide").outerHeight()); // Высота одного слайда
       let step = -slideHeight; // Шаг анимации (высота одного слайда)
       let timeAnimate = 700; // Длительность анимации в миллисекундах
       let isAnimating = false; // Флаг для предотвращения многократного нажатия
-
       // Клонируем последний слайд и вставляем его перед первым, чтобы создать бесшовную прокрутку
       $slides.first().before($slides.last().clone());
       // Клонируем первый слайд и вставляем его после последнего, чтобы создать бесшовную прокрутку
@@ -319,11 +304,13 @@ $slides = array(
       $sliderContainer.css("top", -slideHeight + "px");
 
       // Обработчик события для кнопки "предыдущий слайд"
-      $(".js-partners-slider-prev").click(function () {
+      $(".js-partners-slider-prev").click(function() {
          if (!isAnimating) { // Проверяем, не идет ли сейчас анимация
             isAnimating = true; // Устанавливаем флаг анимации
             let currentTop = parseInt($sliderContainer.css("top")) || 0; // Текущее положение контейнера
-            $sliderContainer.animate({ top: (currentTop - step) + "px" }, timeAnimate, function () { // Анимируем перемещение вверх на шаг
+            $sliderContainer.animate({
+               top: (currentTop - step) + "px"
+            }, timeAnimate, function() { // Анимируем перемещение вверх на шаг
                if (parseInt($sliderContainer.css("top")) >= 0) { // Если достигли верхней границы
                   // Перемещаем контейнер на последнее положение, чтобы создать бесшовный эффект
                   $sliderContainer.css("top", -slideCount * slideHeight + "px");
@@ -334,11 +321,13 @@ $slides = array(
       });
 
       // Обработчик события для кнопки "следующий слайд"
-      $(".js-partners-slider-next").click(function () {
+      $(".js-partners-slider-next").click(function() {
          if (!isAnimating) { // Проверяем, не идет ли сейчас анимация
             isAnimating = true; // Устанавливаем флаг анимации
             let currentTop = parseInt($sliderContainer.css("top")) || 0; // Текущее положение контейнера
-            $sliderContainer.animate({ top: (currentTop + step) + "px" }, timeAnimate, function () { // Анимируем перемещение вниз на шаг
+            $sliderContainer.animate({
+               top: (currentTop + step) + "px"
+            }, timeAnimate, function() { // Анимируем перемещение вниз на шаг
                if (parseInt($sliderContainer.css("top")) <= -(slideCount + 1) * slideHeight) { // Если достигли нижней границы
                   // Перемещаем контейнер на начальное положение, чтобы создать бесшовный эффект
                   $sliderContainer.css("top", -slideHeight + "px");
@@ -348,5 +337,4 @@ $slides = array(
          }
       });
    });
-
 </script>
