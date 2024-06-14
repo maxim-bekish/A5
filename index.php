@@ -25,6 +25,10 @@ $router->add('about-leasing', function () {
    $content = 'src/components/page/about-leasing/main.php';
    include 'template.php';
 });
+$router->add('personal-data', function () {
+   $content = 'src/components/page/personal-data/index.php';
+   include 'template.php';
+});
 
 // Запуск маршрутизатора
 $router->run();

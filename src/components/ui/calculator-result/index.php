@@ -2,19 +2,19 @@
    <div class="leasing-calculator__header">
       <div class="leasing-calculator__header-item leasing-calculator__header-item--big">
          <p class="leasing-calculator__header-title">Годовое удорожание:</p>
-         <p class="leasing-calculator__header-value leasing-calculator__header-value--big">19,74%</p>
+         <p id="annualCost" class="leasing-calculator__header-value leasing-calculator__header-value--big"></p>
       </div>
       <div class="leasing-calculator__header-item">
          <p class="leasing-calculator__header-title">Возврат 20% НДС:</p>
-         <p class="leasing-calculator__header-value">210 800 ₽</p>
+         <p id="vatReturn" class="leasing-calculator__header-value"></p>
       </div>
       <div class="leasing-calculator__header-item leasing-calculator__header-item--big">
          <p class="leasing-calculator__header-title">Ежемесячный платеж:</p>
-         <p class="leasing-calculator__header-value leasing-calculator__header-value--medium">35 900 ₽</p>
+         <p id="monthlyPayment" class="leasing-calculator__header-value leasing-calculator__header-value--medium"></p>
       </div>
       <div class="leasing-calculator__header-item">
          <p class="leasing-calculator__header-title">Сумма договора лизинга:</p>
-         <p class="leasing-calculator__header-value">210 800 ₽</p>
+         <p id="leaseTotal" class="leasing-calculator__header-value"></p>
       </div>
    </div>
    <div>

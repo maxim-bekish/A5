@@ -101,9 +101,11 @@ function listHeader($data)
 <header id="header">
   <section class="container header">
     <div class="logo">
-      <svg width="100%" height="100%" viewBox="0 0 151 107" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <use href="<?php echo SVG_PATH; ?>icons.svg#icon-logo"></use>
-      </svg>
+      <a href="/" target="_blank" rel="noopener noreferrer">
+        <svg width="100%" height="100%" viewBox="0 0 155 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <use href="<?php echo SVG_PATH; ?>icons.svg#icon-logo"></use>
+        </svg>
+      </a>
     </div>
     <button type="button" id="open-burger-menu" class="burger-button mt-21">
       <div></div>
@@ -116,10 +118,12 @@ function listHeader($data)
     <div class="nav mt-21">
       <div class="select select-clients"> <?php listHeader($headerListClients); ?> </div>
       <div class="underline-box">
-        <a class="nav__item underline-el underline-el-blue" href="#">Программы лизинга</a>
+        <a class="nav__item underline-el underline-el-blue" href="#">
+          Каталог изьятой техники
+        </a>
       </div>
       <div class="underline-box">
-        <a class="nav__item underline-el underline-el-blue" href="#home-calculator">Калькулятор</a>
+        <a class="nav__item underline-el underline-el-blue" href="/#home-calculator">Калькулятор</a>
       </div>
     </div>
     <div class="contacts-header mt-21">

@@ -108,13 +108,10 @@
    font-weight: 400;
    line-height: 21.78px;
 }
-.about-home__list-item:hover a{
 
+.about-home__list-item:hover a {
    color: var(--text-blue);
-}
-.about-home__list-item--active a {
    text-decoration: underline;
-   color: var(--text-blue);
 }
 
 

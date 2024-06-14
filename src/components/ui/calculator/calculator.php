@@ -63,7 +63,7 @@
    <div class=" calculator-item last-payment">
       <div class="item-header">
          <p>
-         Последний платеж
+            Последний платеж
          </p>
          <p class='value' id="value4"></p>
       </div>

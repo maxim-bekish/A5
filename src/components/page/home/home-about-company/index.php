@@ -3,9 +3,9 @@
 <?php
 
 $list = [
-   (object) ['title' => 'Подробнее о компании', 'link' => '#', 'id' => 1],
-   (object) ['title' => 'Клиенты и партнеры', 'link' => '#', 'id' => 2],
-   (object) ['title' => 'Документы', 'link' => '#', 'id' => 3],
+   (object) ['title' => 'Подробнее о компании', 'link' => '/about-company', 'id' => 1],
+   (object) ['title' => 'Клиенты и партнеры', 'link' => '/clients', 'id' => 2],
+   (object) ['title' => 'Документы', 'link' => '/clients?section=client-documents', 'id' => 3],
 
 ];
 
@@ -55,9 +55,8 @@ $list = [
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-A5"></use>
          </svg>
          <ul class="about-home__list">
-            <?php foreach ($list as $index => $item): ?>
-               <li
-                  class="about-home__list-item jsListItemAbout <?php echo $index === 0 ? 'about-home__list-item--active' : ''; ?>">
+            <?php foreach ($list as $index => $item) : ?>
+               <li class="about-home__list-item jsListItemAbout">
                   <a href="<?php echo htmlspecialchars($item->link); ?>">
                      <?php echo htmlspecialchars($item->title); ?>
                   </a>
@@ -70,8 +69,3 @@ $list = [
       </div>
    </div>
 </section>
-
-
-
-
-
