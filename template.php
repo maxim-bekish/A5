@@ -49,7 +49,8 @@
       <?php
       include 'src/components/ui/popUpContacts/popUpContacts.php';
       include 'src/components/ui/popUpAsk/popUpAsk.php';
-      include 'src\components\cookie\index.php';
+      include 'src/components/cookie/index.php';
+      //тут
       ?>
    </div>
 </body>

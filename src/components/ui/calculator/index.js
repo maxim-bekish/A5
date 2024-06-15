@@ -60,11 +60,9 @@ $(document).ready(function () {
             + (x * a + s) * r / 12 * (Math.pow(1 + r / 12, z) / (Math.pow(1 + r / 12, z) - 1)) * 1.2
             + x * f * 1.2;
 
-
         let d = z * c + x * y + t;
         let e = ((d - x) / x * 100) / (z / 12);
 
-        console.log(t)
         return {
             monthlyPayment: c,
             annualCost: e,
@@ -96,7 +94,6 @@ $(document).ready(function () {
 
     function updateLastPayment(sliderValue, $valueDisplay) {
 
-        //console.log(data.lastPayment.percent)
         data.lastPayment.value = data.contractPrice.value * sliderValue / 100;
         data.lastPayment.percent = sliderValue;
         $valueDisplay.text(`${sliderValue}% / ${formatNumberAddSymbol(data.lastPayment.value)}`);

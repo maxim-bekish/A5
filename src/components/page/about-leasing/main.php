@@ -22,15 +22,15 @@ $activeNavItem = isset($_GET['section']) ? $_GET['section'] : ' ';
 <?php
 switch ($activeNavItem) {
    case 'subsidies':
-      include 'src\components\page\about-leasing\subsidies\index.php';
+      include 'src/components/page/about-leasing/subsidies/index.php';
       break;
    case 'general-terms':
-      include 'src\components\page\about-leasing\general-terms\index.php';
-      include 'src\components\page\about-leasing\about-calculator-leasing\index.php';
-      include 'src\components\page\about-leasing\about-document\index.php';
+      include 'src/components/page/about-leasing/general-terms/index.php';
+      include 'src/components/page/about-leasing/about-calculator-leasing/index.php';
+      include 'src/components/page/about-leasing/about-document/index.php';
       break;
    default:
-      include 'src\components\page\about-leasing\general-terms\index.php';
+      include 'src/components/page/about-leasing/general-terms/index.php';
       break;
 }
 ?>
