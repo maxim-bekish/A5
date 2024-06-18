@@ -14,9 +14,16 @@ header {
    background-color: #fff;
    padding-top: 30px;
    padding-bottom: 80px;
+   display: grid;
+   grid-template-columns: repeat(4, 410px);
+   grid-column-gap: 40px;
+}
+
+
+.header__logo {
    display: flex;
    justify-content: space-between;
-   align-items: flex-start;
+   padding-right: 50px;
 }
 
 .mt-21 {
@@ -25,6 +32,7 @@ header {
 
 .header p,
 .header a {
+   text-wrap: nowrap;
    cursor: pointer;
    font-family: var(--font-inter);
    font-size: 16px;

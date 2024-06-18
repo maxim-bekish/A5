@@ -6,35 +6,35 @@ $headerListProgram = (object) [
   'list' => [
     (object) [
       'name' => 'Легковой автотранспорт',
-      'link' => '#'
+      'link' => '/program-leasing?section=passenger-vehicles'
     ],
     (object) [
       'name' => 'Грузовой автотранспорт',
-      'link' => '#'
+      'link' => '/program-leasing?section=freight-transport'
     ],
     (object) [
       'name' => 'Спецтехника',
-      'link' => '#'
+      'link' => '/program-leasing?section=special-equipment'
     ],
     (object) [
       'name' => 'Оборудование',
-      'link' => '#'
+      'link' => '/program-leasing?section=equipment'
     ],
     (object) [
       'name' => 'Медицинское оборудование',
-      'link' => '#'
+      'link' => '/program-leasing?section=medical-equipment'
     ],
     (object) [
       'name' => 'Ресторанное оборудование',
-      'link' => '#'
+      'link' => '/program-leasing?section=restaurant-equipment'
     ],
     (object) [
       'name' => 'Б/У продукция',
-      'link' => '#'
+      'link' => '/program-leasing?section=used-products'
     ],
     (object) [
       'name' => 'Недвижимость',
-      'link' => '#'
+      'link' => '/program-leasing?section=real-estate'
     ],
   ]
 ];
@@ -100,17 +100,19 @@ function listHeader($data)
 <script src="/src/components/header/select.js"></script>
 <header id="header">
   <section class="container header">
-    <div class="logo">
-      <a href="/" target="_blank" rel="noopener noreferrer">
-        <svg width="100%" height="100%" viewBox="0 0 155 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <use href="<?php echo SVG_PATH; ?>icons.svg#icon-logo"></use>
-        </svg>
-      </a>
+    <div class="header__logo" >
+      <div class="logo">
+        <a href="/" rel="noopener noreferrer">
+          <svg width="100%" height="100%" viewBox="0 0 155 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use href="<?php echo SVG_PATH; ?>icons.svg#icon-logo"></use>
+          </svg>
+        </a>
+      </div>
+      <button type="button" id="open-burger-menu" class="burger-button mt-21">
+        <div></div>
+        <div></div>
+      </button>
     </div>
-    <button type="button" id="open-burger-menu" class="burger-button mt-21">
-      <div></div>
-      <div></div>
-    </button>
     <div class="leasing mt-21">
       <div class="select select-program"> <?php listHeader($headerListProgram); ?> </div>
       <div class="select select-leasing"> <?php listHeader($headerListLeasing); ?> </div>
@@ -118,7 +120,7 @@ function listHeader($data)
     <div class="nav mt-21">
       <div class="select select-clients"> <?php listHeader($headerListClients); ?> </div>
       <div class="underline-box">
-        <a class="nav__item underline-el underline-el-blue" href="#">
+        <a class="nav__item underline-el underline-el-blue" href="/inventory">
           Каталог изьятой техники
         </a>
       </div>
@@ -211,7 +213,7 @@ function listHeader($data)
       </ul>
       <ul>
         <h5 class="item-title underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank" rel="noopener noreferrer">
+          <a class="underline-el underline-el-white" href="/inventory" target="_blank" rel="noopener noreferrer">
             Каталог изьятой техники
           </a>
         </h5>
@@ -245,3 +247,5 @@ function listHeader($data)
     </div>
   </section>
 </header>
+
+

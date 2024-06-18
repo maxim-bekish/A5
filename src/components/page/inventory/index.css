@@ -1,0 +1,44 @@
+.inventory__content {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-column-gap: 40px;
+   grid-row-gap: 40px;
+}
+
+
+.inventory__title {
+   font-size: 30px;
+   line-height: 31.22px;
+   color: #0045B2;
+
+}
+
+.inventory__content--item--img {
+   width: 410px;
+   height: 410px;
+   background-color: #F2F2F2;
+   margin-bottom: 8px
+}
+
+.inventory__content--item--img img {
+   object-fit: none;
+   object-position: center;
+   height: 100%;
+}
+
+.inventory__content--item--text p:nth-child(1) {
+   font-size: 20px;
+}
+
+.inventory__content--item--text p:nth-child(2) {
+   font-size: 20px;
+   font-weight: 500;
+   color: #979797;
+   margin: 8px 0;
+}
+
+.inventory__content--item--text p:nth-child(3) {
+   font-size: 16px;
+   line-height: 19.36px;
+   color: #979797;
+}

@@ -6,7 +6,9 @@ function get_breadcrumbs($uri)
         'about-company' => 'О компании',
         'clients' => 'Клиенты',
         'about-leasing' => 'О лизинге',
-        'personal-data' => 'Политика обработки персональных данных'
+        'personal-data' => 'Политика обработки персональных данных',
+        'inventory' => 'Каталог изьятой техники',
+        'program-leasing' => 'Программы лизинга',
         // Добавьте другие переводы здесь
     ];
 

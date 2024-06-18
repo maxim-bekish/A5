@@ -29,6 +29,14 @@ $router->add('personal-data', function () {
    $content = 'src/components/page/personal-data/index.php';
    include 'template.php';
 });
+$router->add('inventory', function () {
+   $content = 'src/components/page/inventory/index.php';
+   include 'template.php';
+});
+$router->add('program-leasing', function () {
+   $content = 'src/components/page/program-leasing/index.php';
+   include 'template.php';
+});
 
 // Запуск маршрутизатора
 $router->run();
