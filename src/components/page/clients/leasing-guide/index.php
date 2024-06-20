@@ -26,19 +26,19 @@ $leasingGuide = [
 
 <section class="leasing-guide">
    <div class="leasing-guide__buttons">
-      <button disabled class="button button--outline">
+      <button  class="button button--outline">
          Структура сделки
       </button>
       <button class="button button--outline">
          Оформление
       </button>
-      <button disabled class="button button--outline">
+      <button  class="button button--outline">
          Для физ. лиц
       </button>
-      <button disabled class="button button--outline">
+      <button  class="button button--outline">
          Выгода лизинга
       </button>
-      <button disabled class="button button--outline">
+      <button  class="button button--outline">
          Правила пользования
       </button>
    </div>

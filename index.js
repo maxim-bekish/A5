@@ -23,5 +23,4 @@ $(document).ready(function () {
          form.removeClass('submitted').addClass('submitted-error');
       }
    });
-   
 });

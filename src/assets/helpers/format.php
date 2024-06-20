@@ -1,5 +1,12 @@
 <?php
-function formatNumber($num)
+
+function format($number, $symbol = '')
 {
-   return number_format($num, 0, '', ' ');
+
+   $formatted_number = number_format($number, 0, '', ' ');
+
+
+   $result = $formatted_number . ' ' . $symbol;
+
+   return $result;
 }

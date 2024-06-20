@@ -110,7 +110,7 @@ $slides = array(
                <p class="partners-box__time-description">будет заключён договор.</p>
             </div>
          </div>
-         <button type="button" class="partners-box__button button button--blue">Подобрать</button>
+         <button type="button" id="js-popUp-selection-equipment" class="partners-box__button button button--blue">Подобрать</button>
       </div>
    </div>
    <section class="custom-slider">

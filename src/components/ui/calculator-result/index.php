@@ -18,7 +18,7 @@
       </div>
    </div>
    <div>
-      <button class="button button--white">
+      <button id="js-popUp-offer"  class="button button--white">
          Получить коммерческое предложение
       </button>
       <p class="leasing-calculator__info">

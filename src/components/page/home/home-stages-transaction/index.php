@@ -37,7 +37,7 @@
          </div>
          <hr class="stages-transaction__separator">
       </div>
-      <button type="button" class="button button--blue stages-transaction__button">Бесплатная консультация</button>
+      <button type="button" id="js-popUp-consultation" class="button button--blue stages-transaction__button">Бесплатная консультация</button>
    </div>
 </section>
 

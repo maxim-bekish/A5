@@ -82,7 +82,7 @@ $(document).ready(function () {
     function updateFirstPayment(sliderValue, $valueDisplay) {
         data.firstPayment.value = data.contractPrice.value / 100 * sliderValue;
         data.firstPayment.percent = sliderValue;
-        $valueDisplay.text(`${sliderValue} % / ${formatNumberAddSymbol(data.firstPayment.value)}`);
+        $valueDisplay.text(`${sliderValue} % / ${formatNumberAddSymbol(Math.round(data.firstPayment.value))}`);
         updateResults();
     }
 
@@ -96,7 +96,7 @@ $(document).ready(function () {
 
         data.lastPayment.value = data.contractPrice.value * sliderValue / 100;
         data.lastPayment.percent = sliderValue;
-        $valueDisplay.text(`${sliderValue}% / ${formatNumberAddSymbol(data.lastPayment.value)}`);
+        $valueDisplay.text(`${sliderValue}% / ${formatNumberAddSymbol(Math.ceil(data.lastPayment.value))}`);
         updateResults();
     }
 

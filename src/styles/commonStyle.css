@@ -25,7 +25,9 @@ a {
    text-decoration: none;
 }
 
-
+input:focus-visible {
+   outline: 0;
+}
 
 h1,
 h2,
@@ -36,7 +38,8 @@ h6,
 a,
 p,
 span,
-li {
+li,
+input {
    font-weight: 400;
    font-family: var(--font-inter);
 }
@@ -74,7 +77,6 @@ img {
    pointer-events: none;
    /* Блокировка взаимодействия с контентом */
 }
-
 
 .sidebar,
 .sidebar-ask {
@@ -145,7 +147,15 @@ img {
    grid-area: 1 / 2 / 2 / 5;
 }
 
+.rt0 {
+   transition: transform 400ms ease;
+   transform: rotateX(0deg);
+}
 
+.rt180 {
+   transition: transform 400ms ease;
+   transform: rotateX(180deg);
+}
 
 @media(max-width:768px) {
    body {

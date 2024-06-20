@@ -6,7 +6,7 @@ $activeNavItem = isset($_GET['section']) ? $_GET['section'] : ' ';
       <h3>О лизинге</h3>
       <ul>
          <li>
-            <a href="?section=general-terms" class="<?php if ($activeNavItem === 'general-terms' || $activeNavItem === ' ') echo 'program__navigation--active'; ?>">Общие условия</a>
+            <a href="?section=general-terms" class="<?php if ($activeNavItem === 'general-terms') echo 'program__navigation--active'; ?>">Общие условия</a>
          </li>
          <li>
             <a href="?section=subsidies" class="<?php if ($activeNavItem === 'subsidies') echo 'program__navigation--active'; ?>">Субсидиии малому и среднему бизнесу</a>

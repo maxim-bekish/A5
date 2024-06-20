@@ -1,5 +1,5 @@
 <?php
-
+require 'src/assets/helpers/format.php';
 $programLeasingData = [
    [
       "section" => "passenger-vehicles",
@@ -123,7 +123,7 @@ $programLeasingData = [
       "suppliers" => [
          "4-jood.svg",
          "7-rustorg.svg",
-         "3-medizina",
+         "3-medizina.svg",
          "10-geocentr.svg",
       ]
    ],
@@ -248,7 +248,6 @@ $programLeasingData = [
       ],
       "suppliers" => []
    ],
-
 ];
 
 
@@ -332,7 +331,7 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
             <p>Максимальный срок лизинга</p>
          </div>
          <div class="obtaining-leasing__content--item">
-            <h4><?php echo htmlspecialchars($activeProgram['obtainingLeasing']['minRedemptionPayment']) . ' ₽'; ?></h4>
+            <h4><?php echo format(htmlspecialchars($activeProgram['obtainingLeasing']['minRedemptionPayment']), ' ₽'); ?></h4>
             <p>Минимальный выкупной платёж</p>
          </div>
       </div>
@@ -356,6 +355,10 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
       </ul>
    <?php endif; ?>
 </section>
+
+<?php 
+include 'src/components/page/program-leasing/production/index.php';
+?>
 
 <section class="grid_1-3-box container mt-160px">
    <div class="grid_1-3_1">

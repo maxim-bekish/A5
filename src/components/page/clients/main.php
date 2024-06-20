@@ -10,7 +10,7 @@ $activeNavItem = isset($_GET['section']) ? $_GET['section'] : ' ';
             <a href="/about-company">О компании</a>
          </li>
          <li>
-            <a href="?section=partners" class="<?php if ($activeNavItem === 'partners' || $activeNavItem === ' ') echo 'program__navigation--active'; ?>">Клиенты и партнеры</a>
+            <a href="?section=partners" class="<?php if ($activeNavItem === 'partners') echo 'program__navigation--active'; ?>">Клиенты и партнеры</a>
          </li>
          <li>
             <a href="?section=client-documents" class="<?php if ($activeNavItem === 'client-documents') echo 'program__navigation--active'; ?>">Документы</a>
@@ -43,7 +43,7 @@ $activeNavItem = isset($_GET['section']) ? $_GET['section'] : ' ';
 </section>
 <?php
 
-if ($activeNavItem === 'partners' || $activeNavItem === ' ') {
+if ($activeNavItem === 'partners') {
    include 'src/components/page/clients/partners-items/index.php';
    include 'src/components/page/clients/partners/index.php';
 }
