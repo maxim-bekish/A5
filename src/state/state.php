@@ -85,11 +85,11 @@ $inventory = [
 $production = [
    [
       "id" => 1,
-      "name" => "Автобус ПАЗ Vector NEXT 320415-04",
+      "name" => "1Автобус ПАЗ Vector NEXT 320415-04",
       "priceMonth" => "220000",
       "price" => "4300000",
       "href" => '/program-leasing/card',
-      "imagePreview" => 'busPrev.png',
+      "imagePreview" => 'trPrev.png',
       "image" => 'bus.png',
       "term" => 36,
       "characteristics" => [
@@ -105,11 +105,11 @@ $production = [
    ],
    [
       "id" => 2,
-      "name" => "Chery Tiggo 7 Pro 1.5 CVT",
+      "name" => "2Chery Tiggo 7 Pro 1.5 CVT",
       "priceMonth" => "127636",
       "price" => "1890000",
       "href" => '/program-leasing/card',
-      "imagePreview" => 'redAutoPrev.png',
+      "imagePreview" => 'trPrev.png',
       "image" => null,
       "term" => 2,
       "characteristics" => [
@@ -125,7 +125,7 @@ $production = [
    ],
    [
       "id" => 3,
-      "name" => "Автобус ПАЗ Vector NEXT 320435-04",
+      "name" => "3Автобус ПАЗ Vector NEXT 320435-04",
       "priceMonth" => "127636",
       "price" => "5060000",
       "href" => '/program-leasing/card',
@@ -145,7 +145,7 @@ $production = [
    ],
    [
       "id" => 4,
-      "name" => "Сушильная камера для древесины",
+      "name" => "4 Сушильная камера для древесины",
       "priceMonth" => "127636",
       "price" => "3290000",
       "href" => '/program-leasing/card',
@@ -163,4 +163,86 @@ $production = [
          ]
       ]
    ],
+   [
+      "id" => 5,
+      "name" => "5 Сушильная камера для древесины",
+      "priceMonth" => "127636",
+      "price" => "3290000",
+      "href" => '/program-leasing/card',
+      "imagePreview" => 'trPrev.png',
+      "image" => null,
+      "term" => 4,
+      "characteristics" => [
+         [
+            "title" => 'Год',
+            "value" => 4,
+         ],
+         [
+            "title" => 'Пробег',
+            "value" => 4,
+         ]
+      ]
+   ],
+   [
+      "id" => 6,
+      "name" => "6 Сушильная камера для древесины",
+      "priceMonth" => "127636",
+      "price" => "3290000",
+      "href" => '/program-leasing/card',
+      "imagePreview" => 'trPrev.png',
+      "image" => null,
+      "term" => 4,
+      "characteristics" => [
+         [
+            "title" => 'Год',
+            "value" => 4,
+         ],
+         [
+            "title" => 'Пробег',
+            "value" => 4,
+         ]
+      ]
+   ],
+   [
+      "id" => 7,
+      "name" => "7 Сушильная камера для древесины",
+      "priceMonth" => "127636",
+      "price" => "3290000",
+      "href" => '/program-leasing/card',
+      "imagePreview" => 'trPrev.png',
+      "image" => null,
+      "term" => 4,
+      "characteristics" => [
+         [
+            "title" => 'Год',
+            "value" => 4,
+         ],
+         [
+            "title" => 'Пробег',
+            "value" => 4,
+         ]
+      ]
+   ],
+   [
+      "id" => 8,
+      "name" => "8 Сушильная камера для древесины",
+      "priceMonth" => "127636",
+      "price" => "3290000",
+      "href" => '/program-leasing/card',
+      "imagePreview" => 'trPrev.png',
+      "image" => null,
+      "term" => 4,
+      "characteristics" => [
+         [
+            "title" => 'Год',
+            "value" => 4,
+         ],
+         [
+            "title" => 'Пробег',
+            "value" => 4,
+         ]
+      ]
+   ],
+   
+
 ];

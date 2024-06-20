@@ -148,11 +148,13 @@ img {
 }
 
 .rt0 {
+   cursor: pointer;
    transition: transform 400ms ease;
    transform: rotateX(0deg);
 }
 
 .rt180 {
+   cursor: pointer;
    transition: transform 400ms ease;
    transform: rotateX(180deg);
 }
