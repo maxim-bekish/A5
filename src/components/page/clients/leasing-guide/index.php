@@ -187,7 +187,6 @@ $leasingGuide = [
    }
 
    .leasing-guide__text {
-
       max-height: 0;
       transition: all 0.3s ease;
       opacity: 0;
@@ -203,11 +202,13 @@ $leasingGuide = [
       opacity: 1;
       overflow: hidden;
    }
-   .leasing-guide__button-active{
+
+   .leasing-guide__button-active {
       background-color: rgba(0, 63, 162, 1);
       color: white;
 
    }
+
    .leasing-guide__item {
       padding: 30px 38px 30px 0px;
       border-top: 1px solid #979797;
