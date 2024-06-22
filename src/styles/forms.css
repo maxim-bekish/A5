@@ -91,7 +91,7 @@ form .form-blue {
 /* placeholder focus */
 .form-group input:focus~label {
    font-size: 12px;
-   top:0px;
+   top: 0px;
    line-height: 14.56px;
    color: rgba(178, 199, 232, 1);
    transition: all 0.2s linear;
@@ -278,7 +278,7 @@ form .form-gray {
 
 /* custom-checkbox */
 
-@media(max-width:768px) {
+@media(max-width:1280px) {
    form .form-items-50 {
       grid-template-columns: repeat(1, 1fr);
    }

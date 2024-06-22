@@ -1,3 +1,12 @@
+.slider__pointer--hover,
+.slider__link:hover .slider__pointer {
+   display: none;
+}
+
+.slider__link:hover .slider__pointer--hover {
+   display: block;
+}
+
 .thanks-box {
    display: flex;
    flex-direction: column;
@@ -62,6 +71,7 @@
 .slider__main {
    height: 100%;
    display: flex;
+   justify-content: center;
    align-items: center;
 }
 
@@ -91,12 +101,14 @@
 }
 
 .slider__link {
+   height: 50px;
+   width: 50px;
    bottom: 20px;
    right: 20px;
    position: absolute;
 }
 
-@media(max-width:768px) {
+@media(max-width:1280px) {
    .thanks-box {
       display: none;
    }

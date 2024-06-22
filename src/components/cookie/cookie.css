@@ -1,0 +1,30 @@
+.popup-cookie {
+   width: 100%;
+   left: 0;
+   height: 130px;
+   position: fixed;
+   display: flex;
+   bottom: -130px;
+   padding: 40px 50px;
+   background-color: #F2F2F2;
+   justify-content: space-between;
+   align-items: center;
+   transition: bottom 0.5s ease-in-out;
+}
+
+.popup-cookie.show {
+   bottom: 0;
+}
+
+.popup-cookie p {
+   max-width: 900px;
+}
+
+.popup-cookie p a {
+   color: #0045B2;
+}
+
+.popup-cookie button {
+   max-width: 163px;
+   max-height: 60px;
+}

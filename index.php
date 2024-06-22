@@ -9,7 +9,7 @@ $router = new Router();
 
 // Добавление маршрутов
 $router->add('', function () {
-   $content = 'src/components/page/home/main.php';
+   $content = 'src/components/page/home/index.php';
    include 'template.php';
 });
 

@@ -1,4 +1,8 @@
 <?php
+//    include 'src/state/state.php'; 
+?>
+
+<?php
 
 $inventory = [
    [
@@ -243,6 +247,8 @@ $production = [
          ]
       ]
    ],
-   
-
 ];
+
+//header
+
+//header

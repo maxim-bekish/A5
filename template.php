@@ -47,7 +47,7 @@
       include 'src/components/ui/popUp/popUp-consultation.php';
       include 'src/components/ui/popUp/popUp-offer.php';
       include 'src/components/ui/popUp/popUp-end.php';
-      include 'src/components/cookie/index.php';
+      include 'src/components/cookie/cookie.php';
       ?>
    </div>
 </body>

@@ -11,7 +11,7 @@
    height: 11px;
 }
 
-.breadcrumbs li p ,
+.breadcrumbs li p,
 .breadcrumbs li a {
    display: inline;
    cursor: pointer;
@@ -20,13 +20,14 @@
    color: rgba(151, 151, 151, 1);
 }
 
-.breadcrumbs li p:hover ,
+.breadcrumbs li p:hover,
 .breadcrumbs li a:hover {
    color: rgba(81, 81, 81, 1);
 }
 
-@media (max-width:768px) {
-   .breadcrumbs li p ,
+@media (max-width:1280px) {
+
+   .breadcrumbs li p,
    .breadcrumbs li a {
       font-size: 14px;
       line-height: 16.94px;
@@ -38,7 +39,8 @@
 }
 
 @media (max-width:340px) {
-   .breadcrumbs li p ,
+
+   .breadcrumbs li p,
    .breadcrumbs li a {
       font-size: 12px;
       line-height: 14.52px;

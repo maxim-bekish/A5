@@ -61,12 +61,10 @@ $slides = [
       </div>
       <div class="slider__box">
          <div class="slider__container">
-            <?php foreach ($slides as $slide): ?>
-               <div class="slider__slide" data-title="<?php echo htmlspecialchars($slide['name']); ?>"
-                  data-description="<?php echo htmlspecialchars($slide['jobTitle']); ?>">
+            <?php foreach ($slides as $slide) : ?>
+               <div class="slider__slide" data-title="<?php echo htmlspecialchars($slide['name']); ?>" data-description="<?php echo htmlspecialchars($slide['jobTitle']); ?>">
                   <div class="slider__header">
-                     <img class="slider__image" src="<?php echo IMG_PATH . htmlspecialchars($slide['image']); ?>"
-                        alt="people">
+                     <img class="slider__image" src="<?php echo IMG_PATH . htmlspecialchars($slide['image']); ?>" alt="people">
                   </div>
                </div>
             <?php endforeach; ?>
@@ -177,7 +175,7 @@ $slides = [
       position: absolute;
    }
 
-   @media(max-width:768px) {}
+   @media(max-width:1280px) {}
 
    .team-slider .slider__icon {
       fill: #fff;
@@ -195,7 +193,7 @@ $slides = [
 </style>
 
 <script>
-   $(document).ready(function () {
+   $(document).ready(function() {
       const $sliderContainer = $(".team-slider .slider__container");
       const $slides = $sliderContainer.children(".slider__slide");
       const slideCount = $slides.length;
@@ -234,7 +232,7 @@ $slides = [
 
       updateFirstVisibleSlide();
 
-      $(".team-slider .slider__button--prev").click(function () {
+      $(".team-slider .slider__button--prev").click(function() {
          if (!isAnimating) {
             isAnimating = true;
             const currentLeft = parseInt($sliderContainer.css("left")) || 0;
@@ -242,10 +240,14 @@ $slides = [
             const currentSlide = $sliderContainer.children().eq(Math.abs(currentLeft / slideWidth)); // Текущий первый видимый слайд
             const nextSlide = $sliderContainer.children().eq(Math.abs(newLeft / slideWidth));
 
-            currentSlide.find('.slider__header .slider__image').animate({ height: '80%' }, timeAnimate); // Плавное изменение height текущего слайда
+            currentSlide.find('.slider__header .slider__image').animate({
+               height: '80%'
+            }, timeAnimate); // Плавное изменение height текущего слайда
             nextSlide.find('.slider__header .slider__image').css('height', '80%'); // Начальное состояние изображения
 
-            $sliderContainer.animate({ left: newLeft + "px" }, timeAnimate, function () {
+            $sliderContainer.animate({
+               left: newLeft + "px"
+            }, timeAnimate, function() {
                if (parseInt($sliderContainer.css("left")) >= 0) {
                   $sliderContainer.css("left", -slideCount * slideWidth + "px");
                }
@@ -253,11 +255,13 @@ $slides = [
                isAnimating = false;
             });
 
-            nextSlide.find('.slider__header .slider__image').animate({ height: '100%' }, timeAnimate); // Плавное изменение height
+            nextSlide.find('.slider__header .slider__image').animate({
+               height: '100%'
+            }, timeAnimate); // Плавное изменение height
          }
       });
 
-      $(".team-slider .slider__button--next").click(function () {
+      $(".team-slider .slider__button--next").click(function() {
          if (!isAnimating) {
             isAnimating = true;
             const currentLeft = parseInt($sliderContainer.css("left")) || 0;
@@ -265,10 +269,14 @@ $slides = [
             const currentSlide = $sliderContainer.children().eq(Math.abs(currentLeft / slideWidth)); // Текущий первый видимый слайд
             const nextSlide = $sliderContainer.children().eq(Math.abs(newLeft / slideWidth));
 
-            currentSlide.find('.slider__header .slider__image').animate({ height: '80%' }, timeAnimate); // Плавное изменение height текущего слайда
+            currentSlide.find('.slider__header .slider__image').animate({
+               height: '80%'
+            }, timeAnimate); // Плавное изменение height текущего слайда
             nextSlide.find('.slider__header .slider__image').css('height', '80%'); // Начальное состояние изображения
 
-            $sliderContainer.animate({ left: newLeft + "px" }, timeAnimate, function () {
+            $sliderContainer.animate({
+               left: newLeft + "px"
+            }, timeAnimate, function() {
                if (parseInt($sliderContainer.css("left")) <= -(slideCount + 1) * slideWidth) {
                   $sliderContainer.css("left", -slideWidth + "px");
                }
@@ -276,9 +284,10 @@ $slides = [
                isAnimating = false;
             });
 
-            nextSlide.find('.slider__header .slider__image').animate({ height: '100%' }, timeAnimate); // Плавное изменение height
+            nextSlide.find('.slider__header .slider__image').animate({
+               height: '100%'
+            }, timeAnimate); // Плавное изменение height
          }
       });
    });
-
 </script>

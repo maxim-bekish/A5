@@ -1,8 +1,8 @@
-<!--<link rel="stylesheet" href="/src/components/footer/index.css">-->
-<!--<script src="src/components/footer/index.js"></script>-->
+<link rel="stylesheet" href="src/components/footer/footer.css">
+<script src="src/components/footer/footer.js"></script>
 <footer class="footer-box mt-160px ">
    <section class="footer-up container">
-      <div class="footer-up-column">
+      <div class="footer-up-column w-50">
          <svg width="683" height="583" viewBox="0 0 683 583">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-A5-mini"></use>
          </svg>
@@ -12,7 +12,7 @@
          </h3>
       </div>
 
-      <form class="js-myForm footer-up-column">
+      <form class="js-myForm footer-up-column w-50">
          <h4>Получите бесплатную <br> консультацию</h4>
          <div class="form-items-50 ">
             <div class="form-group">
@@ -50,12 +50,12 @@
    </section>
    <hr>
    <section class="footer-down container">
-      <div class="footer-down-column">
+      <div class="footer-down-column w-50">
          <div class="underline-box">
             <a class="underline-el underline-el-white footer-down-column-tel" href="tel:+73452999999">7 (3452) 99-99-99</a>
          </div>
          <section>
-            <div class="contacts-footer footer-list">
+            <div class="contacts-footer footer-list w-50">
                <h5>Контакты</h5>
                <ul>
                   <li>
@@ -79,7 +79,7 @@
                   </li>
                </ul>
             </div>
-            <div class="network-footer footer-list">
+            <div class="network-footer footer-list w-50">
                <h5>Соцсети</h5>
                <ul>
                   <li class="underline-box">
@@ -102,7 +102,7 @@
 
          </section>
       </div>
-      <div class="footer-down-column footer-info-list ">
+      <div class="footer-down-column w-50 footer-info-list ">
          <div class="footer-info-list-box">
             <div class="footer-list">
                <h5>Главная страница</h5>
@@ -226,287 +226,4 @@
 </footer>
 
 
-<script>
-   $(document).ready(function() {
-      function formatPhoneNumber(value) {
-         if (!value) return '+7 '; // Если значение пустое, возвращаем "+7 "
-         const phoneNumber = value.replace(/[^\d]/g, ''); // Удаляем все нецифровые символы, кроме цифр
-         const phoneNumberWithoutSeven = phoneNumber.startsWith('7') ? phoneNumber.slice(1) : phoneNumber; // Убираем начальную 7, если она есть
-         const phoneNumberLength = phoneNumberWithoutSeven.length; // Определяем длину оставшегося телефонного номера
-         // Форматируем номер в зависимости от его длины
-         if (phoneNumberLength <= 0) return '+7 (';
-         if (phoneNumberLength <= 3) return `+7 (${phoneNumberWithoutSeven.slice(0, 3)}`;
-         if (phoneNumberLength <= 6) return `+7 (${phoneNumberWithoutSeven.slice(0, 3)}) ${phoneNumberWithoutSeven.slice(3, 6)}`;
-         if (phoneNumberLength <= 8) return `+7 (${phoneNumberWithoutSeven.slice(0, 3)}) ${phoneNumberWithoutSeven.slice(3, 6)}-${phoneNumberWithoutSeven.slice(6, 8)}`;
-         return `+7 (${phoneNumberWithoutSeven.slice(0, 3)}) ${phoneNumberWithoutSeven.slice(3, 6)}-${phoneNumberWithoutSeven.slice(6, 8)}-${phoneNumberWithoutSeven.slice(8, 10)}`;
-      }
 
-      $('.footer-box .phone').on('input', function() {
-         const formattedPhoneNumber = formatPhoneNumber(this.value);
-         this.value = formattedPhoneNumber;
-         checkFormValidity();
-      });
-   })
-</script>
-
-<style>
-   .footer-list h5 a {
-      font-family: Inter Tight;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 18.73px;
-      text-wrap: nowrap;
-      color: rgba(128, 162, 216, 1);
-      margin-bottom: 25px;
-   }
-
-   .footer-list h5 a:hover {
-      color: #fff;
-   }
-
-   .footer-box {
-      background: rgba(0, 69, 178, 1);
-      position: relative;
-   }
-
-   .footer-up,
-   .footer-down {
-      display: flex;
-      height: 610px;
-   }
-
-   .footer-box hr {
-      margin: 0;
-      height: 1px;
-      border: 0;
-      background-color: rgba(82, 128, 203, 1);
-   }
-
-   .footer-up-column {
-      width: 50%;
-      margin-top: 185px;
-      z-index: 2;
-   }
-
-   .footer-down-column {
-      margin-top: 85px;
-      width: 50%;
-   }
-
-   .footer-up-column h3 {
-      font-family: Inter Tight;
-      font-size: 64px;
-      font-weight: 500;
-      line-height: 69.12px;
-      color: rgba(255, 255, 255, 1);
-      z-index: 2;
-      position: relative;
-   }
-
-   .footer-up-column h4 {
-      font-family: Inter Tight;
-      font-size: 40px;
-      font-weight: 400;
-      line-height: 43.2px;
-      color: rgba(255, 255, 255, 1);
-   }
-
-   .footer-up-column svg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-   }
-
-   .footer-up-column button {
-      max-width: 410px;
-      margin-top: 32px;
-   }
-
-   .footer-list h5 {
-      font-family: Inter Tight;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 18.73px;
-      text-wrap: nowrap;
-      color: rgba(128, 162, 216, 1);
-      margin-bottom: 25px;
-   }
-
-   .footer-list ul {
-      display: flex;
-      flex-direction: column;
-      gap: 17px;
-   }
-
-   .footer-list li p,
-   .footer-list li a {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      text-wrap: nowrap;
-      line-height: 19.2px;
-      color: #fff;
-   }
-
-   .footer-down-column-tel {
-      display: inline-block;
-      font-family: Inter Tight;
-      font-size: 64px;
-      font-weight: 500;
-      line-height: 66.61px;
-      color: rgba(255, 255, 255, 1);
-      margin-bottom: 70px;
-   }
-
-   .footer-down-column>section {
-      display: flex;
-      max-width: 535px;
-      justify-content: space-between;
-   }
-
-
-   .footer-info-list {
-      max-height: 600px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr;
-      grid-column-gap: 40px;
-   }
-
-   .footer-info-list-box {
-      display: flex;
-      gap: 40px;
-      flex-direction: column;
-   }
-
-   .footer-down-row {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 71px;
-   }
-
-   .footer-down-row>div {
-      display: flex;
-      align-items: center;
-   }
-
-   .footer-down-row>div:first-child {
-      gap: 156px;
-   }
-
-   .footer-down-row>div:last-child {
-      gap: 20px;
-   }
-
-   .footer-down-row p {
-      font-family: Inter Tight;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 16.64px;
-      color: rgba(255, 255, 255, 1);
-   }
-
-   @media(max-width:768px) {
-      .footer-box {
-         margin-top: 0;
-      }
-
-      .footer-up {
-         position: relative;
-         gap: 20px;
-      }
-
-      .footer-up-column svg {
-         width: 606px;
-         height: 409px;
-         top: 50%;
-         transform: translate(-10%, -50%);
-      }
-
-      .footer-up-column h3 {
-         font-size: 35px;
-         line-height: 36.4px;
-      }
-
-      .footer-list {
-         width: 100%;
-      }
-
-      .footer-up-column {
-         margin-top: 85px;
-      }
-
-      .footer-up-column h4 {
-         font-size: 24px;
-         line-height: 25.92px;
-      }
-
-      .footer-down {
-         flex-direction: column;
-         height: auto;
-      }
-
-      .footer-down-column {
-         width: 100%;
-      }
-
-      .footer-down-column>section {
-         gap: 20px;
-         max-width: 100%;
-      }
-
-      .footer-down-column>section>div {
-         width: 50%;
-      }
-
-      .footer-down .footer-down-column {
-         margin-top: 40px;
-         margin-bottom: 60px;
-      }
-
-      .footer-info-list-box:nth-child(1) {
-         flex-direction: row;
-         gap: 0;
-         justify-content: space-between;
-      }
-
-      .footer-info-list {
-         margin-top: 0px !important;
-         grid-template-columns: 70% 30%;
-         grid-column-gap: 20px;
-      }
-
-      .footer-down-row {
-         align-items: flex-end;
-      }
-
-      .footer-down-row>div:first-child {
-         gap: 15px;
-         flex-direction: column;
-         align-items: flex-start;
-      }
-
-      .footer-down-row>div:last-child {
-         margin: 0px 0 -8px 0px;
-      }
-
-      .footer-list li p,
-      .footer-list li a,
-      .footer-down-row p {
-         font-size: 14px;
-         line-height: 14.56px;
-      }
-
-      .footer-list h5 {
-         font-size: 16px;
-         line-height: 16.64px;
-      }
-
-      .footer-down-column-tel {
-         font-size: 40px;
-         line-height: 41.6px;
-         margin-bottom: 60px;
-      }
-   }
-</style>

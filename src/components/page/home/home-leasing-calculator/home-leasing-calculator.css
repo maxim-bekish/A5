@@ -4,15 +4,20 @@
    font-weight: 400;
    line-height: 28px;
    color: rgba(81, 81, 81, 1);
+   max-width: 240px;
 }
 
 .leasing-calculator__box {
    margin-top: 93px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
    .leasing-calculator__box {
       flex-direction: column;
       margin-top: 20px;
+   }
+
+   .leasing-calculator__title-text {
+      max-width: 100%;
    }
 }

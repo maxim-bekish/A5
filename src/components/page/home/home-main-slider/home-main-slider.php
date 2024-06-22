@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/src/components/page/home/home-main-slider/index.css">
-<script src="/src/components/page/home/home-main-slider/index.js"></script>
+<link rel="stylesheet" href="/src/components/page/home/home-main-slider/home-main-slider.css">
+<script src="/src/components/page/home/home-main-slider/home-main-slider.js"></script>
 <section class="main-slider main-slider--container">
    <div class="main-slider__container slider">
       <div class="slide background-one slide--active">

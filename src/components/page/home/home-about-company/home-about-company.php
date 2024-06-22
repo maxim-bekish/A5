@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/src/components/page/home/home-about-company/index.css">
-<script src="/src/components/page/home/home-about-company/index.js"></script>
+<link rel="stylesheet" href="/src/components/page/home/home-about-company/home-about-company.css">
+<script src="/src/components/page/home/home-about-company/home-about-company.js"></script>
 <?php
 
 $list = [
@@ -22,7 +22,7 @@ $list = [
    <div class="about-home__box-content">
       <div class="about-home__content-info">
          <div class="about-home__text">
-            <div class="about-home__text-column">
+            <div class="about-home__text-column w-50">
                <p class="about-home__paragraph">
                   А5 — компания с большим опытом и развитыми отраслевыми компетенциями в сфере финансового, возвратного,
                   оперативного лизинга.
@@ -36,7 +36,7 @@ $list = [
                   подразделения в Нижнем Новгороде и филиала в Тюмени.
                </p>
             </div>
-            <div class="about-home__text-column">
+            <div class="about-home__text-column w-50">
                <p class="about-home__paragraph">
                   Входим в ТОП-10 лизинговых компаний Тюменской области.
                </p>
@@ -54,7 +54,7 @@ $list = [
          <svg class="about-home__pointer" width="1072" height="930" viewBox="0 0 1072 930" fill="none">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-A5"></use>
          </svg>
-         <ul class="about-home__list">
+         <ul class="about-home__list w-50">
             <?php foreach ($list as $index => $item) : ?>
                <li class="about-home__list-item jsListItemAbout">
                   <a href="<?php echo htmlspecialchars($item->link); ?>">
@@ -63,7 +63,7 @@ $list = [
                </li>
             <?php endforeach; ?>
          </ul>
-         <div>
+         <div class="w-50">
             <img src="<?php echo IMG_PATH; ?>about.png" alt="photo" class="about-home__image">
          </div>
       </div>

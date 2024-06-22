@@ -1,6 +1,6 @@
-<script src="/src/components/ui/calculator/index.js"></script>
+<script src="/src/components/ui/calculator/calculator.js"></script>
 
-<link rel="stylesheet" href="/src/components/ui/calculator/index.css">
+<link rel="stylesheet" href="/src/components/ui/calculator/calculator.css">
 
 <section class="calculator-range">
    <div class=" calculator-item contract-price">

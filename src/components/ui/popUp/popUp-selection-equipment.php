@@ -97,7 +97,6 @@
 </script>
 
 
-
 <style>
    .popUp-selection-equipment-box {
       display: none;

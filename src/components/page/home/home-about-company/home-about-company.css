@@ -70,10 +70,7 @@
    width: 100%;
 }
 
-.about-home__list,
-.about-home__content-list>div {
-   width: calc(50% - 20px);
-}
+
 
 .about-home__text {
    display: flex;
@@ -81,7 +78,7 @@
 }
 
 .about-home__text-column {
-   width: calc(50% - 20px);
+
    display: flex;
    flex-direction: column;
    gap: 10px;
@@ -115,7 +112,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
    .about-home__box-title {
       flex-direction: column;
       gap: 20px;
@@ -126,6 +123,8 @@
       font-size: 38px;
       line-height: 45.6px;
    }
+
+
 
    .about-home__box-content {
       padding: 60px 20px 120px 20px;

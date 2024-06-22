@@ -1,6 +1,7 @@
-<?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/src/config/path.php';
+<link rel="stylesheet" href="/src/components/header/header.css">
+<script src="/src/components/header/header.js"></script>
 
+<?php
 $headerListProgram = (object) [
   'title' => 'Программы лизинга',
   'list' => [
@@ -72,9 +73,6 @@ $headerListClients = (object) [
     ],
   ]
 ];
-
-
-
 function listHeader($data)
 {
 ?>
@@ -95,12 +93,11 @@ function listHeader($data)
 }
 ?>
 
-<link rel="stylesheet" href="/src/components/header/header.css">
-<script src="/src/components/header/header.js"></script>
-<script src="/src/components/header/select.js"></script>
+
+
 <header id="header">
   <section class="container header">
-    <div class="header__logo" >
+    <div class="header__logo">
       <div class="logo">
         <a href="/" rel="noopener noreferrer">
           <svg width="100%" height="100%" viewBox="0 0 155 110" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -247,5 +244,3 @@ function listHeader($data)
     </div>
   </section>
 </header>
-
-

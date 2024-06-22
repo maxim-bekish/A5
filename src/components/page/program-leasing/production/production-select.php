@@ -258,7 +258,7 @@
          }
       }
 
-      $('.js-open-select').click(function() {
+      $('.production__select-box .js-open-select').click(function() {
          const $selectBox = $(this).closest('.production__select');
          const $selectItems = $selectBox.find('.production__select-items-box');
          toggleSelect($selectBox, $selectItems);
