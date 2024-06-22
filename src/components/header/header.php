@@ -165,7 +165,7 @@ function listHeader($data)
           <a class="underline-el underline-el-white" href="#" target="_blank">Общие условия</a>
         </li>
         <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Субсидии малому <br> и среднему
+          <a class="underline-el underline-el-white" href="#" target="_blank">Субсидии малому  и среднему
             бизнесу</a>
         </li>
       </ul>

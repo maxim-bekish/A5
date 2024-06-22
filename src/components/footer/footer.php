@@ -2,7 +2,7 @@
 <script src="src/components/footer/footer.js"></script>
 <footer class="footer-box mt-160px ">
    <section class="footer-up container">
-      <div class="footer-up-column w-50">
+      <div class="footer-up-column ">
          <svg width="683" height="583" viewBox="0 0 683 583">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-A5-mini"></use>
          </svg>
@@ -12,7 +12,7 @@
          </h3>
       </div>
 
-      <form class="js-myForm footer-up-column w-50">
+      <form class="js-myForm footer-up-column ">
          <h4>Получите бесплатную <br> консультацию</h4>
          <div class="form-items-50 ">
             <div class="form-group">
@@ -50,7 +50,7 @@
    </section>
    <hr>
    <section class="footer-down container">
-      <div class="footer-down-column w-50">
+      <div class="footer-down-column ">
          <div class="underline-box">
             <a class="underline-el underline-el-white footer-down-column-tel" href="tel:+73452999999">7 (3452) 99-99-99</a>
          </div>
@@ -102,7 +102,7 @@
 
          </section>
       </div>
-      <div class="footer-down-column w-50 footer-info-list ">
+      <div class="footer-down-column  footer-info-list ">
          <div class="footer-info-list-box">
             <div class="footer-list">
                <h5>Главная страница</h5>

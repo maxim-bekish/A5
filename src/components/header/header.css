@@ -173,7 +173,6 @@ header {
 
 /* burger-menu */
 .burger-menu {
-
    position: fixed;
    width: 100%;
    height: 100%;
@@ -197,21 +196,18 @@ body .js-flex {
 .burger-menu .burger-menu-box {
    display: flex;
    justify-content: space-between;
+   row-gap: 100px;
 }
 
 
 
 .burger-menu ul li a {
-   font-family: Inter Tight;
    font-size: 16px;
-   font-weight: 400;
    line-height: 19.2px;
    color: rgba(178, 199, 232, 1);
 }
 
 .burger-menu-box .burger-tel {
-   font-family: Inter Tight;
-   font-size: 40px;
    font-weight: 500;
    line-height: 41.6px;
    color: rgba(255, 255, 255, 1);
@@ -278,9 +274,32 @@ body .js-flex {
 
 @media(max-width:1280px) {
 
+   .burger-menu .button-closed {
+      top: 40px;
+    right: 40px;
+    left: auto;
+   }
+
    .leasing,
    .nav {
       display: none;
+   }
+
+   .burger-menu {
+      padding: 170px 70px 70px 70px;
+   }
+
+   .burger-menu ul {
+      width: calc(50% - 10px);
+
+   }
+
+   .burger-menu ul:last-child {
+      margin-top: -125px;
+   }
+
+   .burger-menu .burger-menu-box {
+      flex-wrap: wrap;
    }
 
    .burger-button {
