@@ -52,6 +52,28 @@ $headerListLeasing = (object) [
     ],
   ]
 ];
+$headerListLeasing = (object) [
+  'title' => 'Главная страница
+',
+  'list' => [
+    (object) [
+      'name' => 'Лизинговый калькулятор',
+      'link' => '#'
+    ],
+    (object) [
+      'name' => 'Партнеры',
+      'link' => '#'
+    ],
+    (object) [
+      'name' => 'Этапы сделки',
+      'link' => '/#stages-transaction'
+    ],
+    (object) [
+      'name' => 'Контакты',
+      'link' => '#'
+    ],
+  ]
+];
 $headerListClients = (object) [
   'title' => 'Клиентам',
   'list' => [
@@ -67,10 +89,10 @@ $headerListClients = (object) [
       'name' => 'Документы',
       'link' => '/clients?section=client-documents'
     ],
-    (object) [
-      'name' => 'Гид по лизингу',
-      'link' => '/clients?section=leasing-guide'
-    ],
+    //(object) [
+    //  'name' => 'Гид по лизингу',
+    //  'link' => '/clients?section=leasing-guide'
+    //],
   ]
 ];
 function listHeader($data)
@@ -86,6 +108,23 @@ function listHeader($data)
     <?php foreach ($data->list as $item) : ?>
       <li class="underline-box">
         <a class="underline-el underline-el-blue select-item" href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
+      </li>
+    <?php endforeach; ?>
+  </ul>
+<?php
+}
+?>
+
+<?php
+function listHeaderBurger($data)
+{
+?>
+  <ul>
+    <h5 class="item-title"><?php echo htmlspecialchars($data->title); ?></h5>
+
+    <?php foreach ($data->list as $item) : ?>
+      <li class="underline-box">
+        <a class="underline-el underline-el-white" href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
       </li>
     <?php endforeach; ?>
   </ul>
@@ -159,55 +198,10 @@ function listHeader($data)
           <a class="underline-el underline-el-white" href="#" target="_blank">Контакты</a>
         </li>
       </ul>
-      <ul>
-        <h5 class="item-title">О лизинге</h5>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Общие условия</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Субсидии малому  и среднему
-            бизнесу</a>
-        </li>
-      </ul>
-      <ul>
-        <h5 class="item-title">Клиентам</h5>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">О компании</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Клиенты и партнеры</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Документы</a>
-        </li>
-      </ul>
-      <ul>
-        <h5 class="item-title">Услуги лизинга</h5>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Легковой автотранспорт</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Грузовой автотранспорт</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Спецтехника</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Оборудование</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Медицинское оборудование</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Ресторанное оборудование</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Б/У продукция</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Недвижимость</a>
-        </li>
-      </ul>
+      <?php listHeaderBurger($headerListLeasing); ?> 
+      <?php listHeaderBurger($headerListClients); ?> 
+      <?php listHeaderBurger($headerListProgram); ?> 
+     
       <ul>
         <h5 class="item-title underline-box">
           <a class="underline-el underline-el-white" href="/inventory" target="_blank" rel="noopener noreferrer">

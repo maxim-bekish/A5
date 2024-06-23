@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="src/components/page/clients/partners-program/index.css">
-
+<link rel="stylesheet" href="src/components/page/clients/partners-program/partners-program.css">
+<script src="src/components/page/clients/partners-program/partners-program.js"></script>
 
 <section class="partners-program">
    <div class="partners-program__img">
@@ -18,22 +18,22 @@
       </li>
       <li>
          <p>
-            Прозрачная система . Можно отслеживать статистику по заявкам;
+            1. Прозрачная система . Можно отслеживать статистику по заявкам;
          </p>
       </li>
       <li>
          <p>
-            Большие выплаты. Высокий процент с каждого проданного авто, текущий средний чек — ... рублей;
+            2. Большие выплаты. Высокий процент с каждого проданного авто, текущий средний чек — ... рублей;
          </p>
       </li>
       <li>
          <p>
-            Скорость. Выплаты поступают к вам на счёт в течение ... дней после передачи предмета в лизинг клиенту;
+            3. Скорость. Выплаты поступают к вам на счёт в течение ... дней после передачи предмета в лизинг клиенту;
          </p>
       </li>
       <li>
          <p>
-            Постоянное кураторство. Можете задавать любой вопрос сотруднику, закрпелённому за вами.
+            4. Постоянное кураторство. Можете задавать любой вопрос сотруднику, закрпелённому за вами.
          </p>
       </li>
    </ul>
@@ -68,7 +68,7 @@
    </ul>
    <form class="js-myForm partners-program__form">
       <h4 class="partners-program__title--form">Мы рады сотрудничеству. Оставьте заявку на партнерство</h4>
-      <div class="form-items-50 form-white ">
+      <div class="form-items-50 form-white partners-program__form--content">
          <div class="form-group">
             <input name="name" id="name" type="text" placeholder="" required>
             <label for="name">Ваше имя</label>
@@ -78,8 +78,7 @@
             <label for="email">Email</label>
          </div>
          <div class="form-group">
-            <input name="phone" id="phone" type="tel" placeholder=""
-               pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+            <input name="phone" id="phone" type="tel" placeholder="" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
             <label for="phone">Телефон</label>
          </div>
          <div class="form-group">
@@ -102,43 +101,3 @@
       </button>
    </form>
 </section>
-
-<style>
-   .partners-program .partners-program__img {
-      height: 571px;
-   }
-
-   .partners-program__list {
-      margin: 30px 0 30px 0;
-   }
-
-   .partners-program .partners-program__img img {
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-   }
-
-   .partners-program__title {
-      margin: 30px 0 40px 0;
-      font-size: 70px;
-      line-height: 84px;
-      color: rgba(0, 69, 178, 1);
-   }
-
-   .partners-program__title--form {
-      font-size: 40px;
-      margin-top: 95px;
-      color: rgba(0, 69, 178, 1);
-      line-height: 48px;
-
-   }
-
-   .partners-program__form {
-      max-width: 860px;
-   }
-
-   .partners-program__button {
-      margin-top: 30px;
-      max-width: calc(50% - 20px);
-   }
-</style>

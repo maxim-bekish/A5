@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/src/components/page/inventory-card/inventory-card.css">
+
 <?php
 require 'src/assets/helpers/format.php';
 include 'src/state/state.php';
@@ -110,87 +112,3 @@ if ($selectedItem !== null) {
       </div>
    </div>
 </section>-->
-
-<style>
-   .card {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 40px;
-   }
-
-   .card__content {
-      display: flex;
-      flex-direction: column;
-   }
-
-   .card__details {
-      display: flex;
-      justify-content: space-between;
-      margin: 30px 0 65px 0;
-   }
-
-   .card__title {
-      font-size: 70px;
-      line-height: 84.72px;
-      color: #0045B2;
-      margin-bottom: 10px;
-   }
-
-   .card__detail-label {
-      font-size: 16px;
-      line-height: 16px;
-      color: #979797;
-   }
-
-   .card__detail-value {
-      font-size: 30px;
-      font-weight: 500;
-      line-height: 36.31px;
-      color: #0045B2;
-   }
-
-   .card__characteristics-title {
-      font-size: 20px;
-      line-height: 24.2px;
-      color: #515151;
-   }
-
-   .card__characteristic {
-      display: flex;
-      justify-content: space-between;
-   }
-
-   .card__characteristic-label {
-      font-size: 16px;
-      line-height: 16px;
-      color: #979797;
-   }
-
-   .card__characteristic-value {
-      font-size: 16px;
-      line-height: 16px;
-      color: #515151;
-   }
-
-   .card__characteristics {
-      max-width: 410px;
-      height: 100%;
-   }
-
-   .card__characteristics ul {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin: 30px 0;
-      height: calc(100% - 147px);
-   }
-
-   .card__image-container {
-      height: 700px;
-   }
-
-   .card__image-container .card__image {
-      object-fit: cover;
-      height: 100%;
-   }
-</style>

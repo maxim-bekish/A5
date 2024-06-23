@@ -19,4 +19,8 @@
       font-size: 50px;
       line-height: 60px;
    }
+   .about-banner {
+      height: 988px;
+      padding: 60px 20px;
+   }
 }

@@ -17,10 +17,15 @@
 }
 
 .stages-transaction__item {
+   padding: 35px 0;
    display: flex;
-   align-items: center;
-   height: 110px;
+   align-items: flex-start;
    justify-content: space-between;
+   border-top: 1px solid #979797
+}
+
+.stages-transaction__item:last-child {
+   border-bottom: 1px solid #979797
 }
 
 .stages-transaction__item-title {
@@ -51,9 +56,7 @@
       width: 100%;
    }
 
-   .stages-transaction__item {
-      height: 126px;
-   }
+
 
    .stages-transaction__item-title {
       font-size: 24px;

@@ -1,0 +1,39 @@
+.dowland svg,
+.view svg,
+.dowland,
+.view {
+   width: 38px;
+   height: 38px;
+}
+
+.client-documents {
+   flex-wrap: wrap;
+   row-gap: 40px;
+}
+
+.client-documents__controller {
+   position: absolute;
+   right: 20px;
+   bottom: 20px;
+   display: flex;
+   gap: 10px;
+}
+
+.client-documents__item p {
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 24px;
+}
+
+.client-documents__item {
+   padding: 30px 20px;
+   position: relative;
+   background: rgba(242, 242, 242, 1);
+   height: 200px;
+}
+
+@media (max-width:1280px) {
+   .client-documents {
+      row-gap: 20px;
+   }
+}

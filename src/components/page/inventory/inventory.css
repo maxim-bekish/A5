@@ -21,7 +21,7 @@
 }
 
 .inventory__content--item--img img {
-   object-fit: none;
+   object-fit: contain;
    object-position: center;
    height: 100%;
 }
@@ -41,4 +41,39 @@
    font-size: 16px;
    line-height: 19.36px;
    color: #979797;
+}
+
+@media (max-width:1280px) {
+
+   .inventory__content--item--img {
+      width: 355px;
+      height: 355px;
+   }
+
+   .inventory__title {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 40px;
+   }
+
+   .inventory__content--item--text p:nth-child(1) {
+      font-size: 18px;
+   }
+
+   .inventory__content--item--text p:nth-child(2) {
+      font-size: 18px;
+      margin: 6px 0;
+   }
+
+   .inventory__content--item--text p:nth-child(3) {
+      font-size: 14px;
+      line-height: 16.94px;
+   }
+
+
+
+   .inventory__content {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px
+   }
 }

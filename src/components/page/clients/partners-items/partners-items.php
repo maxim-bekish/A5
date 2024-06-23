@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="src/components/page/clients/partners-items/partners-items.css">
+<script src="src/components/page/clients/partners-items/partners-items.js"></script>
+
+
 <?php
 $clientsPartnersItems = [
    [
@@ -35,9 +39,9 @@ $clientsPartnersItems = [
 ];
 ?>
 
-<section class="partners-items container mt-160px">
+<section class="partners-items container grid_1-3-box  mt-160px">
    <div class="partners-items__title">
-      <p>Партнеры</p>
+      <p class="p20px-big" >Партнеры</p>
    </div>
    <div class="partners-items__img">
       <?php foreach ($clientsPartnersItems as $slide): ?>
@@ -50,40 +54,3 @@ $clientsPartnersItems = [
    </div>
 </section>
 
-<style>
-   .partners-items {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 1fr;
-      grid-column-gap: 40px;
-      grid-row-gap: 0px;
-   }
-
-   .partners-items__img>div {
-      display: flex;
-      width: 410px;
-      height: 410px;
-      background: rgba(242, 242, 242, 1);
-      align-items: center;
-      justify-content: center;
-   }
-
-   .partners-items__img>div>img {
-      object-fit: none;
-   }
-
-   .partners-items__title {
-      grid-area: 1 / 1 / 2 / 2;
-   }
-
-   .partners-items__img {
-      grid-area: 1 / 2 / 2 / 5;
-
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 40px;
-      grid-row-gap: 40px;
-
-   }
-</style>

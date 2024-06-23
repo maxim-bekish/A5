@@ -35,3 +35,24 @@
    margin-top: 30px;
    max-width: calc(50% - 20px);
 }
+
+
+@media (max-width:1280px) {
+
+   .partners-program__title {
+      font-size: 50px;
+      line-height: 50px;
+   }
+
+   .partners-program__form {
+      max-width: 100%;
+   }
+
+   .partners-program__form--content {
+      grid-template-columns: repeat(2, 1fr) !important;
+   }
+
+   .partners-program__button {
+      max-width: 100%;
+   }
+}

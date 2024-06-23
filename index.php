@@ -24,7 +24,7 @@ $router->add('clients', function () {
       header('Location: /clients?section=partners');
       exit();
    }
-   $content = 'src/components/page/clients/main.php';
+   $content = 'src/components/page/clients/index.php';
    include 'template.php';
 });
 
@@ -41,17 +41,17 @@ $router->add('about-leasing', function () {
 });
 
 $router->add('personal-data', function () {
-   $content = 'src/components/page/personal-data/index.php';
+   $content = 'src/components/page/personal-data/personal-data.php';
    include 'template.php';
 });
 
 $router->add('inventory', function () {
-   $content = 'src/components/page/inventory/index.php';
+   $content = 'src/components/page/inventory/inventory.php';
    include 'template.php';
 });
 
 $router->add('inventory/card', function () {
-   $content = 'src/components/page/inventory-card/index.php';
+   $content = 'src/components/page/inventory-card/inventory-card.php';
    include 'template.php';
 });
 
@@ -66,7 +66,7 @@ $router->add('program-leasing', function () {
 });
 
 $router->add('program-leasing/card', function () {
-   $content = 'src/components/page/inventory-card/index.php';
+   $content = 'src/components/page/inventory-card/inventory-card.php';
    include 'template.php';
 });
 

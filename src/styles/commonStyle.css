@@ -63,6 +63,11 @@ span {
    line-height: 28px;
 }
 
+.p20px-big {
+   font-size: 20px;
+   line-height: 28px;
+}
+
 img {
    width: 100%;
 }
@@ -175,6 +180,18 @@ img {
 @media(max-width:1280px) {
    body {
       max-width: 1280px;
+   }
+
+   .p20px {
+      font-size: 16px !important;
+      line-height: 16px !important;
+   }
+
+   .p20px-big {
+      font-size: 40px !important;
+      line-height: 40px !important;
+      color: #0045B2 !important;
+
    }
 
    .w-50 {

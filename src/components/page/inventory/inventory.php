@@ -3,7 +3,7 @@ require 'src/assets/helpers/format.php';
 include 'src/state/state.php';
 ?>
 
-<link rel="stylesheet" href="src/components/page/inventory/index.css">
+<link rel="stylesheet" href="src/components/page/inventory/inventory.css">
 
 <section class='grid_1-3-box inventory container'>
    <div class="grid_1-3_1 inventory__header">
