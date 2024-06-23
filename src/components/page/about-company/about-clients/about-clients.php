@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="src/components/page/about-company/about-clients/index.css">
-<script src="src/components/page/about-company/about-clients/index.js"></script>
+<link rel="stylesheet" href="src/components/page/about-company/about-clients/about-clients.css">
+<script src="src/components/page/about-company/about-clients/about-clients.js"></script>
 
 <?php
 $slidesClients = [
@@ -48,46 +48,41 @@ $slidesClients = [
 
 
 <section class="about-clients container mt-160px">
-   <div class="about-clients__header">
+
+   <div class="about-clients__header grid_1-3-box">
       <div class="about-clients__header-text">
-         <p>Клиенты</p>
+         <p class="p20px">Клиенты</p>
       </div>
       <div class="about-clients__header-title">
          <h3 class="about-clients__title title-page-h3">
             Решили логистические проблемы на рынке 2022
          </h3>
+
+         <div class="w-50-box about-clients__description">
+            <p class="w-50">
+               Востребованность лизинга за 9 месяцев 2023 года возросла в 2 раза по сравнению с аналогичным периодом
+               2022 года. Резкий скачок связан с геополитическим кризисом, нехваткой техники и быстрым реагированием
+               лизинговых компаний.
+            </p>
+            <p class="w-50">
+               Мы своевременно адаптировались к новым условиям, перестроили свою логистическую цепочку и сделали упор
+               на сотрудничество с дружественными странами. Компания А5 совместно с коллегами не дала «просесть»
+               отечественному производству, а также вывела российский бизнес на показатели выше, чем в докризисный 2021
+               год.
+            </p>
+        
+         </div>
       </div>
    </div>
-   <div class="about-clients__content">
-      <div class="about-clients__text">
-         <p></p>
-      </div>
-      <div class="about-clients__text">
-         <p>
-            Востребованность лизинга за 9 месяцев 2023 года возросла в 2 раза по сравнению с аналогичным периодом
-            2022 года. Резкий скачок связан с геополитическим кризисом, нехваткой техники и быстрым реагированием
-            лизинговых компаний.
-         </p>
-      </div>
-      <div class="about-clients__text">
-         <p>
-            Мы своевременно адаптировались к новым условиям, перестроили свою логистическую цепочку и сделали упор
-            на сотрудничество с дружественными странами. Компания А5 совместно с коллегами не дала «просесть»
-            отечественному производству, а также вывела российский бизнес на показатели выше, чем в докризисный 2021
-            год.
-         </p>
-      </div>
-   </div>
+
    <div class="about-clients__slider">
       <div class="slider__box">
          <div class="slider__container">
-            <?php foreach ($slidesClients as $slide): ?>
+            <?php foreach ($slidesClients as $slide) : ?>
                <div class="slider__slide">
                   <p class="dop-info">Подробнее</p>
                   <div class="slider__slide--front">
-                     <img class="slider__image"
-                        src="<?php echo IMG_PATH . 'slider-clients/' . (!empty($slide['image']) ? htmlspecialchars($slide['image']) : 'placeholder.png'); ?>"
-                        alt="logo">
+                     <img class="slider__image" src="<?php echo IMG_PATH . 'slider-clients/' . (!empty($slide['image']) ? htmlspecialchars($slide['image']) : 'placeholder.png'); ?>" alt="logo">
                   </div>
                   <div class="slider__slide--back">
                      <p class="slider__text"><?php echo nl2br(htmlspecialchars($slide['name'])); ?></p>

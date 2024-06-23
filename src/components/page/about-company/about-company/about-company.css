@@ -12,9 +12,7 @@
    grid-row-gap: 0px;
 }
 
-.about-company__box--up .about-company__header {
-   grid-area: 1 / 1 / 2 / 2;
-}
+
 
 .about-company--text {
    font-size: 20px;
@@ -55,50 +53,46 @@
    /* Включение плавного перехода */
 }
 
-.about-company__box--up .about-company__content {
-   grid-area: 1 / 2 / 2 / 5;
-}
 
 .about-company__box--medium {
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   grid-template-rows: 1fr;
-   grid-column-gap: 25px;
-   grid-row-gap: 0px;
+   grid-template-columns: repeat(2, 1fr);
+   grid-column-gap: 20px;
 }
 
-.about-company__box--medium .about-company__stats {
+
+.about-company__stats--mobil {
    grid-area: 1 / 1 / 2 / 3;
    display: flex;
    flex-direction: column;
    justify-content: center;
 }
 
-.about-company__box--medium .about-company__description {
-   grid-area: 1 / 3 / 2 / 4;
+
+.about-company__description {
+   display: flex;
+   justify-content: space-between;
 }
 
-.about-company__box--medium .about-company__achievements {
-   grid-area: 1 / 4 / 2 / 5;
-}
 
 .about-company__box--down {
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   grid-template-rows: 1fr;
+   grid-template-columns: repeat(2, 1fr);
    grid-column-gap: 20px;
-   grid-row-gap: 0px;
    justify-items: end;
-   align-items: end;
-
 }
 
-.about-company__box--down .about-company__years {
-   grid-area: 1 / 2 / 2 / 3;
+.about-company__stats--mobil {
+   display: none;
+}
+
+.about-company__years {
+   display: flex;
+   height: 100%;
+   align-items: flex-end;
 }
 
 .about-company__box--down .about-company__image {
-   grid-area: 1 / 3 / 2 / 5;
    width: 100%;
    height: 100%;
 }
@@ -107,4 +101,46 @@
 .about-company__box--down .about-company__image img {
    width: 100%;
    height: 100%;
+}
+
+@media (max-width:1280px) {
+   .about-company__stats {
+      display: none !important;
+   }
+
+   .about-company__stats--mobil {
+      display: block;
+   }
+
+   .about-company__box--medium {
+      grid-template-columns: 1fr;
+   }
+
+   .about-company__years {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .about-company--big-test {
+      font-size: 110px;
+      line-height: 110px;
+      text-align: left;
+   }
+
+   .about-company__years>div {
+      width: 100%;
+   }
+
+   .about-company__years--value p {
+      text-align: right
+   }
+
+   .about-company__box--down {
+      grid-column-gap: 10px;
+   
+   }
 }

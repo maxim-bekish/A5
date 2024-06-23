@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="src/components/page/about-company/banner/index.css">
-<script src="src/components/page/about-company/banner/index.js"></script>
+<link rel="stylesheet" href="src/components/page/about-company/banner/banner.css">
+<script src="src/components/page/about-company/banner/banner.js"></script>
 
 <section class="about-banner">
    <h3 class="about-banner__title">

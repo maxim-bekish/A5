@@ -14,7 +14,7 @@ $router->add('', function () {
 });
 
 $router->add('about-company', function () {
-   $content = 'src/components/page/about-company/main.php';
+   $content = 'src/components/page/about-company/index.php';
    include 'template.php';
 });
 

@@ -5,7 +5,7 @@ $(document).ready(function () {
    const $sliderContainer = $(".about-clients__slider .slider__container");
    const $slides = $sliderContainer.children();
    const slideCount = $slides.length;
-   const slideWidth = Math.ceil($(".about-clients__slider .slider__slide").outerWidth()) + 40;
+   const slideWidth = Math.ceil($(".about-clients__slider .slider__slide").outerWidth(true)) ;
    const step = -slideWidth;
    const timeAnimate = 700;
    let isAnimating = false;

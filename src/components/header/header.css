@@ -323,9 +323,10 @@ body .js-flex {
    }
 
    .header {
+      padding-top: 30px;
       max-width: 1280px;
-      padding-bottom: 50px;
-      grid-template-columns: 57% 43%
+      padding-bottom: 30px;
+      grid-template-columns: 57% 43%;
    }
 
    .mt-21 {
