@@ -7,7 +7,7 @@
 .leasing-programs__content {
    position: relative;
 }
-
+/* desktop v1 */
 .leasing-programs__list {
    display: flex;
    flex-direction: column;
@@ -29,12 +29,6 @@
 .leasing-programs__list-item--active {
    text-decoration: underline;
    color: var(--text-blue);
-}
-
-.leasing-programs__list-header {
-   background: none;
-   border: none;
-   cursor: pointer;
 }
 
 .leasing-programs__icon-rt180 {
@@ -117,7 +111,9 @@
       min-height: 636px;
       max-width: 100%;
    }
-
+   .leasing-programs__content .mobile__select{
+      margin-top: -60px;
+   }
 
    .leasing-programs {
       padding: 0;
@@ -152,70 +148,9 @@
       line-height: 19.36px;
    }
 
-   .leasing-programs__list-header {
-      position: absolute;
-      top: 15px;
-      right: 10px;
-      z-index: 99;
+   .leasing-programs__list--open {
+      display: flex !important;
    }
-
 
 }
 
-.leasing-programs__list--open {
-   display: flex !important;
-}
-
-.leasing-programs__mobile-title {
-   display: none;
-
-   justify-content: space-between;
-   align-items: center;
-}
-
-.leasing-programs__list-mobile {
-   display: none;
-   padding: 10px 10px 0 10px;
-   width: 100%;
-}
-
-.leasing-programs__list-mobile li {
-   margin-bottom: 20px;
-}
-
-@media(max-width: 1280px) {
-
-
-   .leasing-programs__mobile-select {
-      position: absolute;
-      display: block;
-      border-radius: 2px;
-      border: 1px solid gray;
-      background: white;
-      width: 94%;
-      min-height: 45px;
-      transform: translate(3%, -60px);
-      margin: 0 auto;
-   }
-
-   .leasing-programs__list-item--active {
-      text-decoration: none;
-   }
-
-   .leasing-programs__list {
-      display: none;
-      border-left: 0;
-      padding: 15px;
-      gap: 25px;
-   }
-
-   .leasing-programs__mobile-title {
-      display: flex;
-   }
-
-   .leasing-programs__mobile-title p {
-      color: var(--text-blue);
-      padding: 10px;
-      text-decoration: none;
-   }
-}

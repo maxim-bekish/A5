@@ -1,7 +1,7 @@
 $(document).ready(function () {
-   const $buttons = $('.leasing-guide__buttons .button');
+   const $buttons = $('.mobile__list-content .button');
    const $items = $('.leasing-guide__list .leasing-guide__item');
-   $('.leasing-guide__mobile-title p').text($('.leasing-guide__button-active').text())
+   $('.mobile__title p').text($('.leasing-guide__button-active').text())
    $buttons.on('click', function () {
       const index = $(this).data('index');
 
@@ -14,21 +14,21 @@ $(document).ready(function () {
    });
 
    $('.leasing-guide__icon-down').click(function () {
-      $(this).toggleClass('rt180');
+      $(this).find('.js-svg-upend').toggleClass('rt180');
       $(this).closest('.leasing-guide__list-title').next('.leasing-guide__text').toggleClass('open');
    });
 
-   $('.leasing-guide__mobile-title .js-open-select').click(function () {
-      $(this).toggleClass('rt180');
-      $('.leasing-guide__buttons').toggleClass("leasing-guide__buttons--open");
-      $('.leasing-guide__mobile-title p').toggleClass("leasing-guide__buttons--closed");
+   $('.leasing-guide .js-open-select').click(function () {
+      $(this).find('.js-svg-upend').toggleClass('rt180');
+      $('.mobile__list-content').toggleClass("mobile__title--open");
+      $('.mobile__title p').toggleClass("mobile__title--closed");
 
    });
-   $('.leasing-guide__buttons--item').click(function () {
-      $('.leasing-guide__mobile-title .js-open-select').toggleClass('rt180');
-      $('.leasing-guide__buttons').toggleClass("leasing-guide__buttons--open");
-      $('.leasing-guide__mobile-title p').text($(this).text());
-      $('.leasing-guide__mobile-title p').removeClass("leasing-guide__buttons--closed");
+   $('.mobile__list-content--item').click(function () {
+      $('.mobile__title .js-open-select').toggleClass('rt180');
+      $('.mobile__list-content').toggleClass("mobile__title--open");
+      $('.leasing-guide .mobile__title p').text($(this).text());
+      $('.leasing-guide .mobile__title p').removeClass("mobile__title--closed");
 
    });
 

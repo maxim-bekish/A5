@@ -1,9 +1,3 @@
-
-
-
-
-
-
 .clients__slider .slider__box {
    position: relative;
    height: 410px;
@@ -114,4 +108,10 @@
       font-size: 14px;
       line-height: 19.6px;
    }
+
+
+   .clients__slider .custom-slider__buttons{
+pa
+   }
+
 }

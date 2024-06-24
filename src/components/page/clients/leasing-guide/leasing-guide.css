@@ -33,8 +33,6 @@
    border-top: 1px solid #979797;
 }
 
-
-
 .leasing-guide__item:last-child {
    border-bottom: 1px solid #979797;
 }
@@ -66,53 +64,12 @@
 }
 
 /* --------- */
-.leasing-guide__mobile-title {
-   display: none;
-   justify-content: space-between;
-   align-items: center;
-}
 
 @media (max-width:1280px) {
-   .leasing-guide__mobile-title p {
-      color: var(--text-blue);
-      text-decoration: none;
-      line-height: 16px;
-   }
 
-   .leasing-guide__list-header {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-   }
-
-   .leasing-guide__mobile-title {
-      display: flex;
-   }
-
-   .leasing-guide__buttons {
-      display: none;
-      flex-direction: column;
-      gap: 25px;
-      margin-bottom: 0;
-   }
-
-   .leasing-guide__buttons--open {
-      display: flex;
-   }
-
-   .leasing-guide__buttons--closed {
-
-      display: none;
-   }
-
-   .leasing-guide__buttons--item {
-      max-width: 100%;
-      height: 100%;
-   }
-   .leasing-guide__list-box{
+   .leasing-guide__list-box {
       margin-top: 80px;
    }
- 
 
    .leasing-guide__buttons--item .leasing-guide__button {
       border: 0;
@@ -126,20 +83,5 @@
    .leasing-guide__buttons--item .leasing-guide__button:hover,
    .leasing-guide__buttons--item .leasing-guide__button-active {
       color: var(--text-blue);
-   }
-
-   .leasing-guide__mobile-select {
-      padding: 15px;
-      position: absolute;
-      display: block;
-      border-radius: 2px;
-      border: 1px solid gray;
-      background: white;
-      width: 96%;
-      z-index: 9;
-      top: 0;
-      min-height: 45px;
-      transform: translate(2%, 0px);
-      margin: 0px auto;
    }
 }

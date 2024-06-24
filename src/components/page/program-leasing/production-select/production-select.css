@@ -1,0 +1,149 @@
+.production__select-items button {
+   padding: 10px 0;
+}
+
+.production__select-item-box {
+   position: relative;
+   display: flex;
+   gap: 13px;
+   height: 27px;
+}
+
+.production__select-item-label {
+   position: absolute;
+   font-size: 16px;
+   bottom: 5px;
+   line-height: 19.36px;
+   color: #979797;
+}
+
+.production__select-item-input {
+   border: 0;
+   width: 100%;
+   padding-left: 30px;
+   font-size: 16px;
+   line-height: 16.64px;
+   color: #515151;
+   border-bottom: 1px solid transparent;
+   padding-bottom: 5px;
+}
+
+.production__select-item-input::placeholder {
+   font-size: 16px;
+   line-height: 16.64px;
+   color: #515151;
+}
+
+.production__select-item-input:hover {
+   border-bottom: 1px solid #979797;
+}
+
+.production__select-item-input:focus {
+   border-bottom: 1px solid #0045B2;
+}
+
+.production__select-box {
+   display: flex;
+   gap: 20px;
+}
+
+.production__select {
+   max-width: 250px;
+   width: 100%;
+   position: relative;
+}
+
+.select-svg {
+   stroke: #515151;
+}
+
+.production__select-title-box {
+   display: flex;
+   align-items: center;
+   padding: 18px 16px;
+   justify-content: space-between;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #979797;
+}
+
+.production__select-items-box {
+   padding: 18px 16px;
+   opacity: 0;
+   max-height: 316px;
+   position: absolute;
+   border-color: #979797;
+   border-style: solid;
+   box-sizing: border-box;
+   border-width: 1px;
+   background-color: #fff;
+   width: 100%;
+   border-top-width: 0px;
+   transition: all 0.1s ease;
+}
+
+.production__select--input .production__select-items {
+   overflow: hidden;
+}
+
+.production__select-items {
+   height: 100%;
+   overflow: auto;
+   transition: all 0.1s ease;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+/* скрол */
+
+/* Стилизация скролла для веб-китовских браузеров (Chrome, Safari) */
+.production__select-items::-webkit-scrollbar {
+   width: 5px;
+
+   /* Ширина скролла */
+}
+
+.production__select-items::-webkit-scrollbar-track {
+   background: #979797;
+   /* Цвет трека */
+   border-radius: 5px;
+   border-right: 2px solid #fff;
+   border-left: 2px solid #fff;
+   cursor: pointer;
+   /* Радиус скролла */
+}
+
+.production__select-items::-webkit-scrollbar-thumb {
+   background: #0045B2;
+   /* Цвет бегунка */
+   cursor: pointer;
+   border-radius: 5px;
+   /* Радиус бегунка */
+}
+
+/* Стилизация скролла для Internet Explorer и Edge */
+.production__select-items {
+   -ms-overflow-style: -ms-autohiding-scrollbar;
+   /* Автоскрывающийся скролл для IE и Edge */
+}
+
+/* скрол */
+
+
+.production__select-title,
+.production__select-items li {
+   font-size: 16px;
+   line-height: 16.64px;
+   color: #515151;
+   cursor: pointer;
+}
+
+.production__select-items li:hover {
+   color: #0045B2;
+}
+
+.production__select--active .production__select-title-box,
+.production__select--active .production__select-items-box {
+   border-color: #0045B2;
+}

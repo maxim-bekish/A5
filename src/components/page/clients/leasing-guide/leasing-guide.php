@@ -13,7 +13,7 @@ $leasingGuide = [
          ],
          [
             'title' => 'Нужен ли залог при заключении договора лизинга?',
-            'text' => 'текст 2'
+            'text' => 'текст 1'
          ],
          [
             'title' => 'title  3',
@@ -133,18 +133,18 @@ $leasingGuide = [
 ?>
 
 <section class="leasing-guide">
-   <div class="leasing-guide__mobile-select">
-      <div class="leasing-guide__mobile-title">
-         <p> 111</p>
-         <button class="js-open-select leasing-guide__list-header" type="button">
-            <svg class="rt0" width="14px" height="9px" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <div class="mobile__select">
+      <div class="mobile__title">
+         <p></p>
+         <button class="js-open-select mobile__list-header" type="button">
+            <svg class="rt0 js-svg-upend" width="14px" height="9px" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
             </svg>
          </button>
       </div>
-      <ul class="leasing-guide__buttons">
+      <ul class="leasing-guide__buttons mobile__list-content">
          <?php foreach ($leasingGuide as $index => $el) : ?>
-            <li class="leasing-guide__buttons--item">
+            <li class="leasing-guide__buttons--item mobile__list-content--item">
                <button class="button button--outline leasing-guide__button <?php echo $index === 0 ? 'leasing-guide__button-active' : ''; ?>" data-index="<?php echo $index; ?>">
                   <?php echo htmlspecialchars($el['title']); ?>
                </button>
@@ -160,9 +160,11 @@ $leasingGuide = [
 
                <div class="leasing-guide__list-title">
                   <h4><?php echo htmlspecialchars($content['title']); ?></h4>
-                  <svg class="leasing-guide__icon-down rt0" width="32" height="18" viewBox="0 0 32 18" fill="none">
-                     <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down-big"></use>
-                  </svg>
+                  <button type="button" class="leasing-guide__icon-down">
+                     <svg class="js-svg-upend rt0" width="32" height="18" viewBox="0 0 32 18" fill="none">
+                        <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down-big"></use>
+                     </svg>
+                  </button>
                </div>
                <?php if ($content['text']) : ?>
                   <p class="leasing-guide__text"><?php echo htmlspecialchars($content['text']); ?></p>

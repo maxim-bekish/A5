@@ -1,30 +1,20 @@
 .partners-items__img>div {
    display: flex;
-   width: 410px;
-   height: 410px;
-
+   aspect-ratio: 1;
+   padding: 35px;
    background: rgba(242, 242, 242, 1);
-   align-items: center;
-   justify-content: center;
-}
 
-.partners-items__img>div>img {
-   object-position: center;
-   object-fit: scale-down;
 }
 
 .partners-items__img {
-   display: flex;
+   display: grid;
+   grid-template-columns: repeat(3, minmax(165px, 1fr));
    gap: 40px;
-   flex-wrap: wrap;
+   grid-template-rows: repeat(3, minmax(165px, 1fr));
 }
 
 @media (max-width:1280px) {
-   .partners-items__img>div {
-      width: 230px;
-      height: 230px;
-      padding: 38px;
-   }
+
 
    .partners-items__img {
       gap: 20px;

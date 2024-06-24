@@ -89,10 +89,10 @@ $headerListClients = (object) [
       'name' => 'Документы',
       'link' => '/clients?section=client-documents'
     ],
-    //(object) [
-    //  'name' => 'Гид по лизингу',
-    //  'link' => '/clients?section=leasing-guide'
-    //],
+    (object) [
+      'name' => 'Гид по лизингу',
+      'link' => '/clients?section=leasing-guide'
+    ],
   ]
 ];
 function listHeader($data)

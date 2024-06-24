@@ -1,7 +1,11 @@
+<script src="src/components/page/program-leasing/program-leasing.js"></script>
+<link rel="stylesheet" href="src/components/page/program-leasing/program-leasing.css">
+
 <?php
 require 'src/assets/helpers/format.php';
 $programLeasingData = [
    [
+      "asideTitle" => "Легковой автотранспорт",
       "section" => "passenger-vehicles",
       "image" => "photo-1.png",
       "title" => "Приобрести легковой автомобиль — легко",
@@ -32,6 +36,7 @@ $programLeasingData = [
       ]
    ],
    [
+      "asideTitle" => "Грузовой автотранспорт",
       "section" => "freight-transport",
       "image" => "photo-2.png",
       "title" => "Серьезная техника для крупного \n  производства",
@@ -65,6 +70,7 @@ $programLeasingData = [
       ]
    ],
    [
+      "asideTitle" => "Спецтехника",
       "section" => "special-equipment",
       "image" => "photo-3.png",
       "title" => "Своя спецтехника — \n свой вектор развития",
@@ -97,6 +103,7 @@ $programLeasingData = [
       ]
    ],
    [
+      "asideTitle" => "Оборудование",
       "section" => "equipment",
       "image" => "photo-4.png",
       "title" => "Высокотехнологичное \n производство с выгодой",
@@ -128,6 +135,7 @@ $programLeasingData = [
       ]
    ],
    [
+      "asideTitle" => "Медицинское оборудование",
       "section" => "medical-equipment",
       "image" => "photo-5.png",
       "title" => "Делаем доступными передовые \n медицинские технологии ",
@@ -156,6 +164,7 @@ $programLeasingData = [
       ]
    ],
    [
+      "asideTitle" => "Ресторанное оборудование",
       "section" => "restaurant-equipment",
       "image" => "photo-6.png",
       "title" => "Мишленовские звезды с нашим \n оборудованием — реальность",
@@ -185,6 +194,7 @@ $programLeasingData = [
       ]
    ],
    [
+      "asideTitle" => "Б/У продукция",
       "section" => "used-products",
       "image" => "photo-7.png",
       "title" => "Продлеваем срок действия \n качественных машин",
@@ -223,6 +233,7 @@ $programLeasingData = [
       ]
    ],
    [
+      "asideTitle" => "Недвижимость",
       "section" => "real-estate",
       "image" => "photo-8.png",
       "title" => "Выгодная альтернатива аренде — \n помещение станет вашим",
@@ -271,37 +282,28 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
 ?>
 
 <section class="grid_1-3-box container">
-   <div class="program-leasing-page__navigation grid_1-3_1">
+   <div class="program-leasing-page__navigation">
       <h3>Программы лизинга</h3>
-      <ul>
-         <li>
-            <a href="?section=passenger-vehicles" class="<?php if ($activeNavItem === 'passenger-vehicles') echo 'program__navigation--active'; ?>">Легковой автотранспорт</a>
-         </li>
-         <li>
-            <a href="?section=freight-transport" class="<?php if ($activeNavItem === 'freight-transport') echo 'program__navigation--active'; ?>">Грузовой автотранспорт</a>
-         </li>
-         <li>
-            <a href="?section=special-equipment" class="<?php if ($activeNavItem === 'special-equipment') echo 'program__navigation--active'; ?>">Спецтехника</a>
-         </li>
-         <li>
-            <a href="?section=equipment" class="<?php if ($activeNavItem === 'equipment') echo 'program__navigation--active'; ?>">Оборудование</a>
-         </li>
-         <li>
-            <a href="?section=medical-equipment" class="<?php if ($activeNavItem === 'medical-equipment') echo 'program__navigation--active'; ?>">Медицинское оборудование</a>
-         </li>
-         <li>
-            <a href="?section=restaurant-equipment" class="<?php if ($activeNavItem === 'restaurant-equipment') echo 'program__navigation--active'; ?>">Ресторанное оборудование</a>
-         </li>
-         <li>
-            <a href="?section=used-products" class="<?php if ($activeNavItem === 'used-products') echo 'program__navigation--active'; ?>">Б/У продукция</a>
-         </li>
-         <li>
-            <a href="?section=real-estate" class="<?php if ($activeNavItem === 'real-estate') echo 'program__navigation--active'; ?>">Недвижимость</a>
-         </li>
-      </ul>
+      <div class="mobile__select">
+         <div class="mobile__title">
+            <p></p>
+            <button class="js-open-select mobile__list-header" type="button">
+               <svg class="rt0 js-svg-upend" width="14px" height="9px" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
+               </svg>
+            </button>
+         </div>
+         <ul class="mobile__list-content">
+            <?php foreach ($programLeasingData as $el) : ?>
+               <li class="mobile__list-content--item">
+                  <a href="?section=<?php echo $el['section'] ?>" class="<?php if ($activeNavItem === $el['section']) echo 'program__navigation--active'; ?>"> <?php echo $el['asideTitle'] ?> </a>
+               </li>
+            <?php endforeach; ?>
+         </ul>
+      </div>
    </div>
 
-   <div class="program-leasing-page__content grid_1-3_3">
+   <div class="program-leasing-page__content">
       <?php if ($activeProgram) : ?>
          <div class="program-leasing-page__image">
             <img src="<?php echo IMG_PATH . 'program-leasing-page/' . htmlspecialchars($activeProgram['image']); ?>" alt="">
@@ -316,12 +318,12 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
 
 <section class="grid_1-3-box container obtaining-leasing">
    <?php if ($activeProgram) : ?>
-      <div class="grid_1-3_1">
+      <div class="">
          <p class="p20px">
             Условия получения лизинга <br> в выбранной нише:
          </p>
       </div>
-      <div class="grid_1-3_3 obtaining-leasing__content">
+      <div class="obtaining-leasing__content">
          <div class="obtaining-leasing__content--item">
             <h4><?php echo htmlspecialchars($activeProgram['obtainingLeasing']['minAdvance']) . '%'; ?></h4>
             <p>Минимальный аванс</p>
@@ -340,12 +342,12 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
 
 <section class="grid_1-3-box container requirements">
    <?php if ($activeProgram) : ?>
-      <div class="grid_1-3_1 requirements__title">
+      <div class="requirements__title">
          <p class="p20px">
             Основные требования <br> к лизингополучателям
          </p>
       </div>
-      <ul class="grid_1-3_3 requirements__content">
+      <ul class="requirements__content">
          <?php foreach ($activeProgram['requirementsLessees'] as $requirement) : ?>
             <li class="requirements__content--item">
                <h4><?php echo htmlspecialchars($requirement['title']); ?></h4>
@@ -357,16 +359,16 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
 </section>
 
 <?php
-include 'src/components/page/program-leasing/production/index.php';
+include 'src/components/page/program-leasing/production/production.php';
 ?>
 
 <section class="grid_1-3-box container mt-160px">
-   <div class="grid_1-3_1">
+   <div>
       <p class="p20px">
          Калькулятор лизинга
       </p>
    </div>
-   <div class="grid_1-3_3 program-leasing-calculator">
+   <div class=" program-leasing-calculator">
       <?php
       include 'src/components/ui/calculator/calculator.php';
       include 'src/components/ui/calculator-result/index.php';
@@ -375,12 +377,12 @@ include 'src/components/page/program-leasing/production/index.php';
 </section>
 
 <section class="grid_1-3-box container mt-160px">
-   <div class="grid_1-3_1">
+   <div>
       <p class="p20px">
          Поставщики
       </p>
    </div>
-   <div class="grid_1-3_3 program-leasing__slider">
+   <div class="program-leasing__slider">
       <div class="slider__box">
          <div class="slider__container">
             <?php if ($activeProgram) : ?>
@@ -406,231 +408,3 @@ include 'src/components/page/program-leasing/production/index.php';
       </div>
    </div>
 </section>
-
-<script>
-   $(document).ready(function() {
-      const $sliderContainer = $(".program-leasing__slider .slider__container");
-      if ($sliderContainer.children().length > 3) {
-         const $slides = $sliderContainer.children();
-         const slideCount = $slides.length;
-         const slideWidth = Math.ceil($(".program-leasing__slider .slider__slide").outerWidth()) + 40;
-         const step = -slideWidth;
-         const timeAnimate = 700;
-         let isAnimating = false;
-         // Копируем первые два слайда и добавляем их в конец контейнера
-         $slides.slice(0, 2).clone().appendTo($sliderContainer);
-         // Копируем последние два слайда и добавляем их в начало контейнера
-         $slides.slice(-2).clone().prependTo($sliderContainer);
-         $sliderContainer.css("left", -slideWidth * 2 + "px");
-
-         $(".program-leasing__slider .slider__button--prev").click(function() {
-            if (!isAnimating) {
-               isAnimating = true;
-               const currentLeft = parseInt($sliderContainer.css("left")) || 0;
-               $sliderContainer.animate({
-                  left: (currentLeft - step) + "px"
-               }, timeAnimate, function() {
-                  if (parseInt($sliderContainer.css("left")) >= 0) {
-                     $sliderContainer.css("left", -slideCount * slideWidth + "px");
-                  }
-                  isAnimating = false;
-               });
-            }
-         });
-
-         $(".program-leasing__slider  .slider__button--next").click(function() {
-            if (!isAnimating) {
-               isAnimating = true;
-               const currentLeft = parseInt($sliderContainer.css("left")) || 0;
-               $sliderContainer.animate({
-                  left: (currentLeft + step) + "px"
-               }, timeAnimate, function() {
-                  if (parseInt($sliderContainer.css("left")) <= -(slideCount + 1) * slideWidth) {
-                     $sliderContainer.css("left", -slideWidth + "px");
-                  }
-                  isAnimating = false;
-               });
-            }
-         });
-      } else {
-         $(".program-leasing__slider .slider__buttons").css('display', 'none');
-      }
-   });
-</script>
-
-<style>
-   .program-leasing__slider {
-      display: flex;
-      grid-area: 1 / 2 / 2 / 5;
-      flex-direction: column;
-      gap: 20px;
-      align-items: flex-end;
-      position: relative;
-   }
-
-   .program-leasing__slider .slider__buttons {
-      display: flex;
-      gap: 20px;
-      max-width: 120px;
-      bottom: 0;
-      position: absolute;
-      left: -140px;
-   }
-
-   .program-leasing__slider .slider__box {
-      position: relative;
-      height: 410px;
-      width: 100%;
-      overflow: hidden;
-   }
-
-   .program-leasing__slider .slider__container {
-      position: absolute;
-      top: 0px;
-      display: flex;
-      height: 100%;
-   }
-
-   .program-leasing__slider .custom-slider__buttons {
-      position: absolute;
-      bottom: 0;
-      left: -160px;
-
-   }
-
-   .program-leasing__slider .slider__slide {
-      width: 410px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      margin-right: 40px;
-      background-color: var(--back-gray-light);
-      justify-content: flex-start;
-      align-items: center;
-      overflow: hidden;
-   }
-
-   .program-leasing__slider .slider__image {
-      width: 100%;
-      height: 100%;
-      object-fit: none;
-   }
-</style>
-
-<style>
-   /* ----------------- */
-   .program-leasing-calculator {
-      display: flex;
-      justify-content: space-between;
-   }
-
-   /* ----------------- */
-   .requirements__content--item {
-      display: flex;
-      border-top: 1px solid #979797;
-      padding: 35px 0;
-   }
-
-   .requirements__content--item:last-child {
-      border-bottom: 1px solid #979797;
-   }
-
-   .requirements__content--item h4 {
-      font-size: 24px;
-      line-height: 24px;
-      width: calc(50% - 20px);
-      color: #0045B2;
-   }
-
-   .requirements__content--item p {
-      width: calc(50% - 20px);
-      color: #515151;
-      line-height: 21.78px;
-   }
-
-   /* ----------------- */
-
-   .obtaining-leasing {
-      margin: 100px 0;
-   }
-
-   .obtaining-leasing__content {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-   }
-
-   .obtaining-leasing__content--item p {
-      font-size: 16px;
-      line-height: 16px;
-      color: #979797;
-   }
-
-   .obtaining-leasing__content--item h4 {
-      font-size: 48px;
-      font-weight: 500;
-      margin-bottom: 10px;
-      line-height: 58.08px;
-      color: #0045B2;
-   }
-
-   /* ----------------- */
-
-   .program-leasing-page__content {
-      font-size: 70px;
-      line-height: 84px;
-      color: #0045B2;
-   }
-
-   .program-leasing-page__image {
-      overflow: hidden;
-      height: 561px;
-   }
-
-   .program-leasing-page__image img {
-      height: 100%;
-      object-position: center;
-      object-fit: cover;
-   }
-
-   .program-leasing-page__navigation ul {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      padding-left: 20px;
-      border-left: 2px solid rgba(0, 69, 178, 1)
-   }
-
-   .program-leasing-page__navigation ul li a {
-      text-wrap: nowrap;
-   }
-
-   .program-leasing-page__navigation ul li a:hover {
-      color: rgba(0, 69, 178, 1);
-   }
-
-   .program-leasing-page__navigation ul li .program__navigation--active {
-      text-decoration: underline;
-      color: rgba(0, 69, 178, 1);
-   }
-
-   .program-leasing-page__navigation h3 {
-      font-size: 30px;
-      margin-bottom: 43px;
-
-      line-height: 31.22px;
-      color: rgba(0, 69, 178, 1);
-   }
-
-   .program-leasing-page__content h3 {
-      margin: 40px 0 30px 0;
-      color: rgba(0, 69, 178, 1);
-      font-size: 70px;
-      line-height: 84px;
-   }
-
-   .program-leasing-page__content p {
-      max-width: 1000px;
-   }
-</style>

@@ -8,7 +8,7 @@ $listTitle = [
       'title' => '1 Легковой автотранспорт',
       'id' => 1,
       'content' => [
-         'term' => '1 лет',
+         'term' => '1 год',
          'prepaid' => 'от 5%',
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
          'link' => '#',
@@ -97,19 +97,19 @@ $listTitle = [
 <section class="leasing-programs mt-160px container">
    <h3 class="leasing-programs__title title-page-h3">Программы лизинга</h3>
    <div id="js-leasing-programs" class="leasing-programs__content grid_1-3-box">
-      <div class="leasing-programs__mobile-select">
-         <div class="leasing-programs__mobile-title">
+      <div class="mobile__select">
+         <div class="mobile__title">
             <p> </p>
-            <button class="js-open-select leasing-programs__list-header svg-upend" type="button">
-               <svg class="rt0" width="14px" height="9px" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="js-open-select  mobile__list-header" type="button">
+               <svg class="rt0 js-svg-upend" width="14px" height="9px" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
                </svg>
             </button>
          </div>
-         <ul id="js-leasing-ul" class="leasing-programs__list">
+         <ul id="js-leasing-ul" class="leasing-programs__list mobile__list-content">
             <?php $index = 0; ?>
             <?php foreach ($listTitle as $el) : ?>
-               <li id="<?php echo htmlspecialchars($el['id']); ?>" data-index="<?php echo $index; ?>">
+               <li id="<?php echo htmlspecialchars($el['id']); ?>" data-index="<?php echo $index; ?>" class="mobile__list-content--item">
                   <p class="leasing-programs__list-item jsListItemProgram <?php echo $index === 0 ? 'leasing-programs__list-item--active' : ''; ?>">
                      <?php echo htmlspecialchars($el['title']); ?>
                   </p>
@@ -123,7 +123,7 @@ $listTitle = [
             <div class="leasing-programs__row">
                <div class="leasing-programs__title-wrapper">
                   <h4 id="js-leasing-term" class="leasing-programs__term">
-                     <!--1 — 5 лет-->
+                     <!-- listTitle[0]content.term -->
                   </h4>
                   <p>Срок лизинга</p>
                </div>
@@ -134,7 +134,7 @@ $listTitle = [
             <div class="leasing-programs__row">
                <div class="leasing-programs__title-wrapper">
                   <h4 id="js-leasing-prepaid" class="leasing-programs__prepaid">
-                     <!--от 5%-->
+                     <!-- listTitle[0]content.prepaid -->
                   </h4>
                   <p>Аванс по договору</p>
                </div>
@@ -143,10 +143,11 @@ $listTitle = [
                   экономическими показателями клиента.
                </p>
                <p id="js-leasing-info">
-                  <!--Легковые автомобили в лизинг для юридических лиц и ИП.-->
+                  <!-- listTitle[0]content.info -->
                </p>
             </div>
             <div class="leasing-programs__button-wrapper">
+               <!-- listTitle[0]content.link -->
                <a id="js-leasing-link" href="" target="_blank" rel="noopener noreferrer">
                   <button class="button button--white">
                      Подробнее
@@ -155,6 +156,7 @@ $listTitle = [
             </div>
          </div>
          <div class="leasing-programs__img-wrapper">
+            <!-- listTitle[0]content.img -->
             <img id="js-leasing-img" src="" alt="auto">
          </div>
       </div>
@@ -175,10 +177,11 @@ $listTitle = [
       const infoElem = $('#js-leasing-info');
       const linkElem = $('#js-leasing-link');
       const imgElem = $('#js-leasing-img');
-      const titleP = $('.leasing-programs__mobile-title p');
+      const titleP = $('.mobile__title p');
       const toggleSelect = () => {
          listBox.toggleClass('leasing-programs__list--open')
-         $(this).find('svg-upend').toggleClass('rt180');
+         $(".js-open-select").find('.js-svg-upend').toggleClass('rt180');
+         $('.mobile__title p').toggleClass("mobile__title--closed");
       }
 
       items.each(function() {
@@ -197,8 +200,9 @@ $listTitle = [
             toggleSelect();
          });
       });
-      $('.leasing-programs__mobile-title .js-open-select').click(function() {
+      $('.mobile__title .js-open-select').click(function() {
          toggleSelect();
+
       })
       // Установим начальные значения для первого элемента
       const initialContent = listTitle[0]['content'];

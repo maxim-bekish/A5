@@ -61,7 +61,7 @@ $router->add('program-leasing', function () {
       header('Location: /program-leasing?section=passenger-vehicles');
       exit();
    }
-   $content = 'src/components/page/program-leasing/index.php';
+   $content = 'src/components/page/program-leasing/program-leasing.php';
    include 'template.php';
 });
 
