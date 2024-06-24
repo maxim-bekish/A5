@@ -16,30 +16,6 @@
    margin: 0;
 }
 
-.stages-transaction__item {
-   padding: 35px 0;
-   display: flex;
-   align-items: flex-start;
-   justify-content: space-between;
-   border-top: 1px solid #979797
-}
-
-.stages-transaction__item:last-child {
-   border-bottom: 1px solid #979797
-}
-
-.stages-transaction__item-title {
-   font-family: var(--font-inter);
-   font-size: 35px;
-   font-weight: 400;
-   line-height: 36.43px;
-   text-align: left;
-   color: rgba(0, 69, 178, 1);
-   width: 50%;
-}
-
-
-
 .stages-transaction__button {
    margin-top: 60px;
    width: 330px;
@@ -54,13 +30,6 @@
 
    .stages-transaction__box {
       width: 100%;
-   }
-
-
-
-   .stages-transaction__item-title {
-      font-size: 24px;
-      line-height: 24.98px;
    }
 
    .stages-transaction__button {

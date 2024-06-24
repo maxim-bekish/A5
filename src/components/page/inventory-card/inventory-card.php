@@ -41,6 +41,7 @@ if ($selectedItem !== null) {
 
    echo "
    <section class=\"card container\">
+     <h2 class=\"card__title__mobile\">$name</h2>
       <div class=\"card__image-container\">
          <img class=\"card__image\" src=\"$imagePath\" alt=\"\">
       </div>

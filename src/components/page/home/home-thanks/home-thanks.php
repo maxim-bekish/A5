@@ -44,14 +44,14 @@ $slides = [
 <section class="thanks-box mt-160px container">
    <h3 class="thanks-box__title title-page-h3">Благодарности и сертификаты</h3>
    <section class="slider">
-      <div class="slider__buttons">
-         <button class="slider__button slider__button--prev" type="button">
-            <svg class="slider__icon" width="50" height="50" viewBox="0 0 50 50">
+      <div class="custom-slider__buttons">
+         <button class="custom-slider__button slider__button--prev" type="button">
+            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
          </button>
-         <button class="slider__button slider__button--next" type="button">
-            <svg class="slider__icon" width="50" height="50" viewBox="0 0 50 50">
+         <button class="custom-slider__button slider__button--next" type="button">
+            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
          </button>

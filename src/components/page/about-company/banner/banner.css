@@ -5,6 +5,9 @@
    height: 793px;
    padding: 80px;
    display: flex;
+   background-position: top;
+   background-size: cover;
+   background-repeat: no-repeat;
    align-items: flex-end;
 }
 
@@ -19,6 +22,7 @@
       font-size: 50px;
       line-height: 60px;
    }
+
    .about-banner {
       height: 988px;
       padding: 60px 20px;

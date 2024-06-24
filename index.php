@@ -36,7 +36,7 @@ $router->add('about-leasing', function () {
       header('Location: /about-leasing?section=general-terms');
       exit();
    }
-   $content = 'src/components/page/about-leasing/main.php';
+   $content = 'src/components/page/about-leasing/index.php';
    include 'template.php';
 });
 

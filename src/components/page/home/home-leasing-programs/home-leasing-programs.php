@@ -100,7 +100,7 @@ $listTitle = [
       <div class="leasing-programs__mobile-select">
          <div class="leasing-programs__mobile-title">
             <p> </p>
-            <button class="js-open-select leasing-programs__list-header" type="button">
+            <button class="js-open-select leasing-programs__list-header svg-upend" type="button">
                <svg class="rt0" width="14px" height="9px" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
                </svg>
@@ -178,7 +178,7 @@ $listTitle = [
       const titleP = $('.leasing-programs__mobile-title p');
       const toggleSelect = () => {
          listBox.toggleClass('leasing-programs__list--open')
-         $(this).find('svg').toggleClass('rt180');
+         $(this).find('svg-upend').toggleClass('rt180');
       }
 
       items.each(function() {

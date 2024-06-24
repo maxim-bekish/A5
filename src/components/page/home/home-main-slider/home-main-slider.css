@@ -17,7 +17,7 @@
    display: flex;
    align-items: flex-end;
    text-wrap: nowrap;
-   width: 130px;
+   width: 100%;
    height: 200px;
    padding: 0 0 50px 25px;
 }
@@ -136,6 +136,10 @@
       font-size: 50px;
       font-weight: 500;
       line-height: 50px;
+   }
+
+   .main-slider--container .slide--active {
+      padding: 0;
    }
 
    .slide__content {

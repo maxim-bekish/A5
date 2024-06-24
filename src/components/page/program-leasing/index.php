@@ -356,7 +356,7 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
    <?php endif; ?>
 </section>
 
-<?php 
+<?php
 include 'src/components/page/program-leasing/production/index.php';
 ?>
 
@@ -392,25 +392,20 @@ include 'src/components/page/program-leasing/production/index.php';
             <?php endif; ?>
          </div>
       </div>
-      <div class="slider__buttons">
-         <button class="slider__button slider__button--prev" type="button" id="prevButton">
-            <svg class="slider__icon" width="50" height="50" viewBox="0 0 50 50">
+      <div class="custom-slider__buttons">
+         <button class="custom-slider__button slider__button--prev" type="button" id="prevButton">
+            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
          </button>
-         <button class="slider__button slider__button--next" type="button" id="nextButton">
-            <svg class="slider__icon" width="50" height="50" viewBox="0 0 50 50">
+         <button class="custom-slider__button slider__button--next" type="button" id="nextButton">
+            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
          </button>
       </div>
    </div>
 </section>
-
-
-
-
-
 
 <script>
    $(document).ready(function() {
@@ -482,41 +477,6 @@ include 'src/components/page/program-leasing/production/index.php';
       left: -140px;
    }
 
-   .program-leasing__slider .slider__button {
-      width: 50px;
-      height: 50px;
-   }
-
-   .program-leasing__slider .slider__button--next {
-      transform: rotate(180deg);
-   }
-
-   .program-leasing__slider .slider__button:disabled .slider__icon {
-      stroke: gray;
-      fill: #fff;
-   }
-
-   .program-leasing__slider .slider__button:hover:disabled .slider__icon {
-      fill: #fff;
-      stroke: gray;
-      --stroke-width: 2px;
-      --circle-radius: 24;
-   }
-
-   .program-leasing__slider .slider__icon {
-      fill: #fff;
-      stroke: #0045B2;
-      transition: all 200ms ease;
-   }
-
-   .program-leasing__slider .slider__button:hover .slider__icon {
-      fill: #0045B2;
-      stroke: #fff;
-      --stroke-width: 0;
-      --circle-radius: 25;
-      transition: all 200ms ease;
-   }
-
    .program-leasing__slider .slider__box {
       position: relative;
       height: 410px;
@@ -531,6 +491,12 @@ include 'src/components/page/program-leasing/production/index.php';
       height: 100%;
    }
 
+   .program-leasing__slider .custom-slider__buttons {
+      position: absolute;
+      bottom: 0;
+      left: -160px;
+
+   }
 
    .program-leasing__slider .slider__slide {
       width: 410px;

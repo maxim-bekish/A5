@@ -1,31 +1,8 @@
-.clients__slider .slider__buttons {
-   display: flex;
-   gap: 20px;
-   max-width: 120px;
-}
 
-.clients__slider .slider__button {
-   width: 50px;
-   height: 50px;
-}
 
-.clients__slider .slider__button--next {
-   transform: rotate(180deg);
-}
 
-.clients__slider .slider__icon {
-   fill: #fff;
-   stroke: #0045B2;
-   transition: all 200ms ease;
-}
 
-.clients__slider .slider__button:hover .slider__icon {
-   fill: #0045B2;
-   stroke: #fff;
-   --stroke-width: 0;
-   --circle-radius: 25;
-   transition: all 200ms ease;
-}
+
 
 .clients__slider .slider__box {
    position: relative;

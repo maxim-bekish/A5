@@ -1,0 +1,65 @@
+.dowland svg,
+.view svg,
+.dowland,
+.view {
+   width: 38px;
+   height: 38px;
+}
+
+/*.about-document {
+      display: grid;
+      grid-template-columns: repeat(2, 410px);
+      grid-template-rows: repeat(2, 200px);
+      grid-column-gap: 40px;
+      grid-row-gap: 40px;
+   }*/
+
+.about-document__controller {
+   position: absolute;
+   right: 20px;
+   bottom: 20px;
+   display: flex;
+   gap: 10px;
+}
+
+
+
+.about-document__date {
+   font-size: 16px;
+   line-height: 19.2px;
+   position: absolute;
+   left: 20px;
+   bottom: 20px;
+   color: #979797;
+}
+
+.about-document__item p {
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 24px;
+}
+
+.about-document__item {
+   padding: 30px 20px;
+   position: relative;
+   max-width: 410px;
+   width: 100%;
+   background: rgba(242, 242, 242, 1);
+   height: 200px;
+}
+
+.about-document__items {
+   justify-content: flex-start;
+   gap: 40px;
+}
+
+@media (max-width:1280px) {
+   .about-document__items {
+      justify-content: space-between;
+      gap: 0px;
+   }
+   .about-document__item {
+      max-width: 100%;
+   }
+
+}

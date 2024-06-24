@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="/src/components/page/about-leasing/general-terms/general-terms.css">
+
+
+
 <?php
 $conditions = [
    [
@@ -24,48 +28,21 @@ $conditions = [
 ?>
 
 <section class="grid_1-3-box general-terms-conditions container">
-   <div class="grid_1-3_1 general-terms-conditions__title">
-      <p>
+   <div>
+      <p class="p20px-big">
          Условия финансирования
       </p>
    </div>
-   <div class="grid_1-3_3">
+   <div>
       <?php foreach ($conditions as $el) : ?>
-         <div class="general-terms-conditions__item">
-            <p>
+         <div class="row">
+            <h4 class="row__title-small  w-50">
                <?php echo nl2br(htmlspecialchars($el['title'])); ?>
-            </p>
-            <p>
+            </h4>
+            <p class="row__text w-50">
                <?php echo nl2br(htmlspecialchars($el['text'])); ?>
             </p>
          </div>
       <?php endforeach; ?>
    </div>
 </section>
-
-<style>
-   .general-terms-conditions__title p {
-      font-size: 20px;
-      line-height: 28px;
-   }
-
-   .general-terms-conditions__item {
-      padding: 35px 0;
-      display: flex;
-      border-top: 1px solid #979797;
-   }
-
-   .general-terms-conditions__item:last-child {
-      border-bottom: 1px solid #979797;
-   }
-
-   .general-terms-conditions__item p {
-      width: 50%;
-   }
-
-   .general-terms-conditions__item p:first-child {
-      font-size: 24px;
-      line-height: 24px;
-      color: #0045B2;
-   }
-</style>

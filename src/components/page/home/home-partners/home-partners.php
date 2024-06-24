@@ -124,13 +124,13 @@ $slides = array(
       </div>
    </div>
    <section class="custom-slider">
-      <div class="custom-slider__buttons">
-         <button class="custom-slider__button js-partners-slider-prev button--visible" type="button">
+      <div class="custom-slider__buttons ">
+         <button class="custom-slider__button js-partners-slider-prev " type="button">
             <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
          </button>
-         <button class="custom-slider__button js-partners-slider-next button--visible" type="button">
+         <button class="custom-slider__button js-partners-slider-next " type="button">
             <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>

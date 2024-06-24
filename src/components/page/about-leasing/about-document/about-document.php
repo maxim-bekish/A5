@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="/src/components/page/about-leasing/about-document/about-document.css">
+
+
+
+
 <?php
 $aboutDocument = [
    [
@@ -16,14 +21,14 @@ $aboutDocument = [
 ?>
 
 <section class="about-document grid_1-3-box container mt-160px">
-   <div class="grid_1-3_1">
-      <p class="p20px">
+   <div>
+      <p class="p20px-big">
          Документы
       </p>
    </div>
-   <div class="grid_1-3_3  about-document__items">
+   <div class="about-document__items w-50-box">
       <?php foreach ($aboutDocument as $el) : ?>
-         <div class="about-document__item">
+         <div class="about-document__item w-50">
             <p>
                <?php echo nl2br(htmlspecialchars($el['title'])); ?>
             </p>
@@ -54,57 +59,3 @@ $aboutDocument = [
       <?php endforeach; ?>
    </div>
 </section>
-
-<style>
-   .dowland svg,
-   .view svg,
-   .dowland,
-   .view {
-      width: 38px;
-      height: 38px;
-   }
-
-   .about-document {
-      display: grid;
-      grid-template-columns: repeat(2, 410px);
-      grid-template-rows: repeat(2, 200px);
-      grid-column-gap: 40px;
-      grid-row-gap: 40px;
-   }
-
-   .about-document__controller {
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
-      display: flex;
-      gap: 10px;
-   }
-
-   .about-document__items {
-      display: flex;
-      gap: 40px;
-   }
-
-   .about-document__date {
-      font-size: 16px;
-      line-height: 19.2px;
-      position: absolute;
-      left: 20px;
-      bottom: 20px;
-      color: #979797;
-   }
-
-   .about-document__item p {
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 24px;
-   }
-
-   .about-document__item {
-      padding: 30px 20px;
-      position: relative;
-      width: 410px;
-      background: rgba(242, 242, 242, 1);
-      height: 200px;
-   }
-</style>

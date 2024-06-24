@@ -4,9 +4,9 @@ $activeNavItem = isset($_GET['section']) ? $_GET['section'] : ' ';
 ?>
 
 <section class="clients-partners-program grid_1-3-box container">
-   <div class="clients-partners-program__navigation">
+   <div class="aside-bar">
       <h3>Клиентам</h3>
-      <ul>
+      <ul class="aside-bar">
          <li>
             <a href="/about-company">О компании</a>
          </li>

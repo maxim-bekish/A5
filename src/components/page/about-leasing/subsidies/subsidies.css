@@ -1,0 +1,45 @@
+.about-leasing__subsidies h3 {
+   margin-bottom: 100px;
+   line-height: 85px;
+}
+
+.about-leasing__subsidies .subsidies--item--sub-title {
+   font-weight: 600;
+   margin-bottom: 3px;
+}
+
+.about-leasing__subsidies--item-decription {
+   max-width: 1160px;
+}
+
+.about-leasing__subsidies--item {
+   padding: 60px 0;
+   border-top: 1px solid #979797
+}
+
+.about-leasing__subsidies--item:last-child {
+   border-top: 1px solid #979797;
+   border-bottom: 1px solid #979797
+}
+
+.about-leasing__subsidies--item-title {
+   font-size: 20px;
+   line-height: 24.2px;
+   color: #515151;
+
+}
+
+@media (max-width:1280px) {
+   .about-leasing__subsidies--item-title {
+      color: #0045B2;
+   }
+
+   .about-leasing__subsidies--item {
+      padding: 50px 15% 50px 0;
+   }
+
+   .about-leasing__subsidies h3 {
+      font-size: 50px;
+      line-height: 60px;
+   }
+}

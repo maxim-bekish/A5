@@ -52,13 +52,13 @@ $headerListLeasing = (object) [
     ],
   ]
 ];
-$headerListLeasing = (object) [
+$headerHomePage = (object) [
   'title' => 'Главная страница
 ',
   'list' => [
     (object) [
       'name' => 'Лизинговый калькулятор',
-      'link' => '#'
+      'link' => '/#home-calculator'
     ],
     (object) [
       'name' => 'Партнеры',
@@ -183,25 +183,12 @@ function listHeaderBurger($data)
       </svg>
     </button>
     <div class="burger-menu-box">
-      <ul>
-        <h5 class="item-title">Главная страница</h5>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Лизинговый калькулятор</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Партнеры</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Этапы сделки</a>
-        </li>
-        <li class="underline-box">
-          <a class="underline-el underline-el-white" href="#" target="_blank">Контакты</a>
-        </li>
-      </ul>
-      <?php listHeaderBurger($headerListLeasing); ?> 
-      <?php listHeaderBurger($headerListClients); ?> 
-      <?php listHeaderBurger($headerListProgram); ?> 
-     
+
+      <?php listHeaderBurger($headerHomePage); ?>
+      <?php listHeaderBurger($headerListLeasing); ?>
+      <?php listHeaderBurger($headerListClients); ?>
+      <?php listHeaderBurger($headerListProgram); ?>
+
       <ul>
         <h5 class="item-title underline-box">
           <a class="underline-el underline-el-white" href="/inventory" target="_blank" rel="noopener noreferrer">

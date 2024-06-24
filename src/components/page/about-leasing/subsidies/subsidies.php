@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="/src/components/page/about-leasing/subsidies/subsidies.css">
+
+
 <?php
 $subsidies = [
    [
@@ -27,19 +30,19 @@ $subsidies = [
 
 <section class="about-leasing__subsidies container">
    <div class="grid_1-3-box">
-      <div class="grid_1-3_1"></div>
-      <h3 class="title-page-h3 grid_1-3_3">
+      <div class="personal-data-none"></div>
+      <h3 class="title-page-h3 ">
          Порядок предоставления субсидий в&nbsp;Тюменской области
       </h3>
    </div>
    <?php foreach ($subsidies as $el) : ?>
       <div class="grid_1-3-box about-leasing__subsidies--item">
-         <div class="grid_1-3_1">
-            <p>
+         <div>
+            <p class="about-leasing__subsidies--item-title">
                <?php echo nl2br(htmlspecialchars($el['title'])); ?>
             </p>
          </div>
-         <div class="grid_1-3_3 about-leasing__subsidies--item-decription ">
+         <div class="about-leasing__subsidies--item-decription ">
             <?php if ($el['subTitle']) : ?>
                <p class="subsidies--item--sub-title">
                   <?php echo nl2br(htmlspecialchars($el['subTitle'])); ?>
@@ -52,31 +55,3 @@ $subsidies = [
       </div>
    <?php endforeach; ?>
 </section>
-
-
-<style>
-   .about-leasing__subsidies h3 {
-      margin-bottom: 100px;
-      line-height: 85px;
-   }
-
-   .about-leasing__subsidies .subsidies--item--sub-title {
-      font-weight: 600;
-      margin-bottom: 3px;
-   }
-
-   .about-leasing__subsidies--item-decription {
-      max-width: 1160px;
-   }
-
-   .about-leasing__subsidies--item {
-      padding: 60px 0;
-      border-top: 1px solid #979797
-   }
-
-   .about-leasing__subsidies--item:last-child {
-
-      border-top: 1px solid #979797;
-      border-bottom: 1px solid #979797
-   }
-</style>

@@ -62,8 +62,8 @@ $personalData = [
 
 <section class="personal-data container">
    <div class="personal-data__title grid_1-3-box">
-      <div class="personal-data-none grid_1-3_1"> </div>
-      <div class="grid_1-3_3">
+      <div class="personal-data-none"> </div>
+      <div>
          <h3 class="title-page-h3">
             Политика обработки персональных <br> данных
          </h3>
@@ -71,7 +71,7 @@ $personalData = [
    </div>
    <?php foreach ($personalData as $el) : ?>
       <div class="personal-data__item grid_1-3-box">
-         <div >
+         <div>
             <p class="personal-data__item-title">
                <?php echo nl2br(htmlspecialchars($el['title'])); ?>
             </p>
