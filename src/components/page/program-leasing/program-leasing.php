@@ -320,7 +320,7 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
    <?php if ($activeProgram) : ?>
       <div class="">
          <p class="p20px">
-            Условия получения лизинга в выбранной нише:
+            Условия получения лизинга в выбранной нише:
          </p>
       </div>
       <div class="obtaining-leasing__content">
@@ -344,7 +344,7 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
    <?php if ($activeProgram) : ?>
       <div class="requirements__title">
          <p class="p20px">
-            Основные требования к лизингополучателям
+            Основные требования к лизингополучателям
          </p>
       </div>
       <ul class="requirements__content">

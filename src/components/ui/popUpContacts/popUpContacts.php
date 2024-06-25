@@ -18,16 +18,23 @@ $state = [
    ]
 ];
 ?>
-<section class="sidebar">
-   <div class="popup-contacts">
-      <button class="popup-contacts-closed">
+
+<section class="sidebar popUp__sidebar">
+
+   <div class="popup-contacts popUp__sidebar-box">
+
+      <button class="popup-contacts-closed popUp__sidebar-closed">
          <svg width="32" height="32" viewBox="0 0 32 32">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-closed"></use>
          </svg>
       </button>
-      <div class="popup-contacts-title max-w-462px">
+
+      <div class="popup-contacts-title max-w-462px popUp__sidebar-title">
          <h3>Контакты</h3>
       </div>
+
+
+
       <div class="popup-contacts-radio max-w-462px">
          <?php foreach ($state as $index => $location) : ?>
             <div class="radio-button">
@@ -95,6 +102,8 @@ $state = [
             </div>
          </form>
       </div>
+
+
    </div>
 </section>
 

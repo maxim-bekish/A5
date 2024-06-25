@@ -88,11 +88,11 @@ $slides = array(
 
 <section class="partners-box mt-160px container">
    <div class="partners-box__up grid_1-3-box">
-      <div class="grid_1-3_1">
+      <div >
 
          <p class="p20px">Партнеры</p>
       </div>
-      <div class="partners-box__content grid_1-3_3">
+      <div class="partners-box__content">
          <h3 class="title-page-h3">
             Не нашли нужный вам продукт?
          </h3>

@@ -41,7 +41,7 @@
    display: grid;
    gap: 40px;
    margin-bottom: 60px;
-   grid-template-columns: repeat(3, minmax(260px, 410px));
+   grid-template-columns: repeat(3, minmax(30%, 410px));
    justify-content: space-between;
 }
 
@@ -53,8 +53,8 @@
 
 .partners-box__button {
    display: grid;
-   gap: 10px;
-   grid-template-columns: repeat(3, minmax(260px, 410px));
+   gap: 40px;
+   grid-template-columns: repeat(3, minmax(30%, 410px));
 
 }
 
@@ -109,5 +109,10 @@
 
    .partners-box .custom-slider__slide {
       gap: 20px
+   }
+
+   .partners-box__button {
+      gap: 20px;
+   
    }
 }

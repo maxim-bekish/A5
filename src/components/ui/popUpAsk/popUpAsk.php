@@ -1,18 +1,23 @@
 <link rel="stylesheet" href="/src/components/ui/popUpAsk/index.css">
 <script src="/src/components/ui/popUpAsk/index.js"></script>
-<section class="sidebar-ask">
-   <div class="popup-ask">
-      <button class="popup-ask-closed">
+
+
+<section class="sidebar-ask popUp__sidebar">
+
+   <div class="popUp__sidebar-box">
+
+      <button class="popUp__sidebar-closed">
          <svg width="32" height="32" viewBox="0 0 32 32">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-closed"></use>
          </svg>
       </button>
-      <div class="popup-ask-title">
-         <h3>
-            Есть вопросы? <br>
-            Бесплатно проконсультируем
-         </h3>
+
+      <div class="popUp__sidebar-title">
+         <h3> Есть вопросы? <br> Бесплатно проконсультируем </h3>
       </div>
+
+
+
       <div class="popup-ask-info">
          <p class="text-html">
             Выберите с кем связаться, оставьте контактные данные
@@ -61,5 +66,7 @@
             </button>
          </div>
       </form>
+
+
    </div>
 </section>

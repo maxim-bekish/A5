@@ -7,8 +7,6 @@
    width: 100%;
 }
 
-
-
 .slide--active .slide__additional-text {
    display: none;
 }
@@ -80,7 +78,7 @@
    line-height: 80px;
 }
 
-.main-slider--container .slide--active {
+.main-slider .slide--active {
    padding: 80px;
 }
 
@@ -138,7 +136,7 @@
       line-height: 50px;
    }
 
-   .main-slider--container .slide--active {
+   .main-slider .slide--active {
       padding: 0;
    }
 
@@ -153,5 +151,11 @@
 
    .main-slider__details {
       display: none !important;
+   }
+}
+
+@media(max-width:360px) {
+   .main-slider {
+
    }
 }

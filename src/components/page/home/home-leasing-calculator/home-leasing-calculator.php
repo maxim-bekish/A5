@@ -6,7 +6,7 @@
    <div class="leasing-calculator__box grid_1-3-box">
       <div class="leasing-calculator__title">
          <p class="p20px">
-            Укажите все параметры и получите точный расчет
+            Укажите все параметры и получите точный расчет
          </p>
       </div>
       <div class='leasing-calculator__box--content'>

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/src/components/page/home/home-main-slider/home-main-slider.css">
 <script src="/src/components/page/home/home-main-slider/home-main-slider.js"></script>
-<section class="main-slider main-slider--container">
+<section class="main-slider">
    <div class="main-slider__container slider">
       <div class="slide background-one slide--active">
          <div class="slide__content">

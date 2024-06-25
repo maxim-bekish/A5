@@ -6,12 +6,12 @@ include 'src/state/state.php';
 <link rel="stylesheet" href="src/components/page/inventory/inventory.css">
 
 <section class='grid_1-3-box inventory container'>
-   <div class="grid_1-3_1 inventory__header">
+   <div class="inventory__header">
       <p class="inventory__title">
          Каталог изьятой техники
       </p>
    </div>
-   <div class="grid_1-3_3 inventory__content">
+   <div class="inventory__content">
       <?php foreach ($inventory as $el) : ?>
          <a href="<?php echo htmlspecialchars($el['href']); ?>?item=<?php echo htmlspecialchars($el['name']); ?>&id=<?php echo htmlspecialchars($el['id']); ?>">
             <div class="inventory__content--item--img">

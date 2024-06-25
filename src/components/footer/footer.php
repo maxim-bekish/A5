@@ -55,7 +55,7 @@
             <a class="underline-el underline-el-white footer-down-column-tel" href="tel:+73452999999">7 (3452) 99-99-99</a>
          </div>
          <section>
-            <div class="contacts-footer footer-list w-50">
+            <div class="contacts-footer footer-list">
                <h5>Контакты</h5>
                <ul>
                   <li>
@@ -79,7 +79,7 @@
                   </li>
                </ul>
             </div>
-            <div class="network-footer footer-list w-50">
+            <div class="contacts-footer footer-list ">
                <h5>Соцсети</h5>
                <ul>
                   <li class="underline-box">

@@ -6,7 +6,7 @@ $(document).ready(function () {
       $('body').css('overflow', 'hidden');
    });
 
-   $('.popup-ask-closed').on('click', function () {
+   $('.popUp__sidebar-closed').on('click', function () {
       $('.sidebar-ask').removeClass('open');
       $('.app').removeClass('blurred');
       $('body').css('overflow', 'auto');
