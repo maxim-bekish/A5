@@ -5,90 +5,90 @@
 <?php
 $listTitle = [
    [
-      'title' => '1 Легковой автотранспорт',
+      'title' => 'Легковой автотранспорт',
       'id' => 1,
       'content' => [
          'term' => '1 год',
          'prepaid' => 'от 5%',
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
-         'link' => '#',
+         'link' => '/program-leasing?section=passenger-vehicles',
          'img' => '1-photo.jpg',
       ]
    ],
    [
-      'title' => '2 Грузовой автотранспорт',
+      'title' => 'Грузовой автотранспорт',
       'id' => 2,
       'content' => [
          'term' => '2 лет',
          'prepaid' => 'от 5%',
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
-         'link' => '#',
+         'link' => '/program-leasing?section=freight-transport',
          'img' => '2-photo.jpg',
       ],
    ],
    [
-      'title' => '3 Грузовой автотранспорт',
+      'title' => 'Спецтехника',
       'id' => 3,
       'content' => [
          'term' => '3 лет',
          'prepaid' => 'от 5%',
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
-         'link' => '#',
+         'link' => '/program-leasing?section=special-equipment',
          'img' => '3-photo.jpg',
       ],
    ],
    [
-      'title' => '4 Грузовой автотранспорт',
+      'title' => 'Оборудование',
       'id' => 4,
       'content' => [
          'term' => '4 лет',
          'prepaid' => 'от 5%',
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
-         'link' => '#',
+         'link' => '/program-leasing?section=equipment',
          'img' => '4-photo.jpg',
       ],
    ],
    [
-      'title' => '5 Грузовой автотранспорт',
+      'title' => 'Медицинское оборудование',
       'id' => 5,
       'content' => [
          'term' => '5 лет',
          'prepaid' => 'от 5%',
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
-         'link' => '#',
+         'link' => '/program-leasing?section=medical-equipment',
          'img' => '5-photo.jpg',
       ],
    ],
    [
-      'title' => '6 Грузовой автотранспорт',
+      'title' => 'Ресторанное оборудование',
       'id' => 6,
       'content' => [
          'term' => '6 лет',
          'prepaid' => 'от 5%',
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
-         'link' => '#',
+         'link' => '/program-leasing?section=restaurant-equipment',
          'img' => '6-photo.jpg',
       ],
    ],
    [
-      'title' => '7 Грузовой автотранспорт',
+      'title' => 'Б/У продукция',
       'id' => 7,
       'content' => [
          'term' => '7 лет',
          'prepaid' => 'от 5%',
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
-         'link' => '#',
+         'link' => '/program-leasing?section=used-products',
          'img' => '7-photo.jpg',
       ],
    ],
    [
-      'title' => '8 Грузовой автотранспорт',
+      'title' => 'Недвижимость',
       'id' => 8,
       'content' => [
          'term' => '8 лет',
          'prepaid' => 'от 5%',
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
-         'link' => '#',
+         'link' => '/program-leasing?section=real-estate',
          'img' => '8-photo.jpg',
       ],
    ],
@@ -148,7 +148,7 @@ $listTitle = [
             </div>
             <div class="leasing-programs__button-wrapper">
                <!-- listTitle[0]content.link -->
-               <a id="js-leasing-link" href="" target="_blank" rel="noopener noreferrer">
+               <a id="js-leasing-link" href="" rel="noopener noreferrer">
                   <button class="button button--white">
                      Подробнее
                   </button>
@@ -169,7 +169,6 @@ $listTitle = [
    $(document).ready(function() {
       const listTitle = <?php echo json_encode($listTitle); ?>;
 
-      console.log(listTitle)
       const items = $('#js-leasing-ul li');
       const listBox = $('#js-leasing-ul');
       const termElem = $('#js-leasing-term');
@@ -178,11 +177,6 @@ $listTitle = [
       const linkElem = $('#js-leasing-link');
       const imgElem = $('#js-leasing-img');
       const titleP = $('.mobile__title p');
-      const toggleSelect = () => {
-         listBox.toggleClass('leasing-programs__list--open')
-         $(".js-open-select").find('.js-svg-upend').toggleClass('rt180');
-         $('.mobile__title p').toggleClass("mobile__title--closed");
-      }
 
       items.each(function() {
          $(this).on('click', function() {
@@ -196,14 +190,9 @@ $listTitle = [
             imgElem.attr('src', '/src/assets/images/img/leasing-programs/' + content['img']);
 
             $(this).find('p').addClass('leasing-programs__list-item--active');
-            titleP.text(listTitle[index]['title']);
-            toggleSelect();
          });
       });
-      $('.mobile__title .js-open-select').click(function() {
-         toggleSelect();
 
-      })
       // Установим начальные значения для первого элемента
       const initialContent = listTitle[0]['content'];
       titleP.text(listTitle[0]['title']);

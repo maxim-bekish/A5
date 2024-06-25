@@ -51,7 +51,7 @@ $list = [
          </div>
       </div>
       <div class="about-home__content-list">
-         <svg class="about-home__pointer" width="1072" height="930" viewBox="0 0 1072 930" fill="none">
+         <svg class="about-home__pointer" width="1072" height="930" viewBox="0 0 1072 950" fill="none">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-A5"></use>
          </svg>
          <ul class="about-home__list w-50">

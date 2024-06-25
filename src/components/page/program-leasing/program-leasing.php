@@ -320,7 +320,7 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
    <?php if ($activeProgram) : ?>
       <div class="">
          <p class="p20px">
-            Условия получения лизинга <br> в выбранной нише:
+            Условия получения лизинга в выбранной нише:
          </p>
       </div>
       <div class="obtaining-leasing__content">
@@ -344,7 +344,7 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
    <?php if ($activeProgram) : ?>
       <div class="requirements__title">
          <p class="p20px">
-            Основные требования <br> к лизингополучателям
+            Основные требования к лизингополучателям
          </p>
       </div>
       <ul class="requirements__content">
@@ -361,24 +361,26 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
 <?php
 include 'src/components/page/program-leasing/production/production.php';
 ?>
-
 <section class="grid_1-3-box container mt-160px">
-   <div>
-      <p class="p20px">
+   <div class="program-leasing-calculator-title">
+      <p class="p20px-big">
          Калькулятор лизинга
       </p>
+      <p class="p20px">
+         Укажите все параметры и получите точный расчет
+      </p>
    </div>
-   <div class=" program-leasing-calculator">
+   <div class="program-leasing-calculator">
       <?php
       include 'src/components/ui/calculator/calculator.php';
-      include 'src/components/ui/calculator-result/index.php';
+      include 'src/components/ui/calculator-result/calculator-result.php';
       ?>
    </div>
 </section>
 
 <section class="grid_1-3-box container mt-160px">
    <div>
-      <p class="p20px">
+      <p class="p20px-big">
          Поставщики
       </p>
    </div>

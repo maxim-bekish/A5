@@ -4,7 +4,7 @@ $(document).ready(function () {
    if ($sliderContainer.children().length > 3) {
       const $slides = $sliderContainer.children();
       const slideCount = $slides.length;
-      const slideWidth = Math.ceil($(".program-leasing__slider .slider__slide").outerWidth()) + 40;
+      const slideWidth = Math.ceil($(".program-leasing__slider .slider__slide").outerWidth(true));
       const step = -slideWidth;
       const timeAnimate = 700;
       let isAnimating = false;
@@ -46,5 +46,6 @@ $(document).ready(function () {
    } else {
       $(".program-leasing__slider .slider__buttons").css('display', 'none');
    }
+   $('.mobile__title p').text($('.program__navigation--active').text())
 });
 

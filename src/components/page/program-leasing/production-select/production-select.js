@@ -2,42 +2,29 @@ $(document).ready(function () {
    const speedAnimation = 100;
 
    function toggleSelect($selectBox, $selectItems) {
-      const isOpen = $selectItems.css('opacity') == 1;
-
+      const isOpen = $selectItems.css('display') == "block";
+      console.log(isOpen);
       $selectBox.find('.select-svg').toggleClass("rt180", !isOpen);
 
       if (isOpen) {
-         $selectItems.animate({
-            opacity: 0,
-            //height: 0
-         }, speedAnimation, function () {
+         $selectItems.slideUp(speedAnimation, function () {
             if (!$selectBox.hasClass('selected')) {
                $selectBox.removeClass('production__select--active');
             }
          });
       } else {
-         //$selectItems.css('height', 'auto');
-
          const autoHeight = $selectItems.prop('scrollHeight');
          let heightWithoutPadding = $selectItems.height();
 
-         //$selectItems.css('height', '0');
-         console.log(heightWithoutPadding)
          if (autoHeight <= 310) {
-
-            $selectBox.find('.production__select-items').css('overflow', 'hidden');
-         } else {
             $selectBox.find('.production__select-items').css('height', heightWithoutPadding);
             $selectBox.find('.production__select-items').css('overflow', 'auto');
-
+         } else {
+            $selectBox.find('.production__select-items').css('overflow', 'hidden');
          }
-         $selectItems.animate({
-            opacity: 1,
-            //height: autoHeight
-         }, speedAnimation, function () {
-            if (!$selectBox.hasClass('selected')) {
-               $selectBox.addClass('production__select--active');
-            }
+
+         $selectItems.slideDown(speedAnimation, function () {
+            $selectBox.addClass('production__select--active');
          });
       }
    }
@@ -68,7 +55,7 @@ $(document).ready(function () {
             const $selectItems = $(this);
             const $selectBox = $selectItems.closest('.production__select');
 
-            if ($selectItems.css('opacity') == 1) {
+            if ($selectItems.css('display') == "block") {
                toggleSelect($selectBox, $selectItems);
             }
          });
@@ -77,7 +64,7 @@ $(document).ready(function () {
             const $otherSelectBox = $(this);
             const $otherSelectItems = $otherSelectBox.find('.production__select-items-box');
 
-            if ($otherSelectItems.css('opacity') == 1) {
+            if ($otherSelectItems.css('display') == "block") {
                toggleSelect($otherSelectBox, $otherSelectItems);
             }
          });

@@ -112,8 +112,14 @@ $slides = array(
                   поставщиком.</p>
             </div>
             <div class="partners-box__time-item">
-               <p class="partners-box__time-value">В течение 2-х дней</p>
-               <p class="partners-box__time-description">будет заключён договор.</p>
+               <p class="partners-box__time-value">
+                  В течение 2-х дней
+
+               </p>
+               <p class="partners-box__time-description">
+                  будет заключён договор.
+
+               </p>
             </div>
          </div>
          <div class="partners-box__button">

@@ -345,6 +345,7 @@ img {
 
    .mobile__list-content--item p,
    .mobile__list-content--item button,
+   .mobile__list-content--item a,
    .mobile__title p {
       line-height: 18px !important;
       font-size: 18px !important;

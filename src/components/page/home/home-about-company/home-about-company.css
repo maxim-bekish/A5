@@ -34,7 +34,7 @@
    position: relative;
    flex-direction: column;
    align-items: flex-end;
-   padding: 60px 80px 10px 80px;
+   padding: 60px 80px 60px 80px;
    justify-content: space-between;
    gap: 40px;
 }

@@ -69,7 +69,8 @@
 
 .production__select-items-box {
    padding: 18px 16px;
-   opacity: 0;
+   /*opacity: 0;*/
+   display: none;
    max-height: 316px;
    position: absolute;
    border-color: #979797;
@@ -139,7 +140,8 @@
    cursor: pointer;
 }
 
-.production__select-items li:hover {
+.production__select-items li:hover,
+.production__select--active .production__select-title {
    color: #0045B2;
 }
 

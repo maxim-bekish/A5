@@ -13,15 +13,9 @@
    margin-right: 40px;
 }
 
-
-
 .team-slider__title {
    margin-bottom: 30px;
 }
-
-
-
-
 
 .team-slider .slider {
    position: relative;
@@ -95,9 +89,7 @@
 
 @media(max-width:1280px) {
 
-
    .team-slider .slider__slide {
-
       width: 100%;
       height: 100%;
    }
@@ -107,7 +99,6 @@
    }
 
    .team-slider .slider__header {
-
       width: 350px;
       height: 350px;
    }
@@ -121,6 +112,11 @@
       top: auto;
    }
 
+   .team-slider .custom-slider__buttons {
+      bottom: 0;
+      right: 0;
+      left: auto;
+   }
 
 
 }
