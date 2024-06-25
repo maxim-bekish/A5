@@ -82,16 +82,12 @@ img {
 .blurred .contentpop {
    filter: blur(5px);
    pointer-events: none;
-   /* Блокировка взаимодействия с контентом */
 }
-
-
 
 .contentpop {
    padding-top: 1px;
    transition: filter 0.3s ease-in-out;
 }
-
 
 .button-visible .hover,
 .button-visible:hover .no-hover {
@@ -101,10 +97,6 @@ img {
 .button-visible:hover .hover {
    display: block;
 }
-
-
-
-
 
 .view:hover .view__default,
 .view__hover {
@@ -438,9 +430,11 @@ img {
       line-height: 41.6px;
    }
 
-   p {
+   p,
+   a,
+   span {
       font-size: 16px;
-      line-height: 22.4px;
+      line-height: 22px;
    }
 }
 
@@ -454,5 +448,26 @@ img {
       box-sizing: border-box;
       width: 100%;
       padding: 0 10px;
+   }
+
+   .p20px {
+      max-width: 100% !important;
+      font-size: 16px !important;
+      line-height: 16px !important;
+
+   }
+
+   .p20px-big {
+      max-width: 100% !important;
+      font-size: 40px !important;
+      line-height: 40px !important;
+      color: #0045B2 !important;
+   }
+
+   p,
+   a,
+   span {
+      font-size: 14px;
+      line-height: 16px;
    }
 }
