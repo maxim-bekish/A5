@@ -119,15 +119,24 @@ function listHeader($data)
 function listHeaderBurger($data)
 {
 ?>
-  <ul>
-    <h5 class="item-title"><?php echo htmlspecialchars($data->title); ?></h5>
+  <div class="burger-menu-box-item">
+    <div class="burger-menu-box-item-row">
+      <h5 class="item-title"><?php echo htmlspecialchars($data->title); ?></h5>
+      <svg class="rt0" fill="none" width="22" height="13" viewBox="0 0 22 13">
+        <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-burger"></use>
+      </svg>
+    </div>
 
-    <?php foreach ($data->list as $item) : ?>
-      <li class="underline-box">
-        <a class="underline-el underline-el-white" href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
-      </li>
-    <?php endforeach; ?>
-  </ul>
+    <ul>
+
+      <?php foreach ($data->list as $item) : ?>
+        <li class="underline-box">
+          <a class="underline-el underline-el-white" href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+
+  </div>
 <?php
 }
 ?>
@@ -177,28 +186,44 @@ function listHeaderBurger($data)
     </div>
   </section>
   <section id="burger-menu" class="burger-menu">
-    <button id="closed-burger-menu" class="button-closed" type="button">
-      <svg width="28" height="28" viewBox="0 0 32 32">
-        <use href="<?php echo SVG_PATH; ?>icons.svg#icon-closed"></use>
-      </svg>
-    </button>
-    <div class="burger-menu-box">
+    <div class="burger-menu-header">
+
+      <a href="/" rel="noopener noreferrer">
+        <svg width="76" height="54" viewBox="0 0 76 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <use href="<?php echo SVG_PATH; ?>icons.svg#icon-logo-mini"></use>
+        </svg>
+      </a>
+
+      <button id="closed-burger-menu" class="button-closed" type="button">
+        <svg width="28" height="28" viewBox="0 0 32 32">
+          <use href="<?php echo SVG_PATH; ?>icons.svg#icon-closed"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="burger-menu-box burger-menu-box-content ">
 
       <?php listHeaderBurger($headerHomePage); ?>
       <?php listHeaderBurger($headerListLeasing); ?>
       <?php listHeaderBurger($headerListClients); ?>
       <?php listHeaderBurger($headerListProgram); ?>
-
-      <ul>
-        <h5 class="item-title underline-box">
-          <a class="underline-el underline-el-white" href="/inventory" target="_blank" rel="noopener noreferrer">
+      <div class="burger-menu-box-item burger-menu-box-item-last">
+        <h5 class="item-title underline-box"> <a class="underline-el underline-el-white" href="/inventory" target="_blank" rel="noopener noreferrer">
             Каталог изьятой техники
-          </a>
-        </h5>
-      </ul>
+          </a></h5>
+
+      </div>
+      <div class="mobile-open-popup">
+        <div class="burger-menu-box-item">
+          <h5 class="item-title">Задать вопрос</h5>
+        </div>
+        <div class="burger-menu-box-item">
+          <h5 class="item-title">Контакты</h5>
+        </div>
+      </div>
     </div>
+
     <div class="burger-menu-box ">
-      <div class="underline-box">
+      <div class="underline-box mob-tel">
         <a class="burger-tel underline-el underline-el-white" href="tel:+73452999999">7 (3452) 99-99-99</a>
       </div>
       <div class="burger-menu-network">

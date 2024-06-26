@@ -21,7 +21,7 @@ $list = [
    </div>
    <div class="about-home__box-content">
       <div class="about-home__content-info">
-         <div class="about-home__text">
+         <div class="about-home__text w-50-box">
             <div class="about-home__text-column w-50">
                <p class="about-home__paragraph">
                   А5 — компания с большим опытом и развитыми отраслевыми компетенциями в сфере финансового, возвратного,

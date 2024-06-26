@@ -54,7 +54,7 @@ $listTitle = [
       'content' => [
          'term' => '12-60 мес',
          'prepaid' => 'от 20%',
-         'info' => 'Медицинское оборудование в лизинг — лёгкий способ усовершенствования оказываемых услуг. ',
+         'info' => 'Медицинское оборудование в лизинг — лёгкий способ усовершенствования оказываемых услуг.',
          'link' => '/program-leasing?section=medical-equipment',
          'img' => '5-photo.jpg',
       ],
@@ -120,31 +120,37 @@ $listTitle = [
       </div>
       <div class="leasing-programs__details">
          <div class='leasing-programs__content-wrapper'>
-            <div class="leasing-programs__row">
-               <div class="leasing-programs__title-wrapper">
-                  <h4 id="js-leasing-term" class="leasing-programs__term">
-                     <!-- listTitle[0]content.term -->
-                  </h4>
-                  <p>Срок лизинга</p>
-               </div>
-               <p>
+            <div class="leasing-programs__title-wrapper">
+               <h4 id="js-leasing-term" class="leasing-programs__term">
+                  <!-- listTitle[0]content.term -->
+               </h4>
+               <p>Срок лизинга</p>
+            </div>
+            <div>
+               <p class="leasing-programs__content-wrapper__text">
                   График платежей настраивается индивидуально и зависит от особенностей бизнеса.
                </p>
             </div>
-            <div class="leasing-programs__row">
-               <div class="leasing-programs__title-wrapper">
-                  <h4 id="js-leasing-prepaid" class="leasing-programs__prepaid">
-                     <!-- listTitle[0]content.prepaid -->
-                  </h4>
-                  <p>Аванс по договору</p>
-               </div>
+            <div class="leasing-programs__title-wrapper">
+               <h4 id="js-leasing-prepaid" class="leasing-programs__prepaid">
+                  <!-- listTitle[0]content.prepaid -->
+               </h4>
+               <p>Аванс по договору</p>
+            </div>
+            <div>
                <p>
                   Размер аванса коррелируется с суммой финансирования, предметом лизинга, объёмом поставок и
                   экономическими показателями клиента.
                </p>
+            </div>
+            <div>
                <p id="js-leasing-info">
                   <!-- listTitle[0]content.info -->
                </p>
+            </div>
+            <div class="leasing-programs__img-wrapper leasing-programs__img-wrapper--mobile">
+               <!-- listTitle[0]content.img -->
+               <img class="js-leasing-img" src="" alt="auto">
             </div>
             <div class="leasing-programs__button-wrapper">
                <!-- listTitle[0]content.link -->
@@ -157,7 +163,7 @@ $listTitle = [
          </div>
          <div class="leasing-programs__img-wrapper">
             <!-- listTitle[0]content.img -->
-            <img id="js-leasing-img" src="" alt="auto">
+            <img class="js-leasing-img" src="" alt="auto">
          </div>
       </div>
    </div>
@@ -175,7 +181,7 @@ $listTitle = [
       const prepaidElem = $('#js-leasing-prepaid');
       const infoElem = $('#js-leasing-info');
       const linkElem = $('#js-leasing-link');
-      const imgElem = $('#js-leasing-img');
+      const imgElem = $('.js-leasing-img');
       const titleP = $('.mobile__title p');
 
       items.each(function() {

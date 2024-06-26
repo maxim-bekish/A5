@@ -29,9 +29,7 @@
 }
 
 .partners-box__text {
-   font-family: var(--font-inter);
    font-size: 24px;
-   font-weight: 400;
    line-height: 29.04px;
    color: var(--text-gray-dark);
    margin: 30px 0 40px 0;
@@ -113,6 +111,46 @@
 
    .partners-box__button {
       gap: 20px;
-   
+
+   }
+}
+
+@media(max-width:360px) {
+
+   .partners-box__text {
+      font-size: 14px;
+      line-height: 19.6px;
+      margin: 20px 0;
+   }
+
+   .partners-box__time {
+      grid-template-columns: 1fr;
+      gap: 35px;
+      margin-bottom: 40px
+   }
+
+   .partners-box__time-value {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21.78px;
+   }
+
+   .partners-box__button {
+      grid-template-columns: 1fr;
+   }
+
+   .partners-box__time-description {
+      margin-top: 5px;
+      font-size: 14px;
+      line-height: 19.6px;
+   }
+
+   .partners-box .custom-slider {
+      margin-top: 60px;
+      gap: 10px;
+   }
+
+   .partners-box .custom-slider__slide {
+      gap: 10px;
    }
 }

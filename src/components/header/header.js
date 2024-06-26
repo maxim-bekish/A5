@@ -39,7 +39,6 @@ $(document).ready(function () {
     });
     $('.select').hover(
         function () {
-    
             $(this).addClass('active');
             $(this).find('.select-list').stop(true, true).slideDown(200);
         },
@@ -48,5 +47,17 @@ $(document).ready(function () {
             $(this).find('.select-list').stop(true, true).slideUp(200);
         }
     );
+
+    $('.burger-menu-box-item-row').click(function () {
+        if ($(window).width() <= 360) {
+            $('.burger-menu-box-item-row').not(this).find('svg').removeClass('rt180');
+            $('.burger-menu-box-item-row').not(this).next('ul').slideUp();
+            var isOpen = $(this).next('ul').is(':visible');
+            $(this).find('svg').toggleClass("rt180", !isOpen);
+            $(this).next('ul').slideToggle();
+        }
+    });
+
+
 
 });

@@ -125,7 +125,7 @@
    }
 
    .about-home {
-     margin-bottom: -120px;
+      margin-bottom: -120px;
    }
 
    .about-home__box-content {
@@ -140,5 +140,52 @@
    .about-home__content-list svg {
       height: 657px;
       width: 757px;
+   }
+}
+
+
+
+@media (max-width: 360px) {
+
+
+   .about-home__box-title-heading {
+      margin-top: 0;
+      font-size: 16px;
+      line-height: 16.64px;
+   }
+
+   .about-home__box-title-description {
+      font-size: 26px;
+      line-height: 31.2px;
+   }
+
+   .about-home__box-content {
+      padding: 90px 10px;
+   }
+
+   .about-home {
+      margin-bottom: -90px;
+   }
+
+   .about-home__text {
+      gap: 10px;
+   }
+
+   .about-home__content-list {
+      gap: 30px;
+      flex-direction: column-reverse;
+   }
+
+   .about-home__content-list svg {
+      display: none;
+   }
+
+   .about-home__list-item a {
+      font-size: 16px;
+      line-height: 16.64px;
+   }
+
+   .about-home__list {
+      gap: 15px;
    }
 }

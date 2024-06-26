@@ -42,24 +42,27 @@
 
 .leasing-programs__details {
    display: grid;
-   grid-template-columns: 45% 1fr;
+   grid-template-columns: 43% 1fr;
    background-color: var(--back-blue);
 }
 
 .leasing-programs__content-wrapper {
-
    padding: 50px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   gap: 70px;
-}
-
-.leasing-programs__row {
-   display: flex;
-   flex-direction: column;
+   height: 830px;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: repeat(4, auto) 1fr;
    gap: 40px;
 }
+
+.leasing-programs__content-wrapper:last-child {
+   margin-top: auto;
+}
+
+.leasing-programs__content-wrapper__text {
+   margin-bottom: 30px;
+}
+
 
 .leasing-programs__title-wrapper {
    display: flex;
@@ -76,15 +79,13 @@
    margin-bottom: 10px;
 }
 
-.leasing-programs__title-wrapper p,
-.leasing-programs__row>p {
+.leasing-programs__details p {
    color: var(--white);
 }
 
 .leasing-programs__button-wrapper {
    text-align: center;
 }
-
 
 
 .leasing-programs__img-wrapper img {
@@ -95,6 +96,10 @@
 
 #js-leasing-info {
    min-height: 76px;
+}
+
+.leasing-programs__img-wrapper--mobile {
+   display: none;
 }
 
 @media(max-width: 1280px) {
@@ -120,10 +125,10 @@
 
    .leasing-programs__content-wrapper {
       padding: 40px 20px;
-      gap: 30px;
-   }
-
-   .leasing-programs__row {
+      height: 636px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto) 1fr;
       gap: 30px;
    }
 
@@ -133,16 +138,96 @@
       line-height: 36.3px;
    }
 
-   /*.leasing-programs__row>p,
-   .leasing-programs__title-wrapper p {
-      font-size: 16px;
-      line-height: 19.36px;
-   }*/
-
    .leasing-programs__list--open {
       display: flex !important;
    }
 
 }
 
-@media(max-width: 360px) {}
+@media(max-width: 360px) {
+   .leasing-programs__img-wrapper--mobile {
+      display: block;
+   }
+
+   .leasing-programs__details {
+      grid-template-columns: 1fr
+   }
+
+   .leasing-programs {
+      background-color: var(--back-blue);
+   }
+
+   .leasing-programs__content-wrapper {
+      height: 100%;
+      padding: 30px 10px 90px 10px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto) 1fr;
+      gap: 20px;
+   }
+
+   .leasing-programs__title {
+      padding: 0 10px;
+   }
+
+   .leasing-programs.mt-160px {
+      margin-top: 0;
+      padding-top: 90px;
+   }
+
+   .leasing-programs__title {
+      color: #fff;
+   }
+
+   .leasing-programs__content-wrapper div:nth-child(1) {
+      grid-area: 1 / 1 / 2 / 2;
+      margin-bottom: 10px;
+   }
+
+   .leasing-programs__content-wrapper div:nth-child(2) {
+      grid-area: 2 / 1 / 3 / 3;
+   }
+
+   .leasing-programs__content-wrapper div:nth-child(3) {
+      grid-area: 1 / 2 / 2 / 3;
+   }
+
+   .leasing-programs__content-wrapper div:nth-child(4) {
+      grid-area: 3 / 1 / 4 / 3;
+   }
+
+   .leasing-programs__content-wrapper div:nth-child(5) {
+      grid-area: 4 / 1 / 5 / 3;
+   }
+
+   .leasing-programs__content-wrapper div:nth-child(6) {
+      grid-area: 5 / 1 / 6 / 3;
+   }
+
+   .leasing-programs__content-wrapper div:nth-child(7) {
+      grid-area: 6 / 1 / 6 / 3;
+   }
+
+   .leasing-programs__term,
+   .leasing-programs__prepaid {
+      margin-bottom: 5px;
+   }
+
+   .leasing-programs__content-wrapper__text {
+      margin-bottom: 0;
+   }
+
+   .leasing-programs__img-wrapper {
+      display: none;
+   }
+
+   .leasing-programs__img-wrapper--mobile {
+      display: block;
+   }
+
+   .leasing-programs__term,
+   .leasing-programs__prepaid {
+      font-family: Inter Tight;
+      font-size: 24px;
+      line-height: 29.04px;
+   }
+}

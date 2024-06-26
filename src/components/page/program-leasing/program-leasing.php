@@ -17,7 +17,7 @@ $programLeasingData = [
       ],
       "requirementsLessees" => [
          [
-            "title" => "Организационно-правовая форма",
+            "title" => "Организационно-правовая форма",
             "text" => "ООО, ОАО, ПАО, ЗАО, ИП, бюджетные организации"
          ],
          [
@@ -48,7 +48,7 @@ $programLeasingData = [
       ],
       "requirementsLessees" => [
          [
-            "title" => "Организационно-правовая форма",
+            "title" => "Организационно-правовая форма",
             "text" => "ООО, ОАО, ПАО, ЗАО, ИП, бюджетные организации"
          ],
          [
@@ -82,7 +82,7 @@ $programLeasingData = [
       ],
       "requirementsLessees" => [
          [
-            "title" => "Организационно-правовая форма",
+            "title" => "Организационно-правовая форма",
             "text" => "ООО, ОАО, ПАО, ЗАО, ИП, бюджетные организации"
          ],
          [
@@ -349,9 +349,9 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
       </div>
       <ul class="requirements__content">
          <?php foreach ($activeProgram['requirementsLessees'] as $requirement) : ?>
-            <li class="requirements__content--item">
-               <h4><?php echo htmlspecialchars($requirement['title']); ?></h4>
-               <p><?php echo htmlspecialchars($requirement['text']); ?></p>
+            <li class="requirements__content--item w-50-box">
+               <h4 class="w-50"><?php echo htmlspecialchars($requirement['title']); ?></h4>
+               <p class="w-50"><?php echo htmlspecialchars($requirement['text']); ?></p>
             </li>
          <?php endforeach; ?>
       </ul>

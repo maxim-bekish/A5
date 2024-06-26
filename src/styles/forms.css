@@ -283,3 +283,23 @@ form .form-gray {
       grid-template-columns: repeat(1, 1fr);
    }
 }
+
+@media(max-width:360px) {
+   .form-group label {
+      font-size: 14px;
+      line-height: 16.94px;
+   }
+
+   form .form-items-50 {
+      grid-row-gap: 20px;
+   }
+
+   .checkbox label,
+   .checkbox input:checked+label {
+      color: #B2C7E8;
+   }
+
+   .checkbox label:hover {
+      color: #B2C7E8;
+   }
+}

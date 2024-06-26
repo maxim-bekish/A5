@@ -36,4 +36,16 @@ $(document).ready(function () {
       $('.mobile__title p').text($(this).text());
       $('.mobile__title p').removeClass("mobile__title--closed");
    });
+
+
+
+   $(window).resize(function () {
+      if ($(window).width() >= 360) {
+         $('.burger-menu-box-item-row').find('svg').removeClass('rt180');
+         $('.burger-menu-box-item-row').next('ul').removeAttr('style');
+      }
+   });
 });
+
+
+

@@ -6,7 +6,7 @@
          <div class="slide__content">
             <div class="slide__content-text">
                <h2 class="slide__heading">
-                  Лизинг транспорта, техники, б/у продукции
+                  Лизинг транспорта, техники, б/у продукции
                </h2>
                <p class="slide__text">Минимальный аванс, любая стоимость</p>
             </div>
@@ -14,7 +14,7 @@
          </div>
          <div class="slide__additional-text">
             <p>
-               Лизинг транспорта, <br>техники
+               Лизинг транспорта, <br> техники
             </p>
          </div>
       </div>
@@ -22,7 +22,7 @@
          <div class="slide__content">
             <div class="slide__content-text">
                <h2 class="slide__heading">
-                  Лизинг медицинского оборудования без НДС
+                  Лизинг медицинского оборудования без НДС
                </h2>
                <p class="slide__text">с экспресс-оценкой организации</p>
             </div>
@@ -30,7 +30,7 @@
          </div>
          <div class="slide__additional-text">
             <p>
-               Лизинг медицинского оборудования <br> по програме минтор
+               Лизинг медицинского оборудования по програме минтор
             </p>
          </div>
       </div>
@@ -38,7 +38,7 @@
          <div class="slide__content">
             <div class="slide__content-text">
                <h2 class="slide__heading">
-                  Гибкий график <br> платежей
+                  Гибкий график <br> платежей
                </h2>
                <p class="slide__text">с учётом сезонности</p>
             </div>
@@ -46,7 +46,7 @@
          </div>
          <div class="slide__additional-text">
             <p>
-               Льготы для предпринимателей <br> на лизинг сельхоз техники
+               Льготы для предпринимателей <br> на лизинг сельхоз техники
             </p>
          </div>
       </div>
@@ -54,7 +54,7 @@
          <div class="slide__content">
             <div class="slide__content-text">
                <h2 class="slide__heading">
-                  Возмещение части авансового платежа
+                  Возмещение части авансового платежа
                </h2>
                <p class="slide__text">по региональной программе Тюменской области </p>
             </div>
@@ -62,10 +62,16 @@
          </div>
          <div class="slide__additional-text">
             <p>
-               Текст меньшей <br> важности
+               Текст меньшей <br> важности
             </p>
          </div>
       </div>
+      <!-- create dots todo -->
+      <div class="main-slider-dot">
+         <div class="main-slider-dot-item main-slider-dot-active" ></div>
+         <div class="main-slider-dot-item " ></div>
+         <div class="main-slider-dot-item " ></div>
+         <div class="main-slider-dot-item " ></div>
+      </div>
    </div>
 </section>
-

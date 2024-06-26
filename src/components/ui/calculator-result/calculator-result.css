@@ -87,10 +87,11 @@
 }
 
 @media (max-width: 1280px) {
-   .leasing-calculator__header{
+   .leasing-calculator__header {
       column-gap: 20px;
 
    }
+
    .leasing-calculator__result {
       max-width: 100%;
       gap: 60px;
@@ -135,5 +136,41 @@
 
    .leasing-calculator__header-item {
       align-items: start;
+   }
+}
+
+@media (max-width: 360px) {
+   .leasing-calculator__result {
+      gap: 30px;
+      padding: 30px 15px;
+   }
+
+   .leasing-calculator__header-item {
+      justify-content: flex-start;
+   }
+
+   .leasing-calculator__header-title {
+      font-size: 13px;
+      line-height: 15.6px;
+      text-wrap: nowrap;
+   }
+
+   .leasing-calculator__header-value {
+      font-size: 20px !important;
+      font-weight: 500 !important;
+      line-height: 24.2px !important;
+   }
+
+   .leasing-calculator__header .leasing-calculator__header-item:nth-child(2) {
+      grid-area: 2 / 1 / 3 / 2;
+   }
+
+   .leasing-calculator__header .leasing-calculator__header-item:nth-child(4) {
+      grid-area: 2 / 2 / 3 / 3;
+   }
+
+   .leasing-calculator__info {
+      font-size: 10px;
+      line-height: 12px;
    }
 }

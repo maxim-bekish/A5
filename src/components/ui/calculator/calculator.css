@@ -99,3 +99,38 @@
       line-height: 16px;
    }
 }
+
+@media(max-width:360px) {
+   .calculator-range {
+      margin: 40px 0 80px 0;
+      gap: 30px;
+   }
+
+   .value {
+      text-wrap: nowrap;
+   }
+
+   .calculator-item:first-child div:first-child p:first-child {
+      max-width: 173px;
+   }
+
+   .calculator-item:nth-child(2) div:first-child p:first-child {
+      max-width: 150px;
+   }
+
+   .calculator-range .item-header p,
+   .calculator-range .item-footer p {
+      font-family: Inter Tight;
+      font-size: 14px;
+      line-height: 16px;
+   }
+
+   .calculator-range .item-header .value {
+      font-size: 18px;
+      line-height: 18px;
+   }
+
+   .calculator-range .item-main {
+      margin: 5px 0;
+   }
+}
