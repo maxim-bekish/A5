@@ -21,19 +21,5 @@ $(document).ready(function () {
 
    $('.mobile__title p').text($('.leasing-guide__button-active').text())
 
-   //$('.js-open-select').click(function () {
-   //   $(this).find('.js-svg-upend').toggleClass('rt180');
-   //   $('.mobile__list-content').toggleClass("mobile__title--open");
-   //   $('.mobile__title p').toggleClass("mobile__title--closed");
-   //});
-
-   //$('.mobile__list-content--item').click(function () {
-   //   $('.mobile__title .js-open-select').toggleClass('rt180');
-   //   $('.mobile__list-content').toggleClass("mobile__title--open");
-   //   $('.leasing-guide .mobile__title p').text($(this).text());
-   //   $('.leasing-guide .mobile__title p').removeClass("mobile__title--closed");
-   //});
-
-
 
 });

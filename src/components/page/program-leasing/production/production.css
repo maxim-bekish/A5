@@ -52,7 +52,6 @@
    row-gap: 60px;
    flex-wrap: wrap;
    flex-direction: row;
-
 }
 
 .production__cards--item {
@@ -63,19 +62,24 @@
 .production__cards--item--img {
    padding: 20px;
    background-color: #F2F2F2;
-   margin-bottom: 8px
+   margin-bottom: 8px;
+   aspect-ratio: 1;
+
 }
 
 .production__cards--item--img img {
    height: 100%;
 }
 
-.inventory__content--item--text p:nth-child(1) {
+.production__cards--item--text p:nth-child(1) {
    font-size: 20px;
+   line-height: 24.2px;
+
 }
 
 .production__cards--item--text p:nth-child(2) {
    font-size: 20px;
+   line-height: 24.2px;
    font-weight: 500;
    color: #979797;
    margin: 8px 0;
@@ -87,6 +91,9 @@
    color: #979797;
 }
 
+.leady-loading {
+   display: none;
+}
 
 @media (max-width:1280px) {
    .production__cards {
@@ -98,5 +105,74 @@
    .production__cards--item {
       width: calc(50% - 10px);
    }
-   
+
+   .production__cards--item--text p:nth-child(1) {
+      font-size: 18px;
+      line-height: 21.78px;
+
+   }
+
+   .production__cards--item--text p:nth-child(2) {
+      font-size: 18px;
+      line-height: 21.78px;
+      margin: 6px 0;
+   }
+
+   .production__cards--item--text p:nth-child(3) {
+      font-size: 14px;
+      line-height: 16.94px;
+   }
+
+}
+
+@media (max-width:360px) {
+   .leady-loading {
+      margin: 0 auto;
+      display: block;
+      max-width: 65%;
+   }
+
+   .production__cards {
+      flex-direction: column;
+   }
+
+   .production__cards--item {
+      width: 100%;
+   }
+
+   .production__module-window {
+      padding: 20px;
+   }
+
+   .production__cards--item--img {
+      max-width: 340px;
+   }
+
+   .production__cards--item--text p:nth-child(1) {
+      font-size: 16px;
+      line-height: 19.36px;
+   }
+
+   .production__cards--item--text p:nth-child(2) {
+      font-size: 16px;
+      line-height: 19.36px;
+      margin: 7px 0;
+   }
+
+   .production__cards--item--text p:nth-child(3) {
+      font-size: 14px;
+      line-height: 16.94px;
+   }
+
+   .production__module-window__title {
+      font-size: 30px;
+      line-height: 31.22px;
+   }
+
+   .production__module-window__description {
+      font-size: 15px;
+      line-height: 21px;
+      margin: 15px 0 30px 0;
+   }
+
 }

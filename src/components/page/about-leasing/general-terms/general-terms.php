@@ -33,13 +33,13 @@ $conditions = [
          Условия финансирования
       </p>
    </div>
-   <div>
+   <div class="mobile-row" >
       <?php foreach ($conditions as $el) : ?>
-         <div class="row">
-            <h4 class="row__title-small  w-50">
+         <div class="row w-50-box">
+            <h4 class="row__title--small  w-50">
                <?php echo nl2br(htmlspecialchars($el['title'])); ?>
             </h4>
-            <p class="row__text w-50">
+            <p class="row__text--small w-50">
                <?php echo nl2br(htmlspecialchars($el['text'])); ?>
             </p>
          </div>

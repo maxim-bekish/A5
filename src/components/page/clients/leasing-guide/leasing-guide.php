@@ -157,7 +157,7 @@ $leasingGuide = [
       <div class="leasing-guide__list">
          <?php foreach ($el['content'] as $content) : ?>
             <div class="leasing-guide__item" data-index="<?php echo $index; ?>" style="<?php echo $index === 0 ? 'display: block;' : 'display: none;'; ?>">
-
+               
                <div class="leasing-guide__list-title">
                   <h4><?php echo htmlspecialchars($content['title']); ?></h4>
                   <button type="button" class="leasing-guide__icon-down">

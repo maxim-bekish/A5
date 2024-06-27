@@ -71,6 +71,10 @@ $(document).ready(function () {
       let slider__slide = $(this).find(".slider__slide");
       let margin = 40;
       let subtractMargin = 40;
+
+      if ($(window).width() <= 360) { margin = 10; subtractMargin = 10; slide -= 1 }
+      if ($(window).width() <= 1280) { margin = 20; subtractMargin = 20 }
+
       if (slide > 0) {
          subtractMargin = (slide - 1) * subtractMargin;
       } else {
@@ -84,8 +88,6 @@ $(document).ready(function () {
       const slideWidth = Math.ceil(slider__slide.outerWidth(true));
       const step = -slideWidth;
 
-      if ($(window).width() <= 360) { margin = 10; subtractMargin = 10 }
-      if ($(window).width() <= 1280) { margin = 20; subtractMargin = 20 }
       const timeAnimate = 700;
 
 

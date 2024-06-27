@@ -3,6 +3,8 @@
 
 
 <?php
+include 'src/assets/helpers/sliderCustom.php';
+
 $clientsPartnersItems = [
    [
       "image" => "1-pесо.svg",
@@ -41,16 +43,29 @@ $clientsPartnersItems = [
 
 <section class="partners-items container grid_1-3-box  mt-160px">
    <div class="partners-items__title">
-      <p class="p20px-big" >Партнеры</p>
+      <p class="p20px-big">Партнеры</p>
    </div>
    <div class="partners-items__img">
-      <?php foreach ($clientsPartnersItems as $slide): ?>
+      <?php foreach ($clientsPartnersItems as $slide) : ?>
          <div>
-            <img class="slider__image"
-               src="<?php echo SVG_PATH . 'clients.partners-items/' . htmlspecialchars($slide['image']); ?>"
-               alt="<?php echo htmlspecialchars($slide['alt']); ?>">
+            <img class="slider__image" src="<?php echo SVG_PATH . 'clients.partners-items/' . htmlspecialchars($slide['image']); ?>" alt="<?php echo htmlspecialchars($slide['alt']); ?>">
          </div>
       <?php endforeach; ?>
    </div>
-</section>
 
+
+   <div class="partners-items__img-mobile">
+      <?php
+      ob_start();
+      foreach ($clientsPartnersItems as $slide) : ?>
+         <div class="slider">
+            <img class="slider__image" src="<?php echo SVG_PATH . 'clients.partners-items/' . htmlspecialchars($slide['image']); ?>" alt="<?php echo htmlspecialchars($slide['alt']); ?>">
+         </div>
+      <?php endforeach;
+      $content = ob_get_clean();
+
+      sliderCustom($content, 1);
+      ?>
+   </div>
+
+</section>

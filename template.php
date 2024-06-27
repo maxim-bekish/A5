@@ -55,14 +55,7 @@
       include 'src/components/cookie/cookie.php';
       ?>
    </div>
-   <!--<script>
-      $(document).ready(function() {
-         // Скрываем спиннер после полной загрузки страницы
-         $(window).on('load', function() {
-            $(".loader-overlay").fadeOut("slow");
-         });
-      });
-   </script>-->
+
 </body>
 
 </html>

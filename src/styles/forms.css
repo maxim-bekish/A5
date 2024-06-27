@@ -200,7 +200,7 @@ form .form-gray {
    background-position: center;
    color: white;
    border: 1px solid rgba(151, 151, 151, 1);
-   background-color: white;
+   background-color: transparent;
    transition: all 0.2s linear;
 }
 
@@ -296,10 +296,12 @@ form .form-gray {
 
    .checkbox label,
    .checkbox input:checked+label {
-      color: #B2C7E8;
+      /*color: #B2C7E8;*/
+      font-size: 12px;
+      line-height: 15.12px;
    }
 
    .checkbox label:hover {
-      color: #B2C7E8;
+      /*color: #B2C7E8;*/
    }
 }

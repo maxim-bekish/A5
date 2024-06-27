@@ -35,7 +35,8 @@ include 'src/state/state.php';
                </div>
             </a>
          <?php endforeach; ?>
-         <div class="production__form" >
+         <button class="button button--blue js-leady-loading leady-loading" type="button">Загрузить еще</button>
+         <div class="production__form">
             <div class="production__module-window">
                <h2 class="production__module-window__title">Не нашли нужный вам продукт?</h2>
                <p class="production__module-window__description">

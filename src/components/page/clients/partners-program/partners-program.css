@@ -58,7 +58,14 @@
 }
 
 
-@media (max-width:1280px) {
+
+@media (max-width:360px) {
+   .partners-program__title {
+      font-size: 30px;
+      line-height: 36px;
+      margin: 30px 0 20px 0;
+   }
+
    .partners-program .partners-program__img {
       height: 228px;
    }
@@ -66,14 +73,6 @@
    .partners-program .partners-program__img img {
       object-fit: cover;
       object-position: right;
-   }
-}
-
-@media (max-width:360px) {
-   .partners-program__title {
-      font-size: 30px;
-      line-height: 36px;
-      margin: 30px 0 20px 0;
    }
 
    .partners-program__list {

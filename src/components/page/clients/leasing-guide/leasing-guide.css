@@ -59,7 +59,8 @@
 
 .leasing-guide__list-title {
    display: flex;
-   align-items: center;
+   gap: 30px;
+   align-items: flex-start;
    justify-content: space-between;
 }
 
@@ -83,5 +84,24 @@
    .leasing-guide__buttons--item .leasing-guide__button:hover,
    .leasing-guide__buttons--item .leasing-guide__button-active {
       color: var(--text-blue);
+   }
+}
+
+@media (max-width:1280px) {
+   .leasing-guide__list-title h4 {
+      font-size: 18px;
+      line-height: 21.6px;
+   }
+
+   .leasing-guide__list-title button svg {
+      width: 16px;
+   }
+
+   .leasing-guide__item {
+      padding: 20px 0;
+   }
+
+   .leasing-guide__text.open {
+      margin-top: 10px
    }
 }

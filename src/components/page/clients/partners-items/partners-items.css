@@ -13,10 +13,22 @@
    grid-template-rows: repeat(3, minmax(165px, 1fr));
 }
 
+.partners-items__img-mobile {
+   display: none;
+}
+
 @media (max-width:1280px) {
-
-
    .partners-items__img {
       gap: 20px;
+   }
+}
+
+@media (max-width:360px) {
+   .partners-items__img {
+      display: none;
+   }
+
+   .partners-items__img-mobile {
+      display: block;
    }
 }

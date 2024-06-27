@@ -69,7 +69,8 @@
 
 .production__select-items-box {
    padding: 18px 16px;
-   /*opacity: 0;*/
+  
+   z-index: 9;
    display: none;
    max-height: 316px;
    position: absolute;
@@ -80,7 +81,6 @@
    background-color: #fff;
    width: 100%;
    border-top-width: 0px;
-   transition: all 0.1s ease;
 }
 
 .production__select--input .production__select-items {
@@ -88,9 +88,9 @@
 }
 
 .production__select-items {
+   /*padding: 18px 0px;*/
    height: 100%;
    overflow: auto;
-   transition: all 0.1s ease;
    display: flex;
    flex-direction: column;
    gap: 20px;
@@ -100,7 +100,7 @@
 
 /* Стилизация скролла для веб-китовских браузеров (Chrome, Safari) */
 .production__select-items::-webkit-scrollbar {
-   width: 5px;
+   width: 3px;
 
    /* Ширина скролла */
 }
@@ -108,9 +108,9 @@
 .production__select-items::-webkit-scrollbar-track {
    background: #979797;
    /* Цвет трека */
-   border-radius: 5px;
-   border-right: 2px solid #fff;
-   border-left: 2px solid #fff;
+   border-radius: 3px;
+   border-right: 1px solid #fff;
+   border-left: 1px solid #fff;
    cursor: pointer;
    /* Радиус скролла */
 }
@@ -148,4 +148,16 @@
 .production__select--active .production__select-title-box,
 .production__select--active .production__select-items-box {
    border-color: #0045B2;
+}
+
+
+@media (max-width:360px) {
+
+
+
+
+   .production__select-box {
+      flex-direction: column;
+      gap: 10px;
+   }
 }

@@ -347,11 +347,11 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
             Основные требования к лизингополучателям
          </p>
       </div>
-      <ul class="requirements__content">
+      <ul class="mobile-row">
          <?php foreach ($activeProgram['requirementsLessees'] as $requirement) : ?>
-            <li class="requirements__content--item w-50-box">
-               <h4 class="w-50"><?php echo htmlspecialchars($requirement['title']); ?></h4>
-               <p class="w-50"><?php echo htmlspecialchars($requirement['text']); ?></p>
+            <li class="row w-50-box">
+               <h4 class="w-50 row__title--small"><?php echo htmlspecialchars($requirement['title']); ?></h4>
+               <p class="row__text--small w-50"><?php echo htmlspecialchars($requirement['text']); ?></p>
             </li>
          <?php endforeach; ?>
       </ul>
@@ -384,6 +384,7 @@ include 'src/components/page/program-leasing/production/production.php';
          Поставщики
       </p>
    </div>
+
    <div class="program-leasing__slider">
       <div class="slider__box">
          <div class="slider__container">
@@ -409,4 +410,5 @@ include 'src/components/page/program-leasing/production/production.php';
          </button>
       </div>
    </div>
+
 </section>

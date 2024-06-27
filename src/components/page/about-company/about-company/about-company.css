@@ -145,7 +145,7 @@
    }
 }
 
-@media (max-width:1280px) {
+@media (max-width:360px) {
 
    .about-company__description {
       flex-direction: column;
@@ -162,5 +162,9 @@
 
    .about-company__years {
       gap: 60px;
+   }
+
+   .about-company__box--down .about-company__image {
+      margin-top: 30px;
    }
 }

@@ -1,9 +1,8 @@
 $(document).ready(function () {
-   const speedAnimation = 100;
+   const speedAnimation = 200;
 
    function toggleSelect($selectBox, $selectItems) {
       const isOpen = $selectItems.css('display') == "block";
-      console.log(isOpen);
       $selectBox.find('.select-svg').toggleClass("rt180", !isOpen);
 
       if (isOpen) {
