@@ -42,16 +42,46 @@ $subsidies = [
                <?php echo nl2br(htmlspecialchars($el['title'])); ?>
             </p>
          </div>
-         <div class="about-leasing__subsidies--item-decription ">
+         <div class="about-leasing__subsidies--item-decription">
             <?php if ($el['subTitle']) : ?>
                <p class="subsidies--item--sub-title">
                   <?php echo nl2br(htmlspecialchars($el['subTitle'])); ?>
                </p>
             <?php endif; ?>
-            <p>
+            <p class="about-leasing__subsidies-text">
                <?php echo nl2br(htmlspecialchars($el['text'])); ?>
             </p>
+            <?php if ($el['subTitle']) : ?>
+               <div class="subsidies--item--sub-title-button">
+                  <p> Подробнее </p>
+                  <svg class="rt0" fill="none" width="14" height="9" viewBox="0 0 14 9">
+                     <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
+                  </svg>
+               </div>
+            <?php endif; ?>
          </div>
       </div>
    <?php endforeach; ?>
 </section>
+
+<script>
+   $(document).ready(function() {
+      $(".subsidies--item--sub-title-button").click(function() {
+         var $prevElement = $(this).prev();
+         $prevElement.slideToggle(400, function() {
+            // После завершения анимации выполним следующий код
+            if ($prevElement.is(":visible")) {
+               // Если элемент видим, меняем текст кнопки на "222"
+               $(this).next().children('p').text("Свернуть");
+               
+            } else {
+               $(this).next().children('p').text("Подробнее");
+               // Если элемент скрыт, меняем текст кнопки на "111"
+            }
+         });
+         $(this).find("svg").toggleClass('rt180');
+      });
+
+
+   })
+</script>

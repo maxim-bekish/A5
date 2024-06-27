@@ -4,7 +4,7 @@
 <section class="about-company container mt-160px">
    <div class="grid_1-3-box">
       <div class="about-company__header">
-         <p class="about-company--text">О компании</p>
+         <p class="p20px">О компании</p>
       </div>
       <div class="about-company__content">
          <h3 class="title-page-h3">
@@ -46,7 +46,7 @@
    <div class="about-company__box--down ">
       <div class="about-company__years">
          <div class="about-company__stats--mobil ">
-            <p class="about-company--big-test">> 5000</p>
+            <p class="about-company--big-test">>5000</p>
             <p class="about-company--text">лизинговых сделок </p>
          </div>
 

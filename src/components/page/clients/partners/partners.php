@@ -3,6 +3,8 @@
 
 
 <?php
+include 'src/assets/helpers/sliderCustom.php';
+
 $slidesClients = [
    [
       "image" => "ats-1.png",
@@ -49,9 +51,25 @@ $slidesClients = [
 
 <section class="partners grid_1-3-box container mt-160px">
    <div class="partners__title">
-      <p class="p20px-big" >Клиенты</p>
+      <p class="p20px-big">Клиенты</p>
    </div>
+
    <?php
-   include 'src/components/ui/clients-slider/clients-slider.php'
+   ob_start();
+   foreach ($slidesClients as $slide) : ?>
+      <div class="slider__slide">
+         <p class="dop-info">Подробнее</p>
+         <div class="slider__slide--front">
+            <img class="slider__image" src="<?php echo IMG_PATH . 'slider-clients/' . (!empty($slide['image']) ? htmlspecialchars($slide['image']) : 'placeholder.png'); ?>" alt="logo">
+         </div>
+         <div class="slider__slide--back">
+            <p class="slider__text"><?php echo nl2br(htmlspecialchars($slide['name'])); ?></p>
+            <p class="slider__text"><?php echo nl2br(htmlspecialchars($slide['description'])); ?></p>
+         </div>
+      </div>
+   <?php endforeach;
+   $content = ob_get_clean();
+
+   sliderCustom($content, 2);
    ?>
 </section>

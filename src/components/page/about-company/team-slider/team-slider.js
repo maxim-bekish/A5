@@ -36,8 +36,7 @@ $(document).ready(function () {
    }
 
    updateFirstVisibleSlide();
-
-   $(".team-slider .slider__button--prev").click(function () {
+   function prevSlide() {
       if (!isAnimating) {
          isAnimating = true;
          const currentLeft = parseInt($sliderContainer.css("left")) || 0;
@@ -64,9 +63,8 @@ $(document).ready(function () {
             height: '100%'
          }, timeAnimate); // Плавное изменение height
       }
-   });
-
-   $(".team-slider .slider__button--next").click(function () {
+   }
+   function nextSlide() {
       if (!isAnimating) {
          isAnimating = true;
          const currentLeft = parseInt($sliderContainer.css("left")) || 0;
@@ -93,5 +91,13 @@ $(document).ready(function () {
             height: '100%'
          }, timeAnimate); // Плавное изменение height
       }
-   });
+   }
+   $(".team-slider .slider__button--prev").click(() => prevSlide());
+
+   $(".team-slider .slider__button--next").click(() => nextSlide());
+   var hammer = new Hammer($sliderContainer[0]);
+
+   hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+   hammer.on("swiperight", () => prevSlide());
+   hammer.on("swipeleft", () => nextSlide());
 });

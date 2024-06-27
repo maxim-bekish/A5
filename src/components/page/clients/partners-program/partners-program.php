@@ -67,7 +67,9 @@
       </li>
    </ul>
    <form class="js-myForm partners-program__form">
-      <h4 class="partners-program__title--form">Мы рады сотрудничеству. Оставьте заявку на партнерство</h4>
+      <h4 class="partners-program__title--form">
+         Мы рады сотрудничеству. Оставьте заявку на партнерство
+      </h4>
       <div class="form-items-50 form-white partners-program__form--content">
          <div class="form-group">
             <input name="name" id="name" type="text" placeholder="" required>

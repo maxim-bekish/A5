@@ -13,26 +13,11 @@
    gap: 40px;
 }
 
-.thanks-box .slider {
-   display: flex;
-   flex-direction: column-reverse;
+.thanks-box .slider__custom {
    align-items: flex-end;
    gap: 20px;
 }
 
-.slider__box {
-   position: relative;
-   height: 360px;
-   width: 100%;
-   overflow: hidden;
-}
-
-.slider__container {
-   position: absolute;
-   top: 0px;
-   display: flex;
-   /*gap: 40px;*/
-}
 
 .slider__slide {
    width: 560px;

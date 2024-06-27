@@ -1,34 +1,4 @@
-.partners__title p {
-   font-size: 20px;
-}
-
-.partners__slider {
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
-   align-items: flex-end;
-}
-
-
-
-
-
-
-.partners__slider .slider__box {
-   position: relative;
-   height: 410px;
-   width: 100%;
-   overflow: hidden;
-}
-
-.partners__slider .slider__container {
-   position: absolute;
-   top: 0px;
-   display: flex;
-   height: 100%;
-}
-
-.partners__slider .slider__slide--back {
+.partners .slider__slide--back {
    display: flex;
    padding: 40px;
    gap: 20px;
@@ -38,13 +8,17 @@
    opacity: 0;
 }
 
-
-.partners__slider .slider__slide--front {
+.partners .slider__slide--front {
    z-index: 2;
 }
 
-.partners__slider .slider__slide--front,
-.partners__slider .slider__slide--back {
+.partners .slider__custom {
+   align-items: flex-end;
+   gap: 20px;
+}
+
+.partners .slider__slide--front,
+.partners .slider__slide--back {
    position: absolute;
    top: 0;
    left: 0;
@@ -55,17 +29,17 @@
 }
 
 
-.partners__slider .dop-info:hover~.slider__slide--front {
+.partners .dop-info:hover~.slider__slide--front {
    transform: rotateY(180deg);
    opacity: 0;
 }
 
-.partners__slider .dop-info:hover~.slider__slide--back {
+.partners .dop-info:hover~.slider__slide--back {
    transform: rotateY(0);
    opacity: 1;
 }
 
-.partners__slider .dop-info {
+.partners .dop-info {
    line-height: 21.78px;
    color: rgba(151, 151, 151, 1);
    text-decoration: underline;
@@ -76,42 +50,80 @@
    cursor: pointer;
 }
 
-.partners__slider .slider__slide {
-   width: 635px;
-   height: 100%;
+.partners .slider__slide {
+   height: 410px;
+   aspect-ratio: 1;
    display: flex;
    flex-direction: column;
    position: relative;
-   margin-right: 40px;
    background-color: var(--back-gray-light);
    justify-content: flex-start;
    align-items: center;
    overflow: hidden;
 }
 
-.partners__slider .slider__image {
+.partners .slider__image {
    width: 100%;
    height: 100%;
    object-fit: none;
 }
 
-.partners__slider .slider__text {
+.partners .slider__text {
    font-size: 20px;
    line-height: 32px;
 }
 
-/*.partners .slider__box .slider__slide {
-   width: 635px;
-}*/
 
-/*@media (max-width:1280px) {
 
-   .partners__slider .slider__slide {
-      width: 354px;
+
+@media (max-width:1280px) {
+
+   .slider__slide--back,
+   .slider__slide--front {
+      opacity: 0 !important;
+      transform: rotateY(180deg) !important;
    }
- 
-   .partners__slider .slider__text {
+
+   .slider__slide--back.visible,
+   .slider__slide--front.visible {
+      opacity: 1 !important;
+      transform: rotateY(0deg) !important;
+   }
+
+   .partners .slider__slide {
+      /*width: 354px;*/
+      height: 354px;
+      /*margin-right: 20px;*/
+   }
+
+   .partners .slider__box {
+      height: 354px;
+   }
+
+   .partners .slider__text {
       font-size: 14px;
       line-height: 19.6px;
    }
-}*/
+
+}
+
+@media (max-width:360px) {
+   .partners .slider__slide {
+      /*width: 340px;*/
+      height: 340px;
+   }
+
+   .partners .slider__box {
+      height: 340px;
+   }
+
+   .partners .slider__text {
+      font-size: 14px;
+      line-height: 19.6px;
+   }
+
+   .partners .dop-info:hover~.slider__slide--back {
+      padding: 20px 20px 80px 20px;
+   }
+
+}

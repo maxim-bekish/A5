@@ -28,3 +28,16 @@
       padding: 60px 20px;
    }
 }
+
+@media (max-width:360px) {
+
+   .about-banner {
+      height: 712px;
+      padding: 40px 10px;
+   }
+
+   .about-banner__title {
+      font-size: 30px;
+      line-height: 36px;
+   }
+}

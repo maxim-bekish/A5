@@ -1,8 +1,16 @@
-
-
 .clients-partners-program__content img {
    object-position: center;
    object-fit: cover;
    height: 560px;
    margin-bottom: 40px;
+}
+
+@media(max-width:360px) {
+   .clients-partners-program__content img {
+      margin-top: -10px;
+      margin-bottom: 30px;
+      height: 228px;
+   }
+
+
 }

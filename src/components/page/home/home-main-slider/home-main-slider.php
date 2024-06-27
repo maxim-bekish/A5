@@ -67,11 +67,11 @@
          </div>
       </div>
       <!-- create dots todo -->
-      <div class="main-slider-dot">
-         <div class="main-slider-dot-item main-slider-dot-active" ></div>
-         <div class="main-slider-dot-item " ></div>
-         <div class="main-slider-dot-item " ></div>
-         <div class="main-slider-dot-item " ></div>
-      </div>
+   </div>
+   <div class="main-slider-dot">
+      <div class="main-slider-dot-item main-slider-dot-active" ></div>
+      <div class="main-slider-dot-item " ></div>
+      <div class="main-slider-dot-item " ></div>
+      <div class="main-slider-dot-item " ></div>
    </div>
 </section>

@@ -2,6 +2,8 @@
 <script src="/src/components/page/home/home-thanks/home-thanks.js"></script>
 
 <?php
+include 'src/assets/helpers/sliderCustom.php';
+
 $slides = [
    [
       "title" => "111 Свидетельство о членстве обьединенной лизинговой ассоциации",
@@ -40,55 +42,41 @@ $slides = [
    ],
 ];
 ?>
-
 <section class="thanks-box mt-160px container">
    <h3 class="thanks-box__title title-page-h3">Благодарности и сертификаты</h3>
-   <section class="slider">
-      <div class="custom-slider__buttons">
-         <button class="custom-slider__button slider__button--prev" type="button">
-            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
-               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
-            </svg>
-         </button>
-         <button class="custom-slider__button slider__button--next" type="button">
-            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
-               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
-            </svg>
-         </button>
-      </div>
-      <div class="slider__box">
-         <div class="slider__container">
-            <?php foreach ($slides as $slide) : ?>
-               <div class="slider__slide">
-                  <div class="slider__header">
-                     <?php if ($slide['title']) : ?>
-                        <p class="slider__title"><?php echo htmlspecialchars($slide['title']); ?></p>
-                     <?php endif; ?>
-                     <?php if ($slide['date']) : ?>
-                        <p class="slider__date"><?php echo htmlspecialchars($slide['date']); ?></p>
-                     <?php endif; ?>
-                  </div>
-                  <div class="slider__main">
-                     <?php if ($slide['image']) : ?>
-                        <img class="slider__image" src="<?php echo SVG_PATH . 'slider-thanks/' . htmlspecialchars($slide['image']); ?>" alt="<?php echo htmlspecialchars($slide['title']); ?>">
-                     <?php endif; ?>
-                     <?php if ($slide['text']) : ?>
-                        <p class="slider__text"><?php echo nl2br(htmlspecialchars($slide['text'])); ?></p>
-                     <?php endif; ?>
-                  </div>
-                  <a class="slider__link" target="_blank" href="<?php echo htmlspecialchars($slide['href']); ?>">
-                     <svg class="slider__pointer" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                        <use href="<?php echo SVG_PATH; ?>icons.svg#icon-eye"></use>
-                     </svg>
-                     <svg class="slider__pointer--hover" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                        <use href="<?php echo SVG_PATH; ?>icons.svg#icon-eye-hover"></use>
-                     </svg>
-                  </a>
-               </div>
-            <?php endforeach; ?>
+   <?php
+   ob_start();
+   foreach ($slides as $slide) : ?>
+      <div class="slider__slide">
+         <div class="slider__header">
+            <?php if ($slide['title']) : ?>
+               <p class="slider__title"><?php echo htmlspecialchars($slide['title']); ?></p>
+            <?php endif; ?>
+            <?php if ($slide['date']) : ?>
+               <p class="slider__date"><?php echo htmlspecialchars($slide['date']); ?></p>
+            <?php endif; ?>
          </div>
+         <div class="slider__main">
+            <?php if ($slide['image']) : ?>
+               <img class="slider__image" src="<?php echo SVG_PATH . 'slider-thanks/' . htmlspecialchars($slide['image']); ?>" alt="<?php echo htmlspecialchars($slide['title']); ?>">
+            <?php endif; ?>
+            <?php if ($slide['text']) : ?>
+               <p class="slider__text"><?php echo nl2br(htmlspecialchars($slide['text'])); ?></p>
+            <?php endif; ?>
+         </div>
+         <a class="slider__link" target="_blank" href="<?php echo htmlspecialchars($slide['href']); ?>">
+            <svg class="slider__pointer" width="50" height="50" viewBox="0 0 50 50" fill="none">
+               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-eye"></use>
+            </svg>
+            <svg class="slider__pointer--hover" width="50" height="50" viewBox="0 0 50 50" fill="none">
+               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-eye-hover"></use>
+            </svg>
+         </a>
       </div>
-   </section>
+   <?php endforeach;
+   $content = ob_get_clean();
+   //ready
+   sliderCustom($content, 3);
+   ?>
+
 </section>
-
-

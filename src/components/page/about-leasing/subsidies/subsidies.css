@@ -29,6 +29,10 @@
 
 }
 
+.subsidies--item--sub-title-button {
+   display: none;
+}
+
 @media (max-width:1280px) {
    .about-leasing__subsidies--item-title {
       color: #0045B2;
@@ -41,5 +45,42 @@
    .about-leasing__subsidies h3 {
       font-size: 50px;
       line-height: 60px;
+   }
+}
+
+@media (max-width:360px) {
+   .about-leasing__subsidies h3 {
+      font-size: 28px;
+      line-height: 33.6px;
+      margin-bottom: 40px;
+   }
+
+   .about-leasing__subsidies--item {
+      padding: 40px 10px;
+   }
+
+   .about-leasing__subsidies--item-title {
+      font-size: 18px;
+      line-height: 18px;
+   }
+
+   .subsidies--item--sub-title-button {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+   }
+
+   .subsidies--item--sub-title-button p {
+      color: #979797;
+   }
+
+   .subsidies--item--sub-title-button svg {
+      stroke: #979797;
+      margin-left: 5px;
+   }
+
+   .subsidies--item--sub-title~.about-leasing__subsidies-text {
+      display: none;
+      margin-top: 15px;
    }
 }

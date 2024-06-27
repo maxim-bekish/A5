@@ -76,19 +76,54 @@
       font-size: 40px;
       line-height: 48px;
    }
-   .stages-work{
+
+   .stages-work {
       padding-top: 107px;
       height: 960px;
    }
+
    .stages-work__item h4 {
       font-size: 30px;
       line-height: 30px;
       margin-bottom: 15px;
    }
-   .stages-work__item--three{
+
+   .stages-work__item--three {
       left: 0;
    }
-   .stages-work__item--four{
+
+   .stages-work__item--four {
       left: 55%;
+   }
+}
+
+@media (max-width:360px) {
+   .stages-work {
+      height: 824px;
+      padding: 90px 10px;
+   }
+
+   .stages-work__title {
+      font-size: 30px;
+      line-height: 36px;
+   }
+
+   .stages-work__item {
+      left: 0;
+      bottom: auto;
+      right: auto;
+      top: auto;
+      position: relative;
+   }
+
+   .stages-work__items {
+      margin-top: 60px;
+      gap: 40px;
+   }
+
+   .stages-work__item h4 {
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 10px;
    }
 }

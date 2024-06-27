@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
    const container = $('#slides-container');
    const slides = Array.from(container.children());
@@ -61,37 +60,43 @@ $(document).ready(function () {
    // Устанавливаем начальное положение контейнера на высоту одного слайда вверх
    $sliderContainer.css("top", -slideHeight + "px");
 
-   // Обработчик события для кнопки "предыдущий слайд"
-   $(".js-partners-slider-prev").click(function () {
-      if (!isAnimating) { // Проверяем, не идет ли сейчас анимация
-         isAnimating = true; // Устанавливаем флаг анимации
-         let currentTop = parseInt($sliderContainer.css("top")) || 0; // Текущее положение контейнера
-         $sliderContainer.animate({
-            top: (currentTop - step) + "px"
-         }, timeAnimate, function () { // Анимируем перемещение вверх на шаг
-            if (parseInt($sliderContainer.css("top")) >= 0) { // Если достигли верхней границы
-               // Перемещаем контейнер на последнее положение, чтобы создать бесшовный эффект
-               $sliderContainer.css("top", -slideCount * slideHeight + "px");
-            }
-            isAnimating = false; // Сбрасываем флаг анимации
-         });
-      }
-   });
-
-   // Обработчик события для кнопки "следующий слайд"
-   $(".js-partners-slider-next").click(function () {
-      if (!isAnimating) { // Проверяем, не идет ли сейчас анимация
-         isAnimating = true; // Устанавливаем флаг анимации
-         let currentTop = parseInt($sliderContainer.css("top")) || 0; // Текущее положение контейнера
+   function nextSlide() {
+      if (!isAnimating) {
+         isAnimating = true;
+         let currentTop = parseInt($sliderContainer.css("top")) || 0;
          $sliderContainer.animate({
             top: (currentTop + step) + "px"
-         }, timeAnimate, function () { // Анимируем перемещение вниз на шаг
-            if (parseInt($sliderContainer.css("top")) <= -(slideCount + 1) * slideHeight) { // Если достигли нижней границы
-               // Перемещаем контейнер на начальное положение, чтобы создать бесшовный эффект
+         }, timeAnimate, function () {
+            if (parseInt($sliderContainer.css("top")) <= -(slideCount + 1) * slideHeight) {
                $sliderContainer.css("top", -slideHeight + "px");
             }
-            isAnimating = false; // Сбрасываем флаг анимации
+            isAnimating = false;
          });
       }
-   });
+   }
+   function prevSlide() {
+      if (!isAnimating) {
+         isAnimating = true;
+         let currentTop = parseInt($sliderContainer.css("top")) || 0;
+         $sliderContainer.animate({
+            top: (currentTop - step) + "px"
+         }, timeAnimate, function () {
+            if (parseInt($sliderContainer.css("top")) >= 0) {
+               $sliderContainer.css("top", -slideCount * slideHeight + "px");
+            }
+            isAnimating = false;
+         });
+      }
+   }
+   // Обработчик события для кнопки "предыдущий слайд"
+   $(".js-partners-slider-prev").click(() => prevSlide());
+   // Обработчик события для кнопки "следующий слайд"
+   $(".js-partners-slider-next").click(() => nextSlide());
+
+   // Используем Hammer.js для обработки свайпов вверх и вниз
+   var hammer = new Hammer($sliderContainer[0]);
+
+   hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+   hammer.on("swipedown", function () { prevSlide() });
+   hammer.on("swipeup", function () { nextSlide() });
 });
