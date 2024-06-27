@@ -39,9 +39,6 @@ button {
    background-color: rgba(231, 231, 231, 1);
 }
 
-/*.button--outline:hover {
-   color: white;
-}*/
 
 .button--blue:hover,
 .button--outline:hover {

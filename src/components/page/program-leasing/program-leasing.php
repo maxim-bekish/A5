@@ -189,6 +189,7 @@ $programLeasingData = [
          ],
       ],
       "suppliers" => [
+         "1-zoomlin.svg",
          "4-jood.svg",
          "7-rustorg.svg",
       ]
@@ -277,8 +278,6 @@ function getProgramData($programLeasingData, $activeNavItem)
 }
 
 $activeProgram = getProgramData($programLeasingData, $activeNavItem);
-
-
 ?>
 
 <section class="grid_1-3-box container">
@@ -378,37 +377,40 @@ include 'src/components/page/program-leasing/production/production.php';
    </div>
 </section>
 
-<section class="grid_1-3-box container mt-160px">
-   <div>
-      <p class="p20px-big">
-         Поставщики
-      </p>
-   </div>
+<?php
+if (count($activeProgram['suppliers']) > 0) :
+?>
+   <section class="grid_1-3-box program-leasing__slider container mt-160px">
+      <div>
+         <p class="p20px-big">
+            Поставщики
+         </p>
 
-   <div class="program-leasing__slider">
-      <div class="slider__box">
-         <div class="slider__container">
+      </div>
+      <?php
+      include 'src/assets/helpers/sliderCustom.php';
+
+      if (count($activeProgram['suppliers']) > 3) :
+         ob_start();
+         foreach ($activeProgram['suppliers'] as $slide) : ?>
+            <div class="slider__slide">
+               <img class="slider__image" src="<?php echo SVG_PATH . 'custom-slider/' . (!empty($slide) ? htmlspecialchars($slide) : 'placeholder.png'); ?>" alt="logo">
+            </div>
+         <?php endforeach;
+         $content = ob_get_clean();
+         //ready
+         sliderCustom($content, 3);
+      else :
+         ?>
+         <div class="no-slider__slide-box">
             <?php if ($activeProgram) : ?>
                <?php foreach ($activeProgram['suppliers'] as $slide) : ?>
-                  <div class="slider__slide">
+                  <div class="no-slider__slide">
                      <img class="slider__image" src="<?php echo SVG_PATH . 'custom-slider/' . (!empty($slide) ? htmlspecialchars($slide) : 'placeholder.png'); ?>" alt="logo">
                   </div>
                <?php endforeach; ?>
             <?php endif; ?>
+         <?php endif; ?>
          </div>
-      </div>
-      <div class="custom-slider__buttons">
-         <button class="custom-slider__button slider__button--prev" type="button" id="prevButton">
-            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
-               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
-            </svg>
-         </button>
-         <button class="custom-slider__button slider__button--next" type="button" id="nextButton">
-            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
-               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
-            </svg>
-         </button>
-      </div>
-   </div>
-
-</section>
+   </section>
+<?php endif; ?>

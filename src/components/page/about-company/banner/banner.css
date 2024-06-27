@@ -14,7 +14,7 @@
 .about-banner__title {
    font-size: 90px;
    line-height: 90px;
-   color: #fff;
+   color: rgba(255, 255, 255, 1);
 }
 
 @media (max-width:1280px) {

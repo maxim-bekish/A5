@@ -9,7 +9,7 @@
 .inventory__title {
    font-size: 30px;
    line-height: 31.22px;
-   color: #0045B2;
+   color: rgba(0, 69, 178, 1);
 
 }
 
@@ -17,7 +17,7 @@
    aspect-ratio: 1;
    max-width: 410px;
    max-height: 410px;
-   background-color: #F2F2F2;
+   background-color: rgba(242, 242, 242, 1);
    margin-bottom: 8px
 }
 
@@ -34,14 +34,14 @@
 .inventory__content--item--text p:nth-child(2) {
    font-size: 20px;
    font-weight: 500;
-   color: #979797;
+   color: rgba(151, 151, 151, 1);
    margin: 8px 0;
 }
 
 .inventory__content--item--text p:nth-child(3) {
    font-size: 16px;
    line-height: 19.36px;
-   color: #979797;
+   color: rgba(151, 151, 151, 1);
 }
 
 @media (max-width:1280px) {

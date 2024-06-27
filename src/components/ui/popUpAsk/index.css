@@ -22,7 +22,7 @@
 }
 
 .popup-ask-map {
-   border: 1px solid black;
+   border: 1px solid rgba(0, 0, 0, 1);
    width: 550px;
    height: 290px;
    display: flex;

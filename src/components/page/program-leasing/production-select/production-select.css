@@ -14,7 +14,7 @@
    font-size: 16px;
    bottom: 5px;
    line-height: 19.36px;
-   color: #979797;
+   color: rgba(151, 151, 151, 1);
 }
 
 .production__select-item-input {
@@ -23,23 +23,23 @@
    padding-left: 30px;
    font-size: 16px;
    line-height: 16.64px;
-   color: #515151;
-   border-bottom: 1px solid transparent;
+   color: rgba(81, 81, 81, 1);
+   border-bottom: 1px solid rgba(0, 0, 0, 0);
    padding-bottom: 5px;
 }
 
 .production__select-item-input::placeholder {
    font-size: 16px;
    line-height: 16.64px;
-   color: #515151;
+   color: rgba(81, 81, 81, 1);
 }
 
 .production__select-item-input:hover {
-   border-bottom: 1px solid #979797;
+   border-bottom: 1px solid rgba(151, 151, 151, 1);
 }
 
 .production__select-item-input:focus {
-   border-bottom: 1px solid #0045B2;
+   border-bottom: 1px solid rgba(0, 69, 178, 1);
 }
 
 .production__select-box {
@@ -54,7 +54,7 @@
 }
 
 .select-svg {
-   stroke: #515151;
+   stroke: rgba(81, 81, 81, 1);
 }
 
 .production__select-title-box {
@@ -64,21 +64,21 @@
    justify-content: space-between;
    border-width: 1px;
    border-style: solid;
-   border-color: #979797;
+   border-color: rgba(151, 151, 151, 1);
 }
 
 .production__select-items-box {
    padding: 18px 16px;
-  
+
    z-index: 9;
    display: none;
    max-height: 316px;
    position: absolute;
-   border-color: #979797;
+   border-color: rgba(151, 151, 151, 1);
    border-style: solid;
    box-sizing: border-box;
    border-width: 1px;
-   background-color: #fff;
+   background-color: rgba(255, 255, 255, 1);
    width: 100%;
    border-top-width: 0px;
 }
@@ -106,17 +106,17 @@
 }
 
 .production__select-items::-webkit-scrollbar-track {
-   background: #979797;
+   background: rgba(151, 151, 151, 1);
    /* Цвет трека */
    border-radius: 3px;
-   border-right: 1px solid #fff;
-   border-left: 1px solid #fff;
+   border-right: 1px solid rgba(255, 255, 255, 1);
+   border-left: 1px solid rgba(255, 255, 255, 1);
    cursor: pointer;
    /* Радиус скролла */
 }
 
 .production__select-items::-webkit-scrollbar-thumb {
-   background: #0045B2;
+   background: rgba(0, 69, 178, 1);
    /* Цвет бегунка */
    cursor: pointer;
    border-radius: 5px;
@@ -136,18 +136,18 @@
 .production__select-items li {
    font-size: 16px;
    line-height: 16.64px;
-   color: #515151;
+   color: rgba(81, 81, 81, 1);
    cursor: pointer;
 }
 
 .production__select-items li:hover,
 .production__select--active .production__select-title {
-   color: #0045B2;
+   color: rgba(0, 69, 178, 1);
 }
 
 .production__select--active .production__select-title-box,
 .production__select--active .production__select-items-box {
-   border-color: #0045B2;
+   border-color: rgba(0, 69, 178, 1);
 }
 
 

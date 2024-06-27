@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/src/components/ui/popUpContacts/index.css">
-<script src="/src/components/ui/popUpContacts/index.js"></script>
+<link rel="stylesheet" href="/src/components/ui/popUpContacts/popUpContacts.css">
+<script src="/src/components/ui/popUpContacts/popUpContacts.js"></script>
 <?php
 $state = [
    (object) [

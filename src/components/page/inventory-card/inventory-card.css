@@ -20,14 +20,14 @@
 .card__title {
    font-size: 70px;
    line-height: 84.72px;
-   color: #0045B2;
+   color: rgba(0, 69, 178, 1);
    margin-bottom: 10px;
 }
 
 .card__detail-label {
    font-size: 16px;
    line-height: 16px;
-   color: #979797;
+   color: rgba(151, 151, 151, 1);
 }
 
 .card__detail-value {
@@ -35,13 +35,13 @@
    font-weight: 500;
    margin-top: 10px;
    line-height: 36.31px;
-   color: #0045B2;
+   color: rgba(0, 69, 178, 1);
 }
 
 .card__characteristics-title {
    font-size: 20px;
    line-height: 24.2px;
-   color: #515151;
+   color: rgba(81, 81, 81, 1);
 }
 
 .card__characteristic {
@@ -57,12 +57,12 @@
 }
 
 .card__characteristic-label {
-   color: #979797;
+   color: rgba(151, 151, 151, 1);
 }
 
 .card__characteristic-value {
 
-   color: #515151;
+   color: rgba(81, 81, 81, 1);
 }
 
 .card__characteristics {
@@ -102,7 +102,7 @@
       display: block;
       font-weight: 500;
       margin-bottom: 60px;
-      color: #0045B2;
+      color: rgba(0, 69, 178, 1);
    }
 
    .card__title {

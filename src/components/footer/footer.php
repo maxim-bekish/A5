@@ -7,7 +7,7 @@
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-A5-mini"></use>
          </svg>
          <h3>
-            Помогаем бизнесу <br> достигать целей на выгодных условиях
+            Помогаем бизнесу <br> достигать целей на выгодных условиях
          </h3>
       </div>
 
@@ -34,7 +34,7 @@
 
 
          <div class="checkbox">
-            <input class="custom-checkbox " type="checkbox" id="option-one">
+            <input class="custom-checkbox " type="checkbox" id="option-one" required>
             <label for="option-one">
                Согласен с политикой конфиденциальности
             </label>

@@ -6,7 +6,7 @@
    display: flex;
    bottom: -100%;
    padding: 40px 50px;
-   background-color: #F2F2F2;
+   background-color: rgb(242, 242, 242);
    justify-content: space-between;
    align-items: center;
    transition: bottom 0.5s ease-in-out;
@@ -23,7 +23,7 @@
 }
 
 .popup-cookie p a {
-   color: #0045B2;
+   color: rgba(0, 69, 178, 1);
 }
 
 .popup-cookie button {

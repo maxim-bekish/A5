@@ -1,44 +1,23 @@
-.program-leasing__slider {
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
-   align-items: flex-end;
-   position: relative;
+.no-slider__slide-box {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 40px;
+}
+
+.no-slider__slide {
+   max-width: 410px;
+   aspect-ratio: 1;
 }
 
 .program-leasing__slider .slider__buttons {
-   display: flex;
-   gap: 20px;
-   max-width: 120px;
-   bottom: 0;
-   position: absolute;
-   left: -140px;
-}
-
-.program-leasing__slider .slider__box {
-   position: relative;
-   height: 410px;
-   width: 100%;
-   overflow: hidden;
-}
-
-.program-leasing__slider .slider__container {
-   position: absolute;
-   top: 0px;
-   display: flex;
-   height: 100%;
-}
-
-.program-leasing__slider .custom-slider__buttons {
    position: absolute;
    bottom: 0;
-   left: -160px;
-
+   right: calc(100% + 20px);
 }
 
 .program-leasing__slider .slider__slide {
    width: 410px;
-   height: 100%;
+   height: 410px;
    display: flex;
    flex-direction: column;
    position: relative;
@@ -75,7 +54,7 @@
 .obtaining-leasing__content--item p {
    font-size: 16px;
    line-height: 16px;
-   color: #979797;
+   color: rgba(151, 151, 151, 1);
 }
 
 .obtaining-leasing__content--item h4 {
@@ -83,7 +62,7 @@
    font-weight: 500;
    margin-bottom: 10px;
    line-height: 58.08px;
-   color: #0045B2;
+   color: rgba(0, 69, 178, 1);
 }
 
 /* ----------------- */
@@ -91,7 +70,7 @@
 .program-leasing-page__content {
    font-size: 70px;
    line-height: 84px;
-   color: #0045B2;
+   color: rgba(0, 69, 178, 1);
 }
 
 .program-leasing-page__image {
@@ -136,7 +115,7 @@
    font-size: 30px;
    margin-bottom: 43px;
    line-height: 31.22px;
-   color: rgba(0, 69, 178, 1);
+   color: rgba(0, 69, 178, 1)
 }
 
 .program-leasing-page__content h3 {
@@ -166,7 +145,6 @@
       gap: 10px;
    }
 
-
    .production__module-window-img {
       display: none;
    }
@@ -175,19 +153,9 @@
       max-width: 100% !important;
    }
 
-   .program-leasing__slider .custom-slider__buttons {
-      position: relative;
-      left: auto;
-   }
-
    .program-leasing__slider .slider__slide {
       width: 300px;
       margin-right: 20px;
-   }
-
-   .program-leasing__slider .slider__box {
-
-      height: 300px;
    }
 
 
@@ -215,7 +183,7 @@
       margin: 40px 0 60px 0;
    }
 
-   .obtaining-leasing .p20px ,
+   .obtaining-leasing .p20px,
    .requirements__title .p20px {
       font-size: 20px !important;
       line-height: 24.2px !important;

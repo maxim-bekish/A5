@@ -1,7 +1,7 @@
 .leasing-guide__list-title h4 {
    font-size: 24px;
    line-height: 24px;
-   color: #0045B2;
+   color: rgba(0, 69, 178, 1);
    max-width: 900px;
 }
 
@@ -24,17 +24,17 @@
 
 .leasing-guide__button-active {
    background-color: rgba(0, 63, 162, 1);
-   color: white;
+   color: rgba(255, 255, 255, 1);
 
 }
 
 .leasing-guide__item {
    padding: 30px 38px 30px 0px;
-   border-top: 1px solid #979797;
+   border-top: 1px solid rgba(151, 151, 151, 1);
 }
 
 .leasing-guide__item:last-child {
-   border-bottom: 1px solid #979797;
+   border-bottom: 1px solid rgba(151, 151, 151, 1);
 }
 
 .leasing-guide__buttons {
@@ -74,11 +74,11 @@
 
    .leasing-guide__buttons--item .leasing-guide__button {
       border: 0;
-      background-color: transparent;
+      background-color: rgba(0, 0, 0, 0);
       text-align: left;
       font-size: 16px;
       line-height: 16px;
-      color: #515151;
+      color: rgba(81, 81, 81, 1);
    }
 
    .leasing-guide__buttons--item .leasing-guide__button:hover,

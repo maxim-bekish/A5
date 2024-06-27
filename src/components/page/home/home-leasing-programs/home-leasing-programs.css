@@ -175,7 +175,7 @@
    }
 
    .leasing-programs__title {
-      color: #fff;
+      color: rgba(255, 255, 255, 1);
    }
 
    .leasing-programs__content-wrapper div:nth-child(1) {

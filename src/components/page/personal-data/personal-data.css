@@ -1,13 +1,13 @@
 .personal-data__table {
-   border-top: 1px solid #979797;
-   border-left: 1px solid #979797;
-   border-right: 1px solid #979797;
+   border-top: 1px solid rgba(151, 151, 151, 1);
+   border-left: 1px solid rgba(151, 151, 151, 1);
+   border-right: 1px solid rgba(151, 151, 151, 1);
    display: flex;
    font-size: 18px;
 }
 
 .personal-data__table:last-child {
-   border-bottom: 1px solid #979797;
+   border-bottom: 1px solid rgba(151, 151, 151, 1);
 }
 
 .personal-data__table li {
@@ -19,7 +19,7 @@
 .personal-data__table li:first-child {
    max-width: 307px;
    min-width: 126px;
-   border-right: 1px solid #979797;
+   border-right: 1px solid rgba(151, 151, 151, 1);
 }
 
 .personal-data__table li:last-child {
@@ -27,11 +27,11 @@
 }
 
 .personal-data__table:not(:first-child) li:last-child {
-   color: #979797;
+   color: rgba(151, 151, 151, 1);
 }
 
 .personal-data__table:first-child li:last-child {
-   color: #fff;
+   color: rgba(255, 255, 255, 1);
 }
 
 .personal-data__title h3 {
@@ -41,11 +41,11 @@
 
 .personal-data__item {
    padding: 40px 0;
-   border-top: 1px solid #979797
+   border-top: 1px solid rgba(151, 151, 151, 1)
 }
 
 .personal-data__item:last-child {
-   border-bottom: 1px solid #979797
+   border-bottom: 1px solid rgba(151, 151, 151, 1)
 }
 
 .personal-data__item-title {

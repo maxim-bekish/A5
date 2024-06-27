@@ -53,7 +53,6 @@ $slidesClients = [
    ],
 ];
 ?>
-<div>
 
    <?php
    ob_start();
@@ -73,4 +72,3 @@ $slidesClients = [
 
    sliderCustom($content, 2);
    ?>
-</div>

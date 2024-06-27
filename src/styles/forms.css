@@ -43,6 +43,17 @@ form .form-blue {
    background: rgba(0, 69, 178, 1);
 }
 
+form .form-blue input:-webkit-autofill {
+   caret-color: #fff;
+   /* Устанавливает цвет курсора */
+   -webkit-box-shadow: 0 0 0 1000px rgba(0, 69, 178, 1) inset;
+   /* Устанавливает цвет фона для заполненного инпута */
+   box-shadow: 0 0 0 1000px rgba(0, 69, 178, 1) inset;
+   /* Устанавливает цвет фона для заполненного инпута */
+   -webkit-text-fill-color: rgba(178, 199, 232, 1);
+   /* Устанавливает цвет текста внутри заполненного инпута */
+}
+
 /* text-border */
 .form-group input {
    padding: 0 0 7px 0;
@@ -84,7 +95,6 @@ form .form-blue {
 
 /*hover placeholder*/
 .form-group:hover label {
-
    color: rgba(255, 255, 255, 1);
 }
 
@@ -109,9 +119,9 @@ form .form-blue {
 /* form  color*/
 
 
-/* background-colorwhite-white form */
+/* background-color-white form */
 form .form-white {
-   background: rgb(255, 255, 255);
+   background: rgba(255, 255, 255, 1);
 }
 
 /* background-color-gray form */
@@ -151,6 +161,34 @@ form .form-gray {
 .form-gray .form-group input:focus~label {
    color: rgba(0, 69, 178, 1);
 }
+
+
+
+
+.form-white .form-group input:-webkit-autofill {
+   caret-color: #000;
+   /* Устанавливает цвет курсора */
+   -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 1) inset;
+   /* Устанавливает цвет фона для заполненного инпута */
+   box-shadow: 0 0 0 1000px rgba(255, 255, 255, 1) inset;
+   /* Устанавливает цвет фона для заполненного инпута */
+   -webkit-text-fill-color: rgba(0, 69, 178, 1);
+
+   /* Устанавливает цвет текста внутри заполненного инпута */
+}
+
+.form-gray .form-group input:-webkit-autofill {
+   caret-color: #000;
+   /* Устанавливает цвет курсора */
+   -webkit-box-shadow: 0 0 0 1000px rgba(242, 242, 242, 1) inset;
+   /* Устанавливает цвет фона для заполненного инпута */
+   box-shadow: 0 0 0 1000px rgba(242, 242, 242, 1) inset;
+   /* Устанавливает цвет фона для заполненного инпута */
+   -webkit-text-fill-color: rgba(0, 69, 178, 1);
+   /* Устанавливает цвет текста внутри заполненного инпута */
+}
+
+
 
 
 /* form  color*/
@@ -198,19 +236,26 @@ form .form-gray {
    border-radius: 4px;
    background-repeat: no-repeat;
    background-position: center;
-   color: white;
    border: 1px solid rgba(151, 151, 151, 1);
-   background-color: transparent;
+   background-color: rgba(0, 0, 0, 0);
    transition: all 0.2s linear;
 }
 
 .checkbox label {
+   display: flex;
+   align-items: center;
    font-family: Inter Tight;
    font-size: 14px;
    font-weight: 400;
    line-height: 14.56px;
    text-align: left;
-   color: rgba(178, 199, 232, 1);
+   color: rgba(151, 151, 151, 1);
+   transition: all 0.2s linear;
+}
+
+
+.checkbox .custom-checkbox:checked+label {
+   color: rgba(81, 81, 81, 1);
 }
 
 /* hover no checked no disabled */
@@ -218,63 +263,54 @@ form .form-gray {
    border: 1px solid rgba(81, 81, 81, 1);
 }
 
-/* no-hover no checked disabled */
-.custom-checkbox:disabled+label::before {
-   border: 1px solid rgba(203, 203, 203, 1)
-}
-
 /* no-hover checked no-disabled */
 .custom-checkbox:checked+label::before {
-   border: 0;
+   border: 1px solid rgba(0, 0, 0, 0);
    background-color: rgba(82, 128, 203, 1);
    background-image: url("/src/assets/images/svg/checkbox/ok-white.svg");
 }
 
 /* hover checked no-disabled */
 .custom-checkbox:checked:hover+label::before {
-   border: 0;
+   border: 1px solid rgba(0, 0, 0, 0);
    background-color: rgba(0, 69, 178, 1);
    background-image: url("/src/assets/images/svg/checkbox/ok-white.svg");
 }
 
 /* no-hover checked disabled */
 .custom-checkbox:checked:disabled+label::before {
-   border: 0;
+   border: 1px solid rgba(0, 0, 0, 0);
    background-color: rgba(242, 242, 242, 1);
    background-image: url("/src/assets/images/svg/checkbox/ok-gray.svg");
 }
 
 /* error no checked  */
-.custom-checkbox-error+label::before {
-   border: 1px solid rgba(255, 138, 138, 1) !important
+
+.submitted-error .checkbox label::before {
+   border: 1px solid rgba(255, 138, 138, 1);
 }
 
-/* error  checked */
-.custom-checkbox-error:checked+label::before,
-.custom-checkbox-error:checked:hover+label::before {
-   border: 1px solid rgba(255, 138, 138, 1) !important;
-   background-color: rgba(178, 199, 232, 1) !important;
+.submitted-error .checkbox input:checked+label::before {
+   border: 1px solid rgba(0, 0, 0, 0);
 }
 
-
-
-
-.checkbox label,
+/*.checkbox label,*/
 .checkbox input:checked:disabled+label {
    color: rgba(151, 151, 151, 1);
    transition: all 0.2s linear;
 }
 
-.checkbox label:hover,
-.checkbox input:checked+label {
+.checkbox label:hover {
    color: rgba(81, 81, 81, 1);
    transition: all 0.2s linear;
 }
 
-.checkbox input:disabled+label {
+.checkbox input:disabled+label,
+.checkbox input:disabled+label::before {
    color: rgba(203, 203, 203, 1);
    transition: all 0.2s linear;
 }
+
 
 /* custom-checkbox */
 
@@ -296,12 +332,12 @@ form .form-gray {
 
    .checkbox label,
    .checkbox input:checked+label {
-      /*color: #B2C7E8;*/
+      /*color: rgba(178, 199, 232, 1);*/
       font-size: 12px;
       line-height: 15.12px;
    }
 
    .checkbox label:hover {
-      /*color: #B2C7E8;*/
+      /*color: rgba(178, 199, 232, 1);*/
    }
 }
