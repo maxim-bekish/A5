@@ -4,7 +4,7 @@
 }
 
 .about-leasing__subsidies .subsidies--item--sub-title {
-   font-weight: 600;
+   font-weight: var(--font-w6);
    margin-bottom: 3px;
 }
 
@@ -14,18 +14,18 @@
 
 .about-leasing__subsidies--item {
    padding: 60px 0;
-   border-top: 1px solid rgba(151, 151, 151, 1)
+   border-top: 1px solid var(--gray)
 }
 
 .about-leasing__subsidies--item:last-child {
-   border-top: 1px solid rgba(151, 151, 151, 1);
-   border-bottom: 1px solid rgba(151, 151, 151, 1)
+   border-top: 1px solid var(--gray);
+   border-bottom: 1px solid var(--gray)
 }
 
 .about-leasing__subsidies--item-title {
    font-size: 20px;
    line-height: 24.2px;
-   color: rgba(81, 81, 81, 1);
+   color: var(--medium-gray);
 
 }
 
@@ -35,7 +35,7 @@
 
 @media (max-width:1280px) {
    .about-leasing__subsidies--item-title {
-      color: rgba(0, 69, 178, 1);
+      color: var(--dark-blue);
    }
 
    .about-leasing__subsidies--item {
@@ -71,11 +71,11 @@
    }
 
    .subsidies--item--sub-title-button p {
-      color: rgba(151, 151, 151, 1);
+      color: var(--gray);
    }
 
    .subsidies--item--sub-title-button svg {
-      stroke: rgba(151, 151, 151, 1);
+      stroke: var(--gray);
       margin-left: 5px;
    }
 

@@ -24,7 +24,7 @@
    display: flex;
    flex-direction: column;
    position: relative;
-   background-color: var(--back-gray-light);
+   background-color: var(--light-gray);
    justify-content: flex-start;
    align-items: center;
    overflow: hidden;
@@ -54,7 +54,7 @@
 
 .dop-info {
    line-height: 21.78px;
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
    text-decoration: underline;
    position: absolute;
    bottom: 20px;

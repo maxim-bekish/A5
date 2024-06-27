@@ -65,7 +65,7 @@ $personalData = [
       <div class="personal-data-none"> </div>
       <div>
          <h3 class="title-page-h3">
-            Политика обработки персональных <br> данных
+            Политика обработки персональных  данных
          </h3>
       </div>
    </div>

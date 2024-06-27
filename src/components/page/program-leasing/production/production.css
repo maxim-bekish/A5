@@ -11,7 +11,7 @@
 
 .production__module-window {
    padding: 50px;
-   background: rgba(242, 242, 242, 1);
+   background: var(--light-gray);
    width: 100%;
 }
 
@@ -31,7 +31,7 @@
 .production__module-window__title {
    font-size: 50px;
    line-height: 52px;
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 .production__module-window__description {
@@ -61,7 +61,7 @@
 
 .production__cards--item--img {
    padding: 20px;
-   background-color: rgba(242, 242, 242, 1);
+   background-color: var(--light-gray);
    margin-bottom: 8px;
    aspect-ratio: 1;
 
@@ -80,15 +80,15 @@
 .production__cards--item--text p:nth-child(2) {
    font-size: 20px;
    line-height: 24.2px;
-   font-weight: 500;
-   color: rgba(151, 151, 151, 1);
+   font-weight: var(--font-w5);
+   color: var(--gray);
    margin: 8px 0;
 }
 
 .production__cards--item--text p:nth-child(3) {
    font-size: 16px;
    line-height: 19.36px;
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
 }
 
 .leady-loading {

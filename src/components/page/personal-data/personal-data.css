@@ -1,13 +1,13 @@
 .personal-data__table {
-   border-top: 1px solid rgba(151, 151, 151, 1);
-   border-left: 1px solid rgba(151, 151, 151, 1);
-   border-right: 1px solid rgba(151, 151, 151, 1);
+   border-top: 1px solid var(--gray);
+   border-left: 1px solid var(--gray);
+   border-right: 1px solid var(--gray);
    display: flex;
    font-size: 18px;
 }
 
 .personal-data__table:last-child {
-   border-bottom: 1px solid rgba(151, 151, 151, 1);
+   border-bottom: 1px solid var(--gray);
 }
 
 .personal-data__table li {
@@ -19,7 +19,7 @@
 .personal-data__table li:first-child {
    max-width: 307px;
    min-width: 126px;
-   border-right: 1px solid rgba(151, 151, 151, 1);
+   border-right: 1px solid var(--gray);
 }
 
 .personal-data__table li:last-child {
@@ -27,31 +27,31 @@
 }
 
 .personal-data__table:not(:first-child) li:last-child {
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
 }
 
 .personal-data__table:first-child li:last-child {
-   color: rgba(255, 255, 255, 1);
+   color: var(--white);
 }
 
 .personal-data__title h3 {
    line-height: 85px;
    margin-bottom: 100px;
+   max-width: 1153px;
 }
 
 .personal-data__item {
    padding: 40px 0;
-   border-top: 1px solid rgba(151, 151, 151, 1)
+   border-top: 1px solid var(--gray)
 }
 
 .personal-data__item:last-child {
-   border-bottom: 1px solid rgba(151, 151, 151, 1)
+   border-bottom: 1px solid var(--gray)
 }
 
 .personal-data__item-title {
    font-size: 20px;
    line-height: 24.2px;
-
 }
 
 @media (max-width:1280px) {
@@ -59,6 +59,7 @@
       font-size: 50px;
       line-height: 60px;
       margin-bottom: 60px;
+      max-width: 723px;
    }
 
    .personal-data-description {
@@ -68,5 +69,19 @@
 
    .personal-data__item {
       padding: 30px 0;
+   }
+}
+
+@media (max-width:360px) {
+   .personal-data__title h3 {
+      font-size: 28px;
+      line-height: 33.6px;
+      margin-bottom: 40px;
+      max-width: 100%;
+   }
+
+   .personal-data__item-title {
+      font-size: 18px;
+      line-height: 25px;
    }
 }

@@ -12,9 +12,9 @@
 
 .stages-work__title {
    font-size: 70px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 84px;
-   color: rgba(255, 255, 255, 1);
+   color: var(--white);
 }
 
 .stages-work__items {
@@ -44,11 +44,11 @@
    line-height: 35px;
    text-align: left;
    margin-bottom: 20px;
-   color: rgba(255, 255, 255, 1);
+   color: var(--white);
 }
 
 .stages-work__item p {
-   color: rgba(255, 255, 255, 1);
+   color: var(--white);
 }
 
 .stages-work__item--one {

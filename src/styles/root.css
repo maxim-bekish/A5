@@ -1,25 +1,24 @@
 :root {
-
-   --white: rgb(255, 255, 255);
-   --black: rgb(0, 0, 0);
-
-   --back-blue: rgba(0, 69, 178, 1);
-   --back-white: rgba(255, 255, 255, 1);
-   --back-gray-light: rgba(242, 242, 242, 1);
-
-   --text-black: rgba(30, 30, 30, 1);
-   --text-gray-dark: rgba(81, 81, 81, 1);
-   --text-blue: rgba(0, 69, 178, 1);
-   --text-grey-light: rgba(203, 203, 203, 1);
-   --text-white-light: rgba(242, 242, 242, 1);
-   --text-blue-light: rgba(128, 162, 216, 1);
-   --text-blue-light-max: rgba(178, 199, 232, 1);
-
-   --line-blue: rgba(0, 69, 178, 1);
-   --line-gray-light: rgba(203, 203, 203, 1);
-   --line-gray: rgba(151, 151, 151, 1);
-   --line-blue-light: rgba(82, 128, 203, 1);
+   --transparent: transparent;
+   --white: rgba(255, 255, 255, 1);
+   --black: rgba(0, 0, 0, 1);
+   --dark-blue: rgba(0, 69, 178, 1);
+   --blue: rgba(82, 128, 203, 1);
+   --light-blue: rgba(128, 162, 216, 1);
+   --sky-blue: rgba(178, 199, 232, 1);
+   --gray: rgba(151, 151, 151, 1);
+   --dark-gray: rgba(30, 30, 30, 1);
+   --light-gray: rgba(242, 242, 242, 1);
+   --medium-gray: rgba(81, 81, 81, 1);
+   --silver: rgba(203, 203, 203, 1);
+   --light-red: rgba(255, 138, 138, 1);
 
    --font-inter: "Inter Tight", sans-serif;
+   --font-arial: Arial, sans-serif;
    --font-regular: Regular, sans-serif;
+
+   --font-w4: 400;
+   --font-w5: 500;
+   --font-w6: 600;
+
 }

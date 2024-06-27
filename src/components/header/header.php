@@ -177,10 +177,10 @@ function listHeaderBurger($data)
       <button class="underline-box">
         <a class="underline-el underline-el-blue" href="tel:+73452999999">7 (3452) 99 99 99</a>
       </button>
-      <button type="button" class="toggle-button-ask underline-box">
+      <button type="button" class="open-button-ask">
         <p class="underline-el underline-el-blue"> Задать вопрос</p>
       </button>
-      <button type="button" class="toggle-button underline-box">
+      <button type="button" class="open-button-contact underline-box">
         <p class="underline-el underline-el-blue">Контакты</p>
       </button>
     </div>
@@ -213,10 +213,10 @@ function listHeaderBurger($data)
 
       </div>
       <div class="mobile-open-popup">
-        <div class="burger-menu-box-item">
+        <div class="burger-menu-box-item open-button-ask">
           <h5 class="item-title">Задать вопрос</h5>
         </div>
-        <div class="burger-menu-box-item">
+        <div class="burger-menu-box-item open-button-contact">
           <h5 class="item-title">Контакты</h5>
         </div>
       </div>

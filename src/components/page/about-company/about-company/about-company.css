@@ -34,10 +34,10 @@
 
 .about-company--big-test {
    font-size: 200px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 200px;
    text-align: left;
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
    opacity: 0;
    /* Начальное состояние - невидимый элемент */
    transform: translateY(250px);

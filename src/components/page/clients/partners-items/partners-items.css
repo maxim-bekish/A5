@@ -2,7 +2,7 @@
    display: flex;
    aspect-ratio: 1;
    padding: 35px;
-   background: rgba(242, 242, 242, 1);
+   background: var(--light-gray);
 
 }
 

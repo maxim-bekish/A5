@@ -2,8 +2,7 @@
 <script src="/src/components/cookie/cookie.js"></script>
 <section class="popup-cookie">
    <p>
-      Пользуясь сайтом, вы даёте согласие на использование файлов cookie, помогающих нам сделать его удобнее для вас. Подробная информация приведена в соответсвующих правилах
-      <a href="/personal-data" target="_blank" rel="noopener noreferrer">
+      Пользуясь сайтом, вы даёте согласие на использование файлов cookie, помогающих нам сделать его удобнее для вас. Подробная информация приведена в <a href="/personal-data" target="_blank" rel="noopener noreferrer">
          соответсвующих правилах
       </a>
    </p>

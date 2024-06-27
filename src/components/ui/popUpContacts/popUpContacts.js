@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-   $('.toggle-button').on('click', function () {
+   $('.open-button-contact').on('click', function () {
       $('.sidebar').addClass('open');
       $('.app').addClass('blurred');
       $('body').css('overflow', 'hidden');

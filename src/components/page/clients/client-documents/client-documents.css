@@ -21,14 +21,14 @@
 
 .client-documents__item p {
    font-size: 20px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 24px;
 }
 
 .client-documents__item {
    padding: 30px 20px;
    position: relative;
-   background: rgba(242, 242, 242, 1);
+   background: var(--light-gray);
    height: 200px;
 }
 

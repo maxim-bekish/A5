@@ -4,12 +4,12 @@ $(document).ready(function () {
       // Показываем окошко при загрузке страницы
       setTimeout(function () {
          $('.popup-cookie').addClass('show');
-      }, 1000);
+      }, 2000);
 
       // Скрываем окошко через 15 секунд
       const hiddenCookie = setTimeout(function () {
          $('.popup-cookie').removeClass('show');
-      }, 16000);
+      }, 1700000);
 
       $('.cookie-ok').click(function () {
          $('.popup-cookie').removeClass('show');

@@ -14,22 +14,22 @@
    flex-direction: column;
    gap: 30px;
    padding-left: 20px;
-   border-left: 1px solid var(--line-blue);
+   border-left: 1px solid var(--dark-blue);
 }
 
 .leasing-programs__list-item {
    cursor: pointer;
-   color: var(--text-gray-dark);
-   font-family: var(--font-inter);
+   color: var(--medium-gray);
+
 }
 
 .leasing-programs__list-item:hover {
-   color: var(--text-blue);
+   color: var(--dark-blue);
 }
 
 .leasing-programs__list-item--active {
    text-decoration: underline;
-   color: var(--text-blue);
+   color: var(--dark-blue);
 }
 
 .leasing-programs__icon-rt180 {
@@ -43,7 +43,7 @@
 .leasing-programs__details {
    display: grid;
    grid-template-columns: 43% 1fr;
-   background-color: var(--back-blue);
+   background-color: var(--dark-blue);
 }
 
 .leasing-programs__content-wrapper {
@@ -71,9 +71,9 @@
 
 .leasing-programs__term,
 .leasing-programs__prepaid {
-   font-family: var(--font-inter);
+
    font-size: 40px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 48.4px;
    color: var(--white);
    margin-bottom: 10px;
@@ -154,7 +154,7 @@
    }
 
    .leasing-programs {
-      background-color: var(--back-blue);
+      background-color: var(--dark-blue);
    }
 
    .leasing-programs__content-wrapper {
@@ -175,7 +175,7 @@
    }
 
    .leasing-programs__title {
-      color: rgba(255, 255, 255, 1);
+      color: var(--white);
    }
 
    .leasing-programs__content-wrapper div:nth-child(1) {
@@ -226,7 +226,6 @@
 
    .leasing-programs__term,
    .leasing-programs__prepaid {
-      font-family: Inter Tight;
       font-size: 24px;
       line-height: 29.04px;
    }

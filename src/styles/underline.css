@@ -24,12 +24,12 @@
 
 /* цвет линии */
 .underline-box .underline-el-white::after {
-   background-color: rgba(255, 255, 255, 1);
+   background-color: var(--white);
 }
 
 /* цвет линии */
 .underline-box .underline-el-blue::after {
-   background-color: var(--text-blue);
+   background-color: var(--dark-blue);
 }
 
 .underline-box .underline-el:hover::after {

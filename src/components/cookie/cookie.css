@@ -6,7 +6,7 @@
    display: flex;
    bottom: -100%;
    padding: 40px 50px;
-   background-color: rgb(242, 242, 242);
+   background-color: var(--light-gray);
    justify-content: space-between;
    align-items: center;
    transition: bottom 0.5s ease-in-out;
@@ -23,7 +23,7 @@
 }
 
 .popup-cookie p a {
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 .popup-cookie button {
@@ -34,5 +34,22 @@
 @media (max-width:1280px) {
    .popup-cookie {
       padding: 40px;
+   }
+
+   .popup-cookie p {
+      max-width: 504px;
+      width: 100%;
+   }
+}
+
+@media (max-width:360px) {
+   .popup-cookie {
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+   }
+
+   .popup-cookie button {
+      max-width: 100%;
    }
 }

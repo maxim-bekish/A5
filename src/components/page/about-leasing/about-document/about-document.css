@@ -30,12 +30,12 @@
    position: absolute;
    left: 20px;
    bottom: 20px;
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
 }
 
 .about-document__item p {
    font-size: 20px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 24px;
 }
 
@@ -44,7 +44,7 @@
    position: relative;
    max-width: 410px;
    width: 100%;
-   background: rgba(242, 242, 242, 1);
+   background: var(--light-gray);
    height: 200px;
 }
 

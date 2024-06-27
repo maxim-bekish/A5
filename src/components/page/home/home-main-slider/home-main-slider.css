@@ -22,9 +22,9 @@
 
 .slide__additional-text p {
    color: var(--white);
-   font-family: var(--font-inter);
+
    font-size: 30px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 30px;
 }
 
@@ -46,18 +46,18 @@
 }
 
 .slide__content .slide__content-text .slide__heading {
-   font-family: var(--font-inter);
+
    color: var(--white);
    font-size: 70px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 84px;
 }
 
 .slide__content .slide__content-text .slide__text {
-   font-family: var(--font-inter);
+
    color: rgba(218, 218, 218, 1);
    font-size: 24px;
-   font-weight: 400;
+
    line-height: 24px;
 }
 
@@ -71,10 +71,10 @@
    border-radius: 50%;
    width: 91px;
    height: 91px;
-   color: var(--text-blue);
-   font-family: var(--font-inter);
+   color: var(--dark-blue);
+
    font-size: 14px;
-   font-weight: 400;
+
    line-height: 80px;
 }
 
@@ -94,22 +94,20 @@
 }
 
 .background-one {
-   background-image: url('/src/assets/images/img/main-slider/step-one.jpeg');
+   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/src/assets/images/img/main-slider/step-one.jpeg');
 }
 
+
 .background-two {
-   background-image: url('/src/assets/images/img/main-slider/step-two.jpeg');
-   background-color: rgba(0, 0, 0, 0.733);
+   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/src/assets/images/img/main-slider/step-two.jpeg');
 }
 
 .background-three {
-   background-image: url('/src/assets/images/img/main-slider/step-three.jpeg');
-   background-color: rgba(0, 0, 0, 1);
+   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/src/assets/images/img/main-slider/step-three.jpeg');
 }
 
 .background-four {
-   background-image: url('/src/assets/images/img/main-slider/step-four.jpeg');
-   background-color: rgba(0, 0, 0, 1);
+   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/src/assets/images/img/main-slider/step-four.jpeg');
 }
 
 .background-one .slide__additional-text {
@@ -133,7 +131,7 @@
    .slide__content .slide__content-text .slide__heading,
    .slide__additional-text p {
       font-size: 50px;
-      font-weight: 500;
+      font-weight: var(--font-w5);
       line-height: 50px;
    }
 
@@ -177,7 +175,7 @@
    .main-slider-dot div {
       border-radius: 10px;
       height: 4px;
-      background-color: rgba(255, 255, 255, 1);
+      background-color: var(--white);
    }
 
    .slide__content {
@@ -190,7 +188,7 @@
    }
 
    .slide__additional-text {
-      background-color: rgba(0, 0, 0, 0) !important;
+      background-color: var(--transparent) !important;
    }
 
    .slide__additional-text p {

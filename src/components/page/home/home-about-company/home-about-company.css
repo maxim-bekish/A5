@@ -1,32 +1,32 @@
 .about-home {
-   background: rgba(242, 242, 242, 1);
+   background: var(--light-gray);
 }
 
 .about-home__box-title {
-   background-color: rgba(0, 69, 178, 1);
+   background-color: var(--dark-blue);
    display: flex;
    padding: 175px 80px;
    gap: 40px;
 }
 
 .about-home__box-title-heading {
-   font-family: var(--font-inter);
+
    margin-top: 8px;
    min-width: 410px;
    font-size: 20px;
-   font-weight: 400;
+
    line-height: 20.82px;
    text-align: left;
-   color: rgba(178, 199, 232, 1);
+   color: var(--sky-blue);
 }
 
 .about-home__box-title-description {
-   font-family: var(--font-inter);
+
    font-size: 70px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 84px;
    text-align: left;
-   color: rgba(255, 255, 255, 1);
+   color: var(--white);
 }
 
 .about-home__box-content {
@@ -85,7 +85,7 @@
 }
 
 .about-home__paragraph {
-   color: rgba(30, 30, 30, 1);
+   color: var(--dark-gray);
 }
 
 .about-home__list {
@@ -95,19 +95,19 @@
    flex-direction: column;
    gap: 30px;
    padding-left: 20px;
-   border-left: 1px solid var(--line-blue);
+   border-left: 1px solid var(--dark-blue);
 }
 
 .about-home__list-item a {
-   color: var(--text-gray-dark);
-   font-family: var(--font-inter);
+   color: var(--medium-gray);
+
    font-size: 18px;
-   font-weight: 400;
+
    line-height: 21.78px;
 }
 
 .about-home__list-item:hover a {
-   color: var(--text-blue);
+   color: var(--dark-blue);
    text-decoration: underline;
 }
 

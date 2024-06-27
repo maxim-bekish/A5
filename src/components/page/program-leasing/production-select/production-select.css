@@ -14,7 +14,7 @@
    font-size: 16px;
    bottom: 5px;
    line-height: 19.36px;
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
 }
 
 .production__select-item-input {
@@ -23,23 +23,23 @@
    padding-left: 30px;
    font-size: 16px;
    line-height: 16.64px;
-   color: rgba(81, 81, 81, 1);
-   border-bottom: 1px solid rgba(0, 0, 0, 0);
+   color: var(--medium-gray);
+   border-bottom: 1px solid var(--transparent);
    padding-bottom: 5px;
 }
 
 .production__select-item-input::placeholder {
    font-size: 16px;
    line-height: 16.64px;
-   color: rgba(81, 81, 81, 1);
+   color: var(--medium-gray);
 }
 
 .production__select-item-input:hover {
-   border-bottom: 1px solid rgba(151, 151, 151, 1);
+   border-bottom: 1px solid var(--gray);
 }
 
 .production__select-item-input:focus {
-   border-bottom: 1px solid rgba(0, 69, 178, 1);
+   border-bottom: 1px solid var(--dark-blue);
 }
 
 .production__select-box {
@@ -54,7 +54,7 @@
 }
 
 .select-svg {
-   stroke: rgba(81, 81, 81, 1);
+   stroke: var(--medium-gray);
 }
 
 .production__select-title-box {
@@ -64,7 +64,7 @@
    justify-content: space-between;
    border-width: 1px;
    border-style: solid;
-   border-color: rgba(151, 151, 151, 1);
+   border-color: var(--gray);
 }
 
 .production__select-items-box {
@@ -74,11 +74,11 @@
    display: none;
    max-height: 316px;
    position: absolute;
-   border-color: rgba(151, 151, 151, 1);
+   border-color: var(--gray);
    border-style: solid;
    box-sizing: border-box;
    border-width: 1px;
-   background-color: rgba(255, 255, 255, 1);
+   background-color: var(--white);
    width: 100%;
    border-top-width: 0px;
 }
@@ -106,17 +106,17 @@
 }
 
 .production__select-items::-webkit-scrollbar-track {
-   background: rgba(151, 151, 151, 1);
+   background: var(--gray);
    /* Цвет трека */
    border-radius: 3px;
-   border-right: 1px solid rgba(255, 255, 255, 1);
-   border-left: 1px solid rgba(255, 255, 255, 1);
+   border-right: 1px solid var(--white);
+   border-left: 1px solid var(--white);
    cursor: pointer;
    /* Радиус скролла */
 }
 
 .production__select-items::-webkit-scrollbar-thumb {
-   background: rgba(0, 69, 178, 1);
+   background: var(--dark-blue);
    /* Цвет бегунка */
    cursor: pointer;
    border-radius: 5px;
@@ -136,18 +136,18 @@
 .production__select-items li {
    font-size: 16px;
    line-height: 16.64px;
-   color: rgba(81, 81, 81, 1);
+   color: var(--medium-gray);
    cursor: pointer;
 }
 
 .production__select-items li:hover,
 .production__select--active .production__select-title {
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 .production__select--active .production__select-title-box,
 .production__select--active .production__select-items-box {
-   border-color: rgba(0, 69, 178, 1);
+   border-color: var(--dark-blue);
 }
 
 

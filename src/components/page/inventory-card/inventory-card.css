@@ -20,28 +20,28 @@
 .card__title {
    font-size: 70px;
    line-height: 84.72px;
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
    margin-bottom: 10px;
 }
 
 .card__detail-label {
    font-size: 16px;
    line-height: 16px;
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
 }
 
 .card__detail-value {
    font-size: 30px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    margin-top: 10px;
    line-height: 36.31px;
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 .card__characteristics-title {
    font-size: 20px;
    line-height: 24.2px;
-   color: rgba(81, 81, 81, 1);
+   color: var(--medium-gray);
 }
 
 .card__characteristic {
@@ -57,12 +57,12 @@
 }
 
 .card__characteristic-label {
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
 }
 
 .card__characteristic-value {
 
-   color: rgba(81, 81, 81, 1);
+   color: var(--medium-gray);
 }
 
 .card__characteristics {
@@ -100,9 +100,9 @@
       font-size: 40px;
       line-height: 41.63px;
       display: block;
-      font-weight: 500;
+      font-weight: var(--font-w5);
       margin-bottom: 60px;
-      color: rgba(0, 69, 178, 1);
+      color: var(--dark-blue);
    }
 
    .card__title {
@@ -110,9 +110,7 @@
 
    }
 
-   .card__detail-value {
-      font-weight: 400;
-   }
+   .card__detail-value {}
 
    .card__details {
       margin: 30px 0 60px 0;

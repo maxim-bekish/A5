@@ -22,7 +22,7 @@
    flex-direction: column;
    position: relative;
    margin-right: 40px;
-   background-color: var(--back-gray-light);
+   background-color: var(--light-gray);
    justify-content: flex-start;
    align-items: center;
    overflow: hidden;
@@ -54,15 +54,15 @@
 .obtaining-leasing__content--item p {
    font-size: 16px;
    line-height: 16px;
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
 }
 
 .obtaining-leasing__content--item h4 {
    font-size: 48px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    margin-bottom: 10px;
    line-height: 58.08px;
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 /* ----------------- */
@@ -70,7 +70,7 @@
 .program-leasing-page__content {
    font-size: 70px;
    line-height: 84px;
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 .program-leasing-page__image {
@@ -95,7 +95,7 @@
    flex-direction: column;
    gap: 30px;
    padding-left: 20px;
-   border-left: 2px solid rgba(0, 69, 178, 1)
+   border-left: 2px solid var(--dark-blue)
 }
 
 .program-leasing-page__navigation ul li a {
@@ -103,24 +103,24 @@
 }
 
 .program-leasing-page__navigation ul li a:hover {
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 .program-leasing-page__navigation ul li .program__navigation--active {
    text-decoration: underline;
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 .program-leasing-page__navigation h3 {
    font-size: 30px;
    margin-bottom: 43px;
    line-height: 31.22px;
-   color: rgba(0, 69, 178, 1)
+   color: var(--dark-blue)
 }
 
 .program-leasing-page__content h3 {
    margin: 40px 0 30px 0;
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
    font-size: 70px;
    line-height: 84px;
 }

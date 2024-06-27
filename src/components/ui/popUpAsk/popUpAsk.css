@@ -1,19 +1,19 @@
-.popup-ask .popup-ask-info .text-html {
+.popup-ask .popup-ask-info {
    margin: 15px 0 40px 0;
 }
 
 .popup-ask-tel a {
-   font-family: Inter Tight;
+
    font-size: 50px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 52.04px;
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 .popup-ask-newsletter p {
-   font-family: Inter Tight;
+
    font-size: 18px;
-   font-weight: 400;
+
    line-height: 18.72px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .popup-ask-map {
-   border: 1px solid rgba(0, 0, 0, 1);
+   border: 1px solid var(--black);
    width: 550px;
    height: 290px;
    display: flex;
@@ -32,7 +32,7 @@
 }
 
 .popup-ask-newsletter p {
-   color: rgba(81, 81, 81, 1);
+   color: var(--medium-gray);
 }
 
 .popup-ask-newsletter-form {
@@ -56,14 +56,14 @@
 }
 
 .popup-ask-newsletter-form input::placeholder {
-   font-weight: 400;
-   color: rgba(151, 151, 151, 1);
+
+   color: var(--gray);
 }
 
 .popup-ask-newsletter .popup-ask-newsletter-form .button {
    max-width: 175px;
    font-size: 16px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 19.36px;
    padding: 15px 0;
 }
@@ -80,4 +80,20 @@
    line-height: 19.36px;
    padding: 0;
 
+}
+
+@media (max-width:128px) {
+   .popup-ask-info .text-html {
+      font-size: 16px;
+      line-height: 22.4px;
+      margin: 20px 0 50px 0;
+   }
+}
+
+@media (max-width:360px) {
+   .popup-ask-info .text-html {
+      margin: 20px 0 40px 0;
+   }
+
+   .form-items-100 .form-group:nth-child(2) {}
 }

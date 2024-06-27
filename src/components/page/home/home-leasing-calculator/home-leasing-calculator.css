@@ -1,9 +1,9 @@
 .leasing-calculator__title-text {
-   font-family: var(--font-inter);
+
    font-size: 20px;
-   font-weight: 400;
+
    line-height: 28px;
-   color: rgba(81, 81, 81, 1);
+   color: var(--medium-gray);
    max-width: 240px;
 }
 

@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/src/components/ui/popUpAsk/index.css">
-<script src="/src/components/ui/popUpAsk/index.js"></script>
+<link rel="stylesheet" href="/src/components/ui/popUpAsk/popUpAsk.css">
+<script src="/src/components/ui/popUpAsk/popUpAsk.js"></script>
 
 
 <section class="sidebar-ask popUp__sidebar">
@@ -20,9 +20,7 @@
 
       <div class="popup-ask-info">
          <p class="text-html">
-            Выберите с кем связаться, оставьте контактные данные
-            <br>
-            и наш специалист свяжется с вами в ближайшее время
+            Выберите с кем связаться, оставьте контактные данные и наш специалист свяжется с вами в ближайшее время
          </p>
       </div>
       <div class="popup-ask-buttons">

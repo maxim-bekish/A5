@@ -3,12 +3,16 @@
 .popup-contacts .popup-contacts-radio {
    display: flex;
    gap: 40px;
+   margin: 40px 0;
 }
 
 .radio-button {
    display: flex;
    align-items: center;
+}
 
+.popup-contacts-tel {
+   margin-bottom: 30px;
 }
 
 .custom-radio {
@@ -30,7 +34,7 @@
 }
 
 .custom-radio input[type="radio"]:checked~.radio-checkmark {
-   border: 2px solid rgba(0, 69, 178, 1);
+   border: 2px solid var(--dark-blue);
 }
 
 .custom-radio span {
@@ -43,8 +47,8 @@
    left: 0;
    height: 20px;
    width: 20px;
-   background-color: rgba(255, 255, 255, 1);
-   border: 2px solid rgba(151, 151, 151, 1);
+   background-color: var(--white);
+   border: 2px solid var(--gray);
    border-radius: 50%;
    display: flex;
    align-items: center;
@@ -66,12 +70,12 @@
 /* radio checked+disabled  сам элемент*/
 .custom-radio input[type="radio"]:checked:disabled~.radio-checkmark {
    display: block;
-   border: 2px solid rgba(203, 203, 203, 1);
+   border: 2px solid var(--silver);
 }
 
 /* radio checked+disabled внутрений круг */
 .custom-radio input[type="radio"]:checked:disabled~.radio-checkmark::after {
-   background-color: rgba(203, 203, 203, 1)
+   background-color: var(--silver)
 }
 
 /* radio checked+disabled+hover  внешний груг*/
@@ -82,12 +86,12 @@
 /* radio checked  сам элемент*/
 .custom-radio input[type="radio"]:disabled~.radio-checkmark {
    display: block;
-   border: 2px solid rgba(203, 203, 203, 1);
+   border: 2px solid var(--silver);
 }
 
 /* radio checked внутрений круг */
 .custom-radio input[type="radio"]:disabled~.radio-checkmark::after {
-   background-color: rgba(203, 203, 203, 1)
+   background-color: var(--silver)
 }
 
 /* radio checked+hover  внешний груг*/
@@ -105,7 +109,7 @@
    width: 10px;
    height: 10px;
    border-radius: 50%;
-   background-color: rgba(0, 69, 178, 1);
+   background-color: var(--dark-blue);
 }
 
 .custom-radio .radio-checkmark::before {
@@ -121,10 +125,10 @@
 }
 
 .custom-radio .text-html {
-   color: rgba(81, 81, 81, 1);
-   font-family: Inter Tight;
+   color: var(--medium-gray);
+
    font-size: 20px;
-   font-weight: 400;
+
    line-height: 20.8px;
    text-align: left;
 }
@@ -136,11 +140,11 @@
 }
 
 .popup-contacts-tel a {
-   font-family: Inter Tight;
+
    font-size: 50px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 52.04px;
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 .popup-contacts-contacts {
@@ -150,7 +154,7 @@
 }
 
 .popup-contacts-contacts h5 {
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
    margin-bottom: 20px;
 }
 
@@ -159,9 +163,9 @@
 .popup-contacts-contacts-network a,
 .popup-contacts-contacts h5,
 .popup-contacts-newsletter p {
-   font-family: Inter Tight;
+
    font-size: 18px;
-   font-weight: 400;
+
    line-height: 18.72px;
 
 }
@@ -169,7 +173,7 @@
 .popup-contacts-contacts p,
 .popup-contacts-contacts a,
 .popup-contacts-contacts-network a {
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 
@@ -183,17 +187,18 @@
 }
 
 .popup-contacts-map {
-   border: 1px solid rgba(0, 0, 0, 1);
-   width: 640px;
+   border: 1px solid var(--black);
+   width: 100%;
    height: 290px;
    display: flex;
    align-items: center;
    justify-content: center;
    text-transform: uppercase;
+   margin: 35px 0 140px 0;
 }
 
 .popup-contacts-newsletter p {
-   color: rgba(81, 81, 81, 1);
+   color: var(--medium-gray);
 }
 
 .popup-contacts-newsletter-form .input {
@@ -208,14 +213,14 @@
 }
 
 .popup-contacts-newsletter-form input::placeholder {
-   font-weight: 400;
-   color: rgba(151, 151, 151, 1);
+
+   color: var(--gray);
 }
 
 .popup-contacts-newsletter .popup-contacts-newsletter-form .button {
    max-width: 175px;
    font-size: 16px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 19.36px;
    padding: 15px 0;
 }
@@ -232,5 +237,81 @@
       line-height: 16.64px;
    }
 
-   .popup-contacts-map {}
+   .popup-contacts .popup-contacts-radio {
+      margin: 50px 0 60px 0;
+   }
+
+   .popup-contacts-map {
+      margin: 60px 0 140px 0;
+   }
+
+   .popup-contacts-tel {
+      margin-bottom: 60px;
+   }
+}
+
+
+@media (max-width:360px) {
+   .custom-radio .text-html {
+      font-size: 16px;
+      line-height: 16.64px;
+   }
+
+   .popup-contacts .popup-contacts-radio {
+      margin: 30px 0 50px 0;
+   }
+
+   .popup-contacts-contacts-office {
+      max-width: 173px;
+   }
+
+   .popup-contacts-contacts {
+      gap: 50;
+      justify-content: flex-start;
+   }
+
+   .popup-contacts-tel a {
+      font-size: 30px;
+      line-height: 31.2px;
+   }
+
+   .popup-contacts-tel {
+      margin-bottom: 30px;
+   }
+
+   .popup-contacts-contacts h5 {
+      font-size: 16px;
+      line-height: 16.64px;
+      margin-bottom: 20px;
+   }
+
+   .popup-contacts-contacts p,
+   .popup-contacts-contacts a,
+   .popup-contacts-contacts-network a {
+      font-size: 14px;
+      line-height: 14.56px;
+   }
+
+   .popup-contacts-map {
+      height: 180px;
+      margin: 30px 0 20px 0;
+   }
+
+   .popup-contacts-newsletter p {
+      font-size: 16px;
+      line-height: 20.16px;
+   }
+
+   .popup-contacts-newsletter-form {
+      flex-direction: column;
+   }
+
+   .popup-contacts-newsletter .popup-contacts-newsletter-form .button {
+      max-width: 100%;
+      padding: 12px 0;
+   }
+
+   .popup-contacts-contacts-office .working-hours {
+      margin: 25px 0 30px 0;
+   }
 }

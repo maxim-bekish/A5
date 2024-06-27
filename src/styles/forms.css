@@ -1,11 +1,11 @@
 /*--------------error-input--------------*/
 
 .submitted-error input:invalid+label {
-   color: rgba(255, 138, 138, 1) !important;
+   color: var(--light-red) !important;
 }
 
 .submitted-error input:invalid {
-   border-color: rgba(255, 138, 138, 1) !important;
+   border-color: var(--light-red) !important;
 }
 
 .form-group input:not(:placeholder-shown)+label {
@@ -40,17 +40,17 @@ form .form-items-50 {
 
 /* background-color form */
 form .form-blue {
-   background: rgba(0, 69, 178, 1);
+   background: var(--dark-blue);
 }
 
 form .form-blue input:-webkit-autofill {
-   caret-color: #fff;
+   caret-color: var(--white);
    /* Устанавливает цвет курсора */
-   -webkit-box-shadow: 0 0 0 1000px rgba(0, 69, 178, 1) inset;
+   -webkit-box-shadow: 0 0 0 1000px var(--dark-blue) inset;
    /* Устанавливает цвет фона для заполненного инпута */
-   box-shadow: 0 0 0 1000px rgba(0, 69, 178, 1) inset;
+   box-shadow: 0 0 0 1000px var(--dark-blue) inset;
    /* Устанавливает цвет фона для заполненного инпута */
-   -webkit-text-fill-color: rgba(178, 199, 232, 1);
+   -webkit-text-fill-color: var(--sky-blue);
    /* Устанавливает цвет текста внутри заполненного инпута */
 }
 
@@ -62,20 +62,20 @@ form .form-blue input:-webkit-autofill {
    border: 0;
    background: none;
    outline: 0 !important;
-   font-family: Inter Tight;
+
    font-size: 16px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 19.36px;
    width: 100%;
-   color: rgba(255, 255, 255, 1);
-   border-bottom: 1px solid rgba(178, 199, 232, 1);
+   color: var(--white);
+   border-bottom: 1px solid var(--sky-blue);
    transition: all 0.2s linear;
 }
 
 /* text-border hover */
 .form-group:hover input {
    transition: all 0.2s linear;
-   border-bottom: 1px solid rgba(255, 255, 255, 1);
+   border-bottom: 1px solid var(--white);
 }
 
 /* placeholder*/
@@ -85,17 +85,17 @@ form .form-blue input:-webkit-autofill {
    position: absolute;
    top: 15px;
    left: 0;
-   font-family: Inter Tight;
+
    font-size: 16px;
-   font-weight: 400;
+
    line-height: 19.36px;
-   color: rgba(178, 199, 232, 1);
+   color: var(--sky-blue);
    transition: all 0.2s linear;
 }
 
 /*hover placeholder*/
 .form-group:hover label {
-   color: rgba(255, 255, 255, 1);
+   color: var(--white);
 }
 
 /* placeholder focus */
@@ -103,14 +103,14 @@ form .form-blue input:-webkit-autofill {
    font-size: 12px;
    top: 0px;
    line-height: 14.56px;
-   color: rgba(178, 199, 232, 1);
+   color: var(--sky-blue);
    transition: all 0.2s linear;
 }
 
 /* text-border focus  */
 .form-group input:focus {
-   color: rgba(255, 255, 255, 1);
-   border-bottom: 1px solid rgba(255, 255, 255, 1);
+   color: var(--white);
+   border-bottom: 1px solid var(--white);
 }
 
 
@@ -121,20 +121,20 @@ form .form-blue input:-webkit-autofill {
 
 /* background-color-white form */
 form .form-white {
-   background: rgba(255, 255, 255, 1);
+   background: var(--white);
 }
 
 /* background-color-gray form */
 form .form-gray {
-   background: rgba(242, 242, 242, 1);
+   background: var(--light-gray);
 
 }
 
 /*  text-border  */
 .form-white .form-group input,
 .form-gray .form-group input {
-   color: rgba(151, 151, 151, 1);
-   border-bottom: 1px solid rgba(151, 151, 151, 1);
+   color: var(--gray);
+   border-bottom: 1px solid var(--gray);
 }
 
 /* text-border hover */
@@ -143,14 +143,14 @@ form .form-gray {
 /* text-border focus  */
 .form-white .form-group input:focus,
 .form-gray .form-group input:focus {
-   color: rgba(0, 69, 178, 1);
-   border-bottom: 1px solid rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
+   border-bottom: 1px solid var(--dark-blue);
 }
 
 /* placeholder*/
 .form-white .form-group label,
 .form-gray .form-group label {
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
 }
 
 /* hover placeholder*/
@@ -159,32 +159,32 @@ form .form-gray {
 /* placeholder focus */
 .form-white .form-group input:focus~label,
 .form-gray .form-group input:focus~label {
-   color: rgba(0, 69, 178, 1);
+   color: var(--dark-blue);
 }
 
 
 
 
 .form-white .form-group input:-webkit-autofill {
-   caret-color: #000;
+   caret-color: var(--black);
    /* Устанавливает цвет курсора */
-   -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 1) inset;
+   -webkit-box-shadow: 0 0 0 1000px var(--white) inset;
    /* Устанавливает цвет фона для заполненного инпута */
-   box-shadow: 0 0 0 1000px rgba(255, 255, 255, 1) inset;
+   box-shadow: 0 0 0 1000px var(--white) inset;
    /* Устанавливает цвет фона для заполненного инпута */
-   -webkit-text-fill-color: rgba(0, 69, 178, 1);
+   -webkit-text-fill-color: var(--dark-blue);
 
    /* Устанавливает цвет текста внутри заполненного инпута */
 }
 
 .form-gray .form-group input:-webkit-autofill {
-   caret-color: #000;
+   caret-color: var(--black);
    /* Устанавливает цвет курсора */
-   -webkit-box-shadow: 0 0 0 1000px rgba(242, 242, 242, 1) inset;
+   -webkit-box-shadow: 0 0 0 1000px var(--light-gray) inset;
    /* Устанавливает цвет фона для заполненного инпута */
-   box-shadow: 0 0 0 1000px rgba(242, 242, 242, 1) inset;
+   box-shadow: 0 0 0 1000px var(--light-gray) inset;
    /* Устанавливает цвет фона для заполненного инпута */
-   -webkit-text-fill-color: rgba(0, 69, 178, 1);
+   -webkit-text-fill-color: var(--dark-blue);
    /* Устанавливает цвет текста внутри заполненного инпута */
 }
 
@@ -217,7 +217,7 @@ form .form-gray {
    cursor: pointer;
    user-select: none;
    font-size: 16px;
-   font-weight: 500;
+   font-weight: var(--font-w5);
    line-height: 24px;
    display: flex;
    align-items: flex-end;
@@ -236,78 +236,78 @@ form .form-gray {
    border-radius: 4px;
    background-repeat: no-repeat;
    background-position: center;
-   border: 1px solid rgba(151, 151, 151, 1);
-   background-color: rgba(0, 0, 0, 0);
+   border: 1px solid var(--gray);
+   background-color: var(--transparent);
    transition: all 0.2s linear;
 }
 
 .checkbox label {
    display: flex;
    align-items: center;
-   font-family: Inter Tight;
+
    font-size: 14px;
-   font-weight: 400;
-   line-height: 14.56px;
+
+   line-height: 13.56px;
    text-align: left;
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
    transition: all 0.2s linear;
 }
 
 
 .checkbox .custom-checkbox:checked+label {
-   color: rgba(81, 81, 81, 1);
+   color: var(--medium-gray);
 }
 
 /* hover no checked no disabled */
 .custom-checkbox:hover+label::before {
-   border: 1px solid rgba(81, 81, 81, 1);
+   border: 1px solid var(--medium-gray);
 }
 
 /* no-hover checked no-disabled */
 .custom-checkbox:checked+label::before {
-   border: 1px solid rgba(0, 0, 0, 0);
-   background-color: rgba(82, 128, 203, 1);
+   border: 1px solid var(--transparent);
+   background-color: var(--blue);
    background-image: url("/src/assets/images/svg/checkbox/ok-white.svg");
 }
 
 /* hover checked no-disabled */
 .custom-checkbox:checked:hover+label::before {
-   border: 1px solid rgba(0, 0, 0, 0);
-   background-color: rgba(0, 69, 178, 1);
+   border: 1px solid var(--transparent);
+   background-color: var(--dark-blue);
    background-image: url("/src/assets/images/svg/checkbox/ok-white.svg");
 }
 
 /* no-hover checked disabled */
 .custom-checkbox:checked:disabled+label::before {
-   border: 1px solid rgba(0, 0, 0, 0);
-   background-color: rgba(242, 242, 242, 1);
+   border: 1px solid var(--transparent);
+   background-color: var(--light-gray);
    background-image: url("/src/assets/images/svg/checkbox/ok-gray.svg");
 }
 
 /* error no checked  */
 
 .submitted-error .checkbox label::before {
-   border: 1px solid rgba(255, 138, 138, 1);
+   border: 1px solid var(--light-red);
 }
 
 .submitted-error .checkbox input:checked+label::before {
-   border: 1px solid rgba(0, 0, 0, 0);
+   border: 1px solid var(--transparent);
 }
 
 /*.checkbox label,*/
 .checkbox input:checked:disabled+label {
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
    transition: all 0.2s linear;
 }
 
 .checkbox label:hover {
-   color: rgba(81, 81, 81, 1);
+   color: var(--medium-gray);
    transition: all 0.2s linear;
 }
 
 .checkbox input:disabled+label,
 .checkbox input:disabled+label::before {
-   color: rgba(203, 203, 203, 1);
+   color: var(--silver);
    transition: all 0.2s linear;
 }
 
@@ -332,12 +332,12 @@ form .form-gray {
 
    .checkbox label,
    .checkbox input:checked+label {
-      /*color: rgba(178, 199, 232, 1);*/
+      /*color: var(--sky-blue);*/
       font-size: 12px;
       line-height: 15.12px;
    }
 
    .checkbox label:hover {
-      /*color: rgba(178, 199, 232, 1);*/
+      /*color: var(--sky-blue);*/
    }
 }
