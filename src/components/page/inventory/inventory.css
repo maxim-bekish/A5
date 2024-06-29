@@ -35,6 +35,10 @@
    color: var(--gray);
 }
 
+.inventory__content button {
+   display: none;
+}
+
 @media (max-width:1280px) {
    .inventory__title {
       font-size: 20px;
@@ -56,6 +60,9 @@
       line-height: 16.94px;
    }
 
+   .inventory__content button {
+      display: block;
+   }
 
 }
 
@@ -77,5 +84,3 @@
       line-height: 16.94px;
    }
 }
-
-

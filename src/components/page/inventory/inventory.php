@@ -31,4 +31,34 @@ include 'src/state/state.php';
          </a>
       <?php endforeach; ?>
    </div>
+   <button class="button button--blue js-leady-loading" type="button">еще</button>
 </section>
+<script>
+   $(document).ready(function() {
+      const items = $('.inventory__content a');
+
+      const itemsToShow = 6;
+      let itemsHidden = items.length - itemsToShow;
+      if (window.innerWidth < 1280) {
+         if (items.length > itemsToShow) {
+            // Показать первые 4 элемента, остальные скрыть
+            items.slice(itemsToShow).hide();
+
+            // Обработчик нажатия на кнопку
+            $('.js-leady-loading').click(function() {
+               // Показать следующие 4 элемента
+               const hiddenItems = items.filter(':hidden').slice(0, itemsToShow);
+               hiddenItems.show();
+
+               // Обновить количество скрытых элементов
+               itemsHidden -= hiddenItems.length;
+
+               // Если больше нет скрытых элементов, скрыть кнопку
+               if (itemsHidden <= 0) {
+                  $(this).hide();
+               }
+            });
+         }
+      }
+   })
+</script>

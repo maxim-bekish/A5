@@ -145,9 +145,7 @@
       gap: 10px;
    }
 
-   .production__module-window-img {
-      display: none;
-   }
+
 
    .production__select {
       max-width: 100% !important;
@@ -180,6 +178,9 @@
    }
    .program-leasing__slider .slider__slide{
       height: 230px;
+   }
+   .production__module-window-img {
+      display: none;
    }
    .program-leasing-page__image {
       height: 228px;
