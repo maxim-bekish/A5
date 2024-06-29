@@ -53,8 +53,8 @@
                   <label for="ask">Задайте вопрос или опишите проблему...</label>
                </div>
             </div>
-            <div class="checkbox">
-               <input class="custom-checkbox" type="checkbox" id="option-ask" required>
+            <div class="checkbox checkbox--white">
+               <input class="custom-checkbox " type="checkbox" id="option-ask" required>
                <label for="option-ask">
                   Согласен с политикой конфиденциальности
                </label>

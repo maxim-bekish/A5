@@ -12,9 +12,7 @@ function popUp($title = '', $description = false, $email = false)
          </button>
          <h2 id="popUpTitle" class="popUp-custom__title"><?php echo $title ?></h2>
          <p id="popUpDescription" class="popUp-custom__description" style="display: <?php echo $description ? 'block' : 'none'; ?>">
-            Оставьте свои контактные данные и наш
-            <br>
-            менеджер перезвонит в ближайшее время
+            Оставьте свои контактные данные и наш менеджер перезвонит в ближайшее время
          </p>
          <form class="js-myForm popUp-custom__form">
             <div class="form-items-100 form-gray popUp-custom__form-items">
@@ -31,13 +29,13 @@ function popUp($title = '', $description = false, $email = false)
                   <label for="offer-email">Email</label>
                </div>
             </div>
-            <div class="checkbox popUp-custom__checkbox">
-               <input class="custom-checkbox checkbox__input" name="privacy_policy" type="checkbox" id="free-custom" required>
+            <div class="checkbox popUp-custom__checkbox checkbox--white">
+               <input class="custom-checkbox  checkbox__input" name="privacy_policy" type="checkbox" id="free-custom" required>
                <label class="checkbox__label" for="free-custom">
                   Согласен с политикой конфиденциальности
                </label>
             </div>
-            <button class="js-submitBtn button button--blue popUp-custom__submitBtn" type="button" disabled>
+            <button class=" button button--blue popUp-custom__submitBtn" type="button" disabled>
                Оставить заявку
             </button>
          </form>
@@ -74,7 +72,7 @@ function popUp($title = '', $description = false, $email = false)
          const email = emailGroupVisible ? $('.popUp-custom__form .email').val() : true;
 
          const isFormValid = name && phone && checkbox && email;
-         $('.popUp-custom__form .js-submitBtn').prop('disabled', !isFormValid);
+         $('.popUp-custom__form .popUp-custom__submitBtn').prop('disabled', !isFormValid);
       }
 
       function resetForm() {
@@ -133,7 +131,7 @@ function popUp($title = '', $description = false, $email = false)
       });
 
       // Обработка отправки формы
-      $('.popUp-custom-box .js-submitBtn').click(function() {
+      $('.popUp-custom-box .popUp-custom__submitBtn').click(function() {
          var form = $(this).closest('.js-myForm')[0]; // Найти ближайший элемент формы с классом 'js-myForm'
          var isValid = form.checkValidity();
          if (isValid) { // Проверка валидности формы
@@ -210,6 +208,7 @@ function popUp($title = '', $description = false, $email = false)
    .popUp-custom__description {
       margin: 15px 0 40px 0;
       font-size: 20px;
+      max-width: 400px;
       line-height: 28px;
    }
 

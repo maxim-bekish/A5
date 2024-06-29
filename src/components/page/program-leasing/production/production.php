@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="src/components/page/program-leasing/production-select/production-select.css">
-<script type="module" src="src/components/page/program-leasing/production-select/production-select.js"></script>
+<script src="src/components/page/program-leasing/production-select/production-select.js"></script>
 
 
 <?php
@@ -59,8 +59,8 @@ include 'src/state/state.php';
                         </label>
                      </div>
                   </div>
-                  <div class="checkbox production__module-window__checkbox">
-                     <input class="custom-checkbox checkbox__input" type="checkbox" name="privacy_policy" id="free-production" required>
+                  <div class="checkbox  production__module-window__checkbox">
+                     <input class="custom-checkbox checkbox__input " type="checkbox" name="privacy_policy" id="free-production" required>
                      <label class="checkbox__label" for="free-production">
                         Согласен с политикой конфиденциальности
                      </label>

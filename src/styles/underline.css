@@ -32,7 +32,12 @@
    background-color: var(--dark-blue);
 }
 
-.underline-box .underline-el:hover::after {
-   width: 100%;
-   /* Подчеркивание растягивается до полной ширины */
+
+@media (hover: hover) {
+   .underline-box .underline-el:hover::after {
+      width: 100%;
+      /* Подчеркивание растягивается до полной ширины */
+   }
+
+
 }

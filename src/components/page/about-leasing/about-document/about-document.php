@@ -26,9 +26,9 @@ $aboutDocument = [
          Документы
       </p>
    </div>
-   <div class="about-document__items w-50-box">
+   <div class="about-document__items ">
       <?php foreach ($aboutDocument as $el) : ?>
-         <div class="about-document__item w-50">
+         <div class="about-document__item ">
             <p>
                <?php echo nl2br(htmlspecialchars($el['title'])); ?>
             </p>

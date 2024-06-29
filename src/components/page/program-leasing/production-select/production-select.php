@@ -3,36 +3,6 @@
 
 
 <div class="production__select-box">
-
-   <div class="production__select">
-      <div class="production__select-title-box">
-         <p class="production__select-title"> Select 2</p>
-         <button type="button" class="js-open-select">
-            <svg class="pointer rt0 select-svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
-               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
-            </svg>
-         </button>
-      </div>
-      <div class="production__select-items-box">
-         <ul class="production__select-items">
-            <li class="production__select-item">1</li>
-            <li class="production__select-item">2</li>
-            <li class="production__select-item">3</li>
-            <li class="production__select-item">4</li>
-            <li class="production__select-item">5</li>
-            <li class="production__select-item">6</li>
-            <li class="production__select-item">7</li>
-            <li class="production__select-item">8</li>
-            <li class="production__select-item">9</li>
-            <li class="production__select-item">9</li>
-            <li class="production__select-item">9</li>
-            <li class="production__select-item">9</li>
-            <li class="production__select-item">9</li>
-            <li class="production__select-item">9</li>
-
-         </ul>
-      </div>
-   </div>
    <div class="production__select">
       <div class="production__select-title-box">
          <p class="production__select-title"> Select 1</p>
@@ -62,7 +32,35 @@
          </ul>
       </div>
    </div>
+   <div class="production__select">
+      <div class="production__select-title-box">
+         <p class="production__select-title"> Select 2</p>
+         <button type="button" class="js-open-select">
+            <svg class="pointer rt0 select-svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+               <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
+            </svg>
+         </button>
+      </div>
+      <div class="production__select-items-box">
+         <ul class="production__select-items">
+            <li class="production__select-item">1</li>
+            <li class="production__select-item">2</li>
+            <li class="production__select-item">3</li>
+            <li class="production__select-item">4</li>
+            <li class="production__select-item">5</li>
+            <li class="production__select-item">6</li>
+            <li class="production__select-item">7</li>
+            <li class="production__select-item">8</li>
+            <li class="production__select-item">9</li>
+            <li class="production__select-item">9</li>
+            <li class="production__select-item">9</li>
+            <li class="production__select-item">9</li>
+            <li class="production__select-item">9</li>
+            <li class="production__select-item">9</li>
 
+         </ul>
+      </div>
+   </div>
    <div class="production__select production__select--input ">
       <div class="production__select-title-box">
          <p class="production__select-title"> Select 2</p>
@@ -86,8 +84,6 @@
             <button type="button" class="js-apply-select button button--blue">Применить</button>
          </div>
       </div>
-      <!--select 222-->
+
    </div>
-
 </div>
-

@@ -7,8 +7,12 @@
 }
 
 .client-documents {
-   flex-wrap: wrap;
+   display: grid;
    row-gap: 40px;
+   column-gap: 40px;
+   grid-template-columns: repeat(2, minmax(10px, 410px));
+   grid-template-rows: auto;
+
 }
 
 .client-documents__controller {
@@ -35,5 +39,14 @@
 @media (max-width:1280px) {
    .client-documents {
       row-gap: 20px;
+      column-gap: 20px;
+   }
+}
+
+@media (max-width:500px) {
+   .client-documents {
+      row-gap: 10px;
+      column-gap: 10px;
+      grid-template-columns: repeat(1, minmax(165px, 100%));
    }
 }

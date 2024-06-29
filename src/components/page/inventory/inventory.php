@@ -11,28 +11,37 @@ include 'src/state/state.php';
          Каталог изьятой техники
       </p>
    </div>
-   <div class="inventory__content grid__item__3">
-      <?php foreach ($inventory as $el) : ?>
-         <a href="<?php echo htmlspecialchars($el['href']); ?>?item=<?php echo htmlspecialchars($el['name']); ?>&id=<?php echo htmlspecialchars($el['id']); ?>">
-            <div class="inventory__content--item--img">
-               <img src="<?php echo IMG_PATH . 'inventory/' . htmlspecialchars($el['imagePreview']); ?>" alt="img">
-            </div>
-            <div class="inventory__content--item--text">
-               <p>
-                  <?php echo nl2br(htmlspecialchars($el['name'])); ?>
-               </p>
-               <p>
-                  от <?php echo format($el['priceMonth'], "₽/мес."); ?>
-               </p>
-               <p>
-                  стоимость: от <?php echo format($el['price'], "₽"); ?>
-               </p>
-            </div>
-         </a>
-      <?php endforeach; ?>
+
+   <div class="inventory__content ">
+      <?php
+      include 'src/components/page/program-leasing/production-select/production-select.php';
+      ?>
+      <div class="grid__item__3" >
+         <?php foreach ($inventory as $el) : ?>
+            <a href="<?php echo htmlspecialchars($el['href']); ?>?item=<?php echo htmlspecialchars($el['name']); ?>&id=<?php echo htmlspecialchars($el['id']); ?>">
+               <div class="inventory__content--item--img">
+                  <img src="<?php echo IMG_PATH . 'inventory/' . htmlspecialchars($el['imagePreview']); ?>" alt="img">
+               </div>
+               <div class="inventory__content--item--text">
+                  <p>
+                     <?php echo nl2br(htmlspecialchars($el['name'])); ?>
+                  </p>
+                  <p>
+                     от <?php echo format($el['priceMonth'], "₽/мес."); ?>
+                  </p>
+                  <p>
+                     стоимость: от <?php echo format($el['price'], "₽"); ?>
+                  </p>
+               </div>
+            </a>
+         <?php endforeach; ?>
+      </div>
    </div>
+
    <button class="button button--blue js-leady-loading" type="button">еще</button>
 </section>
+
+
 <script>
    $(document).ready(function() {
       const items = $('.inventory__content a');

@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="src/components/page/clients/client-documents/client-documents.css">
 <script src="src/components/page/clients/client-documents/client-documents.js"></script>
 
-<section class="client-documents w-50-box">
-   <div class="client-documents__item w-50">
+<section class="client-documents ">
+   <div class="client-documents__item ">
       <p>
          Перечень документов <br> для юридических лиц
       </p>
@@ -26,7 +26,7 @@
 
       </div>
    </div>
-   <div class="client-documents__item w-50">
+   <div class="client-documents__item ">
       <p>
          Перечень документов для ИП
       </p>
@@ -50,7 +50,7 @@
 
       </div>
    </div>
-   <div class="client-documents__item w-50">
+   <div class="client-documents__item ">
       <p>
          Договор лизинга
       </p>
@@ -74,7 +74,7 @@
 
       </div>
    </div>
-   <div class="client-documents__item w-50">
+   <div class="client-documents__item ">
       <p>
          Договор купли-продажи
       </p>

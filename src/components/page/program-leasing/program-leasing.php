@@ -32,7 +32,7 @@ $programLeasingData = [
       "suppliers" => [
          "20-mezcentr.svg",
          "8-pkuspt.svg",
-         "21-logo.svg"
+ 
       ]
    ],
    [

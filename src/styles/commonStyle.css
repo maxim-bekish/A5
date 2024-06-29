@@ -119,26 +119,50 @@ img {
    height: 100%;
 }
 
+@media (hover: hover) {
 
-.button-visible:hover .hover {
+   .button-visible:hover .hover {
+      display: block;
+   }
+
+   .view:hover .view__default,
+   .view__hover {
+      display: none;
+   }
+
+   .dowland:hover .dowland__default,
+   .dowland__hover {
+      display: none;
+   }
+
+   .view:hover .view__hover {
+      display: block;
+   }
+
+   .dowland:hover .dowland__hover {
+      display: block;
+   }
+}
+
+.button-visible:active .hover {
    display: block;
 }
 
-.view:hover .view__default,
+.view:active .view__default,
 .view__hover {
    display: none;
 }
 
-.dowland:hover .dowland__default,
+.dowland:active .dowland__default,
 .dowland__hover {
    display: none;
 }
 
-.view:hover .view__hover {
+.view:active .view__hover {
    display: block;
 }
 
-.dowland:hover .dowland__hover {
+.dowland:active .dowland__hover {
    display: block;
 }
 
@@ -257,6 +281,7 @@ img {
       transition: all 200ms ease;
    }
 }
+
 .custom-slider__button:active .custom-slider__icon {
    fill: var(--dark-blue);
    stroke: var(--white);
@@ -264,6 +289,7 @@ img {
    --circle-radius: 25;
    transition: all 200ms ease;
 }
+
 .custom-slider__button {
    max-width: 50px;
    max-height: 50px;

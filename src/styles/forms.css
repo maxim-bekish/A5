@@ -212,19 +212,7 @@ form .form-gray {
    opacity: 0;
 }
 
-/* для элемента label, связанного с .custom-checkbox */
-.custom-checkbox+label {
-   cursor: pointer;
-   user-select: none;
-   font-size: 16px;
-   font-weight: var(--font-w5);
-   line-height: 24px;
-   display: flex;
-   align-items: flex-end;
-}
 
-/* создание в label псевдоэлемента before со следующими стилями */
-/* no hover no checked no disabled */
 .custom-checkbox+label::before,
 .custom-checkbox-error+label::before {
    content: '';
@@ -236,53 +224,86 @@ form .form-gray {
    border-radius: 4px;
    background-repeat: no-repeat;
    background-position: center;
-   border: 1px solid var(--gray);
-   background-color: var(--transparent);
    transition: all 0.2s linear;
 }
 
 .checkbox label {
+   cursor: pointer;
    display: flex;
+   user-select: none;
    align-items: center;
-
    font-size: 14px;
-
-   line-height: 13.56px;
+   font-weight: var(--font-w5);
+   line-height: 14.56px;
    text-align: left;
-   color: var(--gray);
    transition: all 0.2s linear;
 }
 
 
-.checkbox .custom-checkbox:checked+label {
-   color: var(--medium-gray);
-}
-
-/* hover no checked no disabled */
-.custom-checkbox:hover+label::before {
-   border: 1px solid var(--medium-gray);
-}
-
-/* no-hover checked no-disabled */
 .custom-checkbox:checked+label::before {
-   border: 1px solid var(--transparent);
-   background-color: var(--blue);
    background-image: url("/src/assets/images/svg/checkbox/ok-white.svg");
 }
 
-/* hover checked no-disabled */
-.custom-checkbox:checked:hover+label::before {
-   border: 1px solid var(--transparent);
-   background-color: var(--dark-blue);
-   background-image: url("/src/assets/images/svg/checkbox/ok-white.svg");
-}
-
-/* no-hover checked disabled */
 .custom-checkbox:checked:disabled+label::before {
-   border: 1px solid var(--transparent);
-   background-color: var(--light-gray);
    background-image: url("/src/assets/images/svg/checkbox/ok-gray.svg");
 }
+
+
+/* ------------------------------------ */
+
+
+.checkbox--blue label {
+   color: rgba(178, 199, 232, 1);
+}
+
+.checkbox--blue label:hover {
+   color: rgba(255, 255, 255, 1);
+}
+
+.checkbox--blue label::before {
+   border: 1px solid rgba(178, 199, 232, 1);
+}
+
+.checkbox--blue:hover label::before {
+   border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.checkbox--blue input:checked+label::before {
+   border: 1px solid transparent;
+   background-color: rgba(82, 128, 203, 1);
+}
+
+
+
+/* ----------------- */
+.checkbox--white label {
+   color: rgba(151, 151, 151, 1);
+}
+
+.checkbox--white label:hover {
+   color: rgba(81, 81, 81, 1);
+}
+
+.checkbox--white label::before {
+   border: 1px solid rgba(151, 151, 151, 1);
+}
+
+.checkbox--white:hover label::before {
+   border: 1px solid rgba(81, 81, 81, 1);
+}
+
+.checkbox--white input:checked+label::before {
+   border: 1px solid transparent;
+   background-color: rgba(82, 128, 203, 1);
+}
+
+.checkbox--white:hover input:checked+label::before {
+   border: 1px solid transparent;
+   background-color: rgba(0, 69, 178, 1);
+
+}
+
+
 
 /* error no checked  */
 
@@ -294,22 +315,21 @@ form .form-gray {
    border: 1px solid var(--transparent);
 }
 
+.checkbox .custom-checkbox:disabled+label {
+   color: rgba(203, 203, 203, 1);
+}
+
+.checkbox .custom-checkbox:disabled+label::before {
+   border: 1px solid rgba(203, 203, 203, 1);
+}
+
+.checkbox .custom-checkbox:disabled:checked+label::before {
+   border: 1px solid rgba(203, 203, 203, 1);
+   background-color: rgba(203, 203, 203, 1);
+}
+
 /*.checkbox label,*/
-.checkbox input:checked:disabled+label {
-   color: var(--gray);
-   transition: all 0.2s linear;
-}
 
-.checkbox label:hover {
-   color: var(--medium-gray);
-   transition: all 0.2s linear;
-}
-
-.checkbox input:disabled+label,
-.checkbox input:disabled+label::before {
-   color: var(--silver);
-   transition: all 0.2s linear;
-}
 
 
 /* custom-checkbox */

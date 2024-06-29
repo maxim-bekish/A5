@@ -207,7 +207,7 @@ function listHeaderBurger($data)
       <?php listHeaderBurger($headerListClients); ?>
       <?php listHeaderBurger($headerListProgram); ?>
       <div class="burger-menu-box-item burger-menu-box-item-last">
-        <h5 class="item-title underline-box"> <a class="underline-el underline-el-white" href="/inventory" target="_blank" rel="noopener noreferrer">
+        <h5 class="item-title underline-box"> <a class="underline-el underline-el-white" href="/inventory"  rel="noopener noreferrer">
             Каталог изьятой техники
           </a></h5>
 

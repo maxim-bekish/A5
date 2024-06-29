@@ -94,8 +94,8 @@ $state = [
                   Подписаться
                </button>
             </div>
-            <div class="checkbox">
-               <input class="custom-checkbox" type="checkbox" id="option-two" required>
+            <div class="checkbox checkbox--white">
+               <input class="custom-checkbox " type="checkbox" id="option-two" required>
                <label for="option-two">
                   Согласен с политикой конфиденциальности
                </label>

@@ -90,7 +90,7 @@
       </div>
 
 
-      <div class="checkbox">
+      <div class="checkbox checkbox--white">
          <input class="custom-checkbox " type="checkbox" name="privacy_policy" id="partners-program" required>
          <label for="partners-program">
             Согласен с политикой конфиденциальности

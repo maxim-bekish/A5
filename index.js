@@ -1,12 +1,12 @@
 $(document).ready(function () {
-   //$('.js-submitBtn').click(function () {
-   //   var form = $(this).closest('.js-form');
-   //   if (form[0].checkValidity()) {
-   //      form.addClass('submitted');
-   //   } else {
-   //      form.removeClass('submitted').addClass('submitted-error');
-   //   }
-   //});
+   $('.js-submitBtn').click(function () {
+      var form = $(this).closest('.js-myForm');
+      if (form[0].checkValidity()) {
+         form.addClass('submitted');
+      } else {
+         form.removeClass('submitted').addClass('submitted-error');
+      }
+   });
    //$('.js-submitBtn-popup-contacts').click(function () {
    //   var form = $('.js-myForm-popup-contacts');
    //   if (form[0].checkValidity()) {

@@ -33,7 +33,7 @@
          </div>
 
 
-         <div class="checkbox">
+         <div class="checkbox checkbox--blue">
             <input class="custom-checkbox " type="checkbox" name="privacy_policy" id="footer" required>
             <label for="footer">
                Согласен с политикой конфиденциальности
@@ -82,17 +82,17 @@
                <h5>Соцсети</h5>
                <ul>
                   <li class="underline-box">
-                     <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                     <a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
                         Telegram
                      </a>
                   </li>
                   <li class="underline-box">
-                     <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                     <a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
                         Vkontakte
                      </a>
                   </li>
                   <li class="underline-box">
-                     <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                     <a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
                         WhatsAPP
                      </a>
                   </li>
@@ -106,12 +106,12 @@
             <h5>Главная страница</h5>
             <ul>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Лизинговый калькулятор
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Контакты
                   </a>
                </li>
@@ -121,17 +121,17 @@
             <h5>Компания</h5>
             <ul>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      О компании
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Клиенты и партнеры
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Документы
                   </a>
                </li>
@@ -141,12 +141,12 @@
             <h5>О лизинге</h5>
             <ul>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Общие условия
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Субсидии
                   </a>
                </li>
@@ -156,42 +156,42 @@
             <h5>Услуги лизинга</h5>
             <ul>
                <li class="underline-box">
-                  <a class="underline-el underline-el-white" href="#" target="_blank" rel="noopener noreferrer">
+                  <a class="underline-el underline-el-white" href="#"   rel="noopener noreferrer">
                      Легковой автотранспорт
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Грузовой автотранспорт
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el"   rel="noopener noreferrer">
                      Спецтехника
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Оборудование
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Медицинское оборудование
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Ресторанное оборудование
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Б/У продукция
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" target="_blank" rel="noopener noreferrer">
+                  <a href="#" class="underline-el underline-el-white"   rel="noopener noreferrer">
                      Недвижимость
                   </a>
                </li>
@@ -199,7 +199,7 @@
          </div>
          <div class="footer-list">
             <h5 class="underline-box">
-               <a class="underline-el underline-el-white" href="#" target="_blank" rel="noopener noreferrer">
+               <a class="underline-el underline-el-white" href="#"   rel="noopener noreferrer">
                   Каталог изьятой техники
                </a>
             </h5>

@@ -32,21 +32,13 @@
 }
 
 .production__module-window__title {
-
    font-size: clamp(30px, 2.5vw, 50px);
    line-height: clamp(30px, 2.8vw, 50px);
-
-   /*font-size: 50px;
-   line-height: 52px;*/
-   /*text-wrap: nowrap;*/
    color: var(--dark-blue);
 }
 
 .production__module-window__description {
    margin: 15px 0 30px 0;
-   /*font-size: 20px;
-   line-height: 28px;*/
-
    line-height: clamp(21px, 1vw, 28px);
    font-size: clamp(15px, 1vw, 20px);
 }
@@ -75,7 +67,7 @@
    padding: 20px;
    background-color: var(--light-gray);
    margin-bottom: 8px;
-   
+
 }
 
 .production__cards--item--img img {
@@ -153,6 +145,7 @@
       font-size: 14px;
       line-height: 16.94px;
    }
+
    .leady-loading {
       margin: 0 auto;
       display: block;

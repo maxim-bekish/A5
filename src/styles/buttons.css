@@ -22,11 +22,7 @@ button {
    color: var(--dark-blue);
 }
 
-.button--blue,
-.button--outline:hover {
-   background-color: var(--dark-blue);
-   color: var(--white);
-}
+
 
 .button--outline {
    background-color: var(--white);
@@ -34,14 +30,29 @@ button {
    border: 1px solid var(--dark-blue);
 }
 
-.button--white:hover {
-   background-color: var(--very-light-gray);
+.button--blue {
+   background-color: var(--dark-blue);
+   color: var(--white);
 }
 
-.button--blue:hover,
-.button--outline:hover {
-   background-color: rgba(0, 63, 162, 1);
+@media (hover: hover) {
+
+
+   .button--outline:hover {
+      background-color: var(--dark-blue);
+      color: var(--white);
+   }
+
+   .button--white:hover {
+      background-color: var(--very-light-gray);
+   }
+
+   .button--blue:hover,
+   .button--outline:hover {
+      background-color: rgba(0, 63, 162, 1);
+   }
 }
+
 
 .button--white:active {
    background-color: var(--light-silver);
