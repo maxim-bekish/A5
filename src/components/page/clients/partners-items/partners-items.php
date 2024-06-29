@@ -58,13 +58,13 @@ $clientsPartnersItems = [
       <?php
       ob_start();
       foreach ($clientsPartnersItems as $slide) : ?>
-         <div class="slider">
+         <div class="slider__slide">
             <img class="slider__image" src="<?php echo SVG_PATH . 'clients.partners-items/' . htmlspecialchars($slide['image']); ?>" alt="<?php echo htmlspecialchars($slide['alt']); ?>">
          </div>
       <?php endforeach;
       $content = ob_get_clean();
 
-      sliderCustom($content, 1);
+      sliderCustom($content, 3);
       ?>
    </div>
 

@@ -125,7 +125,7 @@
    }
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
    .card__title__mobile {
       font-size: 30px;
       line-height: 36px;

@@ -16,7 +16,7 @@ include 'src/state/state.php';
       <?php
       include 'src/components/page/program-leasing/production-select/production-select.php';
       ?>
-      <div class="production__cards">
+      <div class="production__cards ">
          <?php foreach ($production as $el) : ?>
             <a href="<?php echo htmlspecialchars($el['href']); ?>?item=<?php echo htmlspecialchars($el['name']); ?>&id=<?php echo htmlspecialchars($el['id']); ?>" class="production__cards--item">
                <div class="production__cards--item--img">
@@ -47,16 +47,20 @@ include 'src/state/state.php';
                <form class="js-myForm production__module-window__form">
                   <div class="form-items-100 form-gray production__module-window__form-items">
                      <div class="form-group production__module-window__form-group">
-                        <input class="form-group__input name" name="production-name" id="production-name" type="text" placeholder="" required>
-                        <label class="form-group__label" for="production-name">Ваше имя</label>
+                        <input class="form-group__input name" name="name" id="production-name" type="text" placeholder="" required>
+                        <label class="form-group__label" for="production-name">
+                           Ваше имя
+                        </label>
                      </div>
                      <div class="form-group production__module-window__form-group">
-                        <input class="form-group__input phone" name="production-phone" id="production-phone" type="tel" placeholder="" required>
-                        <label class="form-group__label" for="production-phone">Телефон</label>
+                        <input class="form-group__input phone" name="phone" id="production-phone" type="tel" placeholder="" required>
+                        <label class="form-group__label" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" for="production-phone">
+                           Телефон
+                        </label>
                      </div>
                   </div>
                   <div class="checkbox production__module-window__checkbox">
-                     <input class="custom-checkbox checkbox__input" type="checkbox" id="free-production" required>
+                     <input class="custom-checkbox checkbox__input" type="checkbox" name="privacy_policy" id="free-production" required>
                      <label class="checkbox__label" for="free-production">
                         Согласен с политикой конфиденциальности
                      </label>

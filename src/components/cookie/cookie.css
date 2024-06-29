@@ -42,7 +42,7 @@
    }
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
    .popup-cookie {
       flex-direction: column;
       padding: 20px;

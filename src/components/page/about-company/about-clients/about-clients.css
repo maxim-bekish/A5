@@ -25,7 +25,7 @@
    }
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
    .about-clients__description {
       margin: 10px 0 40px 0;
       gap: 10px;

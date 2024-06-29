@@ -124,10 +124,6 @@
       line-height: 45.6px;
    }
 
-   .about-home {
-      margin-bottom: -120px;
-   }
-
    .about-home__box-content {
       padding: 60px 20px 120px 20px;
       gap: 20px;
@@ -145,7 +141,7 @@
 
 
 
-@media (max-width: 360px) {
+@media (max-width: 768px) {
 
 
    .about-home__box-title-heading {
@@ -161,10 +157,6 @@
 
    .about-home__box-content {
       padding: 90px 10px;
-   }
-
-   .about-home {
-      margin-bottom: -90px;
    }
 
    .about-home__text {

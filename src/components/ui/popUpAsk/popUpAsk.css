@@ -90,7 +90,7 @@
    }
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
    .popup-ask-info .text-html {
       margin: 20px 0 40px 0;
    }

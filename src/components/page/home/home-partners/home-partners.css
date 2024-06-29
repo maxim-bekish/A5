@@ -115,7 +115,7 @@
    }
 }
 
-@media(max-width:360px) {
+@media (max-width: 768px) {
 
    .partners-box__text {
       font-size: 14px;

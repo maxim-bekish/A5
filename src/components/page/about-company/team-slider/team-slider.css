@@ -121,7 +121,7 @@
 
 }
 
-@media(max-width:360px) {
+@media (max-width: 768px) {
    .team-slider .slider__text:first-child {
       font-size: 18px;
       line-height: 18px;

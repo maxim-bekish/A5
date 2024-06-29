@@ -23,7 +23,7 @@
                <label for="email">Email</label>
             </div>
             <div class="form-group">
-               <input class="phone" name="phone" id="phone" type="tel" placeholder="" required>
+               <input class="phone" name="phone" id="phone" type="tel" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="" required>
                <label for="phone">Телефон</label>
             </div>
             <div class="form-group">
@@ -34,8 +34,8 @@
 
 
          <div class="checkbox">
-            <input class="custom-checkbox " type="checkbox" id="option-one" required>
-            <label for="option-one">
+            <input class="custom-checkbox " type="checkbox" name="privacy_policy" id="footer" required>
+            <label for="footer">
                Согласен с политикой конфиденциальности
             </label>
          </div>

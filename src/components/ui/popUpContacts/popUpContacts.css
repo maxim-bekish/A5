@@ -80,7 +80,7 @@
 
 /* radio checked+disabled+hover  внешний груг*/
 .custom-radio:hover input[type="radio"]:checked:disabled~.radio-checkmark::before {
-   background-color: rgba(203, 203, 203, 0);
+   background-color: var(--transparent);
 }
 
 /* radio checked  сам элемент*/
@@ -96,7 +96,7 @@
 
 /* radio checked+hover  внешний груг*/
 .custom-radio:hover input[type="radio"]:disabled~.radio-checkmark::before {
-   background-color: rgba(203, 203, 203, 0);
+   background-color: var(--transparent);
 }
 
 .custom-radio .radio-checkmark::after {
@@ -251,7 +251,7 @@
 }
 
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
    .custom-radio .text-html {
       font-size: 16px;
       line-height: 16.64px;

@@ -54,29 +54,34 @@ $(document).ready(function () {
    if (items.length % 3 === 1) {
       $('.production__module-window-img').css("display", "none")
       $('.production__cards').css("flex-direction", "row-reverse")
+      $('.production__form').css("width", "calc(66% - 10px)")
+
    }
+
 
 
    const itemsToShow = 4;
    let itemsHidden = items.length - itemsToShow;
+   console.log(window.innerWidth)
+   if (window.innerWidth < 1280) {
+      if (items.length > itemsToShow) {
+         // Показать первые 4 элемента, остальные скрыть
+         items.slice(itemsToShow).hide();
 
-   if (items.length > itemsToShow) {
-      // Показать первые 4 элемента, остальные скрыть
-      items.slice(itemsToShow).hide();
+         // Обработчик нажатия на кнопку
+         $('.js-leady-loading').click(function () {
+            // Показать следующие 4 элемента
+            const hiddenItems = items.filter(':hidden').slice(0, itemsToShow);
+            hiddenItems.show();
 
-      // Обработчик нажатия на кнопку
-      $('.js-leady-loading').click(function () {
-         // Показать следующие 4 элемента
-         const hiddenItems = items.filter(':hidden').slice(0, itemsToShow);
-         hiddenItems.show();
+            // Обновить количество скрытых элементов
+            itemsHidden -= hiddenItems.length;
 
-         // Обновить количество скрытых элементов
-         itemsHidden -= hiddenItems.length;
-
-         // Если больше нет скрытых элементов, скрыть кнопку
-         if (itemsHidden <= 0) {
-            $(this).hide();
-         }
-      });
+            // Если больше нет скрытых элементов, скрыть кнопку
+            if (itemsHidden <= 0) {
+               $(this).hide();
+            }
+         });
+      }
    }
 });

@@ -20,6 +20,7 @@
    <link rel="stylesheet" href="/src/styles/underline.css">
    <link rel="stylesheet" href="/src/styles/bread-crumbs.css">
    <script defer src="/index.js"></script>
+   <script defer src="/slider.js"></script>
 
 </head>
 
@@ -43,16 +44,22 @@
             }
             ?>
          </main>
-         <?php include 'src/components/footer/footer.php'; ?>
+         <?php include 'src/components/footer/footer.php';
+
+
+         ?>
+
       </div>
       <?php
       include 'src/components/ui/popUpContacts/popUpContacts.php';
       include 'src/components/ui/popUpAsk/popUpAsk.php';
-      include 'src/components/ui/popUp/popUp-selection-equipment.php';
-      include 'src/components/ui/popUp/popUp-consultation.php';
-      include 'src/components/ui/popUp/popUp-offer.php';
+      include 'src/components/ui/popUp/popUp.php';
+      //include 'src/components/ui/popUp/popUp-selection-equipment.php';
+      //include 'src/components/ui/popUp/popUp-consultation.php';
+      //include 'src/components/ui/popUp/popUp-offer.php';
       include 'src/components/ui/popUp/popUp-end.php';
       include 'src/components/cookie/cookie.php';
+      popUp();
       ?>
    </div>
 

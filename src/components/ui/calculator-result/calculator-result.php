@@ -4,7 +4,7 @@
    <div class="leasing-calculator__header">
       <div class="leasing-calculator__header-item leasing-calculator__header-item--big ">
          <p class="leasing-calculator__header-title">Годовое удорожание:</p>
-         <p id="annualCost" class="leasing-calculator__header-value leasing-calculator__header-value--big"></p>
+         <p id="annualCost" class="leasing-calculator__header-value "></p>
       </div>
       <div class="leasing-calculator__header-item ">
          <p class="leasing-calculator__header-title">Возврат 20% НДС:</p>
@@ -12,7 +12,7 @@
       </div>
       <div class="leasing-calculator__header-item leasing-calculator__header-item--big ">
          <p class="leasing-calculator__header-title">Ежемесячный платеж:</p>
-         <p id="monthlyPayment" class="leasing-calculator__header-value leasing-calculator__header-value--medium"></p>
+         <p id="monthlyPayment" class="leasing-calculator__header-value "></p>
       </div>
       <div class="leasing-calculator__header-item ">
          <p class="leasing-calculator__header-title">Сумма договора лизинга:</p>
@@ -20,7 +20,8 @@
       </div>
    </div>
    <div>
-      <button id="js-popUp-offer" class="button button--white">
+      <button class="openPopUpButton button button--white" data-title="Получите коммерческое
+      предложение" data-description="false" data-email="true">
          Получить коммерческое предложение
       </button>
       <p class="leasing-calculator__info">
@@ -30,3 +31,4 @@
       </p>
    </div>
 </div>
+<!--js-popUp-offer-->

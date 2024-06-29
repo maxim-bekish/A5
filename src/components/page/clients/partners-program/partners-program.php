@@ -91,8 +91,8 @@
 
 
       <div class="checkbox">
-         <input class="custom-checkbox " type="checkbox" id="option-one">
-         <label for="option-one">
+         <input class="custom-checkbox " type="checkbox" name="privacy_policy" id="partners-program" required>
+         <label for="partners-program">
             Согласен с политикой конфиденциальности
          </label>
       </div>

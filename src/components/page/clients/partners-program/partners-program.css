@@ -59,7 +59,7 @@
 
 
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
    .partners-program__title {
       font-size: 30px;
       line-height: 36px;
@@ -67,7 +67,7 @@
    }
 
    .partners-program .partners-program__img {
-      height: 228px;
+      height: 100%;
    }
 
    .partners-program .partners-program__img img {

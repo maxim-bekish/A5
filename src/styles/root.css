@@ -6,12 +6,35 @@
    --blue: rgba(82, 128, 203, 1);
    --light-blue: rgba(128, 162, 216, 1);
    --sky-blue: rgba(178, 199, 232, 1);
-   --gray: rgba(151, 151, 151, 1);
    --dark-gray: rgba(30, 30, 30, 1);
    --light-gray: rgba(242, 242, 242, 1);
    --medium-gray: rgba(81, 81, 81, 1);
    --silver: rgba(203, 203, 203, 1);
    --light-red: rgba(255, 138, 138, 1);
+   --very-light-gray: rgba(231, 231, 231, 1);
+   --dark-blue-2: rgba(0, 55, 142, 1);
+   --light-silver: rgba(215, 215, 215, 1);
+   --gray: rgba(151, 151, 151, 1);
+
+
+
+
+
+   
+   
+   --white-opacity: rgba(255, 255, 255, 0.7);
+   --gray-opacity: rgba(151, 151, 151, 0.2);
+   --light-blue-opacity: rgba(0, 69, 178, 0.1);
+   --medium-gray-opacity: rgba(128, 128, 128, 0.5);
+   --transparent-silver: rgba(203, 203, 203, 0);
+   --blue-shadow: rgba(54, 95, 161, 0.1);
+
+
+
+
+
+
+
 
    --font-inter: "Inter Tight", sans-serif;
    --font-arial: Arial, sans-serif;
@@ -20,5 +43,7 @@
    --font-w4: 400;
    --font-w5: 500;
    --font-w6: 600;
+   /*--table: "1280px";*/
+   --mobile: 360px;
 
 }

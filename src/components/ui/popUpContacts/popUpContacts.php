@@ -95,7 +95,7 @@ $state = [
                </button>
             </div>
             <div class="checkbox">
-               <input class="custom-checkbox" type="checkbox" id="option-two">
+               <input class="custom-checkbox" type="checkbox" id="option-two" required>
                <label for="option-two">
                   Согласен с политикой конфиденциальности
                </label>

@@ -11,7 +11,7 @@ include 'src/state/state.php';
          Каталог изьятой техники
       </p>
    </div>
-   <div class="inventory__content">
+   <div class="inventory__content grid__item__3">
       <?php foreach ($inventory as $el) : ?>
          <a href="<?php echo htmlspecialchars($el['href']); ?>?item=<?php echo htmlspecialchars($el['name']); ?>&id=<?php echo htmlspecialchars($el['id']); ?>">
             <div class="inventory__content--item--img">

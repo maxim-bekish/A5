@@ -54,7 +54,7 @@
                </div>
             </div>
             <div class="checkbox">
-               <input class="custom-checkbox" type="checkbox" id="option-ask">
+               <input class="custom-checkbox" type="checkbox" id="option-ask" required>
                <label for="option-ask">
                   Согласен с политикой конфиденциальности
                </label>

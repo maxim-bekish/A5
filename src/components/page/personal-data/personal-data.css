@@ -72,7 +72,7 @@
    }
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
    .personal-data__title h3 {
       font-size: 28px;
       line-height: 33.6px;

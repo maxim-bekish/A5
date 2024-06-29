@@ -42,7 +42,7 @@
    }
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
 
    .breadcrumbs li p,
    .breadcrumbs li a {

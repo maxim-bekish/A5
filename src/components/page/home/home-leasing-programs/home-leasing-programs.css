@@ -42,7 +42,7 @@
 
 .leasing-programs__details {
    display: grid;
-   grid-template-columns: 43% 1fr;
+   grid-template-columns: 50% 1fr;
    background-color: var(--dark-blue);
 }
 
@@ -94,10 +94,6 @@
    object-position: center;
 }
 
-#js-leasing-info {
-   min-height: 76px;
-}
-
 .leasing-programs__img-wrapper--mobile {
    display: none;
 }
@@ -144,7 +140,7 @@
 
 }
 
-@media(max-width: 360px) {
+@media (max-width: 768px) {
    .leasing-programs__img-wrapper--mobile {
       display: block;
    }
@@ -228,5 +224,19 @@
    .leasing-programs__prepaid {
       font-size: 24px;
       line-height: 29.04px;
+   }
+
+   .leasing-programs__img-wrapper img {
+      height: 400px  !important;
+
+   }
+}
+
+@media (max-width: 500px) {
+
+   .leasing-programs__img-wrapper img {
+      height: 300px  !important;
+      object-fit: cover;
+      object-position: top;
    }
 }

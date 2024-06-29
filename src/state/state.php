@@ -246,6 +246,44 @@ $production = [
             "value" => 4,
          ]
       ]
+   ], [
+      "id" => 8,
+      "name" => "8 Сушильная камера для древесины",
+      "priceMonth" => "127636",
+      "price" => "3290000",
+      "href" => '/program-leasing/card',
+      "imagePreview" => 'trPrev.png',
+      "image" => null,
+      "term" => 4,
+      "characteristics" => [
+         [
+            "title" => 'Год',
+            "value" => 4,
+         ],
+         [
+            "title" => 'Пробег',
+            "value" => 4,
+         ]
+      ]
+   ], [
+      "id" => 8,
+      "name" => "8 Сушильная камера для древесины",
+      "priceMonth" => "127636",
+      "price" => "3290000",
+      "href" => '/program-leasing/card',
+      "imagePreview" => 'trPrev.png',
+      "image" => null,
+      "term" => 4,
+      "characteristics" => [
+         [
+            "title" => 'Год',
+            "value" => 4,
+         ],
+         [
+            "title" => 'Пробег',
+            "value" => 4,
+         ]
+      ]
    ],
 ];
 

@@ -48,7 +48,7 @@
    }
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
    .about-leasing__subsidies h3 {
       font-size: 28px;
       line-height: 33.6px;

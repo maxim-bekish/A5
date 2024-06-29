@@ -22,7 +22,7 @@ button {
    color: var(--dark-blue);
 }
 
-.button--dark-blue,
+.button--blue,
 .button--outline:hover {
    background-color: var(--dark-blue);
    color: var(--white);
@@ -35,22 +35,21 @@ button {
 }
 
 .button--white:hover {
-   background-color: rgba(231, 231, 231, 1);
+   background-color: var(--very-light-gray);
 }
 
-
-.button--dark-blue:hover,
+.button--blue:hover,
 .button--outline:hover {
    background-color: rgba(0, 63, 162, 1);
 }
 
 .button--white:active {
-   background-color: rgba(215, 215, 215, 1);
+   background-color: var(--light-silver);
 }
 
-.button--dark-blue:active,
+.button--blue:active,
 .button--outline:active {
-   background-color: rgba(0, 55, 142, 1);
+   background-color: var(--dark-blue-2);
 }
 
 .button--white:disabled {
@@ -58,11 +57,11 @@ button {
    background: var(--gray);
 }
 
-.button--dark-blue:disabled,
+.button--blue:disabled,
 .button--outline:disabled {
    color: var(--gray);
-   background-color: rgba(215, 215, 215, 1);
-   border: 1px solid rgba(215, 215, 215, 1);
+   background-color: var(--light-silver);
+   border: 1px solid var(--light-silver);
 }
 
 @media(max-width:1280px) {

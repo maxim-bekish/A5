@@ -52,13 +52,12 @@ $(document).ready(function () {
    let timeAnimate = 700; // Длительность анимации в миллисекундах
    let isAnimating = false; // Флаг для предотвращения многократного нажатия
 
-   // Клонируем последний слайд и вставляем его перед первым, чтобы создать бесшовную прокрутку
-   $slides.first().before($slides.last().clone());
-   // Клонируем первый слайд и вставляем его после последнего, чтобы создать бесшовную прокрутку
-   $slides.last().after($slides.first().clone());
-
    // Устанавливаем начальное положение контейнера на высоту одного слайда вверх
    $sliderContainer.css("top", -slideHeight + "px");
+
+   // Клонируем последний слайд дважды и вставляем их перед первым, чтобы создать бесшовную прокрутку
+   $slides.slice(0, 2).clone().appendTo($sliderContainer);
+   $slides.slice(-2).clone().prependTo($sliderContainer);
 
    function nextSlide() {
       if (!isAnimating) {

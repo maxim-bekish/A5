@@ -97,7 +97,7 @@
    }
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
    .stages-work {
       height: 824px;
       padding: 90px 10px;

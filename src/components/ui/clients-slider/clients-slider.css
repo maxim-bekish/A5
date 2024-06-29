@@ -106,7 +106,7 @@
 
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
 
    .clients-slider .slider__slide {
       height: 340px;

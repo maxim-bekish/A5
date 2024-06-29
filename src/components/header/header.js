@@ -49,7 +49,7 @@ $(document).ready(function () {
     );
 
     $('.burger-menu-box-item-row').click(function () {
-        if ($(window).width() <= 360) {
+        if ($(window).width() <= 768) {
             $('.burger-menu-box-item-row').not(this).find('svg').removeClass('rt180');
             $('.burger-menu-box-item-row').not(this).next('ul').slideUp();
             var isOpen = $(this).next('ul').is(':visible');

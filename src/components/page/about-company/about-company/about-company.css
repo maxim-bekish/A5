@@ -145,7 +145,7 @@
    }
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
 
    .about-company__description {
       flex-direction: column;

@@ -44,11 +44,11 @@ $headerListLeasing = (object) [
   'list' => [
     (object) [
       'name' => 'Общие условия',
-      'link' => 'about-leasing?section=general-terms'
+      'link' => '/about-leasing?section=general-terms'
     ],
     (object) [
       'name' => 'Субсидии малому и среднему бизнесу',
-      'link' => 'about-leasing?section=subsidies'
+      'link' => '/about-leasing?section=subsidies'
     ],
   ]
 ];

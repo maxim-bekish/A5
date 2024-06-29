@@ -5,7 +5,7 @@
    margin-bottom: 40px;
 }
 
-@media(max-width:360px) {
+@media (max-width: 768px) {
    .clients-partners-program__content img {
       margin-top: -10px;
       margin-bottom: 30px;

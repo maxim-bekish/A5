@@ -320,7 +320,7 @@ form .form-gray {
    }
 }
 
-@media(max-width:360px) {
+@media (max-width: 768px) {
    .form-group label {
       font-size: 14px;
       line-height: 16.94px;

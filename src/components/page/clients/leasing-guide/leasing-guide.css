@@ -23,7 +23,7 @@
 }
 
 .leasing-guide__button-active {
-   background-color: rgba(0, 63, 162, 1);
+   background-color: var(--dark-blue);
    color: var(--white);
 
 }

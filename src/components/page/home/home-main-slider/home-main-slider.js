@@ -1,15 +1,15 @@
 $(document).ready(function () {
     let speedAnimation = 1000;
-    let intervalAnimation = speedAnimation * 4;
-
+    let intervalAnimation = 2000;
+    let widthOneSlide = '100%';
     // Устанавливаем первый слайд активным при загрузке страницы
-    $(".slide").first().addClass("slide--active").css("width", "1530px");
+    $(".slide").first().addClass("slide--active").css("width", widthOneSlide);
 
 
 
     let xxx = $(".main-slider__container");
 
-    if ($(window).width() <= 360) {
+    if ($(window).width() <= 768) {
 
         function nextSlide() {
             var $current = $(".slide--active");
@@ -21,7 +21,7 @@ $(document).ready(function () {
             $current.removeClass("slide--active").animate({ width: "0px" }, speedAnimation);
 
             // Добавляем класс к следующему слайду и изменяем его ширину
-            $next.addClass("slide--active").animate({ width: "1530px" }, speedAnimation);
+            $next.addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation);
 
             // Обновляем индикаторы с анимацией изменения ширины
             $activeDot.removeClass("main-slider-dot-active").animate({ width: "20px", opacity: 0.7 }, speedAnimation);
@@ -38,7 +38,7 @@ $(document).ready(function () {
             $current.removeClass("slide--active").animate({ width: "0px" }, speedAnimation);
 
             // Добавляем класс к предыдущему слайду и изменяем его ширину
-            $prev.addClass("slide--active").animate({ width: "1530px" }, speedAnimation);
+            $prev.addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation);
 
             // Обновляем индикаторы с анимацией изменения ширины
             $activeDot.removeClass("main-slider-dot-active").animate({ width: "20px", opacity: 0.7 }, speedAnimation);
@@ -63,7 +63,7 @@ $(document).ready(function () {
             $(".slide").not(this).removeClass("slide--active").animate({ width: "130px" }, speedAnimation);
 
             // Добавляем класс только к текущему блоку и изменяем его ширину
-            $(this).addClass("slide--active").animate({ width: "1530px" }, speedAnimation);
+            $(this).addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation);
         });
     }
 });

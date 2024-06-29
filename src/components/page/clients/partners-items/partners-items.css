@@ -23,12 +23,30 @@
    }
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
    .partners-items__img {
       display: none;
    }
 
    .partners-items__img-mobile {
       display: block;
+   }
+
+   .partners-items__img-mobile .slider__custom {
+      align-items: flex-end;
+      gap: 20px;
+   }
+
+   .partners-items__img-mobile .slider__slide img {
+      aspect-ratio: 1;
+      width: 100%;
+      height: 100%;
+   }
+
+   .partners-items__img-mobile .slider__slide {
+      height: 200px;
+      padding: 20px;
+      aspect-ratio: 1;
+      background-color: var(--light-gray);
    }
 }

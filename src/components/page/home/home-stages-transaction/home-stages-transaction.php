@@ -37,6 +37,15 @@
          </div>
 
       </div>
-      <button type="button" id="js-popUp-consultation" class="button button--blue stages-transaction__button">Бесплатная консультация</button>
+      <button 
+      type="button"
+      class="openPopUpButton button button--blue stages-transaction__button"
+      data-title="Бесплатная консультация"
+      data-description="true"
+      data-email="false"
+      >
+      Бесплатная консультация
+   </button>
    </div>
 </section>
+<!--js-popUp-consultation-->

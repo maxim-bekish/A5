@@ -15,16 +15,20 @@
          <div class="form-items-100 form-gray popUp-consultation__form-items">
             <div class="form-group popUp-consultation__form-group">
                <input class="form-group__input name" name="consultation-name" id="consultation-name" type="text" placeholder="" required>
-               <label class="form-group__label" for="consultation-name">Ваше имя</label>
+               <label class="form-group__label" for="consultation-name">
+                  Ваше имя
+               </label>
             </div>
             <div class="form-group popUp-consultation__form-group">
                <input class="form-group__input phone" name="consultation-phone" id="consultation-phone" type="tel" placeholder="" required>
-               <label class="form-group__label" for="consultation-phone">Телефон</label>
+               <label class="form-group__label" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" for="consultation-phone">
+                  Телефон
+               </label>
             </div>
          </div>
          <div class="checkbox popUp-consultation__checkbox">
-            <input class="custom-checkbox checkbox__input" type="checkbox" id="free-consultation" required>
-            <label class="checkbox__label" for="free-consultation">
+            <input class="custom-checkbox checkbox__input" name="privacy_policy" type="checkbox" id="free-consultation" required>
+            <label class="checkbox__label"  for="free-consultation">
                Согласен с политикой конфиденциальности
             </label>
          </div>
