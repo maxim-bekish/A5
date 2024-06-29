@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="src/components/page/program-leasing/production-select/production-select.css">
-<script src="src/components/page/program-leasing/production-select/production-select.js"></script>
 
+<link rel="stylesheet" href="src/components/page/program-leasing/production/production.css">
+<script src="src/components/page/program-leasing/production/production.js"></script>
 
 <?php
 include 'src/state/state.php';
@@ -35,7 +35,7 @@ include 'src/state/state.php';
                </div>
             </a>
          <?php endforeach; ?>
-         <button class="button button--blue js-leady-loading leady-loading" type="button">Загрузить еще</button>
+         <button class="button button--outline js-leady-loading leady-loading" type="button">Загрузить еще</button>
          <div class="production__form">
             <div class="production__module-window">
                <h2 class="production__module-window__title">Не нашли нужный вам продукт?</h2>
@@ -59,7 +59,7 @@ include 'src/state/state.php';
                         </label>
                      </div>
                   </div>
-                  <div class="checkbox  production__module-window__checkbox">
+                  <div class="checkbox checkbox--white production__module-window__checkbox">
                      <input class="custom-checkbox checkbox__input " type="checkbox" name="privacy_policy" id="free-production" required>
                      <label class="checkbox__label" for="free-production">
                         Согласен с политикой конфиденциальности

@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    let speedAnimation = 1000;
-    let intervalAnimation = 2000;
+    let speedAnimation = 2000;
+    let intervalAnimation = 4000;
     let widthOneSlide = '100%';
     // Устанавливаем первый слайд активным при загрузке страницы
     $(".slide").first().addClass("slide--active").css("width", widthOneSlide);

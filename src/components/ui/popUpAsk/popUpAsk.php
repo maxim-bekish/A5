@@ -20,7 +20,7 @@
 
       <div class="popup-ask-info">
          <p class="text-html">
-            Выберите с кем связаться, оставьте контактные данные и наш специалист свяжется с вами в ближайшее время
+            Выберите c кем связаться, оставьте контактные данные и наш специалист свяжется с вами в ближайшее время
          </p>
       </div>
       <div class="popup-ask-buttons">
@@ -45,7 +45,7 @@
                   <label for="name-ask">Ваше имя</label>
                </div>
                <div class="form-group ">
-                  <input name="tel" id="tel-ask" type="tel" placeholder="" required>
+                  <input name="tel" id="tel-ask" type="tel" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="" required>
                   <label for="tel-ask">Телефон</label>
                </div>
                <div class="form-group ">

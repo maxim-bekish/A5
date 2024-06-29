@@ -1,21 +1,22 @@
 $(document).ready(function () {
-   function debounce(func, wait, immediate) {
-      var timeout;
-      return function () {
-         var context = this, args = arguments;
-         var later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-         };
-         var callNow = immediate && !timeout;
-         clearTimeout(timeout);
-         timeout = setTimeout(later, wait);
-         if (callNow) func.apply(context, args);
-      };
-   }
+   //function debounce(func, wait, immediate) {
+   //   var timeout;
+   //   return function () {
+   //      var context = this, args = arguments;
+   //      var later = function () {
+   //         timeout = null;
+   //         if (!immediate) func.apply(context, args);
+   //      };
+   //      var callNow = immediate && !timeout;
+   //      clearTimeout(timeout);
+   //      timeout = setTimeout(later, wait);
+   //      if (callNow) func.apply(context, args);
+   //   };
+   //}
 
    function updateSlider() {
       $(".slider__custom").each(function () {
+      
          const $sliderContainer = $(this).find(".slider__container");
          const $sliderBox = $(this).find(".slider__box");
          const $sliderSlides = $(this).find(".slider__slide");
@@ -91,8 +92,8 @@ $(document).ready(function () {
          hammer.off('swipeleft').on('swipeleft', nextSlide);
       });
    }
+   updateSlider()
+   //var debouncedUpdateSlider = debounce(updateSlider, 250);
 
-   var debouncedUpdateSlider = debounce(updateSlider, 250);
-
-   $(window).on('resize', debouncedUpdateSlider).trigger('resize');
+   //$(window).on('resize', debouncedUpdateSlider).trigger('resize');
 });

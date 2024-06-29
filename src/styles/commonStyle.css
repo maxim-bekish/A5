@@ -324,22 +324,23 @@ img {
 }
 
 .popUp__sidebar-box {
-   background-color: var(--light-gray);
    padding: 75px 45px 35px 45px;
    width: 640px;
    position: relative;
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
+   height: 100%;
    max-height: 960px;
-   height: 100vh;
 }
 
 .popUp__sidebar {
    position: fixed;
    top: 0;
+   height: 100vh;
    right: -640px;
    transition: right 0.3s ease-in-out;
+   background-color: var(--light-gray);
 }
 
 .popUp__sidebar.open {
@@ -358,6 +359,16 @@ img {
    color: var(--medium-gray);
 }
 
+.grid__item__3 {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(165px, 1fr));
+   grid-column-gap: 40px;
+   grid-row-gap: 40px;
+}
+
+/*.leady-loading {
+   display: none;
+}*/
 
 
 @media(max-width:1280px) {
@@ -414,6 +425,13 @@ img {
    .mobile__title--closed {
       display: none;
    }
+
+   .leady-loading {
+      margin-left: auto;
+      max-width: calc(34% - 22px);
+   }
+
+
 
    .mobile__select {
       padding: 15px;
@@ -545,6 +563,11 @@ img {
       font-size: 16px;
       line-height: 22px;
    }
+
+   .grid__item__3 {
+      grid-column-gap: 20px;
+      grid-row-gap: 40px;
+   }
 }
 
 @media(max-width: 768px) {
@@ -557,6 +580,11 @@ img {
       font-size: 30px;
       line-height: 31.22px;
    }
+
+   .leady-loading {
+      max-width: calc(50% - 5px);
+   }
+
 
    .grid_1-3-box {
       grid-row-gap: 15px;
@@ -657,25 +685,7 @@ img {
       line-height: 16px !important;
       font-size: 16px !important;
    }
-}
 
-
-
-.grid__item__3 {
-   display: grid;
-   grid-template-columns: repeat(3, minmax(165px, 1fr));
-   grid-column-gap: 40px;
-   grid-row-gap: 40px;
-}
-
-@media (max-width: 1280px) {
-   .grid__item__3 {
-      grid-column-gap: 20px;
-      grid-row-gap: 40px;
-   }
-}
-
-@media (max-width: 768px) {
    .grid__item__3 {
       grid-template-columns: repeat(2, minmax(165px, 1fr));
       grid-row-gap: 40px;
@@ -686,5 +696,9 @@ img {
    .grid__item__3 {
       grid-row-gap: 20px;
       grid-template-columns: minmax(165px, 1fr);
+   }
+
+   .leady-loading {
+      max-width: 100%;
    }
 }

@@ -5,6 +5,7 @@ $(document).ready(function () {
       const isOpen = $selectItems.css('display') == "block";
       $selectBox.find('.select-svg').toggleClass("rt180", !isOpen);
 
+
       if (isOpen) {
          $selectItems.slideUp(speedAnimation, function () {
             if (!$selectBox.hasClass('selected')) {
@@ -97,6 +98,7 @@ $(document).ready(function () {
 
       const $selectBox = $(this).closest('.production__select');
       const $selectItems = $selectBox.find('.production__select-items-box');
+      $selectBox.addClass('selected');
       toggleSelect($selectBox, $selectItems);
    });
 });

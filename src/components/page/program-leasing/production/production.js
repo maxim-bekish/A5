@@ -55,6 +55,7 @@ $(document).ready(function () {
    let mobile = false;
    const itemsToShow = 6;
    let itemsHidden = items.length - itemsToShow;
+   let visibleItems = items.slice(0, itemsToShow);  // Сохраняем первоначально видимые элементы
 
    function updateFormAndImage() {
       if (items.filter(':visible').length % 3 === 1) {
@@ -69,7 +70,13 @@ $(document).ready(function () {
          $('.production__module-window-img').css("display", "none");
       }
    }
-
+   function updateVisibility() {
+      if (itemsHidden <= 0) {
+         $('.js-leady-loading').hide();
+      } else {
+         $('.js-leady-loading').show();
+      }
+   }
    if (items.length <= itemsToShow) {
       items.show();
    } else {
@@ -78,14 +85,12 @@ $(document).ready(function () {
          // Показать следующие 6 элементов
          const hiddenItems = items.filter(':hidden').slice(0, itemsToShow);
          hiddenItems.show();
-
+         visibleItems = items.filter(':visible'); // Обновляем список видимых элементов
          // Обновить количество скрытых элементов
          itemsHidden -= hiddenItems.length;
 
          // Если больше нет скрытых элементов, скрыть кнопку
-         if (itemsHidden <= 0) {
-            $(this).hide();
-         }
+         updateVisibility();
 
          // Обновить состояние формы и картинки
          updateFormAndImage();
@@ -98,9 +103,10 @@ $(document).ready(function () {
    // Проверяем ширину окна при изменении размера
    $(window).resize(function () {
       if (window.innerWidth < 1280) {
-         items.hide().slice(0, itemsToShow).show();
+         items.hide();
          updateFormAndImage();
-         $('.js-leady-loading').show();
+         visibleItems.show();
+         updateVisibility();
       } else {
          items.show();
          updateFormAndImage();
@@ -114,39 +120,4 @@ $(document).ready(function () {
          updateFormAndImage();
       }
    }).resize(); // Инициализируем проверку при загрузке страницы
-
-
-
-
-
-
-
-
-
-
-
-
-   //const itemsToShow = 6;
-   //let itemsHidden = items.length - itemsToShow;
-   //if (window.innerWidth < 1280) {
-   //   if (items.length > itemsToShow) {
-   //      // Показать первые 6 элемента, остальные скрыть
-   //      items.slice(itemsToShow).hide();
-
-   //      // Обработчик нажатия на кнопку
-   //      $('.js-leady-loading').click(function () {
-   //         // Показать следующие 6 элемента
-   //         const hiddenItems = items.filter(':hidden').slice(0, itemsToShow);
-   //         hiddenItems.show();
-
-   //         // Обновить количество скрытых элементов
-   //         itemsHidden -= hiddenItems.length;
-
-   //         // Если больше нет скрытых элементов, скрыть кнопку
-   //         if (itemsHidden <= 0) {
-   //            $(this).hide();
-   //         }
-   //      });
-   //   }
-   //}
 });

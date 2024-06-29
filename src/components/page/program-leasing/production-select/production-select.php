@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="src/components/page/program-leasing/production/production.css">
-<script src="src/components/page/program-leasing/production/production.js"></script>
+<link rel="stylesheet" href="src/components/page/program-leasing/production-select/production-select.css">
+<script src="src/components/page/program-leasing/production-select/production-select.js"></script>
 
 
 <div class="production__select-box">
@@ -14,7 +14,9 @@
       </div>
       <div class="production__select-items-box">
          <ul class="production__select-items">
-            <li class="production__select-item">1</li>
+            <li class="production__select-item">wecjbwej we wefnwefnwe fwecwecwc wcw c wejcnoiwec
+
+            </li>
             <li class="production__select-item">2</li>
             <li class="production__select-item">3</li>
             <li class="production__select-item">4</li>

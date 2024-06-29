@@ -2,7 +2,7 @@
 <script src="/src/components/page/home/home-main-slider/home-main-slider.js"></script>
 <section class="main-slider">
    <div class="main-slider__container slider">
-      <div class="slide background-one slide--active">
+      <div class="slide background-one ">
          <div class="slide__content">
             <div class="slide__content-text">
                <h2 class="slide__heading">
@@ -10,7 +10,7 @@
                </h2>
                <p class="slide__text">Минимальный аванс, любая стоимость</p>
             </div>
-            <!--<button class="main-slider__details" type="button">подробнее</button>-->
+
          </div>
          <div class="slide__additional-text">
             <p>
@@ -26,7 +26,7 @@
                </h2>
                <p class="slide__text">с экспресс-оценкой организации</p>
             </div>
-            <!--<button class="main-slider__details" type="button">подробнее</button>-->
+
          </div>
          <div class="slide__additional-text">
             <p>
@@ -42,7 +42,7 @@
                </h2>
                <p class="slide__text">с учётом сезонности</p>
             </div>
-            <!--<button class="main-slider__details" type="button">подробнее</button>-->
+
          </div>
          <div class="slide__additional-text">
             <p>
@@ -58,7 +58,7 @@
                </h2>
                <p class="slide__text">по региональной программе Тюменской области </p>
             </div>
-            <!--<button class="main-slider__details" type="button">подробнее</button>-->
+
          </div>
          <div class="slide__additional-text">
             <p>
@@ -66,12 +66,11 @@
             </p>
          </div>
       </div>
-      <!-- create dots todo -->
    </div>
    <div class="main-slider-dot">
-      <div class="main-slider-dot-item main-slider-dot-active" ></div>
-      <div class="main-slider-dot-item " ></div>
-      <div class="main-slider-dot-item " ></div>
-      <div class="main-slider-dot-item " ></div>
+      <div class="main-slider-dot-item main-slider-dot-active"></div>
+      <div class="main-slider-dot-item "></div>
+      <div class="main-slider-dot-item "></div>
+      <div class="main-slider-dot-item "></div>
    </div>
 </section>
