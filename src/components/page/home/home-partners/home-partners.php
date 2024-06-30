@@ -1,5 +1,5 @@
-<!--<link rel="stylesheet" href="src/components/page/home/home-partners/home-partners.css">
-<script src="src/components/page/home/home-partners/home-partners.js"></script>-->
+<link rel="stylesheet" href="src/components/page/home/home-partners/home-partners.css">
+<script src="src/components/page/home/home-partners/home-partners.js"></script>
 
 <?php
 $partners = array(

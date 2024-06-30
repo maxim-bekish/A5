@@ -272,6 +272,11 @@ body .js-flex {
    display: none;
 }
 
+
+
+
+
+
 @media(max-width:1280px) {
 
    .burger-menu .button-closed {
@@ -470,5 +475,21 @@ body .js-flex {
       font-size: 30px;
       line-height: 31.2px;
 
+   }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+
+   .leasing,
+   .nav,
+   .header,
+   .header__logo {
+      gap: 10px;
+      justify-content: space-around;
+   }
+
+   header .container {
+      padding-left: 50px;
+      padding-right: 50px;
    }
 }

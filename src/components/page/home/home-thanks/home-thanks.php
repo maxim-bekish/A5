@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/src/components/page/home/home-thanks/home-thanks.css">
-<script src="/src/components/page/home/home-thanks/home-thanks.js"></script>
+<link rel="stylesheet" href="src/components/page/home/home-thanks/home-thanks.css">
+<script src="src/components/page/home/home-thanks/home-thanks.js"></script>
 
 <?php
 include 'src/assets/helpers/sliderCustom.php';
@@ -64,7 +64,7 @@ $slides = [
                <p class="slider__text"><?php echo nl2br(htmlspecialchars($slide['text'])); ?></p>
             <?php endif; ?>
          </div>
-         <a class="slider__link" href="<?php echo htmlspecialchars($slide['href']); ?>">
+         <a class="slider__link" target="_blank" href="<?php echo htmlspecialchars($slide['href']); ?>">
             <svg class="slider__pointer" width="50" height="50" viewBox="0 0 50 50" fill="none">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-eye"></use>
             </svg>
