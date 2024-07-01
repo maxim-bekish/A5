@@ -130,7 +130,7 @@ function listHeaderBurger($data)
     <ul>
 
       <?php foreach ($data->list as $item) : ?>
-        <li class="underline-box">
+        <li class="underline-box js-burger-menu-item">
           <a class="underline-el underline-el-white" href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
         </li>
       <?php endforeach; ?>
@@ -207,7 +207,7 @@ function listHeaderBurger($data)
       <?php listHeaderBurger($headerListClients); ?>
       <?php listHeaderBurger($headerListProgram); ?>
       <div class="burger-menu-box-item burger-menu-box-item-last">
-        <h5 class="item-title underline-box"> <a class="underline-el underline-el-white" href="/inventory"  rel="noopener noreferrer">
+        <h5 class="item-title underline-box"> <a class="underline-el underline-el-white" href="/inventory" rel="noopener noreferrer">
             Каталог изьятой техники
           </a></h5>
 

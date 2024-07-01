@@ -207,6 +207,7 @@ body .js-flex {
 .burger-menu-box .burger-tel {
    font-weight: var(--font-w5);
    line-height: 41.6px;
+   font-size: 40px;
    color: var(--white);
 }
 
@@ -262,6 +263,15 @@ body .js-flex {
    top: 52px;
    position: absolute;
    left: 43px;
+}
+
+.burger-menu .button-closed svg {
+   stroke: var(--sky-blue);
+}
+
+.burger-menu .button-closed:hover svg {
+
+   stroke: var(--white);
 }
 
 .mobile-open-popup {

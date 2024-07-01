@@ -37,6 +37,10 @@ $(document).ready(function () {
         $('.burger-menu').removeClass('js-flex');
         $('body').css('overflow', 'auto');
     });
+    $('.js-burger-menu-item').click(function () {
+        $('.burger-menu').removeClass('js-flex');
+        $('body').css('overflow', 'auto');
+    });
     $('.select').hover(
         function () {
             $(this).addClass('active');

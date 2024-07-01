@@ -284,7 +284,7 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
    <div class="program-leasing-page__navigation">
       <h3>Программы лизинга</h3>
       <div class="mobile__select">
-         <div class="mobile__title">
+         <div class="mobile__title js-open-select">
             <p></p>
             <button class="js-open-select mobile__list-header" type="button">
                <svg class="rt0 js-svg-upend" width="14px" height="9px" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -253,53 +253,53 @@ form .form-gray {
 
 
 .checkbox--blue label {
-   color: rgba(178, 199, 232, 1);
+   color: var(--sky-blue);
 }
 
 .checkbox--blue label:hover {
-   color: rgba(255, 255, 255, 1);
+   color: var(--white);
 }
 
 .checkbox--blue label::before {
-   border: 1px solid rgba(178, 199, 232, 1);
+   border: 1px solid var(--sky-blue);
 }
 
 .checkbox--blue:hover label::before {
-   border: 1px solid rgba(255, 255, 255, 1);
+   border: 1px solid var(--white);
 }
 
 .checkbox--blue input:checked+label::before {
    border: 1px solid transparent;
-   background-color: rgba(82, 128, 203, 1);
+   background-color: var(--blue);
 }
 
 
 
 /* ----------------- */
 .checkbox--white label {
-   color: rgba(151, 151, 151, 1);
+   color: var(--gray);
 }
 
 .checkbox--white label:hover {
-   color: rgba(81, 81, 81, 1);
+   color: var(--medium-gray);
 }
 
 .checkbox--white label::before {
-   border: 1px solid rgba(151, 151, 151, 1);
+   border: 1px solid var(--gray);
 }
 
 .checkbox--white:hover label::before {
-   border: 1px solid rgba(81, 81, 81, 1);
+   border: 1px solid var(--medium-gray);
 }
 
 .checkbox--white input:checked+label::before {
    border: 1px solid transparent;
-   background-color: rgba(82, 128, 203, 1);
+   background-color: var(--blue);
 }
 
 .checkbox--white:hover input:checked+label::before {
    border: 1px solid transparent;
-   background-color: rgba(0, 69, 178, 1);
+   background-color: var(--dark-blue);
 
 }
 
@@ -316,16 +316,16 @@ form .form-gray {
 }
 
 .checkbox .custom-checkbox:disabled+label {
-   color: rgba(203, 203, 203, 1);
+   color: var(--silver);
 }
 
 .checkbox .custom-checkbox:disabled+label::before {
-   border: 1px solid rgba(203, 203, 203, 1);
+   border: 1px solid var(--silver);
 }
 
 .checkbox .custom-checkbox:disabled:checked+label::before {
-   border: 1px solid rgba(203, 203, 203, 1);
-   background-color: rgba(203, 203, 203, 1);
+   border: 1px solid var(--silver);
+   background-color: var(--silver);
 }
 
 /*.checkbox label,*/

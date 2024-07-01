@@ -14,43 +14,43 @@ $(document).ready(function () {
       return `+7 (${phoneNumberWithoutSeven.slice(0, 3)}) ${phoneNumberWithoutSeven.slice(3, 6)}-${phoneNumberWithoutSeven.slice(6, 8)}-${phoneNumberWithoutSeven.slice(8, 10)}`;
    }
 
-   function checkFormValidity() {
-      const name = $('.production__module-window__form .name').val();
-      const phone = $('.production__module-window__form .phone').val();
-      const checkbox = $('.production__module-window__form .checkbox__input').is(':checked');
-      const isFormValid = name && phone && checkbox;
-      $('.production__module-window__form .js-popUp-submitBtn').prop('disabled', !isFormValid);
-   }
+   //function checkFormValidity() {
+   //   const name = $('.production__module-window__form .name').val();
+   //   const phone = $('.production__module-window__form .phone').val();
+   //   const checkbox = $('.production__module-window__form .checkbox__input').is(':checked');
+   //   const isFormValid = name && phone && checkbox;
+   //   $('.production__module-window__form .js-popUp-submitBtn').prop('disabled', !isFormValid);
+   //}
 
-   function resetForm() {
-      $('.production__module-window .js-myForm').removeClass('submitted-error');
-      $('.production__module-window__form .name').val('')
-      $('.production__module-window__form .phone').val('')
-      $('.production__module-window__form .checkbox__input').prop('checked', false)
-      checkFormValidity(); // Проверяем валидность формы после сброса
-   }
+   //function resetForm() {
+   //   $('.production__module-window .js-myForm').removeClass('submitted-error');
+   //   $('.production__module-window__form .name').val('')
+   //   $('.production__module-window__form .phone').val('')
+   //   $('.production__module-window__form .checkbox__input').prop('checked', false)
+   //   checkFormValidity(); // Проверяем валидность формы после сброса
+   //}
 
    $('.production__module-window__form .phone').on('input', function () {
       const formattedPhoneNumber = formatPhoneNumber(this.value);
       this.value = formattedPhoneNumber;
-      checkFormValidity();
+      //checkFormValidity();
    });
 
-   checkFormValidity();
+   //checkFormValidity();
 
-   $('.production__module-window__form .name, .production__module-window__form .checkbox__input').on('input change', checkFormValidity);
+   //$('.production__module-window__form .name, .production__module-window__form .checkbox__input').on('input change', checkFormValidity);
 
-   $('#js-production__module-window').click(function () {
-      resetForm(); // Сбрасываем форму при каждом открытии
-      $('.production__module-window').css('display', 'block');
-      $('.app').addClass('blurred');
-      $('body').css('overflow', 'hidden');
-   });
+   //$('#js-production__module-window').click(function () {
+   //   //resetForm(); // Сбрасываем форму при каждом открытии
+   //   $('.production__module-window').css('display', 'block');
+   //   $('.app').addClass('blurred');
+   //   $('body').css('overflow', 'hidden');
+   //});
 
-   $('.production__module-window .js-popUp-submitBtn').click(function () {
-      if (!$(this).prop('disabled')) $('.production__module-window-box').css('display', 'none');
-      resetForm(); // 
-   });
+   //$('.production__module-window .js-popUp-submitBtn').click(function () {
+   //   if (!$(this).prop('disabled')) $('.production__module-window-box').css('display', 'none');
+   //   resetForm(); // 
+   //});
 
    let mobile = false;
    const itemsToShow = 6;

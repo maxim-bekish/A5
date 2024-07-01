@@ -199,14 +199,19 @@ function popUp($title = '', $description = false, $email = false)
    }
 
    .popUp-custom__title {
-      text-wrap: nowrap;
+      /*text-wrap: nowrap;*/
       font-size: 50px;
       line-height: 52px;
       color: #0045B2;
+
+   }
+
+   .popUp-custom__form {
+      margin-top: 40px;
    }
 
    .popUp-custom__description {
-      margin: 15px 0 40px 0;
+      margin-top: 15px;
       font-size: 20px;
       max-width: 400px;
       line-height: 28px;
@@ -230,8 +235,8 @@ function popUp($title = '', $description = false, $email = false)
          padding: 60px 20px;
       }
 
-      .popUp-custom__description {
-         margin: 15px 0 30px 0px
+      .popUp-custom__form {
+         margin-top: 30px;
       }
 
       .popUp-custom-box {

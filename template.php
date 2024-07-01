@@ -19,8 +19,8 @@
    <link rel="stylesheet" href="/src/styles/forms.css">
    <link rel="stylesheet" href="/src/styles/underline.css">
    <link rel="stylesheet" href="/src/styles/bread-crumbs.css">
-   <script defer src="/index.js"></script>
-   <script defer src="/slider.js"></script>
+   <script src="/index.js"></script>
+   <script src="/slider.js"></script>
 
 </head>
 

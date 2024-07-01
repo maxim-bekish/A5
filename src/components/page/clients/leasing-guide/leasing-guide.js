@@ -13,9 +13,9 @@ $(document).ready(function () {
       });
    });
 
-   $('.leasing-guide__icon-down').click(function () {
+   $('.leasing-guide__list-title').click(function () {
       $(this).find('.js-svg-upend').toggleClass('rt180');
-      $(this).closest('.leasing-guide__list-title').next('.leasing-guide__text').toggleClass('open');
+      $(this).next('.leasing-guide__text').toggleClass('open');
    });
 
 

@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="src/components/page/program-leasing/production/production.css">
 <script src="src/components/page/program-leasing/production/production.js"></script>
 
@@ -44,7 +43,7 @@ include 'src/state/state.php';
                   <br>
                   менеджер перезвонит в ближайшее время
                </p>
-               <form class="js-myForm production__module-window__form">
+               <form class="js-myForm js-popApp-OK production__module-window__form">
                   <div class="form-items-100 form-gray production__module-window__form-items">
                      <div class="form-group production__module-window__form-group">
                         <input class="form-group__input name" name="name" id="production-name" type="text" placeholder="" required>
@@ -53,19 +52,22 @@ include 'src/state/state.php';
                         </label>
                      </div>
                      <div class="form-group production__module-window__form-group">
-                        <input class="form-group__input phone" name="phone" id="production-phone" type="tel" placeholder="" required>
-                        <label class="form-group__label" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" for="production-phone">
+                        <input class="form-group__input phone" name="phone"  pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" id="production-phone" type="tel" placeholder="" required>
+                        <label class="form-group__label" for="production-phone">
                            Телефон
                         </label>
                      </div>
                   </div>
+
+
                   <div class="checkbox checkbox--white production__module-window__checkbox">
                      <input class="custom-checkbox checkbox__input " type="checkbox" name="privacy_policy" id="free-production" required>
                      <label class="checkbox__label" for="free-production">
                         Согласен с политикой конфиденциальности
                      </label>
                   </div>
-                  <button class="button button--blue js-popUp-submitBtn  production__module-window__submitBtn" type="button" disabled>
+
+                  <button class="button button--blue js-popUp-submitBtn js-submitBtn " type="button">
                      Оставить заявку
                   </button>
                </form>

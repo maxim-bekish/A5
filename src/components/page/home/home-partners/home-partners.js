@@ -28,9 +28,9 @@ $(document).ready(function () {
       const lastGroup = groupedSlidesContainer.children().last();
       while (lastGroup && lastGroup.children().length < groupSize) {
          const placeholderDiv = $('<div>').addClass('slide-item').html(`
-             <img src="<?php echo SVG_PATH . 'custom-slider/' . $placeholder['image']; ?>" alt="<?php echo $placeholder['alt']; ?>">
-             <p><?php echo $placeholder['text']; ?></p>
-         `);
+               <img src="<?php echo htmlspecialchars(SVG_PATH . 'custom-slider/' . $placeholder['image']); ?>" alt="<?php echo htmlspecialchars($placeholder['alt']); ?>">
+               <p><?php echo htmlspecialchars($placeholder['text']); ?></p>
+            `);
          lastGroup.append(placeholderDiv);
       }
    }
@@ -69,6 +69,7 @@ $(document).ready(function () {
          });
       }
    }
+
    function partnersNextSlide() {
       if (!isAnimating) {
          isAnimating = true;

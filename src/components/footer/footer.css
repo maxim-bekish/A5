@@ -319,8 +319,7 @@
    .footer-up-column svg {
       top: 0;
       height: 310px;
-      width: 100%;
-      transform: translate(0, 0);
+      transform: translate(-20%, 0);
    }
 
    .footer-up-column h3 {
@@ -374,6 +373,7 @@
    .footer-list li p,
    .footer-list li a {
       text-wrap: wrap;
+      max-width: 85%;
    }
 
    .footer-list h5 a {

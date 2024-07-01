@@ -66,7 +66,7 @@
          </p>
       </li>
    </ul>
-   <form class="js-myForm partners-program__form">
+   <form class="js-myForm js-popApp-OK partners-program__form ">
       <h4 class="partners-program__title--form">
          Мы рады сотрудничеству. Оставьте заявку на партнерство
       </h4>
@@ -80,7 +80,7 @@
             <label for="email">Email</label>
          </div>
          <div class="form-group">
-            <input name="phone" id="phone" type="tel" placeholder="" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+            <input name="phone" class="phone" id="phone" type="tel" placeholder="" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
             <label for="phone">Телефон</label>
          </div>
          <div class="form-group">
@@ -98,7 +98,7 @@
       </div>
 
 
-      <button class="partners-program__button button button--blue js-submitBtn" type="button">
+      <button class="partners-program__button button button--blue js-popUp-submitBtn js-submitBtn" type="button">
          Оставить заявку
       </button>
    </form>

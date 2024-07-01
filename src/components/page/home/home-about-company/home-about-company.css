@@ -10,18 +10,15 @@
 }
 
 .about-home__box-title-heading {
-
    margin-top: 8px;
    min-width: 410px;
    font-size: 20px;
-
    line-height: 20.82px;
    text-align: left;
    color: var(--sky-blue);
 }
 
 .about-home__box-title-description {
-
    font-size: 70px;
    font-weight: var(--font-w5);
    line-height: 84px;

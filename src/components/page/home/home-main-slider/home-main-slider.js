@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    let speedAnimation = 1000;
-    let intervalAnimation = 11000;
-    let widthOneSlide = '100%';
+    let speedAnimation = 1000; // скорость перелистывания
+    let intervalAnimation = 3000;  // интервал перелистывания
+    let widthOneSlide = '1530px';
     let widthInactiveSlide = '130px';
     let widthZeroSlide = '0px';
     let isAnimating = false; // Флаг для отслеживания состояния анимации
@@ -12,12 +12,12 @@ $(document).ready(function () {
     let $lastSlideClone = $(".slide").last().clone();
     $slidesContainer.append($firstSlideClone);
     $slidesContainer.prepend($lastSlideClone);
-    
+
     // Инициализация начального состояния
     $('.main-slider-dot-item').first().addClass('main-slider-dot-active').css({ width: '60px', opacity: 1 });
     $('.main-slider-dot-item:not(.main-slider-dot-active)').css({ width: '20px', opacity: 0.7 });
     $(".slide").eq(1).addClass("slide--active").css("width", widthOneSlide);
-    
+
     if ($(window).width() > 768) {
         $firstSlideClone.hide();
         $lastSlideClone.hide();
@@ -33,13 +33,13 @@ $(document).ready(function () {
         function nextSlide() {
             if (isAnimating) return;
             isAnimating = true;
-
-            var $current = $(".slide--active");
-            var $next = $current.next(".slide").length ? $current.next(".slide") : $(".slide").first();
+            let $current = $(".slide--active");
+            let $next = $current.next(".slide").length ? $current.next(".slide") : $(".slide").first();
 
             $current.removeClass("slide--active").animate({ width: widthZeroSlide }, speedAnimation);
             $next.addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation, function () {
                 if ($next.is($firstSlideClone)) {
+                    $next.removeClass("slide--active");
                     $(".slide").eq(1).addClass("slide--active").css("width", widthOneSlide);
                     $firstSlideClone.css("width", widthZeroSlide);
                 } else if ($current.is($lastSlideClone)) {
@@ -54,11 +54,12 @@ $(document).ready(function () {
             if (isAnimating) return;
             isAnimating = true;
 
-            var $current = $(".slide--active");
-            var $prev = $current.prev(".slide").length ? $current.prev(".slide") : $(".slide").last();
+            let $current = $(".slide--active");
+            let $prev = $current.prev(".slide").length ? $current.prev(".slide") : $(".slide").last();
             $current.removeClass("slide--active").animate({ width: widthZeroSlide }, speedAnimation);
             $prev.addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation, function () {
                 if ($prev.is($lastSlideClone)) {
+                    $prev.removeClass("slide--active");
                     $(".slide").eq(-2).addClass("slide--active").css("width", widthOneSlide);
                     $lastSlideClone.css("width", widthZeroSlide);
                 } else if ($current.is($firstSlideClone)) {
@@ -83,7 +84,7 @@ $(document).ready(function () {
         setInterval(nextSlide, intervalAnimation);
 
         // Инициализация Hammer.js для обработки свайпов
-        var hammer = new Hammer($slidesContainer[0]);
+        let hammer = new Hammer($slidesContainer[0]);
         hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
         hammer.on("swiperight", () => prevSlide());
         hammer.on("swipeleft", () => nextSlide());

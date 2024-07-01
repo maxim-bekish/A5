@@ -102,8 +102,8 @@
          d="M-124.483 574.968H-199L16.5275 -12H89.8985L305.426 574.968H230.908L55.5058 80.8602H50.9201L-124.483 574.968ZM-96.9684 345.684H203.394V408.737H-96.9684V345.684Z"
          fill="#1454B8" />
    </symbol>
-   <symbol id="icon-closed" width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <path d="M2 2L30 30M30 2L2 30" stroke="#979797" stroke-width="3" />
+   <symbol id="icon-closed"  fill="none">
+      <path d="M2 2L30 30M30 2L2 30" stroke-width="3" />
    </symbol>
    <symbol id="icon-closed-24" fill="none">
       <path d="M2 2L22 22M22 2L2 22" stroke="#979797" stroke-width="3" />

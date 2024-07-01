@@ -5,7 +5,7 @@
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-closed-24"></use>
          </svg>
       </button>
-      <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+      <svg class="svg" width="140" height="140" viewBox="0 0 140 140" fill="none">
          <use href="<?php echo SVG_PATH; ?>icons.svg#icon-ok-big"></use>
       </svg>
       <h2 class="popUp-end__title">
@@ -17,16 +17,7 @@
 
 <script>
    $(document).ready(function() {
-      $('.js-popUp-submitBtn').click(function() {
-         $('.popUp-end-box').css('display', 'block');
-         $('.app').addClass('blurred');
-         $('body').css('overflow', 'hidden');
-      });
-      $('.js-popUp-closed').click(function() {
-         $('.popUp-end-box').css('display', 'none');
-         $('.app').removeClass('blurred');
-         $('body').css('overflow', 'auto');
-      });
+
    });
 </script>
 
@@ -71,5 +62,33 @@
       line-height: 60px;
       text-align: center;
       color: #0045B2;
+   }
+
+
+   @media (max-width: 1280px) {
+
+      .popUp-end {
+         width: 80%;
+         max-width: 588px;
+      }
+   }
+
+   @media (max-width: 430px) {
+      .popUp-end-box .svg {
+         width: 110px;
+         height: 110px;
+      }
+
+      .popUp-end {
+         padding: 50px;
+         width: 96%;
+         max-height: 472px;
+      }
+
+      .popUp-end__title {
+         font-size: 30px;
+         line-height: 36px;
+      }
+
    }
 </style>

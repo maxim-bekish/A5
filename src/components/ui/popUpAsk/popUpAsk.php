@@ -37,7 +37,7 @@
             Стать партнером
          </button>
       </div>
-      <form class="js-myForm-popup-ask">
+      <form class="js-myForm-popup-ask js-popApp-OK">
          <div class="popup-ask-newsletter-form">
             <div class="form-items-100 form-gray">
                <div class="form-group ">
@@ -45,7 +45,7 @@
                   <label for="name-ask">Ваше имя</label>
                </div>
                <div class="form-group ">
-                  <input name="tel" id="tel-ask" type="tel" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="" required>
+                  <input name="tel" id="tel-ask" class="phone" type="tel" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="" required>
                   <label for="tel-ask">Телефон</label>
                </div>
                <div class="form-group ">
@@ -59,7 +59,7 @@
                   Согласен с политикой конфиденциальности
                </label>
             </div>
-            <button class="button button--blue js-submitBtn-popup-ask">
+            <button type="button" class="button button--blue js-popUp-submitBtn js-submitBtn js-submitBtn-popup-ask">
                Отправить
             </button>
          </div>

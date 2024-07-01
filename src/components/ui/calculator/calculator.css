@@ -35,7 +35,7 @@
 }
 
 .calculator-range input[type="range"]::-webkit-slider-thumb:hover {
-   box-shadow: 0 0 0 10px rgba(54, 95, 161, 0.1)
+   box-shadow: 0 0 0 10px var(--shadow-blue);
 }
 
 

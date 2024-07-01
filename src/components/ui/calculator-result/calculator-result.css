@@ -184,7 +184,7 @@
 
    .leasing-calculator__header-value {
       font-size: 20px !important;
-      font-weight: 500 !important;
+      font-weight: var(--font-w5) !important;
       line-height: 24.2px !important;
    }
 
