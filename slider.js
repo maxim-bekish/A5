@@ -73,8 +73,8 @@ $(document).ready(function () {
 
          let isAnimating = false;
 
-         $slides.slice(0, 2).clone().appendTo($sliderContainer);
-         $slides.slice(-2).clone().prependTo($sliderContainer);
+         $slides.slice(0, 2).clone().addClass("clone").appendTo($sliderContainer);
+         $slides.slice(-2).clone().addClass("clone").prependTo($sliderContainer);
          $sliderContainer.css("left", -slideWidth * 2 + "px");
 
          function prevSlide() {

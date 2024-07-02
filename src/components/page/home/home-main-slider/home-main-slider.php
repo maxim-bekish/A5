@@ -6,25 +6,29 @@
 $mainSlider = array(
    array(
       "image" => "step-one.jpeg",
-      "href" => "program-leasing?section=used-products",
+      //"href" => "program-leasing?section=used-products",
+      "href" => "1",
       "title" => "Лизинг транспорта,<br> техники, б/у продукции",
       "description" => "description Минимальный аванс, любая стоимость",
    ),
    array(
       "image" => "step-two.jpeg",
-      "href" => "program-leasing?section=medical-equipment",
+      //"href" => "program-leasing?section=medical-equipment",
+      "href" => "2",
       "title" => "Лизинг медицинского <br> оборудования без НДС",
       "description" => "description с экспресс-оценкой организации",
    ),
    array(
       "image" => "step-three.jpeg",
-      "href" => "program-leasing?section=real-estate",
+      //"href" => "program-leasing?section=real-estate",
+      "href" => "3",
       "title" => "Гибкий график <br> платежей",
       "description" => "description с экспресс-оценкой организации",
    ),
    array(
       "image" => "step-four.jpeg",
-      "href" => "program-leasing?section=real-estate",
+      //"href" => "program-leasing?section=real-estate",
+      "href" => "4",
       "title" => "Возмещение части <br> авансового платежа",
       "description" => "description с экспресс-оценкой организации",
    ),

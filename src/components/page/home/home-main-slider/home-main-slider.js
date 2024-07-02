@@ -1,7 +1,7 @@
 function initCustomCursor($activeSlide) {
     const $customCursor = $('#customCursor');
     $('.slide').off('mouseenter mouseleave mousemove');
-    $customCursor.show();
+    //$customCursor.show();
     $activeSlide.on('mouseenter', function () {
         $customCursor.show();
     });
@@ -21,18 +21,15 @@ function initCustomCursor($activeSlide) {
             top: relativeY - 45 + 'px'
         });
     });
-    $activeSlide.on('click', function () {
-        const url = $(this).data('url');
-        window.location.href = url;
-    });
+
 
 }
 
 
 
 $(document).ready(function () {
-    let speedAnimation = 1000; // скорость перелистывания
-    let intervalAnimation = 3000;  // интервал перелистывания
+    let speedAnimation = 1000; // скорость перелистывания 1000 = 1s
+    let intervalAnimation = 8000;  // интервал перелистывания 3000 = 3s
     let widthOneSlide = '1530px';
     let widthInactiveSlide = '130px';
     let widthZeroSlide = '0px';
@@ -40,8 +37,8 @@ $(document).ready(function () {
 
     // Устанавливаем второй слайд активным при загрузке страницы
     let $slidesContainer = $(".main-slider__container");
-    let $firstSlideClone = $(".slide").first().clone();
-    let $lastSlideClone = $(".slide").last().clone();
+    let $firstSlideClone = $(".slide").first().clone().addClass('clone');
+    let $lastSlideClone = $(".slide").last().clone().addClass('clone');
     $slidesContainer.append($firstSlideClone);
     $slidesContainer.prepend($lastSlideClone);
 
@@ -57,10 +54,44 @@ $(document).ready(function () {
 
         // Инициализация кастомного курсора для первого активного слайда
         initCustomCursor($(".slide--active"));
+        let isAnimating = false;
+        let slideInterval;
 
-        // Обработка кликов на слайды
+        function goToNextSlide() {
+            if (isAnimating) return;
+
+            isAnimating = true;
+            let $currentSlide = $(".slide--active");
+            let $nextSlide = $currentSlide.next(".slide");
+
+            while ($nextSlide.hasClass("clone")) {
+                $nextSlide = $nextSlide.next(".slide");
+                if ($nextSlide.length === 0) {
+                    $nextSlide = $(".slide").first();
+                }
+            }
+
+            if ($nextSlide.length === 0) {
+                $nextSlide = $(".slide").first();
+            }
+
+            $currentSlide.removeClass("slide--active").animate({ width: widthInactiveSlide }, speedAnimation);
+            $nextSlide.addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation, function () {
+                isAnimating = false;
+                initCustomCursor($nextSlide);
+            });
+        }
+
         $(".slide").click(function () {
-            if (isAnimating || $(this).hasClass("slide--active")) return;
+            if (isAnimating) return;
+            if ($(this).hasClass("slide--active")) {
+                if ($(this).hasClass("slide--active")) {
+                    const url = $(this).data('url');
+                    console.log(url);
+                    window.location.href = url;
+                }
+                return;
+            }
 
             isAnimating = true;
             let $currentSlide = $(".slide--active");
@@ -71,7 +102,16 @@ $(document).ready(function () {
                 isAnimating = false;
                 initCustomCursor($nextSlide);
             });
+
+            clearInterval(slideInterval);
+            slideInterval = setInterval(goToNextSlide, intervalAnimation);
         });
+
+        // Запускаем автоматическое переключение слайдов каждые 3 секунды
+        slideInterval = setInterval(goToNextSlide, intervalAnimation);
+
+
+
 
     } else {
         function nextSlide() {
