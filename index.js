@@ -37,21 +37,15 @@ $(document).ready(function () {
    $('.mobile__select .js-open-select').click(function () {
       $(this).find('.js-svg-upend').toggleClass('rt180');
       $('.mobile__list-content').toggleClass("mobile__title--open");
-      $('.mobile__title p').toggleClass("mobile__title--closed");
    });
 
    $('.mobile__list-content--item').click(function () {
-      $('.mobile__select .js-open-select button').toggleClass('rt180');
+      $('.mobile__select .js-open-select svg').toggleClass('rt180');
       $('.mobile__list-content').toggleClass("mobile__title--open");
       $('.mobile__title p').text($(this).text());
-      $('.mobile__title p').removeClass("mobile__title--closed");
    });
 
 
-   //$(window).on('load', function () {
-   //   console.log("Window loaded, fading out loader-overlay");
-   //   $(".loader-overlay").fadeOut("slow");
-   //});
    $(window).on('load', function () {
       console.log("Window loaded, fading out loader-overlay");
       $(".loader-overlay").fadeOut("slow");

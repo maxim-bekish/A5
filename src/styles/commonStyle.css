@@ -412,11 +412,12 @@ img {
 
    .mobile__select .mobile__list-content {
       display: none;
-      border-left: 0;
       gap: 25px;
+      border: 1px solid var(--gray);
+      border-top: 0;
       flex-direction: column;
       margin: 0;
-      padding: 0;
+      padding: 15px;
    }
 
    .mobile__list-content .mobile__list-content--item {
@@ -440,11 +441,11 @@ img {
 
 
    .mobile__select {
-      padding: 15px;
+      /*padding: 15px;*/
       position: absolute;
       display: block;
       border-radius: 2px;
-      border: 1px solid var(--gray);
+
       background: var(--white);
       width: 96%;
       z-index: 9;
@@ -471,6 +472,9 @@ img {
 
    .mobile__title {
       display: flex;
+      padding: 15px;
+      /*border-bottom: 1px solid var(--gray);*/
+      border: 1px solid var(--gray);
    }
 
    .mobile__list-content--item p,
@@ -481,6 +485,7 @@ img {
       font-size: 18px !important;
       text-decoration: none !important;
       font-weight: var(--font-w4) !important;
+
    }
 
    .custom-slider__icon {
@@ -596,6 +601,7 @@ img {
       font-size: 16px !important;
       line-height: 20px !important;
    }
+
    .grid_1-3-box {
       grid-row-gap: 15px;
    }

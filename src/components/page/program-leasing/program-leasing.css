@@ -146,7 +146,9 @@
    }
 
 
-
+   .program-leasing-page__navigation ul li .program__navigation--active {
+      color: var(--medium-gray);
+   }
    .production__select {
       max-width: 100% !important;
    }

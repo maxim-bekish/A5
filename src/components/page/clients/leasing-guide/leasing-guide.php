@@ -136,11 +136,9 @@ $leasingGuide = [
    <div class="mobile__select">
       <div class="mobile__title js-open-select ">
          <p></p>
-         <button class="mobile__list-header" type="button">
             <svg class="rt0 js-svg-upend" width="14px" height="9px" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
             </svg>
-         </button>
       </div>
       <ul class="leasing-guide__buttons mobile__list-content">
          <?php foreach ($leasingGuide as $index => $el) : ?>
