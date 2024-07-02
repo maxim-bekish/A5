@@ -81,10 +81,14 @@ sliderCustom($content, 2);
          let $parent = $(this).parent();
          let $front = $parent.find('.slider__slide--front');
          let $back = $parent.find('.slider__slide--back');
+
+
          if ($front.hasClass('visible')) {
+            console.log(1)
             $front.removeClass('visible');
             $back.addClass('visible');
          } else {
+            console.log(2)
             $back.removeClass('visible');
             $front.addClass('visible');
          }

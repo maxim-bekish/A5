@@ -5,39 +5,39 @@
 <?php
 $slides = [
    [
-      "image" => "photo-1.png",
+      "image" => "people.jpeg",
       "name" => "Владимир Петров",
-      "jobTitle" => "1Генеральный директор",
+      "jobTitle" => "Генеральный директор",
    ],
    [
-      "image" => "photo-2.png",
-      "name" => "Вася Пупкин",
-      "jobTitle" => "2Генеральный директор",
+      "image" => "people.jpeg",
+      "name" => "Исаак Ньютон",
+      "jobTitle" => "физик, математик, механик и астроном",
    ],
    [
-      "image" => "photo-3.png",
-      "name" => "Вася Пупкин",
-      "jobTitle" => "3Генеральный директор",
+      "image" => "people.jpeg",
+      "name" => "Альберт Эйнштейн",
+      "jobTitle" => " физик-теоретик",
    ],
    [
-      "image" => "photo-4.png",
-      "name" => "Вася Пупкин",
-      "jobTitle" => "4Генеральный директор",
+      "image" => "people.jpeg",
+      "name" => "Джеймс Максвелл",
+      "jobTitle" => "физик, математик и механик",
    ],
    [
-      "image" => "photo-5.png",
-      "name" => "Вася Пупкин",
-      "jobTitle" => "5Генеральный директор",
+      "image" => "people.jpeg",
+      "name" => "Луи Пастер",
+      "jobTitle" => "химик, фармацевт и микробиолог",
    ],
    [
-      "image" => "photo-6.png",
-      "name" => "Вася Пупкин",
-      "jobTitle" => "6Генеральный директор",
+      "image" => "people.jpeg",
+      "name" => "Чарльз Дарвин",
+      "jobTitle" => "натуралист и путешественник",
    ],
    [
-      "image" => "photo-7.png",
-      "name" => "Вася Пупкин",
-      "jobTitle" => "7Генеральный директор",
+      "image" => "people.jpeg",
+      "name" => "Никола Тесла",
+      "jobTitle" => "инженер и физик-электроник, изобретатель",
    ],
 ];
 ?>
@@ -64,7 +64,7 @@ $slides = [
             <?php foreach ($slides as $slide) : ?>
                <div class="slider__slide" data-title="<?php echo htmlspecialchars($slide['name']); ?>" data-description="<?php echo htmlspecialchars($slide['jobTitle']); ?>">
                   <div class="slider__header">
-                     <img class="slider__image" src="<?php echo IMG_PATH . 'program-leasing-page/' . htmlspecialchars($slide['image']); ?>" alt="people">
+                     <img class="slider__image" src="<?php echo IMG_PATH . htmlspecialchars($slide['image']); ?>" alt="people">
                   </div>
                </div>
             <?php endforeach; ?>

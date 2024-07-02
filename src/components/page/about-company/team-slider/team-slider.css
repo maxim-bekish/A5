@@ -40,6 +40,8 @@
    height: 100%;
 }
 
+
+
 .team-slider .slider__title {
 
    font-size: 24px;
@@ -67,7 +69,7 @@
 
 .team-slider .slider__text:last-child {
    font-size: 20px;
-
+   max-width: 560px;
    line-height: 20px;
    color: var(--gray);
 }
@@ -101,6 +103,10 @@
    .team-slider .slider__header {
       width: 350px;
       height: 350px;
+   }
+
+   .team-slider .slider__text:last-child {
+      max-width: 350px;
    }
 
    .team-slider .slider__slide {

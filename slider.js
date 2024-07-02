@@ -74,18 +74,11 @@ $(document).ready(function () {
             slideCount = slideCount - 4;
          }
          $sliderContainer.css("left", (-slideWidth * 2) + "px");
-
-
          function nextSlide() {
             if (!isAnimating) {
                isAnimating = true;
-
                const currentLeft = parseInt($sliderContainer.css("left")) || 0;
                $sliderContainer.animate({ left: (currentLeft + step) + "px" }, timeAnimate, function () {
-
-                  console.log(slideCount)
-
-
                   if (parseInt($sliderContainer.css("left")) <= (-(slideCount + 1) * slideWidth)) {
                      $sliderContainer.css("left", (-slideWidth) + "px");
                   }
@@ -93,7 +86,6 @@ $(document).ready(function () {
                });
             }
          }
-
          function prevSlide() {
             if (!isAnimating) {
                isAnimating = true;
@@ -106,11 +98,8 @@ $(document).ready(function () {
                });
             }
          }
-
-
          $(this).find(".slider__button--prev").off('click').on('click', prevSlide);
          $(this).find(".slider__button--next").off('click').on('click', nextSlide);
-
          var hammer = new Hammer($sliderContainer[0]);
          hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
          hammer.off('swiperight').on('swiperight', prevSlide);

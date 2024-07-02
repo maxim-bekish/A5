@@ -1,7 +1,7 @@
 function initCustomCursor($activeSlide) {
     const $customCursor = $('#customCursor');
     $('.slide').off('mouseenter mouseleave mousemove');
-    //$customCursor.show();
+    $customCursor.hide();
     $activeSlide.on('mouseenter', function () {
         $customCursor.show();
     });
