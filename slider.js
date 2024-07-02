@@ -1,4 +1,5 @@
 $(document).ready(function () {
+   let flagResize = true;
    function debounce(func, wait, immediate) {
       var timeout;
       return function () {
@@ -13,10 +14,9 @@ $(document).ready(function () {
          if (callNow) func.apply(context, args);
       };
    }
-
    function updateSlider() {
-      $(".slider__custom").each(function () {
 
+      $(".slider__custom").each(function () {
          const $sliderContainer = $(this).find(".slider__container");
          const $sliderBox = $(this).find(".slider__box");
          const $sliderSlides = $(this).find(".slider__slide");
@@ -33,11 +33,6 @@ $(document).ready(function () {
             margin = 10;
             subtractMargin = 10;
             slide -= 1;
-         }
-         if ($(window).width() <= 0) {
-            if ($(this).closest('.thanks-box')) {
-               slide = 1;
-            }
          }
          if ($(window).width() <= 830) {
             if ($(this).closest('.thanks-box')) {
@@ -66,16 +61,38 @@ $(document).ready(function () {
          $sliderSlides.css("width", ($sliderBox.outerWidth() - subtractMargin) / slide);
 
          const $slides = $sliderContainer.children();
-         const slideCount = $slides.length;
+         let slideCount = $slides.length;
          const slideWidth = Math.ceil($sliderSlides.outerWidth(true));
          const step = -slideWidth;
          const timeAnimate = 700;
-
          let isAnimating = false;
+         if (flagResize) {
+            $slides.slice(0, 2).clone().addClass("clone").appendTo($sliderContainer);
+            $slides.slice(-2).clone().addClass("clone").prependTo($sliderContainer);
+            flagResize = false;
+         } else {
+            slideCount = slideCount - 4;
+         }
+         $sliderContainer.css("left", (-slideWidth * 2) + "px");
 
-         $slides.slice(0, 2).clone().addClass("clone").appendTo($sliderContainer);
-         $slides.slice(-2).clone().addClass("clone").prependTo($sliderContainer);
-         $sliderContainer.css("left", -slideWidth * 2 + "px");
+
+         function nextSlide() {
+            if (!isAnimating) {
+               isAnimating = true;
+
+               const currentLeft = parseInt($sliderContainer.css("left")) || 0;
+               $sliderContainer.animate({ left: (currentLeft + step) + "px" }, timeAnimate, function () {
+
+                  console.log(slideCount)
+
+
+                  if (parseInt($sliderContainer.css("left")) <= (-(slideCount + 1) * slideWidth)) {
+                     $sliderContainer.css("left", (-slideWidth) + "px");
+                  }
+                  isAnimating = false;
+               });
+            }
+         }
 
          function prevSlide() {
             if (!isAnimating) {
@@ -90,18 +107,6 @@ $(document).ready(function () {
             }
          }
 
-         function nextSlide() {
-            if (!isAnimating) {
-               isAnimating = true;
-               const currentLeft = parseInt($sliderContainer.css("left")) || 0;
-               $sliderContainer.animate({ left: (currentLeft + step) + "px" }, timeAnimate, function () {
-                  if (parseInt($sliderContainer.css("left")) <= -(slideCount + 1) * slideWidth) {
-                     $sliderContainer.css("left", -slideWidth + "px");
-                  }
-                  isAnimating = false;
-               });
-            }
-         }
 
          $(this).find(".slider__button--prev").off('click').on('click', prevSlide);
          $(this).find(".slider__button--next").off('click').on('click', nextSlide);
@@ -112,8 +117,6 @@ $(document).ready(function () {
          hammer.off('swipeleft').on('swipeleft', nextSlide);
       });
    }
-   updateSlider()
    var debouncedUpdateSlider = debounce(updateSlider, 400);
-
    $(window).on('resize', debouncedUpdateSlider).trigger('resize');
 });

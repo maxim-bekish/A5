@@ -5,37 +5,37 @@
 <?php
 $slides = [
    [
-      "image" => "people.jpeg",
+      "image" => "photo-1.png",
       "name" => "Владимир Петров",
       "jobTitle" => "1Генеральный директор",
    ],
    [
-      "image" => "people.jpeg",
+      "image" => "photo-2.png",
       "name" => "Вася Пупкин",
       "jobTitle" => "2Генеральный директор",
    ],
    [
-      "image" => "people.jpeg",
+      "image" => "photo-3.png",
       "name" => "Вася Пупкин",
       "jobTitle" => "3Генеральный директор",
    ],
    [
-      "image" => "people.jpeg",
+      "image" => "photo-4.png",
       "name" => "Вася Пупкин",
       "jobTitle" => "4Генеральный директор",
    ],
    [
-      "image" => "people.jpeg",
+      "image" => "photo-5.png",
       "name" => "Вася Пупкин",
       "jobTitle" => "5Генеральный директор",
    ],
    [
-      "image" => "people.jpeg",
+      "image" => "photo-6.png",
       "name" => "Вася Пупкин",
       "jobTitle" => "6Генеральный директор",
    ],
    [
-      "image" => "people.jpeg",
+      "image" => "photo-7.png",
       "name" => "Вася Пупкин",
       "jobTitle" => "7Генеральный директор",
    ],
@@ -64,7 +64,7 @@ $slides = [
             <?php foreach ($slides as $slide) : ?>
                <div class="slider__slide" data-title="<?php echo htmlspecialchars($slide['name']); ?>" data-description="<?php echo htmlspecialchars($slide['jobTitle']); ?>">
                   <div class="slider__header">
-                     <img class="slider__image" src="<?php echo IMG_PATH . htmlspecialchars($slide['image']); ?>" alt="people">
+                     <img class="slider__image" src="<?php echo IMG_PATH . 'program-leasing-page/' . htmlspecialchars($slide['image']); ?>" alt="people">
                   </div>
                </div>
             <?php endforeach; ?>
