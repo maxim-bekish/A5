@@ -19,6 +19,12 @@ $(document).ready(function () {
       $('.app').removeClass('blurred');
       $('body').css('overflow', 'auto');
    });
+   $('.bottom-select-ask').click(function () {
+      // Находим родителя и всех потомков с классом .bottom-select-ask
+      $(this).parent().find('.bottom-select-ask').removeClass('bottom-select-ask-active');
+      // Добавляем класс к текущему элементу
+      $(this).addClass('bottom-select-ask-active');
+  });
 
    function formatPhoneNumber(value) {
       if (!value) return '+7 '; // Если значение пустое, возвращаем "+7 "

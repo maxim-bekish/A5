@@ -47,9 +47,24 @@ $(document).ready(function () {
       $('.mobile__title p').removeClass("mobile__title--closed");
    });
 
+
+   //$(window).on('load', function () {
+   //   console.log("Window loaded, fading out loader-overlay");
+   //   $(".loader-overlay").fadeOut("slow");
+   //});
    $(window).on('load', function () {
+      console.log("Window loaded, fading out loader-overlay");
       $(".loader-overlay").fadeOut("slow");
    });
+
+   // Если страница не загружена за 4 секунды, скрываем спиннер
+   setTimeout(function () {
+      console.log("4 seconds passed, fading out loader-overlay");
+      $(".loader-overlay").fadeOut("slow");
+   }, 4000);
+
+
+
 
    $(window).resize(function () {
       if ($(window).width() >= 768) {
@@ -58,6 +73,12 @@ $(document).ready(function () {
       }
 
    });
+
+
+
+
+
+
 
 });
 

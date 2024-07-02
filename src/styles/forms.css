@@ -1,26 +1,12 @@
-/*--------------error-input--------------*/
-
-.submitted-error input:invalid+label {
-   color: var(--light-red) !important;
-}
-
-.submitted-error input:invalid {
-   border-color: var(--light-red) !important;
-}
-
-.form-group input:not(:placeholder-shown)+label {
-   opacity: 0;
-   transition: all 0.2s linear;
-}
-
-/*--------------error-input--------------*/
+/* Общие стили формы */
 .form-group {
    position: relative;
+   /*margin-bottom: 1.5em;*/
    height: 46px;
    display: flex;
 }
 
-form .form-items-100 {
+.form-items-100 {
    display: flex;
    flex-direction: column;
    gap: 40px;
@@ -28,7 +14,7 @@ form .form-items-100 {
    margin: 15px 0;
 }
 
-form .form-items-50 {
+.form-items-50 {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    grid-template-rows: repeat(2, 1fr);
@@ -37,181 +23,67 @@ form .form-items-50 {
    margin: 20px 0;
 }
 
-
-/* background-color form */
-form .form-blue {
-   background: var(--dark-blue);
-}
-
-form .form-blue input:-webkit-autofill {
-   caret-color: var(--white);
-   /* Устанавливает цвет курсора */
-   -webkit-box-shadow: 0 0 0 1000px var(--dark-blue) inset;
-   /* Устанавливает цвет фона для заполненного инпута */
-   box-shadow: 0 0 0 1000px var(--dark-blue) inset;
-   /* Устанавливает цвет фона для заполненного инпута */
-   -webkit-text-fill-color: var(--sky-blue);
-   /* Устанавливает цвет текста внутри заполненного инпута */
-}
-
-/* text-border */
 .form-group input {
-   padding: 0 0 7px 0;
+   width: 100%;
+   padding: 0px 10px 12px 0;
+   box-sizing: border-box;
+   border: none;
+   border-bottom: 1px solid var(--gray);
+   background: transparent;
+   color: var(--gray);
+   font-size: 16px;
+   line-height: 24px;
+   transition: all 0.3s ease;
    position: absolute;
    bottom: 0;
-   border: 0;
-   background: none;
    outline: 0 !important;
-
-   font-size: 16px;
-   font-weight: var(--font-w5);
-   line-height: 19.36px;
-   width: 100%;
-   color: var(--white);
-   border-bottom: 1px solid var(--sky-blue);
-   transition: all 0.2s linear;
 }
 
-/* text-border hover */
-.form-group:hover input {
-   transition: all 0.2s linear;
-   border-bottom: 1px solid var(--white);
-}
-
-/* placeholder*/
-.form-group label {
-   display: block;
-   opacity: 1;
-   position: absolute;
-   top: 15px;
-   left: 0;
-
-   font-size: 16px;
-
-   line-height: 19.36px;
-   color: var(--sky-blue);
-   transition: all 0.2s linear;
-}
-
-/*hover placeholder*/
-.form-group:hover label {
-   color: var(--white);
-}
-
-/* placeholder focus */
-.form-group input:focus~label {
-   font-size: 12px;
-   top: 0px;
-   line-height: 14.56px;
-   color: var(--sky-blue);
-   transition: all 0.2s linear;
-}
-
-/* text-border focus  */
 .form-group input:focus {
-   color: var(--white);
-   border-bottom: 1px solid var(--white);
+   border-bottom-color: var(--dark-blue);
+   outline: none;
 }
 
-
-/* form  color*/
-/* form  color*/
-/* form  color*/
-
-
-/* background-color-white form */
-form .form-white {
-   background: var(--white);
-}
-
-/* background-color-gray form */
-form .form-gray {
-   background: var(--light-gray);
-
-}
-
-/*  text-border  */
-.form-white .form-group input,
-.form-gray .form-group input {
-   color: var(--gray);
-   border-bottom: 1px solid var(--gray);
-}
-
-/* text-border hover */
-.form-white .form-group:hover input,
-.form-gray .form-group:hover input,
-/* text-border focus  */
-.form-white .form-group input:focus,
-.form-gray .form-group input:focus {
-   color: var(--dark-blue);
-   border-bottom: 1px solid var(--dark-blue);
-}
-
-/* placeholder*/
-.form-white .form-group label,
-.form-gray .form-group label {
-   color: var(--gray);
-}
-
-/* hover placeholder*/
-.form-white .form-group:hover label,
-.form-gray .form-group:hover label,
-/* placeholder focus */
-.form-white .form-group input:focus~label,
-.form-gray .form-group input:focus~label {
+.form-group input:focus+label {
+   top: 14px;
    color: var(--dark-blue);
 }
 
+.form-group input:not(:placeholder-shown)+label {
+   color: var(--dark-blue);
+   opacity: 0;
 
-
-
-.form-white .form-group input:-webkit-autofill {
-   caret-color: var(--black);
-   /* Устанавливает цвет курсора */
-   -webkit-box-shadow: 0 0 0 1000px var(--white) inset;
-   /* Устанавливает цвет фона для заполненного инпута */
-   box-shadow: 0 0 0 1000px var(--white) inset;
-   /* Устанавливает цвет фона для заполненного инпута */
-   -webkit-text-fill-color: var(--dark-blue);
-
-   /* Устанавливает цвет текста внутри заполненного инпута */
 }
 
-.form-gray .form-group input:-webkit-autofill {
-   caret-color: var(--black);
-   /* Устанавливает цвет курсора */
-   -webkit-box-shadow: 0 0 0 1000px var(--light-gray) inset;
-   /* Устанавливает цвет фона для заполненного инпута */
-   box-shadow: 0 0 0 1000px var(--light-gray) inset;
-   /* Устанавливает цвет фона для заполненного инпута */
-   -webkit-text-fill-color: var(--dark-blue);
-   /* Устанавливает цвет текста внутри заполненного инпута */
+.form-group label {
+   position: absolute;
+   top: 10px;
+   left: 0;
+   font-size: 16px;
+   color: var(--gray);
+   pointer-events: none;
+   transition: all 0.3s ease;
 }
 
+.form-group input:placeholder-shown+label {
+   top: 14px;
+}
 
+/* Стили для состояния ошибки */
+.submitted-error input:invalid+label {
+   color: var(--light-red) !important;
+}
 
+.submitted-error input:invalid {
+   border-color: var(--light-red) !important;
+}
 
-/* form  color*/
-/* form  color*/
-/* form  color*/
-
-
-
-
-
-
-
-
-
-
-/* custom-checkbox */
-
+/* Стили чекбокса */
 .custom-checkbox {
    position: absolute;
    z-index: -1;
    opacity: 0;
 }
-
 
 .custom-checkbox+label::before,
 .custom-checkbox-error+label::before {
@@ -239,7 +111,6 @@ form .form-gray {
    transition: all 0.2s linear;
 }
 
-
 .custom-checkbox:checked+label::before {
    background-image: url("/src/assets/images/svg/checkbox/ok-white.svg");
 }
@@ -248,15 +119,18 @@ form .form-gray {
    background-image: url("/src/assets/images/svg/checkbox/ok-gray.svg");
 }
 
-
-/* ------------------------------------ */
-
-
 .checkbox--blue label {
    color: var(--sky-blue);
 }
 
-.checkbox--blue label:hover {
+@media (hover: hover) {
+
+   .checkbox--blue label:hover {
+      color: var(--white);
+   }
+}
+
+.checkbox--blue label:active {
    color: var(--white);
 }
 
@@ -273,14 +147,17 @@ form .form-gray {
    background-color: var(--blue);
 }
 
-
-
-/* ----------------- */
 .checkbox--white label {
    color: var(--gray);
 }
 
-.checkbox--white label:hover {
+@media (hover: hover) {
+   .checkbox--white label:hover {
+      color: var(--medium-gray);
+   }
+}
+
+.checkbox--white label:active {
    color: var(--medium-gray);
 }
 
@@ -288,7 +165,13 @@ form .form-gray {
    border: 1px solid var(--gray);
 }
 
-.checkbox--white:hover label::before {
+@media (hover: hover) {
+   .checkbox--white:hover label::before {
+      border: 1px solid var(--medium-gray);
+   }
+}
+
+.checkbox--white:active label::before {
    border: 1px solid var(--medium-gray);
 }
 
@@ -297,15 +180,17 @@ form .form-gray {
    background-color: var(--blue);
 }
 
-.checkbox--white:hover input:checked+label::before {
-   border: 1px solid transparent;
-   background-color: var(--dark-blue);
-
+@media (hover: hover) {
+   .checkbox--white:hover input:checked+label::before {
+      border: 1px solid transparent;
+      background-color: var(--dark-blue);
+   }
 }
 
-
-
-/* error no checked  */
+.checkbox--white:active input:checked+label::before {
+   border: 1px solid transparent;
+   background-color: var(--dark-blue);
+}
 
 .submitted-error .checkbox label::before {
    border: 1px solid var(--light-red);
@@ -328,36 +213,155 @@ form .form-gray {
    background-color: var(--silver);
 }
 
-/*.checkbox label,*/
+/* Стили для autofill */
+.form-group input:-webkit-autofill {
+   caret-color: var(--gray);
+   -webkit-box-shadow: 0 0 0 1000px var(--light-gray) inset;
+   box-shadow: 0 0 0 1000px var(--light-gray) inset;
+   -webkit-text-fill-color: var(--dark-blue);
+   font-size: 16px;
+}
 
+/* Стили для фона формы */
+.form-blue .form-group input {
+   border-bottom: 1px solid var(--sky-blue);
+   background: var(--transparent);
+   color: var(--sky-blue);
+}
 
+@media (hover: hover) {
+   .form-blue .form-group input:hover {
+      color: var(--white);
+      border-bottom: 1px solid var(--white);
+   }
 
-/* custom-checkbox */
+   .form-blue .form-group input:hover+label {
+      color: var(--white);
+   }
+}
 
-@media(max-width:1280px) {
-   form .form-items-50 {
+.form-blue .form-group input:active {
+   color: var(--white);
+   border-bottom: 1px solid var(--white);
+}
+
+.form-blue .form-group input:active+label {
+   color: var(--white);
+}
+
+.form-blue .form-group label {
+   color: var(--sky-blue);
+
+}
+
+form .form-group input:focus+label {
+   color: transparent !important;
+}
+
+.form-blue input:-webkit-autofill {
+   caret-color: var(--white);
+   -webkit-box-shadow: 0 0 0 1000px var(--dark-blue) inset;
+   box-shadow: 0 0 0 1000px var(--dark-blue) inset;
+   -webkit-text-fill-color: var(--white);
+   font-size: 16px;
+}
+
+.form-white {
+   background: var(--white);
+}
+
+.form-white .form-group input {
+   color: var(--gray);
+   border-bottom: 1px solid var(--gray);
+}
+
+.form-white .form-group:hover input {
+   border-bottom: 1px solid var(--dark-blue);
+}
+
+.form-white .form-group input:focus {
+   color: var(--dark-blue);
+   border-bottom: 1px solid var(--dark-blue);
+}
+
+.form-white .form-group label {
+   color: var(--gray);
+}
+
+.form-white .form-group:hover label {
+   color: var(--dark-blue);
+}
+
+.form-white .form-group input:focus+label {
+   color: var(--dark-blue);
+}
+
+.form-white .form-group input:-webkit-autofill {
+   caret-color: var(--black);
+   -webkit-box-shadow: 0 0 0 1000px var(--white) inset;
+   box-shadow: 0 0 0 1000px var(--white) inset;
+   -webkit-text-fill-color: var(--dark-blue);
+   font-size: 16px;
+}
+
+.form-gray {
+   background: var(--light-gray);
+}
+
+.form-gray .form-group input {
+   color: var(--gray);
+   border-bottom: 1px solid var(--gray);
+}
+
+.form-gray .form-group:hover input {
+   border-bottom: 1px solid var(--dark-blue);
+}
+
+.form-gray .form-group input:focus {
+   color: var(--dark-blue);
+   border-bottom: 1px solid var(--dark-blue);
+}
+
+.form-gray .form-group label {
+   color: var(--gray);
+}
+
+.form-gray .form-group:hover label {
+   color: var(--dark-blue);
+}
+
+.form-gray .form-group input:focus+label {
+   color: var(--dark-blue);
+}
+
+.form-gray .form-group input:-webkit-autofill {
+   caret-color: var(--black);
+   -webkit-box-shadow: 0 0 0 1000px var(--light-gray) inset;
+   box-shadow: 0 0 0 1000px var(--light-gray) inset;
+   -webkit-text-fill-color: var(--dark-blue);
+   font-size: 16px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1280px) {
+   .form-items-50 {
       grid-template-columns: repeat(1, 1fr);
    }
 }
 
 @media (max-width: 768px) {
    .form-group label {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 16.94px;
    }
 
-   form .form-items-50 {
+   .form-items-50 {
       grid-row-gap: 20px;
    }
 
    .checkbox label,
    .checkbox input:checked+label {
-      /*color: var(--sky-blue);*/
-      font-size: 12px;
+      font-size: 16px;
       line-height: 15.12px;
-   }
-
-   .checkbox label:hover {
-      /*color: var(--sky-blue);*/
    }
 }

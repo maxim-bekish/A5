@@ -1,13 +1,15 @@
 :root {
-   --animate: 2s ease-in-out;
+   --animate: 1s linear;
 }
 
 .main-slider {
+   position: relative;
    display: flex;
 }
 
 .slide {
-   position: relative;
+   /*position: relative;*/
+   /*transition: all 1s ease-in;*/
    height: 800px;
    display: flex;
    align-items: flex-end;
@@ -20,7 +22,9 @@
 }
 
 .slide--active {
-   z-index: 99;
+   position: relative;
+   z-index: 111;
+   cursor: none;
 }
 
 .main-slider__container {
@@ -29,11 +33,52 @@
 }
 
 
+.custom-cursor {
+   width: 90px;
+   height: 90px;
+   background-color: var(--white);
+   position: absolute;
+   z-index: 999;
+   border-radius: 50%;
+   pointer-events: none;
+   /* Чтобы курсор не мешал навигации */
+   display: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+.custom-cursor p {
+   font-size: 14px;
+   color: rgba(0, 69, 178, 1);
+}
+
+.slide:nth-child(2) div {
+   background-color: rgba(0, 78, 200, 1);
+}
+
+.slide:nth-child(3) div {
+   background-color: rgba(0, 69, 178, 1);
+}
+
+.slide:nth-child(4) div {
+   background-color: rgba(0, 58, 149, 1);
+}
+
+.slide:nth-child(5) div {
+   background-color: rgba(0, 48, 124, 1);
+}
+
+.slider .slide--active .slide__content-text {
+   background-color: transparent !important;
+}
+
 /* ---------- */
 
 .slide__content-text {
    display: flex;
-   position: absolute;
+   /*position: absolute;*/
    flex-direction: column;
    width: 100vw;
    justify-content: flex-end;
@@ -44,7 +89,6 @@
 
 .slide:not(.slide--active) .slide__content-text {
    padding: 0 0 40px 20px;
-   background-color: var(--dark-blue);
    gap: 0px;
 }
 
@@ -60,7 +104,7 @@
    font-size: 70px;
    font-weight: var(--font-w5);
    line-height: 84px;
-
+   width: 80vh;
    transition: all var(--animate);
 }
 
@@ -132,7 +176,7 @@
       line-height: 50px !important;
    }
 
-   .slide__text {
+   .slide__text,.custom-cursor {
       display: none;
    }
 
@@ -152,7 +196,7 @@
       position: absolute;
       transform: translate(-50%, -30px);
       left: 50%;
-      z-index: 99;
+      z-index: 150;
    }
 
    .main-slider-dot div {

@@ -45,6 +45,7 @@
    .about-leasing__subsidies h3 {
       font-size: 50px;
       line-height: 60px;
+      margin-bottom: 60px;
    }
 }
 
@@ -56,7 +57,7 @@
    }
 
    .about-leasing__subsidies--item {
-      padding: 40px 10px;
+      padding: 40px 0px;
    }
 
    .about-leasing__subsidies--item-title {

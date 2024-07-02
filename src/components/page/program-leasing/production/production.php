@@ -46,13 +46,13 @@ include 'src/state/state.php';
                <form class="js-myForm js-popApp-OK production__module-window__form">
                   <div class="form-items-100 form-gray production__module-window__form-items">
                      <div class="form-group production__module-window__form-group">
-                        <input class="form-group__input name" name="name" id="production-name" type="text" placeholder="" required>
+                        <input class="form-group__input name" name="name" id="production-name" type="text" placeholder=" " required>
                         <label class="form-group__label" for="production-name">
                            Ваше имя
                         </label>
                      </div>
                      <div class="form-group production__module-window__form-group">
-                        <input class="form-group__input phone" name="phone"  pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" id="production-phone" type="tel" placeholder="" required>
+                        <input class="form-group__input phone" name="phone"  pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" id="production-phone" type="tel" placeholder=" " required>
                         <label class="form-group__label" for="production-phone">
                            Телефон
                         </label>

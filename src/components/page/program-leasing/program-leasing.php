@@ -32,7 +32,7 @@ $programLeasingData = [
       "suppliers" => [
          "20-mezcentr.svg",
          "8-pkuspt.svg",
- 
+
       ]
    ],
    [
@@ -73,7 +73,7 @@ $programLeasingData = [
       "asideTitle" => "Спецтехника",
       "section" => "special-equipment",
       "image" => "photo-3.png",
-      "title" => "Своя спецтехника — \n свой вектор развития",
+      "title" => "Своя спецтехника —\nсвой вектор развития",
       "text" => "У нас представлена техника под любой запрос бизнеса и производства: сельхоз, лесозаготовительная, дорожная, строительная, коммунальная, складская и др. \n\n  Мы сотрудничаем только с надёжными производителями, поставляющими качественные машины: Zoomlion, УралСпецТранс, АГРО-Лидер, ТрансЛифтТехника, МАЗ Центр Челябинск, ПК УСПТ, ЛБР, Агродок, 1-Я ОПАЛУБОЧНАЯ КОМПАНИЯ.",
       "obtainingLeasing" => [
          "minAdvance" => 5,
@@ -324,7 +324,7 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
       </div>
       <div class="obtaining-leasing__content">
          <div class="obtaining-leasing__content--item">
-            <h4><?php echo htmlspecialchars($activeProgram['obtainingLeasing']['minAdvance']) . '%'; ?></h4>
+            <h4>от <?php echo htmlspecialchars($activeProgram['obtainingLeasing']['minAdvance']) . '%'; ?></h4>
             <p>Минимальный аванс</p>
          </div>
          <div class="obtaining-leasing__content--item">

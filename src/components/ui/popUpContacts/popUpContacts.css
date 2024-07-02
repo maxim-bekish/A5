@@ -55,15 +55,32 @@
    justify-content: center;
 }
 
+@media (hover: hover) {
+
+   /* radio hover внутрений круг */
+   .custom-radio:hover input[type="radio"]~.radio-checkmark::before {
+      display: block;
+      background-color: var(--gray);
+      opacity: .2;
+   }
+
+   /* radio hover+checked внутрений круг */
+   .custom-radio:hover input[type="radio"]:checked~.radio-checkmark::before {
+      display: block;
+      background-color: var(--dark-blue);
+      opacity: 0.1;
+   }
+}
+
 /* radio hover внутрений круг */
-.custom-radio:hover input[type="radio"]~.radio-checkmark::before {
+.custom-radio:active input[type="radio"]~.radio-checkmark::before {
    display: block;
    background-color: var(--gray);
    opacity: .2;
 }
 
 /* radio hover+checked внутрений круг */
-.custom-radio:hover input[type="radio"]:checked~.radio-checkmark::before {
+.custom-radio:active input[type="radio"]:checked~.radio-checkmark::before {
    display: block;
    background-color: var(--dark-blue);
    opacity: 0.1;
@@ -233,7 +250,7 @@
    .popup-contacts-tel {
       margin-bottom: 40px;
    }
-   
+
    .popup-contacts-tel a {
       font-size: 40px;
       line-height: 40px;
@@ -258,14 +275,57 @@
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 700px) {
+
+   .popup-contacts-contacts p,
+   .popup-contacts-contacts a,
+   .popup-contacts-contacts-network a,
+   .popup-contacts-contacts h5,
+   .popup-contacts-newsletter p {
+      font-size: 16px;
+      line-height: 17px;
+      margin-bottom: 15px;
+   }
+
+   .popup-contacts-tel {
+      margin-bottom: 25px;
+   }
+
+   .custom-radio .radio-checkmark {
+      width: 14px;
+      height: 14px;
+      transform: translate(40%, 15%);
+   }
+
+   .custom-radio .radio-checkmark::after {
+
+      width: 6px;
+      height: 6px;
+   }
+
+   .custom-radio .radio-checkmark::before {
+      width: 23px;
+      height: 23px;
+   }
+}
+
+@media (max-width: 440px) {
+   .popup-contacts-newsletter-form {
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   .popup-contacts-newsletter .popup-contacts-newsletter-form .button {
+      max-width: 100%;
+   }
+
    .custom-radio .text-html {
       font-size: 16px;
       line-height: 16.64px;
    }
 
    .popup-contacts .popup-contacts-radio {
-      margin: 30px 0 50px 0;
+      margin: 15px 0 30px 0;
    }
 
    .popup-contacts-contacts-office {
@@ -283,7 +343,7 @@
    }
 
    .popup-contacts-tel {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
    }
 
    .popup-contacts-contacts h5 {
@@ -299,8 +359,21 @@
       line-height: 14.56px;
    }
 
+   .popup-contacts-newsletter-form .form-group {
+      height: 40px !important;
+   }
+
+   .popup-contacts-newsletter-form .form-group input {
+      padding: 0 0 6px 0px;
+   }
+
+   .popup-contacts-newsletter-form .form-group input:placeholder-shown+label {
+      top: 19px;
+   }
+
    .popup-contacts-map {
-      margin: 30px 0 20px 0;
+      max-height: 200px;
+      margin: 20px 0 10px 0;
    }
 
    .popup-contacts-newsletter p {
@@ -318,6 +391,39 @@
    }
 
    .popup-contacts-contacts-office .working-hours {
-      margin: 25px 0 30px 0;
+      margin: 20px 0 20px 0;
    }
+}
+
+
+@media (max-height: 690px) {
+   .popup-contacts .popup-contacts-radio {
+      margin: 15px 0 20px 0 !important;
+   }
+
+   .popup-contacts .popup-contacts-radio {
+      margin: 15px 0 20px !important;
+   }
+
+   .popup-contacts-contacts-office .working-hours {
+      margin: 15px 0 20px 0 !important;
+   }
+   .popUp__sidebar-box{
+      overflow: auto;
+   }
+   .popup-contacts-tel a {
+      line-height: auto;
+      font-size: 25px;
+
+   }
+
+   .popup-contacts-contacts p,
+   .popup-contacts-contacts a,
+   .popup-contacts-contacts-network a,
+   .popup-contacts-contacts h5,
+   .popup-contacts-newsletter p {
+
+      margin-bottom: 15px;
+   }
+
 }

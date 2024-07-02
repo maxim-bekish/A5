@@ -22,6 +22,10 @@
    background-color: var(--blue);
 }
 
+.logoGM {
+   width: auto;
+}
+
 .footer-up-column,
 .footer-down-column {
    width: calc(50% - 20px);
@@ -177,10 +181,14 @@
       gap: 20px;
    }
 
-   /*.footer-up,
+   .footer-up,
    .footer-down {
-      gap: 0;
-   }*/
+      min-height: auto;
+   }
+
+   .footer-down-row {
+      padding-bottom: 20px;
+   }
 
    .footer-up {
       position: relative;
@@ -386,4 +394,12 @@
       gap: 44px;
    }
 
+   .footer-down-row div:last-child {
+      width: 100%;
+      gap: 10px;
+   }
+
+   .footer-down-row div:last-child p {
+      width: 50%;
+   }
 }

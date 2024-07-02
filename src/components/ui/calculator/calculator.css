@@ -131,6 +131,12 @@
    .value {
       text-wrap: nowrap;
    }
+}
+
+@media(max-width:1680px) {
+   .calculator-range .item-header p:first-child {
+      font-size: 14px;
+   }
 
    .calculator-item:first-child div:first-child p:first-child {
       max-width: 173px;

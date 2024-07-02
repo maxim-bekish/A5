@@ -26,6 +26,7 @@
       display: none;
       width: 100vw;
       height: 100vh;
+      min-height: -webkit-fill-available;
       z-index: 9999999;
       position: fixed;
       background-color: #9797974D;

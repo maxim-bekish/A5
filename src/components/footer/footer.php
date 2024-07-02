@@ -11,23 +11,23 @@
          </h3>
       </div>
 
-      <form class="js-myForm footer-up-column js-popApp-OK">
+      <form class="js-myForm footer-up-column  js-popApp-OK">
          <h4>Получите бесплатную <br> консультацию</h4>
-         <div class="form-items-50 ">
+         <div class="form-items-50 form-blue ">
             <div class="form-group">
-               <input name="name" id="name" type="text" placeholder="" required>
+               <input name="name" id="name" type="text" placeholder=" " required>
                <label for="name">Ваше имя</label>
             </div>
             <div class="form-group">
-               <input name="email" id="email" type="email" placeholder="" required>
+               <input name="email" id="email" type="email" placeholder=" " required>
                <label for="email">Email</label>
             </div>
             <div class="form-group">
-               <input class="phone" name="phone" id="phone" type="tel" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="" required>
+               <input class="phone" name="phone" id="phone" type="tel" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder=" " required>
                <label for="phone">Телефон</label>
             </div>
             <div class="form-group">
-               <input name="company" id="company" type="text" placeholder="">
+               <input name="company" id="company" type="text" placeholder=" ">
                <label for="company">Компания</label>
             </div>
          </div>
@@ -42,7 +42,7 @@
 
 
          <button class="button button--white js-submitBtn js-popUp-submitBtn" type="button">
-            Получить предложение
+            Получить консультацию
          </button>
       </form>
 
@@ -213,9 +213,7 @@
       </div>
       <div>
          <p>Разработка сайта</p>
-         <svg width="201" height="26" viewBox="0 0 201 26">
-            <use href="<?php echo SVG_PATH; ?>icons.svg#icon-logo-site "></use>
-         </svg>
+         <img class="logoGM" src="<?php echo SVG_PATH; ?>logoGM.svg" alt="logoGM">
       </div>
    </section>
 </footer>

@@ -39,6 +39,16 @@ $(document).ready(function () {
                slide = 1;
             }
          }
+         if ($(window).width() <= 830) {
+            if ($(this).closest('.thanks-box')) {
+               slide = 2;
+            }
+         }
+         if ($(window).width() <= 600) {
+            if ($(this).closest('.thanks-box')) {
+               slide = 1;
+            }
+         }
          if ($(window).width() <= 430) {
             margin = 10;
             subtractMargin = 10;

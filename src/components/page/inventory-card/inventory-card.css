@@ -96,6 +96,10 @@
       grid-template-columns: 1fr;
    }
 
+   .card__image-container {
+      height: 500px;
+   }
+
    .card__title__mobile {
       font-size: 40px;
       line-height: 41.63px;

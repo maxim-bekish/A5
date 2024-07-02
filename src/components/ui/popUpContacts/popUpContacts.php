@@ -80,7 +80,7 @@ $state = [
             <div class="popup-contacts-newsletter-form">
                <div class="form-items-100 form-gray input">
                   <div class="form-group">
-                     <input name="email" id="email" type="email" placeholder="" required>
+                     <input name="email" id="email" type="email" placeholder=" " required>
                      <label for="email">Email</label>
                   </div>
                </div>

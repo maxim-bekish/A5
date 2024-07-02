@@ -7,7 +7,7 @@
    <div class="popUp__sidebar-box">
 
       <button class="popUp__sidebar-closed">
-         <svg width="32" height="32" viewBox="0 0 32 32">
+         <svg >
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-closed"></use>
          </svg>
       </button>
@@ -24,32 +24,32 @@
          </p>
       </div>
       <div class="popup-ask-buttons">
-         <button type="button" class="button button--outline">
+         <button type="button" class="button button--outline bottom-select-ask">
             Консультация по лизингу
          </button>
-         <button type="button" class="button button--outline">
+         <button type="button" class="button button--outline bottom-select-ask ">
             Бухгалтерия
          </button>
-         <button type="button" class="button button--outline">
+         <button type="button" class="button button--outline bottom-select-ask ">
             Получить коммерческое предложение
          </button>
-         <button type="button" class="button button--outline">
+         <button type="button" class="button button--outline bottom-select-ask ">
             Стать партнером
          </button>
       </div>
       <form class="js-myForm-popup-ask js-popApp-OK">
          <div class="popup-ask-newsletter-form">
             <div class="form-items-100 form-gray">
-               <div class="form-group ">
-                  <input name="name" id="name-ask" type="text" placeholder="" required>
+               <div class="form-group">
+                  <input name="name" id="name-ask" type="text" placeholder=" " required>
                   <label for="name-ask">Ваше имя</label>
                </div>
                <div class="form-group ">
-                  <input name="tel" id="tel-ask" class="phone" type="tel" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="" required>
+                  <input name="tel" id="tel-ask" class="phone" type="tel" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder=" " required>
                   <label for="tel-ask">Телефон</label>
                </div>
                <div class="form-group ">
-                  <input name="ask" id="ask" type="text" placeholder="">
+                  <input name="ask" id="ask" type="text" placeholder=" ">
                   <label for="ask">Задайте вопрос или опишите проблему...</label>
                </div>
             </div>
@@ -64,6 +64,8 @@
             </button>
          </div>
       </form>
+ 
+
 
 
    </div>

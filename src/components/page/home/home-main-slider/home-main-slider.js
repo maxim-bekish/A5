@@ -1,3 +1,35 @@
+function initCustomCursor($activeSlide) {
+    const $customCursor = $('#customCursor');
+    $('.slide').off('mouseenter mouseleave mousemove');
+    $customCursor.show();
+    $activeSlide.on('mouseenter', function () {
+        $customCursor.show();
+    });
+
+    $activeSlide.on('mouseleave', function () {
+        $customCursor.hide();
+    });
+
+
+    $activeSlide.on('mousemove', function (e) {
+        const mainBlockOffset = $activeSlide.parent().offset();
+        const relativeX = e.pageX - mainBlockOffset.left;
+        const relativeY = e.pageY - mainBlockOffset.top;
+
+        $customCursor.css({
+            left: relativeX - 45 + 'px',
+            top: relativeY - 45 + 'px'
+        });
+    });
+    $activeSlide.on('click', function () {
+        const url = $(this).data('url');
+        window.location.href = url;
+    });
+
+}
+
+
+
 $(document).ready(function () {
     let speedAnimation = 1000; // скорость перелистывания
     let intervalAnimation = 3000;  // интервал перелистывания
@@ -18,17 +50,29 @@ $(document).ready(function () {
     $('.main-slider-dot-item:not(.main-slider-dot-active)').css({ width: '20px', opacity: 0.7 });
     $(".slide").eq(1).addClass("slide--active").css("width", widthOneSlide);
 
+
     if ($(window).width() > 768) {
         $firstSlideClone.hide();
         $lastSlideClone.hide();
+
+        // Инициализация кастомного курсора для первого активного слайда
+        initCustomCursor($(".slide--active"));
+
+        // Обработка кликов на слайды
         $(".slide").click(function () {
-            if (isAnimating) return;
+            if (isAnimating || $(this).hasClass("slide--active")) return;
+
             isAnimating = true;
-            $(".slide").not(this).removeClass("slide--active").animate({ width: widthInactiveSlide }, speedAnimation);
-            $(this).addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation, function () {
+            let $currentSlide = $(".slide--active");
+            let $nextSlide = $(this);
+
+            $currentSlide.removeClass("slide--active").animate({ width: widthInactiveSlide }, speedAnimation);
+            $nextSlide.addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation, function () {
                 isAnimating = false;
+                initCustomCursor($nextSlide);
             });
         });
+
     } else {
         function nextSlide() {
             if (isAnimating) return;
@@ -81,6 +125,11 @@ $(document).ready(function () {
             $('.main-slider-dot-item').eq(actualIndex).stop(true, true).addClass('main-slider-dot-active').animate({ width: '60px', opacity: 1 }, speedAnimation);
         }
 
+        $(".slide").on('click', function () {
+            const url = $(this).data('url');
+            window.location.href = url;
+        });
+
         setInterval(nextSlide, intervalAnimation);
 
         // Инициализация Hammer.js для обработки свайпов
@@ -89,4 +138,11 @@ $(document).ready(function () {
         hammer.on("swiperight", () => prevSlide());
         hammer.on("swipeleft", () => nextSlide());
     }
+
+
+
 });
+
+
+
+

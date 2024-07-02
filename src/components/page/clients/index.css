@@ -3,3 +3,6 @@
 .clients-partners-program__content {
    position: relative;
 }
+.clients-partners-program{
+gap: 0;
+}

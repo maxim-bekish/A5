@@ -1,5 +1,6 @@
 .partners-program .partners-program__img {
    height: 571px;
+   overflow: hidden;
 }
 
 .partners-program__list {
@@ -7,8 +8,12 @@
 }
 
 .partners-program .partners-program__img img {
-   height: 100%;
+   /*height: 100%;*/
    object-fit: cover;
+   scale: 1.15;
+   aspect-ratio: 2;
+   position: relative;
+   top: 30px;
    object-position: top;
 }
 
@@ -38,6 +43,9 @@
 
 
 @media (max-width:1280px) {
+   .partners-program .partners-program__img {
+      height: 500px;
+   }
 
    .partners-program__title {
       font-size: 50px;
@@ -52,9 +60,7 @@
       grid-template-columns: repeat(2, 1fr) !important;
    }
 
-   .partners-program__button {
-      max-width: 100%;
-   }
+
 }
 
 
@@ -64,6 +70,10 @@
       font-size: 30px;
       line-height: 36px;
       margin: 30px 0 20px 0;
+   }
+
+   .partners-program__button {
+      max-width: 100%;
    }
 
    .partners-program .partners-program__img {

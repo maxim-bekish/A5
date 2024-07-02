@@ -176,5 +176,6 @@
 
    .about-home__list {
       gap: 15px;
+      border-left: 2px solid var(--dark-blue);
    }
 }

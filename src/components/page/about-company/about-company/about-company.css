@@ -143,6 +143,10 @@
       grid-column-gap: 10px;
 
    }
+   .about-company__box--down {
+      grid-template-rows: 327px;
+      
+   }
 }
 
 @media (max-width: 768px) {
@@ -167,4 +171,9 @@
    .about-company__box--down .about-company__image {
       margin-top: 30px;
    }
+   .about-company--text {
+      font-size: 12px;
+      line-height: 14px;
+   }
+   
 }

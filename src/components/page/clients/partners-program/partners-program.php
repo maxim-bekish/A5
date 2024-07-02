@@ -72,19 +72,19 @@
       </h4>
       <div class="form-items-50 form-white partners-program__form--content">
          <div class="form-group">
-            <input name="name" id="name" type="text" placeholder="" required>
+            <input name="name" id="name" type="text" placeholder=" " required>
             <label for="name">Ваше имя</label>
          </div>
          <div class="form-group">
-            <input name="email" id="email" type="email" placeholder="" required>
+            <input name="email" id="email" type="email" placeholder=" " required>
             <label for="email">Email</label>
          </div>
          <div class="form-group">
-            <input name="phone" class="phone" id="phone" type="tel" placeholder="" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+            <input name="phone" class="phone" id="phone" type="tel" placeholder=" " pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
             <label for="phone">Телефон</label>
          </div>
          <div class="form-group">
-            <input name="company" id="company" type="text" placeholder="">
+            <input name="company" id="company" type="text" placeholder=" ">
             <label for="company">Компания</label>
          </div>
       </div>

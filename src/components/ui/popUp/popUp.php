@@ -17,15 +17,15 @@ function popUp($title = '', $description = false, $email = false)
          <form class="js-myForm popUp-custom__form">
             <div class="form-items-100 form-gray popUp-custom__form-items">
                <div class="form-group popUp-custom__form-group">
-                  <input class="form-group__input name" name="custom-name" id="custom-name" type="text" placeholder="" required>
+                  <input class="form-group__input name" name="custom-name" id="custom-name" type="text" placeholder=" " required>
                   <label class="form-group__label" for="custom-name">Ваше имя</label>
                </div>
                <div class="form-group popUp-custom__form-group">
-                  <input class="form-group__input phone" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" name="custom-phone" id="custom-phone" type="tel" placeholder="" required>
+                  <input class="form-group__input phone" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" name="custom-phone" id="custom-phone" type="tel" placeholder=" " required>
                   <label class="form-group__label" for="custom-phone">Телефон</label>
                </div>
                <div id="emailGroup" class="form-group" style="display: <?php echo $email ? 'block' : 'none'; ?>">
-                  <input class="email" name="offer-email" id="email" type="email" placeholder="" <?php echo $email ? "required" : ''; ?>>
+                  <input class="email" name="offer-email" id="email" type="email" placeholder=" " <?php echo $email ? "required" : ''; ?>>
                   <label for="offer-email">Email</label>
                </div>
             </div>
@@ -161,6 +161,7 @@ function popUp($title = '', $description = false, $email = false)
       display: none;
       width: 100vw;
       height: 100vh;
+      min-height: -webkit-fill-available;
       z-index: 9999999;
       position: fixed;
       background-color: #9797974D;
@@ -199,7 +200,7 @@ function popUp($title = '', $description = false, $email = false)
    }
 
    .popUp-custom__title {
-      /*text-wrap: nowrap;*/
+
       font-size: 50px;
       line-height: 52px;
       color: #0045B2;

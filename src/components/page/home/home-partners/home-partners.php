@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="src/components/page/home/home-partners/home-partners.css">
-<script src="src/components/page/home/home-partners/home-partners.js"></script>
+<!--<script src="src/components/page/home/home-partners/home-partners.js"></script>-->
 
 <?php
 $partners = array(
@@ -97,8 +97,9 @@ $partners = array(
    </section>
 </section>
 
+
 <script>
-   $(document).ready(function () {
+    $(document).ready(function () {
    const container = $('#slides-container');
    const slidesPartners = Array.from(container.children());
    container.hide();
@@ -201,3 +202,4 @@ $partners = array(
 });
 
 </script>
+

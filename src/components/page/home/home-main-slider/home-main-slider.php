@@ -6,21 +6,25 @@
 $mainSlider = array(
    array(
       "image" => "step-one.jpeg",
+      "href" => "program-leasing?section=used-products",
       "title" => "Лизинг транспорта,<br> техники, б/у продукции",
       "description" => "description Минимальный аванс, любая стоимость",
    ),
    array(
       "image" => "step-two.jpeg",
+      "href" => "program-leasing?section=medical-equipment",
       "title" => "Лизинг медицинского <br> оборудования без НДС",
       "description" => "description с экспресс-оценкой организации",
    ),
    array(
       "image" => "step-three.jpeg",
+      "href" => "program-leasing?section=real-estate",
       "title" => "Гибкий график <br> платежей",
       "description" => "description с экспресс-оценкой организации",
    ),
    array(
       "image" => "step-four.jpeg",
+      "href" => "program-leasing?section=real-estate",
       "title" => "Возмещение части <br> авансового платежа",
       "description" => "description с экспресс-оценкой организации",
    ),
@@ -32,12 +36,15 @@ $mainSlider = array(
 
 
 <section class="main-slider">
+
+
    <div class="main-slider__container slider">
       <!-- ------------- -->
       <?php foreach ($mainSlider as $index => $el) { ?>
-         <div class="slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('<?php echo  IMG_PATH . 'main-slider/' . $el['image'] ?>');">
+         <div class="slide" data-url="<?php echo $el['href'] ?>" style="background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('<?php echo  IMG_PATH . 'main-slider/' . $el['image'] ?>');">
             <!--<div class="slide__content">-->
-            <div class="slide__content-text">
+
+            <div class="slide__content-text ">
                <h2 class="slide__heading">
                   <?php echo $el['title']; ?>
                </h2>
@@ -50,6 +57,9 @@ $mainSlider = array(
       <?php
       }; ?>
       <!-- ------------- -->
+   </div>
+   <div class="custom-cursor" id="customCursor">
+      <p>подробнее</p>
    </div>
    <div class="main-slider-dot">
       <div class="main-slider-dot-item main-slider-dot-active"></div>
