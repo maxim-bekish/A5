@@ -71,16 +71,22 @@
       font-size: 16px;
       line-height: 19.36px;
    }
-
+   
    .inventory__content--item--text p:nth-child(2) {
       font-size: 16px;
       line-height: 19.36px;
       font-weight: var(--font-w5);
       margin: 7px 0;
    }
-
+   
    .inventory__content--item--text p:nth-child(3) {
       font-size: 14px;
       line-height: 16.94px;
+   }
+}
+@media (max-width: 550px) {
+   .inventory__title {
+
+      margin-bottom: 20px;
    }
 }

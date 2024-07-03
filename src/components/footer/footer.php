@@ -212,8 +212,9 @@
          <p>Политика обработки персональных данных</p>
       </div>
       <div>
-         <p>Разработка сайта</p>
-         <img class="logoGM" src="<?php echo SVG_PATH; ?>logoGM.svg" alt="logoGM">
+         <a href="http://negodyaev.com">
+            <img class="logoGM" src="<?php echo SVG_PATH; ?>logoGM.svg" alt="logoGM">
+         </a>
       </div>
    </section>
 </footer>

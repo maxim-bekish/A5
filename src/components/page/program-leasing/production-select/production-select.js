@@ -101,4 +101,20 @@ $(document).ready(function () {
       $selectBox.addClass('selected');
       toggleSelect($selectBox, $selectItems);
    });
+   let title = [];
+   $('.production__select-title').each(function () {
+      title.push($(this).text());
+   });
+
+
+   $('.production-closed').on('click', function () {
+      $('.production__select').removeClass('production__select--active');
+      let index = 0;
+      $('.production__select-title').each(function () {
+         $(this).text(title[index]);
+         index++
+      });
+
+   })
+
 });

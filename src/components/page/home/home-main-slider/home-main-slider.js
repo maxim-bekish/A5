@@ -29,7 +29,7 @@ function initCustomCursor($activeSlide) {
 
 $(document).ready(function () {
     let speedAnimation = 1000; // скорость перелистывания 1000 = 1s
-    let intervalAnimation = 8000;  // интервал перелистывания 3000 = 3s
+    let intervalAnimation = 2500;  // интервал перелистывания 3000 = 3s
     let widthOneSlide = '1530px';
     let widthInactiveSlide = '130px';
     let widthZeroSlide = '0px';

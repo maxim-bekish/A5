@@ -65,7 +65,7 @@
       <div class="production__select-title-box js-open-select">
          <p class="production__select-title"> Select 3</p>
          <p class="production__select-title-two"></p>
-         <button type="button" >
+         <button type="button">
             <svg class="pointer rt0 select-svg " width="14" height="9" viewBox="0 0 14 9" fill="none">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down"></use>
             </svg>
@@ -85,4 +85,10 @@
          </div>
       </div>
    </div>
+   <button class="production-closed" type="button">
+      Очистить
+      <svg width="14" height="9" viewBox="0 0 14 9">
+         <use href="<?php echo SVG_PATH; ?>icons.svg#icon-closed-mini"></use>
+      </svg>
+   </button>
 </div>
