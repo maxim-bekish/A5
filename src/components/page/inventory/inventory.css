@@ -43,7 +43,6 @@
    .inventory__title {
       font-size: 20px;
       line-height: 20px;
-      margin-bottom: 40px;
    }
 
    .inventory__content--item--text p:nth-child(1) {
@@ -82,11 +81,5 @@
    .inventory__content--item--text p:nth-child(3) {
       font-size: 14px;
       line-height: 16.94px;
-   }
-}
-@media (max-width: 550px) {
-   .inventory__title {
-
-      margin-bottom: 20px;
    }
 }
