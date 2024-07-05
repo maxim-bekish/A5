@@ -6,26 +6,26 @@
    <div class=" calculator-item contract-price">
       <div class="item-header">
          <p>
-            Стоимость лизингового договора
+            Стоимость предмета лизинга
          </p>
          <p class='value' id="value1"></p>
       </div>
       <div class="item-main">
-         <input type="range" min="400000" max="25000000" value="8900100" id="range1" />
+         <input type="range" min="0" max="100000000" value="8900100" id="range1" />
       </div>
       <div class="item-footer">
          <p>
-            от 400 000 ₽
+            0 ₽
          </p>
          <p>
-            до 25 000 000 ₽
+            до 100 000 000 ₽
          </p>
       </div>
    </div>
    <div class=" calculator-item first-payment">
       <div class="item-header">
          <p>
-            Первоначальный взнос
+            Первоначальный взнос (аванс)
          </p>
          <p class='value' id="value2"></p>
       </div>
@@ -60,7 +60,7 @@
          </p>
       </div>
    </div>
-   <div class=" calculator-item last-payment">
+   <!--<div class=" calculator-item last-payment">
       <div class="item-header">
          <p>
             Последний платеж
@@ -78,5 +78,5 @@
             40%
          </p>
       </div>
-   </div>
+   </div>-->
 </section>

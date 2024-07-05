@@ -33,10 +33,10 @@ let data = {
     contractTime: {
         value: 0
     },
-    lastPayment: {
-        percent: 0,
-        value: 0
-    }
+    //lastPayment: {
+    //    percent: 0,
+    //    value: 0
+    //}
 };
 
 $(document).ready(function () {
@@ -48,19 +48,20 @@ $(document).ready(function () {
     const f = 0.17 / 100;  //  Ставка компании, %
     const a = 0.00 / 100;  //  Ставка агента, %
     const s = 0.00;        // Дополнительные расходы, руб.
-    //const t = 1000.00;     // Выкупной платеж, руб.
+
 
     function calculate() {
         let x = data.contractPrice.value;
         let y = data.firstPayment.percent / 100;
         let z = data.contractTime.value;
-        let t = data.lastPayment.percent / 100 * x;
+        //let t = data.lastPayment.percent / 100 * x;
         let c = x * (1 - y) * r / 12 * (Math.pow(1 + r / 12, z) / (Math.pow(1 + r / 12, z) - 1))
             + (z * x * (1 - y) * r / 12 * (Math.pow(1 + r / 12, z) / (Math.pow(1 + r / 12, z) - 1)) - x * (1 - y)) * 0.2 / z
             + (x * a + s) * r / 12 * (Math.pow(1 + r / 12, z) / (Math.pow(1 + r / 12, z) - 1)) * 1.2
             + x * f * 1.2;
 
-        let d = z * c + x * y + t;
+        let d = z * c + x * y;
+        //let d = z * c + x * y + t;
         let e = ((d - x) / x * 100) / (z / 12);
 
         return {
@@ -92,13 +93,13 @@ $(document).ready(function () {
         updateResults();
     }
 
-    function updateLastPayment(sliderValue, $valueDisplay) {
+    //function updateLastPayment(sliderValue, $valueDisplay) {
 
-        data.lastPayment.value = data.contractPrice.value * sliderValue / 100;
-        data.lastPayment.percent = sliderValue;
-        $valueDisplay.text(`${sliderValue}% / ${formatNumberAddSymbol(Math.ceil(data.lastPayment.value))}`);
-        updateResults();
-    }
+    //    data.lastPayment.value = data.contractPrice.value * sliderValue / 100;
+    //    data.lastPayment.percent = sliderValue;
+    //    $valueDisplay.text(`${sliderValue}% / ${formatNumberAddSymbol(Math.ceil(data.lastPayment.value))}`);
+    //    updateResults();
+    //}
 
     function updateSlider($slider, $valueDisplay) {
         const sliderValue = parseInt($slider.val());
@@ -116,9 +117,9 @@ $(document).ready(function () {
             case 'range3':
                 updateContractTime(sliderValue, $valueDisplay);
                 break;
-            case 'range4':
-                updateLastPayment(sliderValue, $valueDisplay);
-                break;
+            //case 'range4':
+            //    updateLastPayment(sliderValue, $valueDisplay);
+            //    break;
         }
 
         $slider.css("background", `linear-gradient(to right, #0045b2 ${progress}%, #cbcbcb ${progress}%)`);
@@ -128,10 +129,10 @@ $(document).ready(function () {
         const results = calculate();
 
         $("#monthlyPayment").text(formatNumberAddSymbol(results.monthlyPayment.toFixed(0))); //Ежемесячный платеж
-        $("#annualCost").text(results.annualCost.toFixed(2) + ' %'); // Годовое удорожание
+        //$("#annualCost").text(results.annualCost.toFixed(2) + ' %'); // Годовое удорожание
         $("#leaseTotal").text(formatNumberAddSymbol(results.leaseTotal.toFixed(0))); // Сумма договора лизинга
         $("#vatReturn").text(formatNumberAddSymbol(results.vatReturn.toFixed(0))); // Возврат 20% НДС
-        //$("#taxReduction").text(formatNumberAddSymbol(results.taxReduction.toFixed(2))); // Снижение налога на прибыль
+
     }
 
     // Initial update on page load
