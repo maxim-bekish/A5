@@ -8,7 +8,10 @@
          <p>
             Стоимость предмета лизинга
          </p>
-         <p class='value' id="value1"></p>
+         <div>
+            <input type="number" name="input1" min="0" max="100000000" value="8900100" class="inputCalculator" id="inputCalculator1">
+            <p class='value js-value' id="value1"></p>
+         </div>
       </div>
       <div class="item-main">
          <input type="range" min="0" max="100000000" value="8900100" id="range1" />
@@ -27,7 +30,10 @@
          <p>
             Первоначальный взнос (аванс)
          </p>
-         <p class='value' id="value2"></p>
+         <div>
+            <input min="0" max="49" value="20" type="number" name="input2" class="inputCalculator" id="inputCalculator2">
+            <p class='value js-value' id="value2"></p>
+         </div>
       </div>
       <div class="item-main">
          <input type="range" min="0" max="49" value="20" id="range2" />
@@ -46,37 +52,21 @@
          <p>
             Срок договора
          </p>
-         <p class='value' id="value3"></p>
+         <div>
+            <input min="12" max="60" value=26 type="number" name="input3" class="inputCalculator" id="inputCalculator3">
+            <p class='value js-value' id="value3"></p>
+         </div>
       </div>
       <div class="item-main">
-         <input type="range" min="12" max="84" value=68 id="range3" />
+         <input type="range" min="12" max="60" value=26 id="range3" />
       </div>
       <div class="item-footer">
          <p>
             от 1 года
          </p>
          <p>
-            до 7 лет
+            до 5 лет
          </p>
       </div>
    </div>
-   <!--<div class=" calculator-item last-payment">
-      <div class="item-header">
-         <p>
-            Последний платеж
-         </p>
-         <p class='value' id="value4"></p>
-      </div>
-      <div class="item-main">
-         <input type="range" min="0" max="40" value="15" id="range4" />
-      </div>
-      <div class="item-footer">
-         <p>
-            0%
-         </p>
-         <p>
-            40%
-         </p>
-      </div>
-   </div>-->
 </section>

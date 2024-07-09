@@ -33,35 +33,27 @@ let data = {
     contractTime: {
         value: 0
     },
-    //lastPayment: {
-    //    percent: 0,
-    //    value: 0
-    //}
 };
 
 $(document).ready(function () {
     const $sliders = $("input[type='range']");
-
-
+    const $slidersInput = $(".calculator-range input[type='number']");
 
     const r = 40.00 / 100; //  Ставка банка, %
     const f = 0.17 / 100;  //  Ставка компании, %
     const a = 0.00 / 100;  //  Ставка агента, %
     const s = 0.00;        // Дополнительные расходы, руб.
 
-
     function calculate() {
         let x = data.contractPrice.value;
         let y = data.firstPayment.percent / 100;
         let z = data.contractTime.value;
-        //let t = data.lastPayment.percent / 100 * x;
         let c = x * (1 - y) * r / 12 * (Math.pow(1 + r / 12, z) / (Math.pow(1 + r / 12, z) - 1))
             + (z * x * (1 - y) * r / 12 * (Math.pow(1 + r / 12, z) / (Math.pow(1 + r / 12, z) - 1)) - x * (1 - y)) * 0.2 / z
             + (x * a + s) * r / 12 * (Math.pow(1 + r / 12, z) / (Math.pow(1 + r / 12, z) - 1)) * 1.2
             + x * f * 1.2;
 
         let d = z * c + x * y;
-        //let d = z * c + x * y + t;
         let e = ((d - x) / x * 100) / (z / 12);
 
         return {
@@ -74,9 +66,10 @@ $(document).ready(function () {
     }
 
     function updateContractPrice(sliderValue, $valueDisplay) {
+
         data.contractPrice.value = sliderValue;
         $valueDisplay.text(formatNumberAddSymbol(sliderValue));
-        updateFirstPayment($("#range2").val(), $("#range2").closest(".calculator-item").find(".value"));
+        updateFirstPayment($("#range2").val(), $("#range2").closest(".calculator-item").find(".js-value"));
         updateResults();
     }
 
@@ -93,43 +86,69 @@ $(document).ready(function () {
         updateResults();
     }
 
-    //function updateLastPayment(sliderValue, $valueDisplay) {
 
-    //    data.lastPayment.value = data.contractPrice.value * sliderValue / 100;
-    //    data.lastPayment.percent = sliderValue;
-    //    $valueDisplay.text(`${sliderValue}% / ${formatNumberAddSymbol(Math.ceil(data.lastPayment.value))}`);
-    //    updateResults();
-    //}
 
     function updateSlider($slider, $valueDisplay) {
-        const sliderValue = parseInt($slider.val());
+        let sliderValue = parseInt($slider.val());
         const min = parseInt($slider.attr("min"));
         const max = parseInt($slider.attr("max"));
+
+
+        if (sliderValue > max) {
+            sliderValue = max;
+        }
+        if (isNaN(sliderValue) || sliderValue < min) {
+            sliderValue = min;
+        }
         const progress = ((sliderValue - min) / (max - min)) * 100;
 
         switch ($slider.attr("id")) {
+
             case 'range1':
                 updateContractPrice(sliderValue, $valueDisplay);
+                $('#range1').css("background", `linear-gradient(to right, #0045b2 ${progress}%, #cbcbcb ${progress}%)`);
+                $('#inputCalculator1').val(sliderValue);
                 break;
+            case 'inputCalculator1':
+                $('#inputCalculator1').val(sliderValue);
+                updateContractPrice(sliderValue, $valueDisplay);
+                $('#range1').css("background", `linear-gradient(to right, #0045b2 ${progress}%, #cbcbcb ${progress}%)`);
+                $('#range1').val(sliderValue);
+                break;
+
+
             case 'range2':
                 updateFirstPayment(sliderValue, $valueDisplay);
+                $('#range2').css("background", `linear-gradient(to right, #0045b2 ${progress}%, #cbcbcb ${progress}%)`);
+                $('#inputCalculator2').val(sliderValue);
                 break;
-            case 'range3':
-                updateContractTime(sliderValue, $valueDisplay);
+            case 'inputCalculator2':
+                $('#inputCalculator2').val(sliderValue);
+                updateFirstPayment(sliderValue, $valueDisplay);
+                $('#range2').css("background", `linear-gradient(to right, #0045b2 ${progress}%, #cbcbcb ${progress}%)`);
+                $('#range2').val(sliderValue);
                 break;
-            //case 'range4':
-            //    updateLastPayment(sliderValue, $valueDisplay);
-            //    break;
-        }
 
-        $slider.css("background", `linear-gradient(to right, #0045b2 ${progress}%, #cbcbcb ${progress}%)`);
+
+            case 'range3':
+                $('#inputCalculator3').val(sliderValue);
+                updateContractTime(sliderValue, $valueDisplay);
+                $('#range3').css("background", `linear-gradient(to right, #0045b2 ${progress}%, #cbcbcb ${progress}%)`);
+                break;
+            case 'inputCalculator3':
+                $('#inputCalculator3').val(sliderValue);
+                updateContractTime(sliderValue, $valueDisplay);
+                $('#range3').css("background", `linear-gradient(to right, #0045b2 ${progress}%, #cbcbcb ${progress}%)`);
+                $('#range3').val(sliderValue);
+                break;
+
+        }
     }
 
     function updateResults() {
         const results = calculate();
 
         $("#monthlyPayment").text(formatNumberAddSymbol(results.monthlyPayment.toFixed(0))); //Ежемесячный платеж
-        //$("#annualCost").text(results.annualCost.toFixed(2) + ' %'); // Годовое удорожание
         $("#leaseTotal").text(formatNumberAddSymbol(results.leaseTotal.toFixed(0))); // Сумма договора лизинга
         $("#vatReturn").text(formatNumberAddSymbol(results.vatReturn.toFixed(0))); // Возврат 20% НДС
 
@@ -138,14 +157,41 @@ $(document).ready(function () {
     // Initial update on page load
     $sliders.each(function () {
         const $slider = $(this);
-        const $valueDisplay = $slider.closest(".calculator-item").find(".value");
+        const $valueDisplay = $slider.closest(".calculator-item").find(".js-value");
         updateSlider($slider, $valueDisplay);
     });
 
     // Update on input
     $sliders.on("input", function () {
         const $slider = $(this);
-        const $valueDisplay = $slider.closest(".calculator-item").find(".value");
+        const $valueDisplay = $slider.closest(".calculator-item").find(".js-value");
         updateSlider($slider, $valueDisplay);
+    });
+    $(".js-value").on("click", function () {
+        $(this).css("display", "none");
+        $(this).prev("input").css("display", "block").focus();
+
+    });
+    $(".inputCalculator").on("blur", function () {
+        $(this).css("display", "none");
+        $(this).next("p").css("display", "block");
+    });
+    let timer;
+
+    //$(".inputCalculator").on("input", function () {
+    //    let $this = $(this);
+    //    clearTimeout(timer);
+    //    timer = setTimeout(function () {
+    //        $this.css("display", "none");
+    //        $this.next("p").css("display", "block");
+    //        console.log("Прошла 1 секунда с момента ввода");
+    //    }, 1000);
+    //});
+
+    $slidersInput.on("input", function () {
+        const $slider = $(this);
+        const $valueDisplay = $slider.closest(".calculator-item").find(".js-value");
+        updateSlider($slider, $valueDisplay);
+
     });
 });
