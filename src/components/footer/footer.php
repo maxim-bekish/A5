@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/src/components/footer/footer.css">
-<script src="/src/components/footer/footer.js"></script>
+<script type="module" src="/src/components/footer/footer.js"></script>
 <footer class="footer-box mt-160px">
    <section class="footer-up container">
       <div class="footer-up-column ">

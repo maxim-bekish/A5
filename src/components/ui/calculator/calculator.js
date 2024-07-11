@@ -172,15 +172,20 @@ $(document).ready(function () {
         updateInput($slider, $valueDisplay);
     });
     let timer;
+    let timer2;
     $(".inputCalculator").on("input", function () {
         let $this = $(this);
-        let sliderValue = validValue($this)
-        $this.val(sliderValue);
+
+        clearTimeout(timer2);
+        timer2 = setTimeout(function () {
+            let sliderValue = validValue($this)
+            $this.val(sliderValue);
+        }, 0);
         clearTimeout(timer);
         timer = setTimeout(function () {
             $this.css("display", "none");
             $this.next("p").css("display", "block");
-            console.log("Прошла 1 секунда с момента ввода");
+            console.log("Прошла 0.5 секунд с момента ввода");
         }, 500);
     });
 });

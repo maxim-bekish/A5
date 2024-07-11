@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="src/components/page/clients/partners-program/partners-program.css">
-<script src="src/components/page/clients/partners-program/partners-program.js"></script>
+<script type="module" src="src/components/page/clients/partners-program/partners-program.js"></script>
 
 <section class="partners-program">
    <div class="partners-program__img">

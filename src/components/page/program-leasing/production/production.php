@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="src/components/page/program-leasing/production/production.css">
-<script src="src/components/page/program-leasing/production/production.js"></script>
+<script type="module" src="src/components/page/program-leasing/production/production.js"></script>
 
 <?php
 include 'src/state/state.php';

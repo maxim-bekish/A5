@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/src/components/ui/popUpAsk/popUpAsk.css">
-<script src="/src/components/ui/popUpAsk/popUpAsk.js"></script>
+<script type="module" src="/src/components/ui/popUpAsk/popUpAsk.js"></script>
 
 
 <section class="sidebar-ask popUp__sidebar">

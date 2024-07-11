@@ -325,6 +325,7 @@ img {
 
 .popUp__sidebar-box {
    overflow-y: auto;
+   overflow-x: hidden;
    padding: 75px 45px 35px 45px;
    width: 640px;
    position: relative;
