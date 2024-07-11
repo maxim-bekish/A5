@@ -21,3 +21,12 @@ export function formatPhoneNumber(value) {
    if (phoneNumberLength <= 8) return `+7 (${phoneNumberWithoutSeven.slice(0, 3)}) ${phoneNumberWithoutSeven.slice(3, 6)}-${phoneNumberWithoutSeven.slice(6, 8)}`;
    return `+7 (${phoneNumberWithoutSeven.slice(0, 3)}) ${phoneNumberWithoutSeven.slice(3, 6)}-${phoneNumberWithoutSeven.slice(6, 8)}-${phoneNumberWithoutSeven.slice(8, 10)}`;
 }
+export function dateFormat(num, type = 'year') {
+   if (type === 'months') {
+      let years = Math.floor(num / 12);
+      let months = num % 12;
+      let yearsText = years === 1 ? '1 год' : (years <= 4 ? `${years} года` : `${years} лет`);
+      let monthsText = months === 0 ? '' : (months === 1 ? '1 месяц' : (months <= 4 ? `${months} месяца` : `${months} месяцев`));
+      return `${yearsText} ${monthsText}`.trim();
+   }
+}

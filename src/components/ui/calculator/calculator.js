@@ -1,14 +1,5 @@
 import { formatNumberWithSymbol } from '/src/assets/helpers/format.js'
 
-
-//function dateFormat(num) {
-//    let years = Math.floor(num / 12);
-//    let months = num % 12;
-//    let yearsText = years === 1 ? '1 год' : (years <= 4 ? `${years} года` : `${years} лет`);
-//    let monthsText = months === 0 ? '' : (months === 1 ? '1 месяц' : (months <= 4 ? `${months} месяца` : `${months} месяцев`));
-//    return `${yearsText} ${monthsText}`.trim();
-//}
-
 let data = {
     contractPrice: {
         value: 0,
@@ -160,7 +151,7 @@ $(document).ready(function () {
     $(".js-value").on("click", function () {
         $(this).css("display", "none");
         $(this).prev("input").css("display", "block").focus();
-        //$(this).prev("input").val('');
+
     });
 
     $(".inputCalculator").on("blur", function () {
@@ -185,7 +176,6 @@ $(document).ready(function () {
         timer = setTimeout(function () {
             $this.css("display", "none");
             $this.next("p").css("display", "block");
-            console.log("Прошла 0.5 секунд с момента ввода");
         }, 500);
     });
 });

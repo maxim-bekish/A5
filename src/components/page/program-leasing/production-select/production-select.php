@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="src/components/page/program-leasing/production-select/production-select.css">
-<script src="src/components/page/program-leasing/production-select/production-select.js"></script>
+<script type="module" src="src/components/page/program-leasing/production-select/production-select.js"></script>
 
 
 <div class="production__select-box">

@@ -18,8 +18,8 @@ foreach ($inventory as $item) {
 if ($selectedItem !== null) {
    $imagePath = isset($selectedItem['image']) ? IMG_PATH . 'inventory/' . $selectedItem['image'] : IMG_PATH . 'placeholder.png';
    $name = $selectedItem['name'];
-   $price = format($selectedItem['price'], '₽');
-   $priceMonth = format($selectedItem['priceMonth'],'₽');
+   $price = format($selectedItem['price']);
+   $priceMonth = format($selectedItem['priceMonth']);
    $term = $selectedItem['term'] . ' мес.';
 
    // Выводим характеристики, если они есть

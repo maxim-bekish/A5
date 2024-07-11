@@ -142,7 +142,6 @@ function popUp($title = '', $description = false, $email = false)
             $(form).addClass('submitted-error'); // Добавление класса ошибки
          }
       });
-
    });
 </script>
 

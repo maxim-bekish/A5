@@ -1,7 +1,9 @@
 <script type="module" src="/src/components/ui/calculator/calculator.js"></script>
 
 <link rel="stylesheet" href="/src/components/ui/calculator/calculator.css">
-
+<?php
+require 'src/assets/helpers/format.php';
+?>
 <section class="calculator-range">
    <div class=" calculator-item contract-price">
       <div class="item-header">
@@ -9,7 +11,7 @@
             Стоимость предмета лизинга c НДС
          </p>
          <div>
-            <input type="number"  name="input1" min="0" max="100000000" value="8955000" class="inputCalculator" id="inputCalculator1">
+            <input type="number" name="input1" min="0" max="100000000" value="8955000" class="inputCalculator" id="inputCalculator1">
             <p class='value js-value' id="value1"></p>
          </div>
       </div>
@@ -18,10 +20,10 @@
       </div>
       <div class="item-footer">
          <p>
-            0 ₽
+            <?php echo format(0); ?>
          </p>
          <p>
-            до 100 000 000 ₽
+            до <?php echo format(100000000); ?>
          </p>
       </div>
    </div>
@@ -40,10 +42,10 @@
       </div>
       <div class="item-footer">
          <p>
-            0%
+            <?php echo format(0, '%'); ?>
          </p>
          <p>
-            49%
+            <?php echo format(49, '%'); ?>
          </p>
       </div>
    </div>
@@ -62,10 +64,10 @@
       </div>
       <div class="item-footer">
          <p>
-            12 мес
+            <?php echo format(12, 'мес'); ?>
          </p>
          <p>
-            60 мес
+            <?php echo format(60, 'мес'); ?>
          </p>
       </div>
    </div>

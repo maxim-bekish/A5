@@ -1,5 +1,8 @@
+import { formatNumberWithSymbol } from '/src/assets/helpers/format.js'
+
 $(document).ready(function () {
    const speedAnimation = 200;
+   let title = [];
 
    function toggleSelect($selectBox, $selectItems) {
       const isOpen = $selectItems.css('display') == "block";
@@ -71,17 +74,13 @@ $(document).ready(function () {
       }
    });
 
-   function formatNumber(num) {
-      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-   }
 
    $('.production__select-item-input').on('input', function () {
       let value = $(this).val().replace(/[^\d.-]/g, '');
       if (value) {
-         let formattedValue = formatNumber(parseInt(value));
-         $(this).val(formattedValue + " ₽");
+         $(this).val(formatNumberWithSymbol(parseInt(value)));
       } else {
-         $(this).val("0 ₽");
+         $(this).val(formatNumberWithSymbol(0));
       }
    });
 
@@ -91,17 +90,17 @@ $(document).ready(function () {
       if (!fromValue) fromValue = 0;
       if (!toValue) toValue = 0;
       let values = {
-         from: fromValue,
-         to: toValue
+         from: Number(fromValue),
+         to: Number(toValue)
       };
-      $('.production__select--input .production__select-title').html(`${formatNumber(values.from)} - ${formatNumber(values.to)} ₽`);
+      $('.production__select--input .production__select-title').html(`${formatNumberWithSymbol(values.from,'')} - ${formatNumberWithSymbol(values.to)}`);
 
       const $selectBox = $(this).closest('.production__select');
       const $selectItems = $selectBox.find('.production__select-items-box');
       $selectBox.addClass('selected');
       toggleSelect($selectBox, $selectItems);
    });
-   let title = [];
+
    $('.production__select-title').each(function () {
       title.push($(this).text());
    });

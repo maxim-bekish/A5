@@ -31,7 +31,7 @@ include 'src/state/state.php';
                      от <?php echo format($el['priceMonth'], "₽/мес."); ?>
                   </p>
                   <p>
-                     стоимость: от <?php echo format($el['price'], "₽"); ?>
+                     стоимость: от <?php echo format($el['price']); ?>
                   </p>
                </div>
             </a>

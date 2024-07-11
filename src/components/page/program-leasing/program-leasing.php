@@ -12,7 +12,7 @@ $programLeasingData = [
       "text" => "Мы передаем в лизинг легковые автомобили с различным типом кузова: седан, лифтбек, внедорожник, купе, пикапы, фургоны и др. \n \n У нас представлены все самые востребованные и актуальные марки на настоящий день: ...",
       "obtainingLeasing" => [
          "minAdvance" => 5,
-         "maxLeasingPeriod" => "5 лет",
+         "maxLeasingPeriod" => 1,
          "minRedemptionPayment" => 1200,
       ],
       "requirementsLessees" => [
@@ -26,7 +26,7 @@ $programLeasingData = [
          ],
          [
             "title" => "Срок деятельности лизингополучателя",
-            "text" => "От 1 года"
+            "text" => 1
          ],
       ],
       "suppliers" => [
@@ -43,7 +43,7 @@ $programLeasingData = [
       "text" => "У нас в наличии: тягачи, самосвалы, рефрижераторы,  фургоны, бортовые грузовики  и другие виды, индивидуально подобранные под ваш бизнес.  \n\n Мы отдаём предпочтение самым надёжным производителям грузового автотранспорта из России, работаем с проверенными поставщиками — УралСпецТранс, АГРО-Лидер, МАЗ Центр Челябинск, ПК УСПТ.",
       "obtainingLeasing" => [
          "minAdvance" => 5,
-         "maxLeasingPeriod" => "5 лет",
+         "maxLeasingPeriod" => 2,
          "minRedemptionPayment" => 1200,
       ],
       "requirementsLessees" => [
@@ -57,7 +57,7 @@ $programLeasingData = [
          ],
          [
             "title" => "Срок деятельности лизингополучателя",
-            "text" => "От 1 года"
+            "text" => 1
          ],
       ],
       "suppliers" => [
@@ -77,7 +77,7 @@ $programLeasingData = [
       "text" => "У нас представлена техника под любой запрос бизнеса и производства: сельхоз, лесозаготовительная, дорожная, строительная, коммунальная, складская и др. \n\n  Мы сотрудничаем только с надёжными производителями, поставляющими качественные машины: Zoomlion, УралСпецТранс, АГРО-Лидер, ТрансЛифтТехника, МАЗ Центр Челябинск, ПК УСПТ, ЛБР, Агродок, 1-Я ОПАЛУБОЧНАЯ КОМПАНИЯ.",
       "obtainingLeasing" => [
          "minAdvance" => 5,
-         "maxLeasingPeriod" => "5 лет",
+         "maxLeasingPeriod" => 3,
          "minRedemptionPayment" => 1200,
       ],
       "requirementsLessees" => [
@@ -91,7 +91,7 @@ $programLeasingData = [
          ],
          [
             "title" => "Срок деятельности лизингополучателя",
-            "text" => "От 1 года"
+            "text" => 1
          ],
       ],
       "suppliers" => [
@@ -110,7 +110,7 @@ $programLeasingData = [
       "text" => "Оборудование под специальный запрос: для металлообрабатывающего, пищевого, строительного, деревообрабатывающего, строительного  производства. Подберём оборудование под ваш запрос. \n\n Мы поддерживаем российского производителя, именно поэтому участвуем в программе  «Лизинговые проекты» Фонда развития промышленности и предоставляем заём до 27% от общей стоимости российского оборудования. \n\n Работаем со следующими поставщиками: ТрансЛифтТехника, ГСИ-Екатеринбург, FoodProm, РУСТорг, ЛБР, MEDLIGA, 1-Я ОПАЛУБОЧНАЯ КОМПАНИЯ.",
       "obtainingLeasing" => [
          "minAdvance" => 20,
-         "maxLeasingPeriod" => "5 лет",
+         "maxLeasingPeriod" => 4,
          "minRedemptionPayment" => 1200,
       ],
       "requirementsLessees" => [
@@ -124,7 +124,7 @@ $programLeasingData = [
          ],
          [
             "title" => "Срок деятельности лизингополучателя",
-            "text" => "От 1 года"
+            "text" => 1
          ],
       ],
       "suppliers" => [
@@ -142,7 +142,7 @@ $programLeasingData = [
       "text" => "Повышаем качество медицинских услуг посредством лизинга медицинского оборудования для клиник, фармацевтической промышленности и исследовательских центров. \n\n Мы сотрудничаем с федеральной компанией MEDLIGA, которая является официальным дистрибьютором профессионального медицинского оборудования: Mindray, Canon, Pentax, General Electric, Samsung, Siemens, Olympus, Электрон, С.П. Гелпик, ЭМА .",
       "obtainingLeasing" => [
          "minAdvance" => 20,
-         "maxLeasingPeriod" => "60 мес",
+         "maxLeasingPeriod" => 5,
          "minRedemptionPayment" => 1200,
       ],
       "requirementsLessees" => [
@@ -156,7 +156,7 @@ $programLeasingData = [
          ],
          [
             "title" => "Срок деятельности лизингополучателя",
-            "text" => "От 1 года"
+            "text" => 1
          ],
       ],
       "suppliers" => [
@@ -171,7 +171,7 @@ $programLeasingData = [
       "text" => "Качественный сервис и вкусная еда начинается с технологичного ресторанного оборудования.  У нас можно взять \n в лизинг кухонные процессоры, пароконвектоматы, плиты, холодильные витрины и др. \n\n Нам поставляют оборудование надёжные партнёры, такие как FoodProm и РУСТорг.",
       "obtainingLeasing" => [
          "minAdvance" => 20,
-         "maxLeasingPeriod" => "5 лет",
+         "maxLeasingPeriod" => 5,
          "minRedemptionPayment" => 1200,
       ],
       "requirementsLessees" => [
@@ -185,7 +185,7 @@ $programLeasingData = [
          ],
          [
             "title" => "Срок деятельности лизингополучателя",
-            "text" => "От 1 года"
+            "text" => 1
          ],
       ],
       "suppliers" => [
@@ -202,7 +202,7 @@ $programLeasingData = [
       "text" => "К поддержанной продукции, сдаваемой в лизинг, мы относим легковой и грузовой транспорт не старше 5 лет. \n\n У нас всё «прозрачно», ведь перед оформлением договора вы можете проверить документы и состояние продукции.\n Выгода лизинга  б/у транспорта составляет 40% перед лизингом аналогичных новых машин. \n\n Мы работаем только с проверенными поставщиками АГРО-Лидер и ГСИ , поэтому уверены в качестве продукции.",
       "obtainingLeasing" => [
          "minAdvance" => 20,
-         "maxLeasingPeriod" => "5 года",
+         "maxLeasingPeriod" => 5,
          "minRedemptionPayment" => 1200,
       ],
       "requirementsLessees" => [
@@ -216,7 +216,7 @@ $programLeasingData = [
          ],
          [
             "title" => "Срок деятельности лизингополучателя",
-            "text" => "От 1 года"
+            "text" => 1
          ],
       ],
       "suppliers" => [
@@ -241,7 +241,7 @@ $programLeasingData = [
       "text" => "Компания А5 предоставляет большой спектр видов недвижимости: дома, квартиры. офисы, торговые площадки, склады и др. Можем подобрать любое помещение под ваш запрос. \n\n Вам нужно только выбрать помещение из нашего списка, мы передаём вам сведения комплексной экспертизы, менеджер А5  заключает договор лизинга и купли-продажи.",
       "obtainingLeasing" => [
          "minAdvance" => 30,
-         "maxLeasingPeriod" => "5 лет",
+         "maxLeasingPeriod" => 5,
          "minRedemptionPayment" => 1200,
       ],
       "requirementsLessees" => [
@@ -255,7 +255,7 @@ $programLeasingData = [
          ],
          [
             "title" => "Срок деятельности лизингополучателя",
-            "text" => "От 1 года"
+            "text" => 1
          ],
       ],
       "suppliers" => []
@@ -322,15 +322,23 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
       </div>
       <div class="obtaining-leasing__content">
          <div class="obtaining-leasing__content--item">
-            <h4>от <?php echo htmlspecialchars($activeProgram['obtainingLeasing']['minAdvance']) . '%'; ?></h4>
+
+
+            <h4>
+               от <?php echo format($activeProgram['obtainingLeasing']['minAdvance'], "%"); ?>
+            </h4>
             <p>Минимальный аванс</p>
          </div>
          <div class="obtaining-leasing__content--item">
-            <h4><?php echo htmlspecialchars($activeProgram['obtainingLeasing']['maxLeasingPeriod']); ?></h4>
+            <h4>
+               <?php echo dateFormat($activeProgram['obtainingLeasing']['maxLeasingPeriod']); ?>
+            </h4>
             <p>Максимальный срок лизинга</p>
          </div>
          <div class="obtaining-leasing__content--item">
-            <h4><?php echo format(htmlspecialchars($activeProgram['obtainingLeasing']['minRedemptionPayment']), ' ₽'); ?></h4>
+            <h4>
+               <?php echo format($activeProgram['obtainingLeasing']['minRedemptionPayment']); ?>
+            </h4>
             <p>Минимальный выкупной платёж</p>
          </div>
       </div>
@@ -348,7 +356,9 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
          <?php foreach ($activeProgram['requirementsLessees'] as $requirement) : ?>
             <li class="row w-50-box">
                <h4 class="w-50 row__title--small"><?php echo htmlspecialchars($requirement['title']); ?></h4>
-               <p class="row__text--small w-50"><?php echo htmlspecialchars($requirement['text']); ?></p>
+               <p class="row__text--small w-50">
+                  от <?php echo dateFormat($requirement['text'],true); ?>
+               </p>
             </li>
          <?php endforeach; ?>
       </ul>

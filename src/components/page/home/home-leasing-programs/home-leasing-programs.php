@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="src/components/page/home/home-leasing-programs/home-leasing-programs.css">
-<script src="src/components/page/home/home-leasing-programs/home-leasing-programs.js"></script>
+<script type="module" src="src/components/page/home/home-leasing-programs/home-leasing-programs.js"></script>
 
 
 
@@ -11,7 +11,7 @@ $listTitle = [
       'id' => 1,
       'content' => [
          'term' => '1 год',
-         'prepaid' => 'от 5%',
+         'prepaid' => 5,
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
          'link' => '/program-leasing?section=passenger-vehicles',
          'img' => '1-photo.jpg',
@@ -22,7 +22,7 @@ $listTitle = [
       'id' => 2,
       'content' => [
          'term' => '2 лет',
-         'prepaid' => 'от 5%',
+         'prepaid' => 5,
          'info' => ' Легковые автомобили в лизинг для юридических лиц и ИП. Легковые автомобили в лизинг для юридических лиц и ИП. Легковые автомобили в лизинг для юридических лиц и ИП.',
          'link' => '/program-leasing?section=freight-transport',
          'img' => '2-photo.jpg',
@@ -33,7 +33,7 @@ $listTitle = [
       'id' => 3,
       'content' => [
          'term' => '3 лет',
-         'prepaid' => 'от 5%',
+         'prepaid' => 5,
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
          'link' => '/program-leasing?section=special-equipment',
          'img' => '3-photo.jpg',
@@ -44,7 +44,7 @@ $listTitle = [
       'id' => 4,
       'content' => [
          'term' => '4 лет',
-         'prepaid' => 'от 5%',
+         'prepaid' => 5,
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
          'link' => '/program-leasing?section=equipment',
          'img' => '4-photo.jpg',
@@ -55,7 +55,7 @@ $listTitle = [
       'id' => 5,
       'content' => [
          'term' => '12-60 мес',
-         'prepaid' => 'от 20%',
+         'prepaid' => 20,
          'info' => 'Медицинское оборудование в лизинг — лёгкий способ усовершенствования оказываемых услуг.',
          'link' => '/program-leasing?section=medical-equipment',
          'img' => '5-photo.jpg',
@@ -66,7 +66,7 @@ $listTitle = [
       'id' => 6,
       'content' => [
          'term' => '6 лет',
-         'prepaid' => 'от 5%',
+         'prepaid' => 5,
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
          'link' => '/program-leasing?section=restaurant-equipment',
          'img' => '6-photo.jpg',
@@ -77,7 +77,7 @@ $listTitle = [
       'id' => 7,
       'content' => [
          'term' => '7 лет',
-         'prepaid' => 'от 5%',
+         'prepaid' => 5,
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
          'link' => '/program-leasing?section=used-products',
          'img' => '7-photo.jpg',
@@ -88,7 +88,7 @@ $listTitle = [
       'id' => 8,
       'content' => [
          'term' => '8 лет',
-         'prepaid' => 'от 5%',
+         'prepaid' => 5,
          'info' => 'Легковые автомобили в лизинг для юридических лиц и ИП.',
          'link' => '/program-leasing?section=real-estate',
          'img' => '8-photo.jpg',
