@@ -1,4 +1,4 @@
-<script src="/src/components/ui/calculator/calculator.js"></script>
+<script type="module" src="/src/components/ui/calculator/calculator.js"></script>
 
 <link rel="stylesheet" href="/src/components/ui/calculator/calculator.css">
 

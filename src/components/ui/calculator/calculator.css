@@ -10,14 +10,7 @@
 }
 
 .inputCalculator {
-   border: 0;
-   padding: 0;
    display: none;
-   padding-block: 0px;
-   padding-inline: 0px;
-   box-sizing: border-box;
-  height: 20px;
-  text-align: end;
 }
 
 .calculator-range input[type="range"] {
@@ -30,9 +23,14 @@
    height: 4px;
 }
 
-.value,
 .inputCalculator {
    text-wrap: nowrap;
+   border: 0;
+   padding: 0;
+   line-height: 26px;
+   text-align: end;
+   height: 26px;
+
 }
 
 
@@ -118,6 +116,7 @@
    .inputCalculator {
       font-size: 20px;
       line-height: 20px;
+      height: 20px;
    }
 
    .calculator-range .item-footer p {
@@ -153,6 +152,7 @@
    .inputCalculator {
       font-size: 18px;
       line-height: 18px;
+      height: 18px;
    }
 
    .calculator-range .item-footer p {
