@@ -1,13 +1,13 @@
 import { formatNumberWithSymbol } from '/src/assets/helpers/formatPhone.js'
 
 
-function dateFormat(num) {
-    let years = Math.floor(num / 12);
-    let months = num % 12;
-    let yearsText = years === 1 ? '1 год' : (years <= 4 ? `${years} года` : `${years} лет`);
-    let monthsText = months === 0 ? '' : (months === 1 ? '1 месяц' : (months <= 4 ? `${months} месяца` : `${months} месяцев`));
-    return `${yearsText} ${monthsText}`.trim();
-}
+//function dateFormat(num) {
+//    let years = Math.floor(num / 12);
+//    let months = num % 12;
+//    let yearsText = years === 1 ? '1 год' : (years <= 4 ? `${years} года` : `${years} лет`);
+//    let monthsText = months === 0 ? '' : (months === 1 ? '1 месяц' : (months <= 4 ? `${months} месяца` : `${months} месяцев`));
+//    return `${yearsText} ${monthsText}`.trim();
+//}
 
 let data = {
     contractPrice: {
@@ -37,23 +37,23 @@ function calculate() {
         + x * f * 1.2;
 
     let d = z * c + x * y;
-    let e = ((d - x) / x * 100) / (z / 12);
+
 
     return {
         monthlyPayment: c,
         leaseTotal: d,
         vatReturn: 0.2 * x,
-        //annualCost: e,
-        //taxReduction: 0.2 * x
+
+
     };
 }
 
 function updateResults() {
-    const results = calculate();
+    const { monthlyPayment, leaseTotal, vatReturn } = calculate();
 
-    $("#monthlyPayment").text(formatNumberWithSymbol(results.monthlyPayment.toFixed(0))); //Ежемесячный платеж
-    $("#leaseTotal").text(formatNumberWithSymbol(results.leaseTotal.toFixed(0))); // Сумма договора лизинга
-    $("#vatReturn").text(formatNumberWithSymbol(results.vatReturn.toFixed(0))); // Возврат 20% НДС
+    $("#monthlyPayment").text(formatNumberWithSymbol(Number(monthlyPayment.toFixed(0)))); //Ежемесячный платеж
+    $("#leaseTotal").text(formatNumberWithSymbol(Number(leaseTotal.toFixed(0)))); // Сумма договора лизинга
+    $("#vatReturn").text(formatNumberWithSymbol(Number(vatReturn.toFixed(0)))); // Возврат 20% НДС
 
 }
 
@@ -79,10 +79,8 @@ function validValue($this) {
 
 $(document).ready(function () {
     const $sliders = $("input[type='range']");
-
     function updateContractPrice(sliderValue, $valueDisplay) {
         data.contractPrice.value = sliderValue;
-        console.log($valueDisplay)
         $valueDisplay.text(formatNumberWithSymbol(sliderValue));
         updateFirstPayment($("#range2").val(), $("#range2").closest(".calculator-item").find(".js-value"));
     }
@@ -95,7 +93,8 @@ $(document).ready(function () {
 
     function updateContractTime(sliderValue, $valueDisplay) {
         data.contractTime.value = sliderValue;
-        $valueDisplay.text(dateFormat(sliderValue));
+        //$valueDisplay.text(dateFormat(sliderValue));
+        $valueDisplay.text(sliderValue);
     }
 
     function updateRange($slider, $valueDisplay) {
@@ -118,7 +117,7 @@ $(document).ready(function () {
                 progressRange($('#range3'), sliderValue)
                 break;
         }
-        updateResults()
+        updateResults();
     }
 
     function updateInput($slider, $valueDisplay) {

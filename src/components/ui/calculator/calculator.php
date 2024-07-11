@@ -62,10 +62,10 @@
       </div>
       <div class="item-footer">
          <p>
-            от 1 года
+            12 мес
          </p>
          <p>
-            до 5 лет
+            60 мес
          </p>
       </div>
    </div>
