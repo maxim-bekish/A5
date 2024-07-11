@@ -6,15 +6,15 @@
    <div class=" calculator-item contract-price">
       <div class="item-header">
          <p>
-            Стоимость предмета лизинга
+            Стоимость предмета лизинга c НДС
          </p>
          <div>
-            <input type="number" name="input1" min="0" max="100000000" value="8900100" class="inputCalculator" id="inputCalculator1">
+            <input type="number"  name="input1" min="0" max="100000000" value="8955000" class="inputCalculator" id="inputCalculator1">
             <p class='value js-value' id="value1"></p>
          </div>
       </div>
       <div class="item-main">
-         <input type="range" min="0" max="100000000" value="8900100" id="range1" />
+         <input type="range" step="1000" min="0" max="100000000" value="8955000" id="range1" />
       </div>
       <div class="item-footer">
          <p>

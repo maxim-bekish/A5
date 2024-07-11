@@ -76,6 +76,7 @@
 
 .calculator-range .item-header .value,
 .inputCalculator {
+   text-wrap: nowrap;
    font-size: 26px;
    font-weight: var(--font-w5);
    line-height: 26px;

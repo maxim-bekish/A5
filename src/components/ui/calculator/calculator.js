@@ -1,4 +1,4 @@
-import { formatNumberWithSymbol } from '/src/assets/helpers/formatPhone.js'
+import { formatNumberWithSymbol } from '/src/assets/helpers/format.js'
 
 
 //function dateFormat(num) {
@@ -143,8 +143,6 @@ $(document).ready(function () {
         updateResults()
     }
 
-
-
     // Initial update on page load
     $sliders.each(function () {
         const $slider = $(this);
@@ -162,7 +160,7 @@ $(document).ready(function () {
     $(".js-value").on("click", function () {
         $(this).css("display", "none");
         $(this).prev("input").css("display", "block").focus();
-        $(this).prev("input").val('');
+        //$(this).prev("input").val('');
     });
 
     $(".inputCalculator").on("blur", function () {
@@ -173,5 +171,16 @@ $(document).ready(function () {
         $(this).next("p").css("display", "block");
         updateInput($slider, $valueDisplay);
     });
-
+    let timer;
+    $(".inputCalculator").on("input", function () {
+        let $this = $(this);
+        let sliderValue = validValue($this)
+        $this.val(sliderValue);
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            $this.css("display", "none");
+            $this.next("p").css("display", "block");
+            console.log("Прошла 1 секунда с момента ввода");
+        }, 500);
+    });
 });
