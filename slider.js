@@ -6,7 +6,10 @@ $(document).ready(function () {
          var context = this, args = arguments;
          var later = function () {
             timeout = null;
-            if (!immediate) func.apply(context, args);
+            if (!immediate) {
+               func.apply(context, args);
+               flagResize = false;
+            }
          };
          var callNow = immediate && !timeout;
          clearTimeout(timeout);
@@ -69,7 +72,7 @@ $(document).ready(function () {
          if (flagResize) {
             $slides.slice(0, 2).clone().addClass("clone").appendTo($sliderContainer);
             $slides.slice(-2).clone().addClass("clone").prependTo($sliderContainer);
-            flagResize = false;
+            //flagResize = false;
          } else {
             slideCount = slideCount - 4;
          }

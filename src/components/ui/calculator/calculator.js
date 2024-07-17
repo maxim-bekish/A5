@@ -14,28 +14,28 @@ let data = {
 };
 
 function calculate() {
-    const r = 40.00 / 100; //  Ставка банка, %
-    const f = 0.17 / 100;  //  Ставка компании, %
-    const a = 0.00 / 100;  //  Ставка агента, %
-    const s = 0.00;        // Дополнительные расходы, руб.
+    const R = 20.5 / 100;                       // Ставка банка, %
+    const F = 0.00 / 100;                       // Ставка компании, %
+    const A = 0.00 / 100;                       // Ставка агента, %
+    const S = 9500;                             // Дополнительные расходы, руб.
+    const T = 1200;                             // Выкупной платеж, руб.
 
-    let x = data.contractPrice.value;
-    let y = data.firstPayment.percent / 100;
-    let z = data.contractTime.value;
-    let c = x * (1 - y) * r / 12 * (Math.pow(1 + r / 12, z) / (Math.pow(1 + r / 12, z) - 1))
-        + (z * x * (1 - y) * r / 12 * (Math.pow(1 + r / 12, z) / (Math.pow(1 + r / 12, z) - 1)) - x * (1 - y)) * 0.2 / z
-        + (x * a + s) * r / 12 * (Math.pow(1 + r / 12, z) / (Math.pow(1 + r / 12, z) - 1)) * 1.2
-        + x * f * 1.2;
+    let X = data.contractPrice.value;           // Стоимость предмета лизинга, руб.
+    let Y = data.firstPayment.percent / 100;    // Размер аванса, %
+    let Z = data.contractTime.value;            // Срок договора лизинга, мес.
+    let H = X * Y                               // Размер аванса, руб
 
-    let d = z * c + x * y;
+    let O = X * 0.03 / 12 * Z * 1.2;            // Маржа, руб.
 
+    let C = X * (1 - Y) * R / 12 * Math.pow((1 + R / 12), Z) / (Math.pow((1 + R / 12), Z) - 1) + (Z * X * (1 - Y) * R / 12 * Math.pow((1 + R / 12), Z) / (Math.pow((1 + R / 12), Z) - 1) - X * (1 - Y)) * 0.2 / Z + (X * A + S) * R / 12 * Math.pow((1 + R / 12), Z) / (Math.pow((1 + R / 12), Z) - 1) * 1.2 + X * F * 1.2 + O / Z;                                // Ежемесячный платеж, руб.
 
+    let D = (Z * C) + (X * Y) + T;              // Сумма договора лизинга, руб.
+    let E = (((D - X) / X) * 100) / (Z / 12)    // Удорожание в год, %
+    let P = D * 0.2
     return {
-        monthlyPayment: c,
-        leaseTotal: d,
-        vatReturn: 0.2 * x,
-
-
+        monthlyPayment: C,
+        leaseTotal: D,
+        vatReturn: P,
     };
 }
 
@@ -48,119 +48,119 @@ function updateResults() {
 
 }
 
-function progressRange(range, sliderValue) {
+function progressRange(range, valueInput) {
     const min = parseInt(range.attr("min"));
     const max = parseInt(range.attr("max"));
-    const progress = ((sliderValue - min) / (max - min)) * 100;
-    range.val(sliderValue);
+    const progress = ((valueInput - min) / (max - min)) * 100;
+    range.val(valueInput);
     range.css("background", `linear-gradient(to right, #0045b2 ${progress}%, #cbcbcb ${progress}%)`);
 }
 function validValue($this) {
-    let sliderValue = parseInt($this.val());
+    let valueInput = parseInt($this.val());
     const min = parseInt($this.attr("min"));
     const max = parseInt($this.attr("max"));
-    if (sliderValue > max) {
-        sliderValue = max;
+    if (valueInput > max) {
+        valueInput = max;
     }
-    if (isNaN(sliderValue) || sliderValue < min) {
-        sliderValue = min;
+    if (isNaN(valueInput) || valueInput < min) {
+        valueInput = min;
     }
-    return sliderValue;
+    return valueInput;
 }
 
 $(document).ready(function () {
-    const $sliders = $("input[type='range']");
-    function updateContractPrice(sliderValue, $valueDisplay) {
-        data.contractPrice.value = sliderValue;
-        $valueDisplay.text(formatNumberWithSymbol(sliderValue));
+    const $inputRange = $("input[type='range']");
+    function updateContractPrice(valueInput, $valueDisplay) {
+        data.contractPrice.value = valueInput;
+        $valueDisplay.text(formatNumberWithSymbol(valueInput));
         updateFirstPayment($("#range2").val(), $("#range2").closest(".calculator-item").find(".js-value"));
     }
 
-    function updateFirstPayment(sliderValue, $valueDisplay) {
-        data.firstPayment.value = data.contractPrice.value / 100 * sliderValue;
-        data.firstPayment.percent = sliderValue;
-        $valueDisplay.text(`${sliderValue} % / ${formatNumberWithSymbol(Math.round(data.firstPayment.value))}`);
+    function updateFirstPayment(valueInput, $valueDisplay) {
+        data.firstPayment.value = data.contractPrice.value / 100 * valueInput;
+        data.firstPayment.percent = valueInput;
+        $valueDisplay.text(`${valueInput} % / ${formatNumberWithSymbol(Math.round(data.firstPayment.value))}`);
     }
 
-    function updateContractTime(sliderValue, $valueDisplay) {
-        data.contractTime.value = sliderValue;
-        //$valueDisplay.text(dateFormat(sliderValue));
-        $valueDisplay.text(sliderValue);
+    function updateContractTime(valueInput, $valueDisplay) {
+        data.contractTime.value = valueInput;
+        //$valueDisplay.text(dateFormat(valueInput));
+        $valueDisplay.text(valueInput);
     }
 
-    function updateRange($slider, $valueDisplay) {
-        let sliderValue = validValue($slider)
+    function updateRange($range, $valueDisplay) {
+        let valueInput = validValue($range)
 
-        switch ($slider.attr("id")) {
+        switch ($range.attr("id")) {
 
             case 'range1':
-                updateContractPrice(sliderValue, $valueDisplay);
-                progressRange($('#range1'), sliderValue)
+                updateContractPrice(valueInput, $valueDisplay);
+                progressRange($('#range1'), valueInput)
                 break;
 
             case 'range2':
-                updateFirstPayment(sliderValue, $valueDisplay);
-                progressRange($('#range2'), sliderValue)
+                updateFirstPayment(valueInput, $valueDisplay);
+                progressRange($('#range2'), valueInput)
                 break;
 
             case 'range3':
-                updateContractTime(sliderValue, $valueDisplay);
-                progressRange($('#range3'), sliderValue)
+                updateContractTime(valueInput, $valueDisplay);
+                progressRange($('#range3'), valueInput)
                 break;
         }
         updateResults();
     }
 
-    function updateInput($slider, $valueDisplay) {
-        let sliderValue = validValue($slider)
+    function updateInput($input, $valueDisplay) {
+        let valueInput = validValue($input)
 
-        switch ($slider.attr("id")) {
+        switch ($input.attr("id")) {
 
             case 'inputCalculator1':
-                updateContractPrice(sliderValue, $valueDisplay);
-                progressRange($('#range1'), sliderValue)
+                updateContractPrice(valueInput, $valueDisplay);
+                progressRange($('#range1'), valueInput)
                 break;
 
             case 'inputCalculator2':
-                updateFirstPayment(sliderValue, $valueDisplay);
-                progressRange($('#range2'), sliderValue)
+                updateFirstPayment(valueInput, $valueDisplay);
+                progressRange($('#range2'), valueInput)
                 break;
-
             case 'inputCalculator3':
-                updateContractTime(sliderValue, $valueDisplay);
-                progressRange($('#range3'), sliderValue)
+                updateContractTime(valueInput, $valueDisplay);
+                progressRange($('#range3'), valueInput)
                 break;
         }
         updateResults()
     }
 
     // Initial update on page load
-    $sliders.each(function () {
-        const $slider = $(this);
-        const $valueDisplay = $slider.closest(".calculator-item").find(".js-value");
-        updateRange($slider, $valueDisplay);
+    $inputRange.each(function () {
+        const $range = $(this);
+        const $valueDisplay = $range.closest(".calculator-item").find(".js-value");
+        updateRange($range, $valueDisplay);
     });
 
     // Update on input
-    $sliders.on("input", function () {
-        const $slider = $(this);
-        const $valueDisplay = $slider.closest(".calculator-item").find(".js-value");
-        updateRange($slider, $valueDisplay);
+    $inputRange.on("input", function () {
+        const $range = $(this);
+        const $valueDisplay = $range.closest(".calculator-item").find(".js-value");
+        updateRange($range, $valueDisplay);
     });
 
     $(".js-value").on("click", function () {
-        $(this).css("display", "none");
-        $(this).prev("input").css("display", "block").focus();
-
+        if (!$(this).hasClass("not-input")) {
+            $(this).prev().val('');
+            $(this).css("display", "none");
+            $(this).prev("input").css("display", "block").focus();
+        }
     });
 
     $(".inputCalculator").on("blur", function () {
-
-        const $slider = $(this);
-        const $valueDisplay = $slider.closest(".calculator-item").find(".js-value");
+        const $range = $(this);
+        const $valueDisplay = $range.closest(".calculator-item").find(".js-value");
         $(this).css("display", "none");
         $(this).next("p").css("display", "block");
-        updateInput($slider, $valueDisplay);
+        updateInput($range, $valueDisplay);
     });
     let timer;
     let timer2;
@@ -169,13 +169,13 @@ $(document).ready(function () {
 
         clearTimeout(timer2);
         timer2 = setTimeout(function () {
-            let sliderValue = validValue($this)
-            $this.val(sliderValue);
+            let valueInput = validValue($this)
+            $this.val(valueInput);
         }, 0);
         clearTimeout(timer);
         timer = setTimeout(function () {
             $this.css("display", "none");
             $this.next("p").css("display", "block");
-        }, 500);
+        }, 2000);
     });
 });

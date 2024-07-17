@@ -10,7 +10,7 @@ require 'src/assets/helpers/format.php';
          <p>
             Стоимость предмета лизинга c НДС
          </p>
-         <div>
+         <div class="item-header-box-value" >
             <input type="number" name="input1" min="0" max="100000000" value="8955000" class="inputCalculator" id="inputCalculator1">
             <p class='value js-value' id="value1"></p>
          </div>
@@ -32,7 +32,7 @@ require 'src/assets/helpers/format.php';
          <p>
             Первоначальный взнос (аванс)
          </p>
-         <div>
+         <div class="item-header-box-value" >
             <input min="0" max="49" value="20" type="number" name="input2" class="inputCalculator" id="inputCalculator2">
             <p class='value js-value' id="value2"></p>
          </div>
@@ -54,9 +54,9 @@ require 'src/assets/helpers/format.php';
          <p>
             Срок договора
          </p>
-         <div>
+         <div class="item-header-box-value" >
             <input min="12" max="60" value=26 type="number" name="input3" class="inputCalculator" id="inputCalculator3">
-            <p class='value js-value' id="value3"></p>
+            <p class='value js-value not-input' id="value3"></p>
          </div>
       </div>
       <div class="item-main">

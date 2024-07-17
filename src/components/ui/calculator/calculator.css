@@ -83,6 +83,13 @@
    color: var(--dark-blue)
 }
 
+.item-header-box-value {
+   max-width: 236px;
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+}
+
 .calculator-range .item-footer p {
    font-size: 18px;
    line-height: 18px;

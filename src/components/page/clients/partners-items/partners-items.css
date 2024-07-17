@@ -10,7 +10,7 @@
    display: grid;
    grid-template-columns: repeat(3, minmax(165px, 1fr));
    gap: 40px;
-   grid-template-rows: repeat(3, minmax(165px, 1fr));
+   /*grid-template-rows: repeat(3, minmax(165px, 1fr));*/
 }
 
 .partners-items__img-mobile {
