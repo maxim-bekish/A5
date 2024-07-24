@@ -177,7 +177,7 @@ function listHeaderBurger($data)
       <button class="underline-box">
         <a class="underline-el underline-el-blue" href="tel:+73452999999">7 (3452) 99 99 99</a>
       </button>
-      <button type="button" class="open-button-ask">
+      <button type="button" class="open-button-ask underline-box">
         <p class="underline-el underline-el-blue"> Задать вопрос</p>
       </button>
       <button type="button" class="open-button-contact underline-box">
