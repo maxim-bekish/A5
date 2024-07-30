@@ -2,14 +2,12 @@ import { formatPhoneNumber } from '/src/assets/helpers/format.js'
 
 
 $(document).ready(function () {
-   //$('.js-submitBtn-popup-ask').click(function () {
-   //   var form = $('.js-myForm-popup-ask');
-   //   if (form[0].checkValidity()) {
-   //      form.addClass('submitted');
-   //   } else {
-   //      form.removeClass('submitted').addClass('submitted-error');
-   //   }
-   //});
+   $(document).on('click', function (e) {
+      if (!$(e.target).closest('.sidebar-ask').length && !$(e.target).closest('.open-button-ask').length) {
+         $('.sidebar-ask').removeClass('open');
+      }
+   });
+
    $('.open-button-ask').on('click', function () {
       $('.sidebar-ask').addClass('open');
       $('.app').addClass('blurred');
@@ -29,9 +27,24 @@ $(document).ready(function () {
   });
 
 
-   $('.js-myForm-popup-ask .phone').on('input', function () {
+   function checkFormValidity() {
+      const name = $('#name-ask').val();
+      const phone = $('#tel-ask').val();
+      const checkbox = $('#option-ask').is(':checked');
+      const isFormValid = name && phone && checkbox;
+      $('.js-submitBtn-popup-ask').prop('disabled', !isFormValid);
+      return isFormValid
+   }
+
+   $('#tel-ask').on('input', function () {
       const formattedPhoneNumber = formatPhoneNumber(this.value);
       this.value = formattedPhoneNumber;
+      checkFormValidity()
    });
-
+   $('#name-ask').on('input', function () {
+      checkFormValidity()
+   });
+   $('#option-ask').on('change', function () {
+      checkFormValidity()
+   });
 });

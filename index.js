@@ -1,5 +1,6 @@
 $(document).ready(function () {
    $('.js-popUp-submitBtn').click(function () {
+      console.log(``)
       let form = $(this).closest('.js-popApp-OK');
       if (form[0].checkValidity()) {
          $('.popUp-end-box').css('display', 'block');
@@ -7,15 +8,17 @@ $(document).ready(function () {
          $('body').css('overflow', 'hidden');
          form.addClass('submitted').removeClass('submitted-error');
          form[0].reset();
+         $('.sidebar-ask').removeClass('open');
+         $('.sidebar').removeClass('open');
+         console.log('submitted');
       } else {
+         console.log('noo');
          form.removeClass('submitted').addClass('submitted-error');
       }
 
    });
    $('.js-popUp-closed').click(function () {
       $('.popUp-end-box').css('display', 'none');
-      $('.app').removeClass('blurred');
-      $('body').css('overflow', 'auto');
    });
 
    $('.mobile__select .js-open-select').click(function () {
@@ -45,6 +48,21 @@ $(document).ready(function () {
       if ($(window).width() >= 768) {
          $('.burger-menu-box-item-row').find('svg').removeClass('rt180');
          $('.burger-menu-box-item-row').next('ul').removeAttr('style');
+      }
+   });
+
+   $(document).on('click', function (e) {
+      if (!$(e.target).attr('blurred')) {
+         if (!$(e.target).closest('.closed-blurred').length &&
+            !$(e.target).closest('.openPopUpButton').length &&
+            !$(e.target).closest('.js-btn-footer').length &&
+            !$(e.target).closest('.js-btn-production').length &&
+            !$(e.target).closest('.partners-program__button').length &&
+            !$(e.target).closest('.popUp-custom-box').length
+         ) {
+            $('.app').removeClass('blurred');
+            $('body').css('overflow', 'auto');
+         }
       }
    });
 });

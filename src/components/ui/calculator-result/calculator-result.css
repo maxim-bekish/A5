@@ -42,6 +42,7 @@
    height: 100%;
    align-items: center;
    justify-content: flex-start;
+   justify-content: space-between;
 }
 
 .leasing-calculator__header-item .leasing-calculator__header-value {
@@ -92,7 +93,7 @@
 
 @media (max-width: 1680px) {
    .leasing-calculator__result {
-      padding: 50px 20px;
+      padding: 50px 40px;
    }
 
 
@@ -144,11 +145,11 @@
    }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 450px) {
 
    .leasing-calculator__result {
       gap: 35px;
-      padding: 15px 25px;
+      padding:  25px;
    }
 
    .leasing-calculator__header-title {

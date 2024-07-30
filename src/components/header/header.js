@@ -42,26 +42,55 @@ $(document).ready(function () {
         $('body').css('overflow', 'auto');
     });
     $('.select').hover(
-    function () {
-        $(this).addClass('active');
-        $(this).find('.select-list').stop(true, true).slideDown(200);
-    },
-    function () {
-        $(this).removeClass('active');
-        $(this).find('.select-list').stop(true, true).slideUp(200);
-    }
+        function () {
+            $(this).addClass('active');
+            $(this).find('.select-list').stop(true, true).slideDown(200);
+        },
+        function () {
+            $(this).removeClass('active');
+            $(this).find('.select-list').stop(true, true).slideUp(200);
+        }
     );
 
-$('.burger-menu-box-item-row').click(function () {
-    if ($(window).width() <= 768) {
-        $('.burger-menu-box-item-row').not(this).find('svg').removeClass('rt180');
-        $('.burger-menu-box-item-row').not(this).next('ul').slideUp();
-        var isOpen = $(this).next('ul').is(':visible');
-        $(this).find('svg').toggleClass("rt180", !isOpen);
-        $(this).next('ul').slideToggle();
+    $('.burger-menu-box-item-row').click(function () {
+        if ($(window).width() <= 768) {
+            $('.burger-menu-box-item-row').not(this).find('svg').removeClass('rt180');
+            $('.burger-menu-box-item-row').not(this).next('ul').slideUp();
+            let isOpen = $(this).next('ul').is(':visible');
+            $(this).find('svg').toggleClass("rt180", !isOpen);
+            $(this).next('ul').slideToggle();
+        }
+    });
+
+    // Обработчик клика по якорной ссылке
+    $('.js-anchor-link').click(function (event) {
+        event.preventDefault(); // Предотвращаем стандартное поведение
+
+        // Получаем ID цели из атрибута href
+        let targetId = $(this).attr('href');
+
+        if (window.location.pathname !== '/') {
+            // Если мы не на главной странице, перенаправляем на главную страницу с якорем
+            window.location.href = '/' + targetId;
+        } else {
+            // Если мы уже на главной странице, скроллим к элементу
+            scrollToTarget(targetId);
+        }
+    });
+
+    function scrollToTarget(targetId) {
+        let $target = $(targetId);
+
+        if ($target.length) {
+            // Скроллим к элементу
+            $('html, body').animate({
+                scrollTop: $target.offset().top - 220
+            }, 1000);
+        }
     }
-});
-
-
+    if (window.location.hash) {
+        let targetId = window.location.hash;
+        scrollToTarget(targetId);
+    }
 
 });

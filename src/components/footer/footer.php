@@ -15,40 +15,38 @@
          <h4>Получите бесплатную <br> консультацию</h4>
          <div class="form-items-50 form-blue ">
             <div class="form-group">
-               <input name="name" id="name" type="text" placeholder=" " required>
-               <label for="name">Ваше имя</label>
+               <input name="footer-name" id="footer-name" autocomplete="name" type="text" placeholder=" " required>
+               <label for="footer-name">Ваше имя</label>
             </div>
             <div class="form-group">
-               <input name="email" id="email" type="email" placeholder=" " required>
-               <label for="email">Email</label>
+               <input name="footer-email" id="footer-email" autocomplete="email" type="email" placeholder=" " >
+               <label for="footer-email">Email</label>
             </div>
             <div class="form-group">
-               <input class="phone" name="phone" id="phone" type="tel" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder=" " required>
-               <label for="phone">Телефон</label>
+               <input name="footer-phone" class="phone" autocomplete="tel" id="footer-phone" type="tel" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder=" " required>
+               <label for="footer-phone">Телефон</label>
             </div>
             <div class="form-group">
-               <input name="company" id="company" type="text" placeholder=" ">
-               <label for="company">Компания</label>
+               <input name="footer-company" id="footer-company" autocomplete="organization" type="text" placeholder=" ">
+               <label for="footer-company">Компания</label>
             </div>
          </div>
 
 
          <div class="checkbox checkbox--blue">
-            <input class="custom-checkbox " type="checkbox" name="privacy_policy" id="footer" required>
-            <label for="footer">
+            <input class="custom-checkbox " type="checkbox" name="footer-option" id="footer-option" required>
+            <label for="footer-option">
                Согласен с политикой конфиденциальности
             </label>
          </div>
-
-
-         <button class="button button--white js-submitBtn js-popUp-submitBtn" type="button">
+         <button  disabled class="button button--white js-btn-footer js-popUp-submitBtn" type="button">
             Получить консультацию
          </button>
       </form>
 
    </section>
    <hr>
-   <section class="footer-down container">
+   <section id="contacts" class="footer-down container">
       <div class="footer-down-column ">
          <div class="underline-box">
             <a class="underline-el underline-el-white footer-down-column-tel" href="tel:+73452999999">7 (3452) 99-99-99</a>
@@ -106,12 +104,12 @@
             <h5>Главная страница</h5>
             <ul>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
+                  <a href="#home-calculator" class="underline-el underline-el-white js-anchor-link" rel="noopener noreferrer">
                      Лизинговый калькулятор
                   </a>
                </li>
                <li class="underline-box">
-                  <a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
+                  <a href="#contacts" class="underline-el underline-el-white js-anchor-link" rel="noopener noreferrer">
                      Контакты
                   </a>
                </li>
@@ -212,7 +210,7 @@
          <p>Политика обработки персональных данных</p>
       </div>
       <div>
-         <a href="http://negodyaev.com">
+         <a target="_blank" href="http://negodyaev.com">
             <img class="logoGM" src="<?php echo SVG_PATH; ?>logoGM.svg" alt="logoGM">
          </a>
       </div>

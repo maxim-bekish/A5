@@ -2,12 +2,12 @@
 <script type="module" src="/src/components/ui/popUpAsk/popUpAsk.js"></script>
 
 
-<section class="sidebar-ask popUp__sidebar">
+<section class="sidebar-ask popUp__sidebar closed-blurred">
 
    <div class="popUp__sidebar-box">
 
       <button class="popUp__sidebar-closed">
-         <svg >
+         <svg>
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-closed"></use>
          </svg>
       </button>
@@ -59,7 +59,7 @@
                   Согласен с политикой конфиденциальности
                </label>
             </div>
-            <button type="button" class="button button--blue js-popUp-submitBtn js-submitBtn js-submitBtn-popup-ask">
+            <button type="button" disabled class="button button--blue js-popUp-submitBtn js-submitBtn js-submitBtn-popup-ask">
                Отправить
             </button>
          </div>

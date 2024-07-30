@@ -41,25 +41,8 @@ header {
 }
 
 .burger-button {
-   display: flex;
-   align-content: space-between;
-   flex-wrap: wrap;
    width: 45px;
    height: 12px;
-}
-
-.burger-button div {
-   height: 2px;
-   background-color: var(--medium-gray);
-   opacity: .8;
-}
-
-.burger-button div:first-child {
-   width: 45px;
-}
-
-.burger-button div:last-child {
-   width: 28px;
 }
 
 .logo {

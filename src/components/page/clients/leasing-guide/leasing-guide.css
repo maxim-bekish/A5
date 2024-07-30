@@ -57,6 +57,7 @@
 }
 
 .leasing-guide__list-title {
+   cursor: pointer;
    display: flex;
    gap: 30px;
    align-items: flex-start;

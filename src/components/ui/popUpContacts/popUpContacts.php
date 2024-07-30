@@ -19,7 +19,7 @@ $state = [
 ];
 ?>
 
-<section class="sidebar popUp__sidebar">
+<section class="sidebar popUp__sidebar closed-blurred">
    <div class="popup-contacts popUp__sidebar-box">
       <button class="popup-contacts-closed popUp__sidebar-closed">
          <svg width="32" height="32" viewBox="0 0 32 32">
@@ -80,17 +80,17 @@ $state = [
             <div class="popup-contacts-newsletter-form">
                <div class="form-items-100 form-gray input">
                   <div class="form-group">
-                     <input name="email" id="email" type="email" placeholder=" " required>
-                     <label for="email">Email</label>
+                     <input name="email" id="email-contact" type="email" placeholder=" " required>
+                     <label for="email-contact">Email</label>
                   </div>
                </div>
-               <button class="button button--blue js-popUp-submitBtn js-submitBtn js-submitBtn-popup-contacts">
+               <button  type="button" disabled class="button button--blue js-popUp-submitBtn js-submitBtn js-submitBtn-popup-contacts">
                   Подписаться
                </button>
             </div>
             <div class="checkbox checkbox--white">
-               <input class="custom-checkbox " type="checkbox" id="option-two" required>
-               <label for="option-two">
+               <input class="custom-checkbox " type="checkbox" id="option-contact" required>
+               <label for="option-contact">
                   Согласен с политикой конфиденциальности
                </label>
             </div>
@@ -104,7 +104,7 @@ $state = [
 
 
 <script>
-   document.addEventListener('DOMContentLoaded', function () {
+   document.addEventListener('DOMContentLoaded', function() {
       const stateData = <?php echo json_encode($state); ?>;
       const radioButtons = document.querySelectorAll('input[name="location"]');
       const phoneElement = document.getElementById('contact-phone');
@@ -113,7 +113,7 @@ $state = [
       const emailElement = document.getElementById('contact-email');
 
       radioButtons.forEach(button => {
-         button.addEventListener('change', function () {
+         button.addEventListener('change', function() {
             const selectedIndex = this.value;
             const selectedLocation = stateData[selectedIndex];
 

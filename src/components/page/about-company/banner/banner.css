@@ -32,7 +32,7 @@
 @media (max-width: 768px) {
 
    .about-banner {
-      height: 712px;
+      height: calc(100vh - 147px - 73px);
       padding: 40px 10px;
    }
 

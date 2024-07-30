@@ -65,7 +65,7 @@ button {
 
 .button--white:disabled {
    color: var(--gray);
-   background: var(--gray);
+   background: var(--light-silver);
 }
 
 .button--blue:disabled,

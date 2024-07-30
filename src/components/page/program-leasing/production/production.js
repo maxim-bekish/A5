@@ -10,6 +10,29 @@ $(document).ready(function () {
    });
 
 
+
+   const name = $('#production-name');
+   const phone = $('#production-phone');
+   const checkbox = $('#option-production');
+   function checkFormValidity() {
+      let isFormValid = name.val() && phone.val() && checkbox.is(':checked');
+      $('.js-btn-production').prop('disabled', !isFormValid);
+   }
+
+   $('#production-name, #production-phone').on('input', function () {
+      checkFormValidity();
+   });
+
+   $('#option-production').on('change', function () {
+      checkFormValidity();
+   });
+   $('.js-btn-production').on('click', function () {
+      checkFormValidity();
+   });
+
+
+
+
    let mobile = false;
    const itemsToShow = 6;
    let itemsHidden = items.length - itemsToShow;

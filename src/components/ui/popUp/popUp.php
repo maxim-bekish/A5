@@ -1,5 +1,5 @@
 <?php
-function popUp($title = '', $description = false, $email = false)
+function popUp($title = '', $description = false, $email = false, $requiredEmail = false)
 {
 ?>
 
@@ -25,7 +25,7 @@ function popUp($title = '', $description = false, $email = false)
                   <label class="form-group__label" for="custom-phone">Телефон</label>
                </div>
                <div id="emailGroup" class="form-group" style="display: <?php echo $email ? 'block' : 'none'; ?>">
-                  <input class="email" name="offer-email" id="email" type="email" placeholder=" " <?php echo $email ? "required" : ''; ?>>
+                  <input class="email" name="offer-email" id="email" type="email" placeholder=" " <?php echo $requiredEmail ? "required" : ''; ?>>
                   <label for="offer-email">Email</label>
                </div>
             </div>
@@ -50,7 +50,9 @@ function popUp($title = '', $description = false, $email = false)
 
 
 <script type="module">
-   import { formatPhoneNumber } from '/src/assets/helpers/format.js'
+   import {
+      formatPhoneNumber
+   } from '/src/assets/helpers/format.js'
 
    $(document).ready(function() {
 
@@ -60,8 +62,9 @@ function popUp($title = '', $description = false, $email = false)
          const checkbox = $('.popUp-custom__form .checkbox__input').is(':checked');
          const emailGroupVisible = $('#emailGroup').is(':visible');
          const email = emailGroupVisible ? $('.popUp-custom__form .email').val() : true;
+         const emailRequired = $('.popUp-custom__form .email').attr('required') !== undefined;
 
-         const isFormValid = name && phone && checkbox && email;
+         const isFormValid = name && phone && checkbox && (!emailRequired ? true : email);
          $('.popUp-custom__form .popUp-custom__submitBtn').prop('disabled', !isFormValid);
       }
 
@@ -120,6 +123,13 @@ function popUp($title = '', $description = false, $email = false)
          $('body').css('overflow', 'auto');
       });
 
+      $(document).on('click', function(e) {
+         if ($(e.target).hasClass('popUpCustom')) {
+            console.log('click');
+            $('.popUpCustom').css('display', 'none');
+         }
+      });
+
       // Обработка отправки формы
       $('.popUp-custom-box .popUp-custom__submitBtn').click(function() {
          var form = $(this).closest('.js-myForm')[0]; // Найти ближайший элемент формы с классом 'js-myForm'
@@ -136,8 +146,6 @@ function popUp($title = '', $description = false, $email = false)
             $('.popUp-end-box').css('display', 'block');
             resetForm(); // Сброс формы
             $('.popUpCustom').css('display', 'none'); // Скрытие элемента
-            $('.app').removeClass('blurred');
-            $('body').css('overflow', 'auto');
          } else {
             $(form).addClass('submitted-error'); // Добавление класса ошибки
          }

@@ -72,33 +72,33 @@
       </h4>
       <div class="form-items-50 form-white partners-program__form--content">
          <div class="form-group">
-            <input name="name" id="name" type="text" placeholder=" " required>
-            <label for="name">Ваше имя</label>
+            <input name="name" id="name-partners-program" type="text" placeholder=" " required>
+            <label for="name-partners-program">Ваше имя</label>
          </div>
          <div class="form-group">
-            <input name="email" id="email" type="email" placeholder=" " required>
-            <label for="email">Email</label>
+            <input name="email" id="email-partners-program" type="email" placeholder=" ">
+            <label for="email-partners-program">Email</label>
          </div>
          <div class="form-group">
-            <input name="phone" class="phone" id="phone" type="tel" placeholder=" " pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-            <label for="phone">Телефон</label>
+            <input name="phone" class="phone" id="phone-partners-program" type="tel" placeholder=" " pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+            <label for="phone-partners-program">Телефон</label>
          </div>
          <div class="form-group">
-            <input name="company" id="company" type="text" placeholder=" ">
-            <label for="company">Компания</label>
+            <input name="company" id="company-partners-program" type="text" placeholder=" ">
+            <label for="company-partners-program">Компания</label>
          </div>
       </div>
 
 
       <div class="checkbox checkbox--white">
-         <input class="custom-checkbox " type="checkbox" name="privacy_policy" id="partners-program" required>
-         <label for="partners-program">
+         <input class="custom-checkbox " type="checkbox" name="privacy_policy" id="option-partners-program" required>
+         <label for="option-partners-program">
             Согласен с политикой конфиденциальности
          </label>
       </div>
 
 
-      <button class="partners-program__button button button--blue js-popUp-submitBtn js-submitBtn" type="button">
+      <button disabled class="partners-program__button button button--blue js-popUp-submitBtn js-submitBtn" type="button">
          Оставить заявку
       </button>
    </form>

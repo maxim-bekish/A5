@@ -53,24 +53,23 @@ $headerListLeasing = (object) [
   ]
 ];
 $headerHomePage = (object) [
-  'title' => 'Главная страница
-',
+  'title' => 'Главная страница',
   'list' => [
     (object) [
       'name' => 'Лизинговый калькулятор',
-      'link' => '/#home-calculator'
+      'link' => '#home-calculator'
     ],
     (object) [
       'name' => 'Партнеры',
-      'link' => '#'
+      'link' => '#partners'
     ],
     (object) [
       'name' => 'Этапы сделки',
-      'link' => '/#stages-transaction'
+      'link' => '#stages-transaction'
     ],
     (object) [
       'name' => 'Контакты',
-      'link' => '#'
+      'link' => '#contacts'
     ],
   ]
 ];
@@ -131,7 +130,7 @@ function listHeaderBurger($data)
 
       <?php foreach ($data->list as $item) : ?>
         <li class="underline-box js-burger-menu-item">
-          <a class="underline-el underline-el-white" href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
+          <a class="underline-el underline-el-white <?php if ($data->title === "Главная страница") echo 'js-anchor-link'; ?>" href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
         </li>
       <?php endforeach; ?>
     </ul>
@@ -154,8 +153,7 @@ function listHeaderBurger($data)
         </a>
       </div>
       <button type="button" id="open-burger-menu" class="burger-button mt-21">
-        <div></div>
-        <div></div>
+        <img src="<?php echo IMG_PATH; ?>burger.png" alt="">
       </button>
     </div>
     <div class="leasing mt-21">
@@ -170,7 +168,7 @@ function listHeaderBurger($data)
         </a>
       </div>
       <div class="underline-box">
-        <a class="nav__item underline-el underline-el-blue" href="/#home-calculator">Калькулятор</a>
+        <a class="nav__item underline-el underline-el-blue js-anchor-link" href="#home-calculator">Калькулятор</a>
       </div>
     </div>
     <div class="contacts-header mt-21">
@@ -178,10 +176,10 @@ function listHeaderBurger($data)
         <a class="underline-el underline-el-blue" href="tel:+73452999999">7 (3452) 99 99 99</a>
       </button>
       <button type="button" class="open-button-ask underline-box">
-        <p class="underline-el underline-el-blue"> Задать вопрос</p>
+        <p blurred=true class="underline-el underline-el-blue"> Задать вопрос</p>
       </button>
       <button type="button" class="open-button-contact underline-box">
-        <p class="underline-el underline-el-blue">Контакты</p>
+        <p blurred=true class="underline-el underline-el-blue">Контакты</p>
       </button>
     </div>
   </section>

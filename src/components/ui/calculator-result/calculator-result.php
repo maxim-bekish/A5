@@ -21,7 +21,7 @@
    </div>
    <div>
       <button class="openPopUpButton button button--white" data-title="Получите коммерческое
-      предложение" data-description="false" data-email="true">
+      предложение" data-description="false"  data-email="true" data-email-required="false">
          Получить коммерческое предложение
       </button>
       <p class="leasing-calculator__info">

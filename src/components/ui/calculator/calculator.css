@@ -1,6 +1,7 @@
 .calculator-range {
    max-width: 560px;
    gap: 50px;
+   height: 100%;
    width: calc(50% - 20px);
    min-width: 425px;
    max-width: 560px;

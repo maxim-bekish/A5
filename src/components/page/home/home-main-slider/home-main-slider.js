@@ -10,18 +10,24 @@ function initCustomCursor($activeSlide) {
         $customCursor.hide();
     });
 
-
     $activeSlide.on('mousemove', function (e) {
+        $customCursor.show();
         const mainBlockOffset = $activeSlide.parent().offset();
         const relativeX = e.pageX - mainBlockOffset.left;
         const relativeY = e.pageY - mainBlockOffset.top;
 
         $customCursor.css({
-            left: relativeX - 45 + 'px',
-            top: relativeY - 45 + 'px'
+            left: relativeX - $customCursor.width() / 2 + 'px',
+            top: relativeY - $customCursor.height() / 2 + 'px'
         });
     });
 
+    $customCursor.on('mouseenter', function () {
+        $activeSlide.trigger('mouseenter');
+    });
+    $customCursor.on('mouseleave', function () {
+        $activeSlide.trigger('mouseleave');
+    });
 
 }
 
@@ -29,7 +35,7 @@ function initCustomCursor($activeSlide) {
 
 $(document).ready(function () {
     let speedAnimation = 1000; // скорость перелистывания 1000 = 1s
-    let intervalAnimation = 2500;  // интервал перелистывания 3000 = 3s
+    let intervalAnimation = 3000;  // интервал перелистывания 3000 = 3s
     let widthOneSlide = '1530px';
     let widthInactiveSlide = '130px';
     let widthZeroSlide = '0px';

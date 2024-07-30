@@ -77,6 +77,7 @@ $(document).ready(function () {
 
    $('.production__select-item-input').on('input', function () {
       let value = $(this).val().replace(/[^\d.-]/g, '');
+      if (value >= 100000000) value = 100000000;
       if (value) {
          $(this).val(formatNumberWithSymbol(parseInt(value)));
       } else {

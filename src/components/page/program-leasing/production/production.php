@@ -61,13 +61,13 @@ include 'src/state/state.php';
 
 
                   <div class="checkbox checkbox--white production__module-window__checkbox">
-                     <input class="custom-checkbox checkbox__input " type="checkbox" name="privacy_policy" id="free-production" required>
-                     <label class="checkbox__label" for="free-production">
+                     <input class="custom-checkbox checkbox__input " type="checkbox" name="privacy_policy" id="option-production" required>
+                     <label class="checkbox__label" for="option-production">
                         Согласен с политикой конфиденциальности
                      </label>
                   </div>
-
-                  <button class="button button--blue js-popUp-submitBtn js-submitBtn " type="button">
+                  <!--js-popUp-submitBtn-->
+                  <button disabled class="button button--blue js-btn-production js-popUp-submitBtn " type="button">
                      Оставить заявку
                   </button>
                </form>

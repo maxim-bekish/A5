@@ -301,17 +301,29 @@ $(document).ready(function () {
         updateResults()
     };
 
+    function moveCursorToEnd($input) {
+        const input = $input[0];
+        const length = input.value.length;
+        input.setSelectionRange(length - 2, length - 2);
+    }
 
     $inputRange.each(function () {
         updateAll($(this));
     });
 
-    $inputRange.add($inputManual).on("input", function () {
+    $inputManual.on("input", function () {
+        updateAll($(this));
+        moveCursorToEnd($(this));
+    });
+    $inputRange.on("input", function () {
         updateAll($(this));
     });
     ($inputManual).on("focus", function () {
         $(this).val("");
         updateAll($(this));
+        moveCursorToEnd($(this));
     });
-
+    $inputManual.on("click", function () {
+        moveCursorToEnd($(this));
+    });
 });

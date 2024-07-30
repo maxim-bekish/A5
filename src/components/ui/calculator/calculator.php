@@ -1,9 +1,7 @@
 <script type="module" src="/src/components/ui/calculator/calculator.js"></script>
 
 <link rel="stylesheet" href="/src/components/ui/calculator/calculator.css">
-<?php
-require 'src/assets/helpers/format.php';
-?>
+
 <section class="calculator-range">
    <div class=" calculator-item contract-price">
       <div class="item-header">
@@ -19,10 +17,10 @@ require 'src/assets/helpers/format.php';
       </div>
       <div class="item-footer">
          <p>
-            <?php echo format(0); ?>
+            <?php echo number_format(0, 0, '', ' ') . "₽" ?>
          </p>
          <p>
-            до <?php echo format(100000000); ?>
+            до <?php echo number_format(100000000, 0, '', ' ') . "₽"; ?>
          </p>
       </div>
    </div>
@@ -32,8 +30,8 @@ require 'src/assets/helpers/format.php';
             Первоначальный взнос (аванс)
          </p>
          <div class="item-header-box-value">
-               <input min="0" max="49" value="20" type="text" name="input2" class="inputCalculator fixInput" id="inputCalculator2">
-               <span class="inputCalculatorTwo"></span>
+            <input min="0" max="49" value="20" type="text" name="input2" class="inputCalculator fixInput" id="inputCalculator2">
+            <span class="inputCalculatorTwo"></span>
          </div>
       </div>
       <div class="item-main">
@@ -41,10 +39,10 @@ require 'src/assets/helpers/format.php';
       </div>
       <div class="item-footer">
          <p>
-            <?php echo format(0, '%'); ?>
+            <?php echo number_format(0, 0, '', ' ') . "%"; ?>
          </p>
          <p>
-            <?php echo format(49, '%'); ?>
+            <?php echo number_format(49, 0, '', ' ') . "%"; ?>
          </p>
       </div>
    </div>
@@ -62,10 +60,10 @@ require 'src/assets/helpers/format.php';
       </div>
       <div class="item-footer">
          <p>
-            <?php echo format(12, 'мес'); ?>
+            <?php echo number_format(12, 0, '', ' ') . "мес"; ?>
          </p>
          <p>
-            <?php echo format(60, 'мес'); ?>
+            <?php echo number_format(60, 0, '', ' ') . "мес"; ?>
          </p>
       </div>
    </div>

@@ -379,7 +379,13 @@ include 'src/components/page/program-leasing/production/production.php';
    </div>
    <div class="program-leasing-calculator">
       <?php
+
+ini_set('display_errors', 1);  // Включение отображения ошибок
+ini_set('display_startup_errors', 1); // Включение отображения ошибок запуска
+error_reporting(E_ALL); // Сообщать обо всех ошибках
       include 'src/components/ui/calculator/calculator.php';
+   
+  
       include 'src/components/ui/calculator-result/calculator-result.php';
       ?>
    </div>

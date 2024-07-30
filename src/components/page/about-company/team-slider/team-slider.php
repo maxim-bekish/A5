@@ -49,12 +49,12 @@ $slides = [
    <section class="slider">
       <div class="custom-slider__buttons">
          <button class="custom-slider__button slider__button--prev" type="button">
-            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
+            <svg class="custom-slider__icon" width="50" height="50" viewBox="-1 -1 52 52">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
          </button>
          <button class="custom-slider__button slider__button--next" type="button">
-            <svg class="custom-slider__icon" width="50" height="50" viewBox="0 0 50 50">
+            <svg class="custom-slider__icon" width="50" height="50" viewBox="-1 -1 52 52">
                <use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-left-circle"></use>
             </svg>
          </button>
