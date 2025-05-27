@@ -1,194 +1,148 @@
 function initCustomCursor($activeSlide) {
-    const $customCursor = $('#customCursor');
-    $('.slide').off('mouseenter mouseleave mousemove');
-    $customCursor.hide();
-    $activeSlide.on('mouseenter', function () {
-        $customCursor.show();
-    });
+	$('.mainSliderSlide').on('click', function () {
+		const url = $(this).data('url');
 
-    $activeSlide.on('mouseleave', function () {
-        $customCursor.hide();
-    });
+		if (url) {
+			window.location.href = url;
+		} else {
+			console.warn('Атрибут data-url не задан для элемента:', this);
+		}
+	});
 
-    $activeSlide.on('mousemove', function (e) {
-        $customCursor.show();
-        const mainBlockOffset = $activeSlide.parent().offset();
-        const relativeX = e.pageX - mainBlockOffset.left;
-        const relativeY = e.pageY - mainBlockOffset.top;
+	if(window.innerWidth <= 768) {
+		return;
+	}
+	const $customCursor = $('#customCursor');
+	$('.mainSliderSlide').off('mouseenter mouseleave mousemove');
+	$customCursor.hide();
+	$activeSlide.on('mouseenter', function () {
+		$customCursor.show();
+	});
 
-        $customCursor.css({
-            left: relativeX - $customCursor.width() / 2 + 'px',
-            top: relativeY - $customCursor.height() / 2 + 'px'
-        });
-    });
+	$activeSlide.on('mouseleave', function () {
+		$customCursor.hide();
+	});
 
-    $customCursor.on('mouseenter', function () {
-        $activeSlide.trigger('mouseenter');
-    });
-    $customCursor.on('mouseleave', function () {
-        $activeSlide.trigger('mouseleave');
-    });
+	$activeSlide.on('mousemove', function (e) {
+		$customCursor.show();
+		const mainBlockOffset = $activeSlide.parent().offset();
+		const relativeX = e.pageX - mainBlockOffset.left;
+		const relativeY = e.pageY - mainBlockOffset.top;
 
+		$customCursor.css({
+			left: relativeX - $customCursor.width() / 2 + 'px',
+			top: relativeY - $customCursor.height() / 2 + 'px',
+		});
+	});
+
+	$customCursor.on('mouseenter', function () {
+		$activeSlide.trigger('mouseenter');
+	});
+	$customCursor.on('mouseleave', function () {
+		$activeSlide.trigger('mouseleave');
+	});
 }
 
+function initSlider(speed = 0.5) {
+	// Параметр для скорости в миллисекундах
+	const slider = $('#mainSliderContainer');
+	const slides = $('.mainSliderSlide');
+	const slideCount = slides.length;
 
+	// Дублируем первый и последний слайды для бесшовности
+	const firstSlide = slides.first().clone();
+	const lastSlide = slides.last().clone();
+
+	slider.append(firstSlide); // Добавляем копию первого слайда в конец
+	slider.prepend(lastSlide); // Добавляем копию последнего слайда в начало
+
+	const totalSlides = slideCount + 2; // Общее количество слайдов с учетом дублированных
+	const slideWidth = $('#mainSliderContainer .mainSliderSlide').outerWidth();
+
+	slider.css({
+		width: slideWidth * totalSlides,
+		transform: `translateX(-${slideWidth}px)`, // Смещение на первый оригинальный слайд
+	});
+
+	let currentIndex = 1;
+	let startX = 0;
+	let moveX = 0;
+	let isSwiping = false;
+
+	function moveToSlide(index) {
+		slider.css({
+			transform: `translateX(-${slideWidth * index}px)`,
+			transition: `transform ${speed * 1000}ms ease-in-out`, // Используем скорость
+		});
+
+		currentIndex = index;
+
+		// После завершения анимации, если мы на дублированных слайдах
+		slider.one('transitionend', function () {
+			if (currentIndex === 0) {
+				slider.css({
+					transform: `translateX(-${slideWidth * slideCount}px)`,
+					transition: 'none', // Убираем анимацию
+				});
+				currentIndex = slideCount;
+			} else if (currentIndex === slideCount + 1) {
+				slider.css({
+					transform: `translateX(-${slideWidth}px)`,
+					transition: 'none', // Убираем анимацию
+				});
+				currentIndex = 1;
+			}
+		});
+	}
+
+	$('#navigationNext').click(function () {
+		moveToSlide(currentIndex + 1);
+	});
+
+	$('#navigationPrev').click(function () {
+		moveToSlide(currentIndex - 1);
+	});
+
+	// Обработчики для свайпов
+	slider.on('touchstart', function (e) {
+		startX = e.originalEvent.touches[0].pageX;
+		isSwiping = true;
+	});
+
+	slider.on('touchmove', function (e) {
+		if (!isSwiping) return;
+
+		moveX = e.originalEvent.touches[0].pageX - startX;
+		slider.css({
+			transform: `translateX(calc(-${slideWidth * currentIndex}px + ${moveX}px))`,
+			transition: 'none', // Убираем анимацию во время свайпа
+		});
+	});
+
+	slider.on('touchend', function () {
+		if (!isSwiping) return;
+
+		isSwiping = false;
+
+		if (Math.abs(moveX) > slideWidth / 4) {
+			// Если свайп значительный, перемещаем слайд
+			if (moveX < 0) {
+				moveToSlide(currentIndex + 1); // Свайп влево
+			} else {
+				moveToSlide(currentIndex - 1); // Свайп вправо
+			}
+		} else {
+			// Если свайп незначительный, возвращаемся на текущий слайд
+			moveToSlide(currentIndex);
+		}
+
+		// Сбрасываем значения
+		startX = 0;
+		moveX = 0;
+	});
+}
 
 $(document).ready(function () {
-    let speedAnimation = 1000; // скорость перелистывания 1000 = 1s
-    let intervalAnimation = 3000;  // интервал перелистывания 3000 = 3s
-    let widthOneSlide = '1530px';
-    let widthInactiveSlide = '130px';
-    let widthZeroSlide = '0px';
-    let isAnimating = false; // Флаг для отслеживания состояния анимации
-
-    // Устанавливаем второй слайд активным при загрузке страницы
-    let $slidesContainer = $(".main-slider__container");
-    let $firstSlideClone = $(".slide").first().clone().addClass('clone');
-    let $lastSlideClone = $(".slide").last().clone().addClass('clone');
-    $slidesContainer.append($firstSlideClone);
-    $slidesContainer.prepend($lastSlideClone);
-
-    // Инициализация начального состояния
-    $('.main-slider-dot-item').first().addClass('main-slider-dot-active').css({ width: '60px', opacity: 1 });
-    $('.main-slider-dot-item:not(.main-slider-dot-active)').css({ width: '20px', opacity: 0.7 });
-    $(".slide").eq(1).addClass("slide--active").css("width", widthOneSlide);
-
-
-    if ($(window).width() > 768) {
-        $firstSlideClone.hide();
-        $lastSlideClone.hide();
-
-        // Инициализация кастомного курсора для первого активного слайда
-        initCustomCursor($(".slide--active"));
-        let isAnimating = false;
-        let slideInterval;
-
-        function goToNextSlide() {
-            if (isAnimating) return;
-
-            isAnimating = true;
-            let $currentSlide = $(".slide--active");
-            let $nextSlide = $currentSlide.next(".slide");
-
-            while ($nextSlide.hasClass("clone")) {
-                $nextSlide = $nextSlide.next(".slide");
-                if ($nextSlide.length === 0) {
-                    $nextSlide = $(".slide").first();
-                }
-            }
-
-            if ($nextSlide.length === 0) {
-                $nextSlide = $(".slide").first();
-            }
-
-            $currentSlide.removeClass("slide--active").animate({ width: widthInactiveSlide }, speedAnimation);
-            $nextSlide.addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation, function () {
-                isAnimating = false;
-                initCustomCursor($nextSlide);
-            });
-        }
-
-        $(".slide").click(function () {
-            if (isAnimating) return;
-            if ($(this).hasClass("slide--active")) {
-                if ($(this).hasClass("slide--active")) {
-                    const url = $(this).data('url');
-                    console.log(url);
-                    window.location.href = url;
-                }
-                return;
-            }
-
-            isAnimating = true;
-            let $currentSlide = $(".slide--active");
-            let $nextSlide = $(this);
-
-            $currentSlide.removeClass("slide--active").animate({ width: widthInactiveSlide }, speedAnimation);
-            $nextSlide.addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation, function () {
-                isAnimating = false;
-                initCustomCursor($nextSlide);
-            });
-
-            clearInterval(slideInterval);
-            slideInterval = setInterval(goToNextSlide, intervalAnimation);
-        });
-
-        // Запускаем автоматическое переключение слайдов каждые 3 секунды
-        slideInterval = setInterval(goToNextSlide, intervalAnimation);
-
-
-
-
-    } else {
-        function nextSlide() {
-            if (isAnimating) return;
-            isAnimating = true;
-            let $current = $(".slide--active");
-            let $next = $current.next(".slide").length ? $current.next(".slide") : $(".slide").first();
-
-            $current.removeClass("slide--active").animate({ width: widthZeroSlide }, speedAnimation);
-            $next.addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation, function () {
-                if ($next.is($firstSlideClone)) {
-                    $next.removeClass("slide--active");
-                    $(".slide").eq(1).addClass("slide--active").css("width", widthOneSlide);
-                    $firstSlideClone.css("width", widthZeroSlide);
-                } else if ($current.is($lastSlideClone)) {
-                    $(".slide").eq(1).addClass("slide--active").css("width", widthOneSlide);
-                }
-                isAnimating = false;
-            });
-            runDot($next);
-        }
-
-        function prevSlide() {
-            if (isAnimating) return;
-            isAnimating = true;
-
-            let $current = $(".slide--active");
-            let $prev = $current.prev(".slide").length ? $current.prev(".slide") : $(".slide").last();
-            $current.removeClass("slide--active").animate({ width: widthZeroSlide }, speedAnimation);
-            $prev.addClass("slide--active").animate({ width: widthOneSlide }, speedAnimation, function () {
-                if ($prev.is($lastSlideClone)) {
-                    $prev.removeClass("slide--active");
-                    $(".slide").eq(-2).addClass("slide--active").css("width", widthOneSlide);
-                    $lastSlideClone.css("width", widthZeroSlide);
-                } else if ($current.is($firstSlideClone)) {
-                    $(".slide").eq(-2).addClass("slide--active").css("width", widthOneSlide);
-                }
-                isAnimating = false;
-            });
-            runDot($prev);
-        }
-
-        function runDot($activeSlide) {
-            let actualIndex = $activeSlide.index() - 1; // Исключаем клон слайда перед первым слайдом
-            if (actualIndex >= $(".slide").length - 2) {
-                actualIndex = 0;
-            } else if (actualIndex < 0) {
-                actualIndex = $(".slide").length - 3;
-            }
-            $('.main-slider-dot-item').stop(true, true).removeClass('main-slider-dot-active').animate({ width: '20px', opacity: 0.7 }, speedAnimation);
-            $('.main-slider-dot-item').eq(actualIndex).stop(true, true).addClass('main-slider-dot-active').animate({ width: '60px', opacity: 1 }, speedAnimation);
-        }
-
-        $(".slide").on('click', function () {
-            const url = $(this).data('url');
-            window.location.href = url;
-        });
-
-        setInterval(nextSlide, intervalAnimation);
-
-        // Инициализация Hammer.js для обработки свайпов
-        let hammer = new Hammer($slidesContainer[0]);
-        hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
-        hammer.on("swiperight", () => prevSlide());
-        hammer.on("swipeleft", () => nextSlide());
-    }
-
-
-
+	initCustomCursor($('#mainSliderContainer'));
+	initSlider();
 });
-
-
-
-
