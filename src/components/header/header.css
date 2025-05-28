@@ -12,8 +12,8 @@ header {
 .header {
 	max-width: 1920px;
 	background-color: var(--white);
-	padding-top: 30px;
-	padding-bottom: 80px;
+	padding-top: 40px;
+	padding-bottom: 35px;
 	display: grid;
 	grid-template-columns: repeat(4, minmax(290px, 410px));
 	justify-content: space-between;
@@ -46,10 +46,10 @@ header {
 }
 
 .logo {
-	max-width: 151px;
-	max-height: 106px;
-	min-width: 151px;
-	min-height: 106px;
+	max-width: 125px;
+	max-height: 83px;
+	min-width: 125px;
+	min-height: 83px;
 }
 
 .leasing,

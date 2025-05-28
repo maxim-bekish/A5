@@ -156,11 +156,11 @@ function listHeaderBurger($data)
         <img src="<?php echo IMG_PATH; ?>burger.png" alt="">
       </button>
     </div>
-    <div class="leasing mt-21">
+    <div class="leasing ">
       <div class="select select-program"> <?php listHeader($headerListProgram); ?> </div>
       <div class="select select-leasing"> <?php listHeader($headerListLeasing); ?> </div>
     </div>
-    <div class="nav mt-21">
+    <div class="nav ">
       <div class="select select-clients"> <?php listHeader($headerListClients); ?> </div>
       <div class="underline-box">
         <a class="nav__item underline-el underline-el-blue" href="/inventory">
@@ -171,7 +171,7 @@ function listHeaderBurger($data)
         <a class="nav__item underline-el underline-el-blue js-anchor-link" href="#home-calculator">Калькулятор</a>
       </div>
     </div>
-    <div class="contacts-header mt-21">
+    <div class="contacts-header ">
       <button class="underline-box">
         <a class="underline-el underline-el-blue" href="tel:+73452999999">7 (3452) 99 99 99</a>
       </button>
