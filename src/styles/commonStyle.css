@@ -172,6 +172,12 @@ img {
 	grid-column-gap: 40px;
 	grid-row-gap: 20px;
 }
+.grid_1fr-600-box {
+	display: grid;
+	grid-template-columns: 1fr 600px;
+	grid-column-gap: 40px;
+	grid-row-gap: 20px;
+}
 
 .rt0 {
 	stroke: var(--silver);
@@ -543,7 +549,8 @@ img {
 		width: calc(50% - 10px) !important;
 	}
 
-	.grid_1-3-box {
+	.grid_1-3-box,
+	.grid_1fr-600-box {
 		grid-template-columns: 1fr;
 	}
 
@@ -717,8 +724,7 @@ img {
 	.leady-loading {
 		max-width: 100%;
 	}
-		.mt-160px {
+	.mt-160px {
 		margin-top: 0px;
 	}
-
 }

@@ -2,9 +2,9 @@
 <script src="/src/components/page/home/home-leasing-calculator/home-leasing-calculator.js"></script>
 
 <section id="home-calculator" class="leasing-calculator mt-160px container">
-   <h3 class="title-page-h3">Калькулятор лизинга</h3>
-   <div class="leasing-calculator__box grid_1-3-box">
-      <div class="leasing-calculator__title">
+	<div class="leasing-calculator__box grid_1-3-box">
+		<div class="leasing-calculator__title">
+				<h3 class="title-page-h3">Лизинговый калькулятор</h3>
          <p class="p20px">
             Укажите все параметры и получите точный расчет
          </p>

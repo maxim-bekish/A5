@@ -1,51 +1,38 @@
 <link rel="stylesheet" href="src/components/page/home/home-stages-transaction/home-stages-transaction.css">
-<!--<script src="src/components/page/home/home-stages-transaction/home-stages-transaction.js"></script>-->
 
-<section id="stages-transaction" class="stages-transaction mt-160px container">
-   <h3 class="title-page-h3">Этапы сделки</h3>
-   <div class="stages-transaction__box">
-      <div class="stages-transaction__content">
+<?php
+$list = array(
+	array("title" => "Подтверждение заявки", "description" => "Заполните форму на сайте и направьте заявку в один клик. Сотрудник А5 свяжется с вами в течение 3-х часов в рабочий день, чтобы подтвердить, что заявка принята и уточнить нюансы, если это необходимо"),
+	array("title" => "Подготовка документов", "description" => "Теперь у вас есть персональный менеджер, который поможет собрать необходимый пакет документов и направит их на одобрение лизинговой сделки"),
+	array("title" => "Одобрение и оплата", "description" => "После того, как положительное решение принято, подписываем договор, после чего вы можете внести аванс"),
+	array("title" => "Передача предмета лизинга ", "description" => "Всё готово! Поставщик передаёт вам в пользование транспорт, технику, оборудование или недвижимость — то, что необходимо для развития вашего бизнеса"),
+	array("title" => "Эксплуатация предмета лизинга и приобретение его в собственность", "description" => "Можно завершить договор по истечении его срока, или досрочно. Право собственности на предмет лизинга может переходит к лизингополучателю после окончательных расчетов"),
 
-         <div class="row w-50-box">
-            <h4 class="row__title w-50 ">Подтверждение заявки</h4>
-            <p class="row__text w-50 ">
-               Вы оставляете заявку на сайте. <br>
-               В течение 2-х часов наш сотрудник связывается с вами и подтверждает заявку
-            </p>
-         </div>
-
-         <div class="row w-50-box">
-            <h4 class="row__title w-50 ">Подготовка документов</h4>
-            <p class="row__text w-50 ">
-               Персональный менеджер курирует вас, объясняет, какие документы нужно предъявить и направляет их на
-               одобрение
-            </p>
-         </div>
-
-         <div class="row w-50-box">
-            <h4 class="row__title w-50 ">Одобрение и оплата</h4>
-            <p class="row__text w-50 ">
-               Мы принимаем решение, подписываем договор, только тогда вы вносите аванс
-            </p>
-         </div>
-
-         <div class="row w-50-box">
-            <h4 class="row__title w-50 ">Передача <br> предмета лизинга</h4>
-            <p class="row__text w-50 ">
-               Далее поставщик передаёт вам в пользование автотранспорт, оборудование или недвижимость
-            </p>
-         </div>
-
-      </div>
-      <button 
-      type="button"
-      class="openPopUpButton button button--blue stages-transaction__button"
-      data-title="Бесплатная консультация"
-      data-description="true"
-      data-email="false"
-      >
-      Бесплатная консультация
-   </button>
-   </div>
+);
+?>
+<section id="stages-transaction" class=" mt-160px container grid_1-3-box">
+	<div>
+		<h3 class="title-page-h3">Лизинг с А5 – это просто!</h3>
+		<button
+			type="button"
+			class="openPopUpButton button button--blue stages-transaction__button"
+			data-title="Бесплатная консультация"
+			data-description="true"
+			data-email="false">
+			Хочу бесплатную консультацию!
+		</button>
+	</div>
+	<div class="stages-transaction__box">
+		<ul class="stages-transaction__list">
+			<?php foreach ($list as $index => $stage): ?>
+				<li class="stages-transaction__item">
+					<h6 class="stages-transaction__step"><?= $index + 1 ?></h6>
+					<div class="stages-transaction__content">
+						<h5 class="stages-transaction__title"><?= htmlspecialchars($stage['title'], ENT_QUOTES) ?></h5>
+						<p class="stages-transaction__description"><?= htmlspecialchars($stage['description'], ENT_QUOTES) ?></p>
+					</div>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+	</div>
 </section>
-<!--js-popUp-consultation-->

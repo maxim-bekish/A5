@@ -1,47 +1,94 @@
-.stages-transaction {
-   display: flex;
-   justify-content: space-between;
-}
-
-.stages-transaction__box {
-   width: calc(50% - 20px);
-}
-
-.stages-transaction__content {
-   display: flex;
-   flex-direction: column;
-}
-
-.stages-transaction__separator {
-   margin: 0;
-}
-
 .stages-transaction__button {
-   margin-top: 60px;
-   width: 330px;
-   min-width: 250px;
+	margin-top: 60px;
+	width: 330px;
+	min-width: 250px;
+}
+.stages-transaction__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+}
+.stages-transaction__item {
+	max-width: 410px;
+	display: flex;
+	gap: 17px;
+	width: 100%;
+}
+.stages-transaction__step {
+	width: 110px;
+	text-align: center;
+	font-weight: var(--font-w4);
+	font-size: 179px;
+	line-height: 104%;
+	color: var(--dark-blue);
+}
+.stages-transaction__content {
+	display: flex;
+	flex: 2;
+	flex-direction: column;
+	gap: 15px;
+}
+.stages-transaction__title {
+	font-weight: var(--font-w4);
+	font-size: 24px;
+	line-height: 120%;
+	color: var(--black);
+}
+.stages-transaction__description {
+	font-weight: var(--font-w4);
+	font-size: 18px;
+	line-height: 140%;
+	color: var(--gray-text);
 }
 
 @media (max-width: 1280px) {
-   .stages-transaction {
-      flex-direction: column;
-      gap: 20px;
-   }
+	.stages-transaction__list {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 30px;
+	}
+	.stages-transaction__step {
+		width: 73px;
+		font-size: 120px;
+	}
+	.stages-transaction__button {
+		margin-top: 50px;
+		width: 35%;
+	}
 
-   .stages-transaction__box {
-      width: 100%;
-   }
-
-   .stages-transaction__button {
-      margin-top: 50px;
-      width: 35%;
-   }
+	.stages-transaction__title {
+		font-size: 23px;
+		line-height: 115%;
+	}
+	.stages-transaction__description {
+		font-size: 16px;
+		line-height: 130%;
+	}
 }
-
-@media (max-width: 390px) {
-   .stages-transaction__button {
-      margin-top: 40px;
-      width: 100%;
-   }
-
+@media (max-width: 600px) {
+	.stages-transaction__list {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+	.stages-transaction__item {
+		max-width: 100%;
+		gap: 10px;
+	}
+	.stages-transaction__content {
+		gap: 7px;
+	}
+	.stages-transaction__step {
+		width: 34px;
+		font-size: 60px;
+	}
+	.stages-transaction__title {
+		font-size: 16px;
+		line-height: 130%;
+	}
+	.stages-transaction__description {
+		font-size: 14px;
+	}
+	.stages-transaction__button {
+		margin-top: 20px;
+		width: 100%;
+	}
 }
