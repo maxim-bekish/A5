@@ -1,65 +1,63 @@
 .breadcrumbs {
-   display: flex;
-   align-items: center;
-   flex-wrap: wrap;
-   margin-bottom: 45px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
 }
 
 .breadcrumbs li .breadcrumbs__arrow {
-   margin-right: 15px;
-   width: 7px;
-   height: 11px;
+  margin-right: 15px;
+  width: 7px;
+  height: 11px;
 }
 
 .breadcrumbs li:not(:last-child) {
-   margin-right: 15px;
+  margin-right: 15px;
 }
 
 .breadcrumbs li p,
 .breadcrumbs li a {
-   display: inline;
-   cursor: pointer;
-   font-size: 16px;
-   line-height: 19.36px;
-   color: var(--gray);
+  display: inline;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 19.36px;
+  color: var(--gray);
 }
 
 .breadcrumbs li p:hover,
 .breadcrumbs li a:hover {
-   color: var(--medium-gray);
+  color: var(--medium-gray);
 }
 
-@media (max-width:1280px) {
+@media (max-width: 1280px) {
+  .breadcrumbs li p,
+  .breadcrumbs li a {
+    font-size: 14px;
+    line-height: 16.94px;
+  }
 
-   .breadcrumbs li p,
-   .breadcrumbs li a {
-      font-size: 14px;
-      line-height: 16.94px;
-   }
-
-   .breadcrumbs {
-      margin: 20px 0 35px 0;
-   }
+  .breadcrumbs {
+    margin: 20px 0 35px 0;
+  }
 }
 
 @media (max-width: 768px) {
+  .breadcrumbs li p,
+  .breadcrumbs li a {
+    font-size: 12px;
+    line-height: 14.52px;
+  }
 
-   .breadcrumbs li p,
-   .breadcrumbs li a {
-      font-size: 12px;
-      line-height: 14.52px;
-   }
+  .breadcrumbs li .breadcrumbs__arrow {
+    margin-right: 10px;
+  }
 
-   .breadcrumbs li .breadcrumbs__arrow {
-      margin-right: 10px;
-   }
+  .breadcrumbs li:not(:last-child) {
+    margin-right: 10px;
+  }
 
-   .breadcrumbs li:not(:last-child) {
-      margin-right: 10px;
-   }
-
-   .breadcrumbs {
-      margin: 0;
-      padding: 20px 10px 35px 10px;
-   }
+  .breadcrumbs {
+    margin: 0;
+    padding: 20px 10px 35px 10px;
+  }
 }

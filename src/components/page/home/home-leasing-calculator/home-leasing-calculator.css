@@ -1,28 +1,28 @@
 .leasing-calculator__title {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .leasing-calculator__title-text {
-	font-size: 20px;
+  font-size: 20px;
 
-	line-height: 28px;
-	color: var(--medium-gray);
-	max-width: 240px;
+  line-height: 28px;
+  color: var(--medium-gray);
+  max-width: 240px;
 }
 
 .leasing-calculator__box {
-	margin-top: 93px;
+  margin-top: 93px;
 }
 
 @media (max-width: 1280px) {
-	.leasing-calculator__box {
-		flex-direction: column;
-		margin-top: 20px;
-	}
+  .leasing-calculator__box {
+    flex-direction: column;
+    margin-top: 20px;
+  }
 
-	.leasing-calculator__title-text {
-		max-width: 100%;
-	}
+  .leasing-calculator__title-text {
+    max-width: 100%;
+  }
 }

@@ -4,6 +4,5 @@ include 'src/components/page/home/home-leasing-programs/home-leasing-programs.ph
 include 'src/components/page/home/home-partners/home-partners.php';
 include 'src/components/page/home/home-leasing-calculator/home-leasing-calculator.php';
 include 'src/components/page/home/home-stages-transaction/home-stages-transaction.php';
- 
+
 include 'src/components/page/home/home-banner-one/home-banner-one.php';
-?>

@@ -63,12 +63,12 @@ $mainSlider = array(
 	</div>
 	<div class="main-slider__navigation">
 		<button type="button" class="main-slider__button main-slider__button--prev" id="navigationPrev">
-			<svg class="main-slider__icon"  viewBox="0 0 50 50">
+			<svg class="main-slider__icon" viewBox="0 0 50 50">
 				<use href="<?php echo SVG_PATH; ?>icons.svg#icon-outline-prev"></use>
 			</svg>
 		</button>
 		<button type="button" class="main-slider__button main-slider__button--next" id="navigationNext">
-			<svg class="main-slider__icon"  viewBox="0 0 50 50">
+			<svg class="main-slider__icon" viewBox="0 0 50 50">
 				<use href="<?php echo SVG_PATH; ?>icons.svg#icon-outline-next"></use>
 			</svg>
 		</button>

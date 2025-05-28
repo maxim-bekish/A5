@@ -1,23 +1,20 @@
 .clients-partners-program__content img {
-   object-position: center;
-   object-fit: cover;
-   height: 560px;
-   margin-bottom: 40px;
+  object-position: center;
+  object-fit: cover;
+  height: 560px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 1280px) {
-   .clients-partners-program {
-      gap: 0;
-   }
-
+  .clients-partners-program {
+    gap: 0;
+  }
 }
 
 @media (max-width: 768px) {
-   .clients-partners-program__content img {
-      margin-top: -10px;
-      margin-bottom: 30px;
-      height: 40vw;
-   }
-
-
+  .clients-partners-program__content img {
+    margin-top: -10px;
+    margin-bottom: 30px;
+    height: 40vw;
+  }
 }

@@ -1,43 +1,40 @@
 .underline-box {
-   position: relative;
-   /* Нужно для позиционирования псевдоэлемента */
+  position: relative;
+  /* Нужно для позиционирования псевдоэлемента */
 }
 
 .underline-box .underline-el {
-   text-decoration: none;
-   position: relative;
-   /* Нужно для позиционирования псевдоэлемента */
+  text-decoration: none;
+  position: relative;
+  /* Нужно для позиционирования псевдоэлемента */
 }
 
 .underline-box .underline-el::after {
-   content: '';
-   position: absolute;
-   width: 0;
-   height: 1px;
-   /* Толщина подчеркивания */
-   bottom: 0;
-   left: 0;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  /* Толщина подчеркивания */
+  bottom: 0;
+  left: 0;
 
-   /* Цвет подчеркивания */
-   transition: width 500ms;
+  /* Цвет подчеркивания */
+  transition: width 500ms;
 }
 
 /* цвет линии */
 .underline-box .underline-el-white::after {
-   background-color: var(--white);
+  background-color: var(--white);
 }
 
 /* цвет линии */
 .underline-box .underline-el-blue::after {
-   background-color: var(--dark-blue);
+  background-color: var(--dark-blue);
 }
 
-
 @media (hover: hover) {
-   .underline-box .underline-el:hover::after {
-      width: 100%;
-      /* Подчеркивание растягивается до полной ширины */
-   }
-
-
+  .underline-box .underline-el:hover::after {
+    width: 100%;
+    /* Подчеркивание растягивается до полной ширины */
+  }
 }

@@ -1,29 +1,28 @@
 .about-calculator-leasing__content {
-   display: flex;
-   justify-content: space-between;
-
+  display: flex;
+  justify-content: space-between;
 }
 
 .about-calculator-leasing-title {
-   display: flex;
-   flex-direction: column;
-   gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .about-calculator-leasing-title p:last-child {
-   max-width: 240px;
+  max-width: 240px;
 }
 
-@media (max-width:1280px) {
-   .about-calculator-leasing-title p:last-child {
-      max-width: 260px;
-   }
+@media (max-width: 1280px) {
+  .about-calculator-leasing-title p:last-child {
+    max-width: 260px;
+  }
 
-   .about-calculator-leasing-title {
-      gap: 20px;
-   }
+  .about-calculator-leasing-title {
+    gap: 20px;
+  }
 
-   .about-calculator-leasing__content {
-      flex-direction: column;
-   }
+  .about-calculator-leasing__content {
+    flex-direction: column;
+  }
 }

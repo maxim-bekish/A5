@@ -9,37 +9,37 @@ $id = isset($_GET['id']) ? intval($_GET['id']) : null;
 $selectedItem = null;
 
 foreach ($inventory as $item) {
-   if ($item['id'] === $id) {
-      $selectedItem = $item;
-      break;
-   }
+	if ($item['id'] === $id) {
+		$selectedItem = $item;
+		break;
+	}
 }
 
 if ($selectedItem !== null) {
-   $imagePath = isset($selectedItem['image']) ? IMG_PATH . 'inventory/' . $selectedItem['image'] : IMG_PATH . 'placeholder.png';
-   $name = $selectedItem['name'];
-   $price = format($selectedItem['price']);
-   $priceMonth = format($selectedItem['priceMonth']);
-   $term = $selectedItem['term'] . ' мес.';
+	$imagePath = isset($selectedItem['image']) ? IMG_PATH . 'inventory/' . $selectedItem['image'] : IMG_PATH . 'placeholder.png';
+	$name = $selectedItem['name'];
+	$price = format($selectedItem['price']);
+	$priceMonth = format($selectedItem['priceMonth']);
+	$term = $selectedItem['term'] . ' мес.';
 
-   // Выводим характеристики, если они есть
-   $characteristicsHtml = '';
-   if (isset($selectedItem['characteristics']) && is_array($selectedItem['characteristics'])) {
-      foreach ($selectedItem['characteristics'] as $characteristic) {
-         $label = $characteristic['title'];
-         $value = $characteristic['value'];
-         if ($label === 'Пробег') {
-            $value = format($characteristic['value'], "км");
-         }
-         $characteristicsHtml .= "
+	// Выводим характеристики, если они есть
+	$characteristicsHtml = '';
+	if (isset($selectedItem['characteristics']) && is_array($selectedItem['characteristics'])) {
+		foreach ($selectedItem['characteristics'] as $characteristic) {
+			$label = $characteristic['title'];
+			$value = $characteristic['value'];
+			if ($label === 'Пробег') {
+				$value = format($characteristic['value'], "км");
+			}
+			$characteristicsHtml .= "
                   <li class=\"card__characteristic\">
                      <p class=\"card__characteristic-label\">$label</p>
                      <p class=\"card__characteristic-value\">$value</p>
                   </li>";
-      }
-   }
+		}
+	}
 
-   echo "
+	echo "
    <section class=\"card container\">
      <h2 class=\"card__title__mobile\">$name</h2>
       <div class=\"card__image-container\">
@@ -71,7 +71,7 @@ if ($selectedItem !== null) {
       </div>
    </section>";
 } else {
-   echo "<p>Элемент с указанным ID не найден.</p>";
+	echo "<p>Элемент с указанным ID не найден.</p>";
 }
 
 ?>

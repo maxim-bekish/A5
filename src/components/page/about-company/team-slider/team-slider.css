@@ -1,148 +1,140 @@
 .team-slider .slider__main {
-   display: flex;
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .team-slider .slider__slide {
-   display: flex;
-   flex-direction: column;
-   position: relative;
-   box-sizing: border-box;
-   width: 560px;
-   height: 560px;
-   margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  width: 560px;
+  height: 560px;
+  margin-right: 40px;
 }
 
 .team-slider__title {
-   margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .team-slider .slider {
-   position: relative;
+  position: relative;
 }
 
 .team-slider .slider__box {
-   position: relative;
-   height: 560px;
-   width: 100%;
-   overflow: hidden;
+  position: relative;
+  height: 560px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .team-slider .slider__container {
-   position: absolute;
-   top: 0px;
-   display: flex;
+  position: absolute;
+  top: 0px;
+  display: flex;
 }
 
 .team-slider .slider__header {
-   position: relative;
-   width: 100%;
-   height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-
-
 .team-slider .slider__title {
-
-   font-size: 24px;
-   font-weight: var(--font-w5);
-   line-height: 33.6px;
-   color: var(--medium-gray);
+  font-size: 24px;
+  font-weight: var(--font-w5);
+  line-height: 33.6px;
+  color: var(--medium-gray);
 }
 
 .team-slider .slider__image {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   top: 0px;
-   left: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0px;
+  left: 0px;
 }
 
 .team-slider .slider__text:first-child {
-   font-size: 30px;
+  font-size: 30px;
 
-   margin: 15px 0 10px 0;
-   line-height: 30px;
-   color: var(--medium-gray);
+  margin: 15px 0 10px 0;
+  line-height: 30px;
+  color: var(--medium-gray);
 }
 
 .team-slider .slider__text:last-child {
-   font-size: 20px;
-   max-width: 560px;
-   line-height: 20px;
-   color: var(--gray);
+  font-size: 20px;
+  max-width: 560px;
+  line-height: 20px;
+  color: var(--gray);
 }
 
 .team-slider .slider__link {
-   bottom: 20px;
-   right: 20px;
-   position: absolute;
+  bottom: 20px;
+  right: 20px;
+  position: absolute;
 }
 
 .team-slider .custom-slider__buttons {
-   position: absolute;
-   bottom: 75px;
-   left: 600px;
-   z-index: 999;
+  position: absolute;
+  bottom: 75px;
+  left: 600px;
+  z-index: 999;
 }
 
+@media (max-width: 1280px) {
+  .team-slider .slider__slide {
+    width: 100%;
+    height: 100%;
+  }
 
+  .team-slider .slider__box {
+    height: 360px;
+  }
 
-@media(max-width:1280px) {
+  .team-slider .slider__header {
+    width: 350px;
+    height: 350px;
+  }
 
-   .team-slider .slider__slide {
-      width: 100%;
-      height: 100%;
-   }
+  .team-slider .slider__text:last-child {
+    max-width: 350px;
+  }
 
-   .team-slider .slider__box {
-      height: 360px;
-   }
+  .team-slider .slider__slide {
+    margin-right: 20px;
+  }
 
-   .team-slider .slider__header {
-      width: 350px;
-      height: 350px;
-   }
+  .team-slider .slider__image {
+    bottom: 0;
+    top: auto;
+  }
 
-   .team-slider .slider__text:last-child {
-      max-width: 350px;
-   }
-
-   .team-slider .slider__slide {
-      margin-right: 20px;
-   }
-
-   .team-slider .slider__image {
-      bottom: 0;
-      top: auto;
-   }
-
-   .team-slider .custom-slider__buttons {
-      bottom: 0;
-      right: 0;
-      left: auto;
-   }
-
-
+  .team-slider .custom-slider__buttons {
+    bottom: 0;
+    right: 0;
+    left: auto;
+  }
 }
 
 @media (max-width: 768px) {
-   .team-slider .slider__text:first-child {
-      font-size: 18px;
-      line-height: 18px;
-   }
+  .team-slider .slider__text:first-child {
+    font-size: 18px;
+    line-height: 18px;
+  }
 
-   .team-slider .slider__text:last-child {
-      font-size: 14px;
-      line-height: 14px;
-   }
+  .team-slider .slider__text:last-child {
+    font-size: 14px;
+    line-height: 14px;
+  }
 
-   .team-slider .slider__box {
-      height: 350px;
-   }
+  .team-slider .slider__box {
+    height: 350px;
+  }
 
-   .team-slider__title {
-      margin-bottom: 20px;
-   }
+  .team-slider__title {
+    margin-bottom: 20px;
+  }
 }

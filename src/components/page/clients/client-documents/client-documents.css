@@ -2,51 +2,50 @@
 .view svg,
 .dowland,
 .view {
-   width: 38px;
-   height: 38px;
+  width: 38px;
+  height: 38px;
 }
 
 .client-documents {
-   display: grid;
-   row-gap: 40px;
-   column-gap: 40px;
-   grid-template-columns: repeat(2, minmax(10px, 410px));
-   grid-template-rows: auto;
-
+  display: grid;
+  row-gap: 40px;
+  column-gap: 40px;
+  grid-template-columns: repeat(2, minmax(10px, 410px));
+  grid-template-rows: auto;
 }
 
 .client-documents__controller {
-   position: absolute;
-   right: 20px;
-   bottom: 20px;
-   display: flex;
-   gap: 10px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
 }
 
 .client-documents__item p {
-   font-size: 20px;
-   font-weight: var(--font-w5);
-   line-height: 24px;
+  font-size: 20px;
+  font-weight: var(--font-w5);
+  line-height: 24px;
 }
 
 .client-documents__item {
-   padding: 30px 20px;
-   position: relative;
-   background: var(--light-gray);
-   height: 200px;
+  padding: 30px 20px;
+  position: relative;
+  background: var(--light-gray);
+  height: 200px;
 }
 
-@media (max-width:1280px) {
-   .client-documents {
-      row-gap: 20px;
-      column-gap: 20px;
-   }
+@media (max-width: 1280px) {
+  .client-documents {
+    row-gap: 20px;
+    column-gap: 20px;
+  }
 }
 
-@media (max-width:500px) {
-   .client-documents {
-      row-gap: 10px;
-      column-gap: 10px;
-      grid-template-columns: repeat(1, minmax(165px, 100%));
-   }
+@media (max-width: 500px) {
+  .client-documents {
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(1, minmax(165px, 100%));
+  }
 }

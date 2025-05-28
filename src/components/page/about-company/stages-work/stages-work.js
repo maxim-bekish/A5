@@ -1,16 +1,16 @@
-$(document).ready(function() {
+$(document).ready(function () {
   function checkVisibility() {
-    $('.stages-work__item').each(function() {
+    $(".stages-work__item").each(function () {
       var blockTop = $(this).offset().top;
       var windowBottom = $(window).scrollTop() + $(window).height();
 
       if (blockTop < windowBottom) {
-        $(this).addClass('visible');
+        $(this).addClass("visible");
       }
     });
   }
 
-  $(window).on('scroll', function() {
+  $(window).on("scroll", function () {
     checkVisibility();
   });
 
