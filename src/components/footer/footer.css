@@ -30,6 +30,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 30px;
+	grid-row-gap: 40px;
 }
 
 .footer__info-contacts__network li {
@@ -222,5 +223,11 @@
 	.footer__down a {
 		font-size: 12px;
 		line-height: 130%;
+	}
+}
+
+@media (max-width: 600px) {
+	.footer__info {
+		grid-template-columns: 1fr;
 	}
 }

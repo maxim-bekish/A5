@@ -75,7 +75,12 @@
 	align-items: flex-start;
 	justify-content: space-between;
 }
-
+.leasing-guide__item:hover h4 {
+	color: var(--dark-blue);
+}
+.leasing-guide__item:hover svg {
+	stroke: var(--dark-blue);
+}
 /* --------- */
 
 @media (max-width: 1280px) {

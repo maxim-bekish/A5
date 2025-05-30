@@ -120,7 +120,7 @@
 		<path d="M13 1L7 7L1 1" stroke-width="2" />
 	</symbol>
 	<symbol id="icon-arrow-down-big">
-		<path d="M31 1L16 16L0.999998 1" stroke="#979797" stroke-width="2.5" />
+		<path d="M31 1L16 16L0.999998 1"  stroke-width="2.5" />
 	</symbol>
 	<symbol id="icon-arrow-right">
 		<path d="M1 0.5L5.75 5.25L1 10" stroke="#979797" />

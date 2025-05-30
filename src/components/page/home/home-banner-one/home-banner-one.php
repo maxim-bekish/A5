@@ -126,7 +126,7 @@ $leasingGuide = $lists['leasingGuide'];
 			<ul class="leasing-guide__buttons mobile__list-content">
 				<?php foreach ($leasingGuide as $index => $el) : ?>
 					<li class="leasing-guide__buttons--item mobile__list-content--item">
-						<button class="button button--outline leasing-guide__button <?php echo $index === 0 ? 'leasing-guide__button-active' : ''; ?>" data-index="<?php echo $index; ?>">
+						<button class="button button--gray leasing-guide__button <?php echo $index === 0 ? 'leasing-guide__button-active' : ''; ?>" data-index="<?php echo $index; ?>">
 							<?php echo htmlspecialchars($el['title']); ?>
 						</button>
 					</li>
@@ -140,7 +140,7 @@ $leasingGuide = $lists['leasingGuide'];
 						<div class="leasing-guide__item" data-index="<?php echo $index; ?>" style="<?php echo $index === 0 ? 'display: block;' : 'display: none;'; ?>">
 
 							<div class="leasing-guide__list-title">
-								<h4><?php echo htmlspecialchars($content['title']); ?></h4>
+								<h4> <?php echo htmlspecialchars($content['title']); ?></h4>
 								<button type="button" class="leasing-guide__icon-down">
 									<svg class="js-svg-upend rt0" width="32" height="18" viewBox="0 0 32 18" fill="none">
 										<use href="<?php echo SVG_PATH; ?>icons.svg#icon-arrow-down-big"></use>

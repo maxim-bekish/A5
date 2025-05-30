@@ -22,6 +22,11 @@ button {
 	color: var(--dark-blue);
 }
 
+.button--gray {
+	background-color: var(--light-gray);
+	color: rgb(var(--gray-text));
+}
+
 .button--outline {
 	background-color: var(--transparent);
 	color: var(--dark-blue);
@@ -34,7 +39,8 @@ button {
 }
 
 @media (hover: hover) {
-	.button--outline:hover {
+	.button--outline:hover,
+	.button--gray:hover {
 		background-color: var(--dark-blue);
 		color: var(--white);
 	}
