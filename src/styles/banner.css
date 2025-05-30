@@ -1,51 +1,64 @@
 .banner {
-  position: relative;
-  padding: 100px 80px;
+	position: relative;
+	padding: 100px 80px;
 }
 .banner__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  object-fit: cover;
-  object-position: right;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+	object-fit: cover;
+	object-position: right;
 }
 .banner__description {
-  position: relative;
-  z-index: 2;
-  max-width: 812px;
+	position: relative;
+	z-index: 2;
+	max-width: 812px;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
 }
-.banner__description * {
-  color: var(--white);
+.banner__description *:not(button) {
+	color: var(--white);
 }
+.banner__description button {
 
+	max-width: 410px;
+}
+.banner__text {
+	max-width: 430px;
+	font-weight: var(--font-w4);
+	font-size: 18px;
+	line-height: 100%;
+	color: var(--text-bg-blue);
+}
 @media (max-width: 1280px) {
-  .banner {
-    padding: 70px 50px;
-  }
-  .banner__description {
-    max-width: 650px;
-  }
+	.banner {
+		padding: 70px 50px;
+	}
+	.banner__description {
+		max-width: 650px;
+	}
 }
 @media (max-width: 768px) {
-  .banner {
-    padding: 40px 20px;
-  }
-  .banner__description {
-    max-width: 498px;
-  }
+	.banner {
+		padding: 40px 20px;
+	}
+	.banner__description {
+		max-width: 498px;
+	}
 }
 @media (max-width: 360px) {
-  .banner {
-    padding-block: 30px 100px;
-    padding-inline: 20px;
-  }
-  .banner__description {
-    max-width: 100%;
-  }
-  .banner__image {
-    object-position: 88%;
-  }
+	.banner {
+		padding-block: 30px 100px;
+		padding-inline: 20px;
+	}
+	.banner__description {
+		max-width: 100%;
+	}
+	.banner__image {
+		object-position: 88%;
+	}
 }

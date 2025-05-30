@@ -1,79 +1,79 @@
 button {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  outline: 0;
-  padding: 0;
+	cursor: pointer;
+	background: none;
+	border: 0;
+	outline: 0;
+	padding: 0;
 }
 
 .button {
-  box-sizing: border-box;
-  width: 100%;
-  border-radius: 2px;
-  font-size: 18px;
-  font-weight: var(--font-w5);
-  line-height: 21.78px;
-  border: 1px solid var(--transparent);
-  padding: 19px 0;
+	box-sizing: border-box;
+	width: 100%;
+	border-radius: 2px;
+	font-size: 18px;
+	font-weight: var(--font-w5);
+	line-height: 21.78px;
+	border: 1px solid var(--transparent);
+	padding: 19px 0;
 }
 
 .button--white {
-  background-color: var(--white);
-  color: var(--dark-blue);
+	background-color: var(--white);
+	color: var(--dark-blue);
 }
 
 .button--outline {
-  background-color: var(--transparent);
-  color: var(--dark-blue);
-  border: 1px solid var(--dark-blue);
+	background-color: var(--transparent);
+	color: var(--dark-blue);
+	border: 1px solid var(--dark-blue);
 }
 
 .button--blue {
-  background-color: var(--dark-blue);
-  color: var(--white);
+	background-color: var(--dark-blue);
+	color: var(--white);
 }
 
 @media (hover: hover) {
-  .button--outline:hover {
-    background-color: var(--dark-blue);
-    color: var(--white);
-  }
+	.button--outline:hover {
+		background-color: var(--dark-blue);
+		color: var(--white);
+	}
 
-  .button--white:hover {
-    background-color: var(--very-light-gray);
-  }
+	.button--white:hover {
+		background-color: var(--very-light-gray);
+	}
 
-  .button--blue:hover,
-  .button--outline:hover {
-    background-color: var(--button-hover);
-  }
+	.button--blue:hover,
+	.button--outline:hover {
+		background-color: var(--button-hover);
+	}
 }
 
 .button--white:active {
-  background-color: var(--light-silver);
+	background-color: var(--light-silver);
 }
 
 .button--blue:active,
 .button--outline:active {
-  background-color: var(--dark-blue-2);
+	background-color: var(--dark-blue-2);
 }
 
 .button--white:disabled {
-  color: var(--gray);
-  background: var(--light-silver);
+	color: var(--gray);
+	background: var(--light-silver);
 }
 
 .button--blue:disabled,
 .button--outline:disabled {
-  color: var(--gray);
-  background-color: var(--light-silver);
-  border: 1px solid var(--light-silver);
+	color: var(--gray);
+	background-color: var(--light-silver);
+	border: 1px solid var(--light-silver);
 }
 
 @media (max-width: 1280px) {
-  .button {
-    font-size: 16px;
-    line-height: 21.78px;
-    padding: 14px 0;
-  }
+	.button {
+		font-size: 16px;
+		line-height: 21.78px;
+		padding: 14px 0;
+	}
 }

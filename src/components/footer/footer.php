@@ -1,17 +1,13 @@
 <link rel="stylesheet" href="/src/components/footer/footer.css">
 <script type="module" src="/src/components/footer/footer.js"></script>
-<footer class="footer-box mt-160px">
-	<section class="footer-up container">
-		<div class="footer-up-column ">
-			<svg width="683" height="583" viewBox="0 0 683 583">
-				<use href="<?php echo SVG_PATH; ?>icons.svg#icon-A5-mini"></use>
-			</svg>
-			<h3>
-				Помогаем бизнесу <br> достигать целей на выгодных условиях
-			</h3>
-		</div>
-
-		<form class="js-myForm footer-up-column  js-popApp-OK">
+<footer class="footer mt-160px container">
+	<div class="footer__logo">
+		<svg class="" viewBox="0 0 85 56">
+			<use href="<?php echo SVG_PATH; ?>icons.svg#icon-A5"></use>
+		</svg>
+	</div>
+	<div class="footer__form">
+		<form class="js-myForm js-popApp-OK">
 			<h4>Получите бесплатную <br> консультацию</h4>
 			<div class="form-items-50 form-blue ">
 				<div class="form-group">
@@ -31,8 +27,6 @@
 					<label for="footer-company">Компания</label>
 				</div>
 			</div>
-
-
 			<div class="checkbox checkbox--blue">
 				<input class="custom-checkbox " type="checkbox" name="footer-option" id="footer-option" required>
 				<label for="footer-option">
@@ -40,183 +34,83 @@
 				</label>
 			</div>
 			<button disabled class="button button--white js-btn-footer js-popUp-submitBtn" type="button">
-				Получить консультацию
+				Получить
 			</button>
 		</form>
-
-	</section>
-	<hr>
-	<section id="contacts" class="footer-down container">
-		<div class="footer-down-column ">
-			<div class="underline-box">
-				<a class="underline-el underline-el-white footer-down-column-tel" href="tel:+73452999999">7 (3452) 99-99-99</a>
-			</div>
-			<section>
-				<div class="contacts-footer footer-list">
-					<h5>Контакты</h5>
-					<ul>
-						<li>
-							<p>
-								Нижний Новгород, ул.&nbsp;Октябрьская,
-								дом&nbsp;33 помещ.&nbsp;3,&nbsp;офис&nbsp;12
-							</p>
-						</li>
-						<li>
-							<p>
-								Тюмень,&nbsp;ул.&nbsp;​Грибоедова, 6&nbsp;к1/7&nbsp;3/28&nbsp;офис
-							</p>
-						</li>
-						<li>
-							<p>
-								ПН-ПТ с 9:00 до 18:00
-							</p>
-						</li>
-						<li class="underline-box">
-							<a class="underline-el underline-el-white" href="mailto:artfin-t@yandex.ru">artfin-t@yandex.ru</a>
-						</li>
-					</ul>
-				</div>
-				<div class="contacts-footer footer-list ">
-					<h5>Соцсети</h5>
-					<ul>
-						<li class="underline-box">
-							<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-								Telegram
-							</a>
-						</li>
-						<li class="underline-box">
-							<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-								Vkontakte
-							</a>
-						</li>
-						<li class="underline-box">
-							<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-								WhatsAPP
-							</a>
-						</li>
-					</ul>
-				</div>
-
-			</section>
-		</div>
-		<div class="footer-down-column  footer-info-list ">
-			<div class="footer-list">
-				<h5>Главная страница</h5>
+	</div>
+	<div class="footer__info">
+		<div class="footer__info-contacts">
+			<div class='footer__info-contacts__list footer__info-list'>
+				<h4>Контакты</h4>
 				<ul>
-					<li class="underline-box">
-						<a href="#home-calculator" class="underline-el underline-el-white js-anchor-link" rel="noopener noreferrer">
-							Лизинговый калькулятор
-						</a>
+					<li>Тюмень, ул. ​Грибоедова, 6 к1/7​ 3/28 офис</li>
+					<li>Нижний Новгород, ул. Октябрьская,
+						дом 33, помещ. 3, офис 12</li>
+					<li>С понедельника по пятницу с 9.00 до 18.00</li>
+					<li>
+						<a href="tel:+73452595069">+7 (3452) 59 50 69</a>
 					</li>
-					<li class="underline-box">
-						<a href="#contacts" class="underline-el underline-el-white js-anchor-link" rel="noopener noreferrer">
-							Контакты
-						</a>
-					</li>
+					<li> <a href="mailto:artfin-t@yandex.ru">artfin-t@yandex.ru</a></li>
 				</ul>
 			</div>
-			<div class="footer-list">
-				<h5>Компания</h5>
-				<ul>
-					<li class="underline-box">
-						<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-							О компании
-						</a>
-					</li>
-					<li class="underline-box">
-						<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-							Клиенты и партнеры
-						</a>
-					</li>
-					<li class="underline-box">
-						<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-							Документы
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-list">
-				<h5>О лизинге</h5>
-				<ul>
-					<li class="underline-box">
-						<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-							Общие условия
-						</a>
-					</li>
-					<li class="underline-box">
-						<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-							Субсидии
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-list">
-				<h5>Услуги лизинга</h5>
-				<ul>
-					<li class="underline-box">
-						<a class="underline-el underline-el-white" href="#" rel="noopener noreferrer">
-							Легковой автотранспорт
-						</a>
-					</li>
-					<li class="underline-box">
-						<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-							Грузовой автотранспорт
-						</a>
-					</li>
-					<li class="underline-box">
-						<a href="#" class="underline-el" rel="noopener noreferrer">
-							Спецтехника
-						</a>
-					</li>
-					<li class="underline-box">
-						<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-							Оборудование
-						</a>
-					</li>
-					<li class="underline-box">
-						<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-							Медицинское оборудование
-						</a>
-					</li>
-					<li class="underline-box">
-						<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-							Ресторанное оборудование
-						</a>
-					</li>
-					<li class="underline-box">
-						<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-							Б/У продукция
-						</a>
-					</li>
-					<li class="underline-box">
-						<a href="#" class="underline-el underline-el-white" rel="noopener noreferrer">
-							Недвижимость
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-list">
-				<h5 class="underline-box">
-					<a class="underline-el underline-el-white" href="#" rel="noopener noreferrer">
-						Каталог изьятой техники
+			<ul class='footer__info-contacts__network'>
+				<li>
+					<a href="#" target="_blank" rel="noopener noreferrer">
+						<svg class="svg-item" width="inherit" height="inherit" viewBox="0 0 35 35" fill="none">
+							<use href="<?php echo SVG_PATH; ?>icons.svg#icon-vk"></use>
+						</svg>
 					</a>
-				</h5>
-			</div>
+				</li>
+				<li>
+					<a href="#" target="_blank" rel="noopener noreferrer">
+						<svg class="svg-item" width="inherit" height="inherit" viewBox="0 0 35 35" fill="none">
+							<use href="<?php echo SVG_PATH; ?>icons.svg#icon-rutube"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" rel="noopener noreferrer">
+						<svg class="svg-item" width="inherit" height="inherit" viewBox="0 0 35 35" fill="none">
+							<use href="<?php echo SVG_PATH; ?>icons.svg#icon-youtube"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" rel="noopener noreferrer">
+						<svg class="svg-item" width="inherit" height="inherit" viewBox="0 0 35 35" fill="none">
+							<use href="<?php echo SVG_PATH; ?>icons.svg#icon-telegram"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" rel="noopener noreferrer">
+						<svg class="svg-item" width="inherit" height="inherit" viewBox="0 0 35 35" fill="none">
+							<use href="<?php echo SVG_PATH; ?>icons.svg#icon-whatsapp"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
 		</div>
-	</section>
-	<section class="footer-down-row container">
-		<div>
-			<p>© 2024 ООО «Лизинговая компания А5»</p>
-			<p>Политика обработки персональных данных</p>
+		<div class="footer__info-menu footer__info-list">
+			<h4>Меню</h4>
+			<ul>
+				<li> <a href="#"> Программы лизинга</a></li>
+				<li> <a href="#"> О компании</a></li>
+				<li> <a href="#"> Клиентам</a></li>
+				<li> <a href="#"> Каталог изьятого имущества</a></li>
+			</ul>
 		</div>
-		<div>
-			<a target="_blank" href="http://negodyaev.com">
-				<img class="logoGM" src="<?php echo SVG_PATH; ?>logoGM.svg" alt="logoGM">
-			</a>
+	</div>
+	<div class="footer__down">
+		<div class="footer__down-info">
+			<p class="footer__down-copyright">© 2024 ООО «Лизинговая компания А5»</p>
+			<p class="footer__down-policy">Политика обработки персональных данных</p>
 		</div>
-	</section>
+		<div class="footer__down-credits">
+			<p>
+				Разработка сайта
+			</p>
+			<a class="footer__down-link" href="#" target="_blank" rel="noopener noreferrer">Негодяев маркетинг</a>
+		</div>
+	</div>
 </footer>
-
-<style>
-
-</style>
