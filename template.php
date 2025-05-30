@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="/src/styles/underline.css">
 	<link rel="stylesheet" href="/src/styles/bread-crumbs.css">
 	<link rel="stylesheet" href="/src/styles/banner.css">
+	<link rel="stylesheet" href="/src/styles/lists.css">
 	<script src="/index.js"></script>
 	<script type="module" src="/src/assets/helpers/format.js"></script>
 	<script src="/slider.js"></script>

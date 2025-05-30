@@ -1,0 +1,57 @@
+.docs-transaction {
+	background-color: var(--light-gray);
+	padding: 47px 50px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.docs-transaction h4 {
+	font-weight: var(--font-w4);
+	font-size: 40px;
+	line-height: 120%;
+	color: var(--black);
+}
+
+.docs-transaction .button {
+	max-width: 500px;
+}
+
+.docs-transaction .svg {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+@media (max-width: 1280px) {
+	.docs-transaction {
+		padding: 40px 20px;
+	}
+	.docs-transaction .button {
+		max-width: 250px;
+	}
+	.docs-transaction h4 {
+		font-size: 38px;
+		line-height: 120%;
+	}
+	.docs-transaction .svg {
+		display: none;
+	}
+}
+@media (max-width: 768px) {
+	.docs-transaction {
+		padding: 40px 15px;
+		flex-direction: column;
+		gap: 30px;
+	}
+	.docs-transaction .button {
+		max-width: 100%;
+	}
+	.docs-transaction h4 {
+		font-size: 24px;
+		line-height: 110%;
+	}
+	.docs-transaction .svg {
+		display: none;
+	}
+}

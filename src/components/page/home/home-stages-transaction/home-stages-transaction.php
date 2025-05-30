@@ -22,17 +22,15 @@ $list = array(
 			Хочу бесплатную консультацию!
 		</button>
 	</div>
-	<div class="stages-transaction__box">
-		<ul class="stages-transaction__list">
-			<?php foreach ($list as $index => $stage): ?>
-				<li class="stages-transaction__item">
-					<h6 class="stages-transaction__step"><?= $index + 1 ?></h6>
-					<div class="stages-transaction__content">
-						<h5 class="stages-transaction__title"><?= htmlspecialchars($stage['title'], ENT_QUOTES) ?></h5>
-						<p class="stages-transaction__description"><?= htmlspecialchars($stage['description'], ENT_QUOTES) ?></p>
-					</div>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-	</div>
+	<ul class="list-big-number__list">
+		<?php foreach ($list as $index => $stage): ?>
+			<li class="list-big-number__item">
+				<h6 class="list-big-number__step"><?= $index + 1 ?></h6>
+				<div class="list-big-number__content">
+					<h5 class="list-big-number__title"><?= htmlspecialchars($stage['title'], ENT_QUOTES) ?></h5>
+					<p class="list-big-number__description"><?= htmlspecialchars($stage['description'], ENT_QUOTES) ?></p>
+				</div>
+			</li>
+		<?php endforeach; ?>
+	</ul>
 </section>
