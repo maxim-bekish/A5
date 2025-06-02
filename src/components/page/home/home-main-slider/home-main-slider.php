@@ -6,7 +6,7 @@
 $mainSlider = array(
 	array(
 		"image" => "step-one.jpeg",
-		"href" => "program-leasing?section=used-products",
+		"href" => "program-leasing?section=passenger-vehicles",
 		// "href" => "1",
 		"title" => "Абсолютный лизинг с А5  ",
 		"description" => "Узнайте о том, как получить лизинг на индивидуальных условиях",

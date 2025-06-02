@@ -1,6 +1,8 @@
 <script src="src/components/page/program-leasing/program-leasing.js"></script>
 <link rel="stylesheet" href="src/components/page/program-leasing/program-leasing.css">
 
+
+<!-- тут вся инфа о всех страницах в массиве. если если раздела нет то обычную проверку на наличей конкретного блока. примеры есть 171 строчка и 219 -->
 <?php
 require 'src/assets/helpers/format.php';
 $programLeasingData = [
@@ -123,9 +125,9 @@ function getProgramData($programLeasingData, $activeNavItem)
 $activeProgram = getProgramData($programLeasingData, $activeNavItem);
 ?>
 
-<section class="grid_1-3-box ">
+<section class="grid_1-3-box container">
 	<div class="program-leasing-page__navigation ">
-		<h3 class="container" >Программы лизинга</h3>
+		<h3>Программы лизинга</h3>
 		<div class="mobile__select">
 			<div class="mobile__title js-open-select">
 				<p></p>
