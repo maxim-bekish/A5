@@ -1,17 +1,21 @@
 interface data {
-	type?: string;
 	id: string;
+	class?: string;
+	title?: string;
+	subtitle?: string;
 	variable: {
 		name?: boolean;
-		mail?: boolean;
 		phone?: boolean;
+		mail?: boolean;
 		company?: boolean;
 	};
-	checkbox_required: boolean;
-	button?: {
-		label?: string;
+	checkbox: {
+		required: boolean;
 		class?: string;
-    
 	};
-	actions: string;
+	button: {
+		label: string;
+		class: string;
+	};
+	actions?: string;
 }

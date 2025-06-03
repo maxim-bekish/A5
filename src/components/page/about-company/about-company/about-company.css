@@ -2,3 +2,262 @@
 	font-size: 57px;
 	line-height: 104%;
 }
+
+@media (max-width: 768px) {
+	.about-company h4 {
+		font-size: 38px;
+		line-height: 120%;
+	}
+}
+@media (max-width: 400px) {
+	.about-company h4 {
+		font-size: 24px;
+		line-height: 110%;
+	}
+}
+
+/* about-banner */
+.about-banner {
+	background-image: url('/src/assets/images/img/page-about/banner.png');
+	width: 100%;
+	height: 793px;
+	padding: 80px;
+	display: flex;
+	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+	align-items: flex-end;
+}
+
+.about-banner__title {
+	font-size: 90px;
+	line-height: 100%;
+	color: var(--white);
+}
+
+@media (max-width: 1280px) {
+	.about-banner__title {
+		font-size: 60px;
+		line-height: 110%;
+	}
+
+	.about-banner {
+		height: 750px;
+		padding: 40px 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.about-banner {
+		height: calc(60vh - 73px);
+		padding: 40px 10px;
+		background-position: 75%;
+	}
+
+	.about-banner__title {
+		font-size: 30px;
+		line-height: 36px;
+	}
+}
+/* about-banner */
+
+/* map */
+.about-company__map {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.about-company__map-wrapper {
+	display: grid;
+	grid-template-columns: minmax(200px, 410px) minmax(800px, 100%);
+}
+
+.about-company__stats {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 100px;
+	column-gap: 30px;
+}
+
+.about-company__stat-item {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.about-company__stat-number,
+.about-company__info-highlight {
+	font-size: 90px;
+	line-height: 100%;
+	font-weight: var(--font-w4);
+	letter-spacing: -6%;
+	color: var(--black);
+}
+
+.about-company__stat-desc {
+	font-weight: var(--font-w4);
+	font-size: 18px;
+	line-height: 100%;
+	color: rgb(var(--gray-text));
+}
+
+.about-company__map-icon {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: -100px;
+	position: relative;
+	z-index: -1;
+	width: 100%;
+	width: 1300px;
+	height: 804px;
+}
+
+@media (max-width: 1280px) {
+	.about-company__map {
+		margin-top: 120px;
+		gap: 120px;
+	}
+
+	.about-company__map-wrapper {
+		grid-template-columns: 1fr;
+	}
+
+	.about-company__stats {
+		flex-direction: row;
+		justify-content: left;
+	}
+
+	.about-company__map-icon {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 0px;
+	}
+
+	.about-company__stat-item {
+		gap: 10px;
+	}
+
+	.about-company__stat-number,
+	.about-company__info-highlight {
+		font-size: 60px;
+		line-height: 110%;
+		letter-spacing: 0%;
+		color: var(--black);
+	}
+
+	.about-company__map-icon {
+		width: 100%;
+		height: auto;
+	}
+
+	.about-company__stat-desc {
+		font-size: 16px;
+		line-height: 130%;
+	}
+}
+
+@media (max-width: 768px) {
+	.about-company__map {
+		margin-top: 80px;
+		gap: 80px;
+	}
+
+	.about-company__map-wrapper {
+		gap: 20px;
+	}
+
+	.about-company__stat-item {
+		gap: 5px;
+	}
+
+	.about-company__stat-number,
+	.about-company__info-highlight {
+		font-size: 35px;
+	}
+
+	.about-company__stat-desc {
+		font-size: 14px;
+	}
+}
+
+/* map */
+
+/* end form */
+
+.about-company__partnership {
+	background-color: var(--light-gray);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 40px;
+	row-gap: 40px;
+	padding: 100px;
+}
+
+.about-company__banner--list {
+	margin-top: 50px;
+}
+
+/* Основной контейнер */
+.about-company__partnership-content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	max-width: 510px;
+}
+
+/* Контентная часть */
+.about-company__partnership-title {
+	color: var(--black);
+}
+
+/* Заголовок */
+.about-company__partnership-text {
+	font-size: 24px;
+	line-height: 100%;
+}
+
+/* Текст */
+.about-company__form {
+	max-width: 450px;
+}
+
+@media (max-width: 1280px) {
+	.about-company__partnership {
+		grid-template-columns: 1fr;
+	}
+
+	.about-company__partnership-content,
+	.about-company__form {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.about-company__partnership {
+		padding: 40px;
+	}
+
+	.about-company__partnership-text {
+		font-size: 16px;
+		line-height: 130%;
+	}
+}
+
+@media (max-width: 400px) {
+	.about-company__partnership {
+		padding-inline: 15px;
+		gap: 30px;
+	}
+
+	.about-company__partnership-content {
+		gap: 10px;
+	}
+
+	.about-company__partnership-text {
+		font-size: 14px;
+	}
+}
+
+/* end form */

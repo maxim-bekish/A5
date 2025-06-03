@@ -1,0 +1,78 @@
+.general-condition {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+.general-condition__title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	row-gap: 20px;
+}
+.general-condition__title-left {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+.general-condition__title h4 {
+	font-size: 40px;
+	line-height: 120%;
+	color: var(--black);
+}
+.general-condition__title p {
+	font-size: 18px;
+	line-height: 100%;
+	color: rgb(var(--gray-text));
+}
+@media (max-width: 1280px) {
+	.general-condition {
+		gap: 40px;
+	}
+	.general-condition__title {
+		display: flex;
+		flex-direction: column;
+	}
+	.general-condition__title-left {
+		gap: 20px;
+	}
+	.general-condition__title h4 {
+		font-size: 38px;
+		line-height: 120%;
+	}
+	.general-condition__title p {
+		font-size: 16px;
+		line-height: 130%;
+	}
+}
+@media (max-width: 768px) {
+	.general-condition {
+		gap: 30px;
+	}
+	.general-condition__title {
+		gap: 20px;
+	}
+	.general-condition__title-left {
+		gap: 10px;
+	}
+	.general-condition__title h4 {
+		font-size: 24px;
+		line-height: 110%;
+	}
+	.general-condition__title p {
+		font-size: 14px;
+	}
+}
+/*  */
+.general-condition__financing-button {
+	width: 336px;
+}
+@media (max-width: 1280px) {
+	.general-condition__financing-button {
+		width: 364px;
+	}
+}
+@media (max-width: 768px) {
+	.general-condition__financing-button {
+		width: 100%;
+	}
+}

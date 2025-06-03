@@ -42,6 +42,7 @@
     $formData = [
       'class' => "form-items-50 form-blue input_4 ",
       'id' => 'footer',
+      'title' => "Получите бесплатную \n консультацию",
       'variable' => [
         'name' => true,
         'phone' => false,

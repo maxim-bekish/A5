@@ -95,7 +95,6 @@ function get_breadcrumbs($uri)
 					'name' => $item,
 					'url' => $path
 				];
-				continue;
 				break;
 			default:
 				// Обработка всех остальных частей пути

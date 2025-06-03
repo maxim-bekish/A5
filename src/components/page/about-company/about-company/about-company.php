@@ -2,15 +2,23 @@
 <script src="src/components/page/about-company/about-company/about-company.js"></script>
 
 <?php
-$list = [
-  "Сотрудничаем с бизнесом любого масштаба",
-  "Поставляем технику, транспорт, оборудование по всей России",
-  "Лизинг без границ: поставщики из любых стран мира",
-  "Лизинг на индивидуальных условиях, подходящих вашему бизнесу: только адресные предложения с гибкими условиями"
-];
 
+$list = [
+  ['subTitle' => "Сотрудничаем с бизнесом любого масштаба"],
+  ['subTitle' => "Поставляем технику, транспорт, оборудование по всей России"],
+  ['subTitle' => "Лизинг без границ: поставщики из любых стран мира"],
+  ['subTitle' => "Лизинг на индивидуальных условиях, подходящих вашему бизнесу: только адресные предложения с гибкими условиями"],
+
+];
 ?>
 
+<section class="about-banner">
+  <h3 class="about-banner__title">
+    А5 Формула
+    <br>
+    успешного бизнеса
+  </h3>
+</section>
 
 <section class="about-company about-company__map">
   <div class="about-company__map-wrapper">
@@ -25,26 +33,16 @@ $list = [
       </div>
     </div>
     <div class="about-company__map-icon">
-      <svg width="1297" height="696" viewBox="0 0 1297 696" fill="none">
+      <svg viewBox="0 0 1300 804" fill="none">
         <use href="<?php echo SVG_PATH; ?>icons.svg#icon-map"></use>
       </svg>
     </div>
   </div>
 
-  <div class="list">
-    <?php foreach ($list as $index => $item): ?>
-      <div class="card-corner__item">
-        <div class="list__content">
-          <h5>
-            <?= htmlspecialchars($item) ?>
-          </h5>
-        </div>
-        <svg class="card-corner__svg" width="75" height="24" viewBox="0 0 75 24" fill="none">
-          <use href="<?php echo SVG_PATH; ?>icons.svg#icon-corner-card"></use>
-        </svg>
-      </div>
-    <?php endforeach; ?>
-  </div>
+  <?php
+  require_once 'src/components/ui/corner-list/corner-list.php';
+  echo generateCornerList($list, 'col-4 container subtitle-big')
+  ?>
 </section>
 
 <section class="about-company about-company__banners mt-160px">
@@ -80,7 +78,7 @@ $list = [
         Готовы к нестандартным решениям
       </p>
     </div>
-    <svg class="about-company__info-icon" width="804" height="419" viewBox="0 0 804 419">
+    <svg class="about-company__info-icon" viewBox="0 0 804 419">
       <use href="<?php echo SVG_PATH; ?>icons.svg#icon-polygons-1"></use>
     </svg>
   </div>
@@ -94,7 +92,8 @@ $list = [
       <button class="button button--white" type="button">Хочу бесплатную консультацию!</button>
     </div>
   </div>
-  <div class="grid_0-1 about-company__banner about-company__banner--list ">
+
+  <div class="grid_0-1 about-company__banner about-company__banner--list container ">
     <div>
       <?php
       include 'src/components/ui/list-big-number/list-big-number.php';
@@ -116,7 +115,7 @@ $list = [
     require_once 'src/components/ui/forms/form_1/form.php';
     $formData = [
       'class' => "form-items-100 form-gray input_2 ",
-      'id' => 'contact',
+      'id' => 'about-company',
       'variable' => [
         'name' => false,
         'phone' => false,
@@ -133,65 +132,14 @@ $list = [
       ],
       'actions' => 'js-myForm js-popApp-OK'
     ];
-
     echo generateDynamicForm($formData);
-
     ?>
   </div>
 </section>
 
 
 
-<style>
-  /* map */
-  .about-company__map {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-  }
 
-  .about-company__map-wrapper {
-    display: grid;
-    grid-template-columns: minmax(200px, 410px) minmax(800px, 100%);
-  }
-
-  .about-company__stats {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 100px;
-  }
-
-  .about-company__stat-item {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .about-company__stat-number,
-  .about-company__info-highlight {
-    font-size: 90px;
-    line-height: 100%;
-    font-weight: var(--font-w4);
-    letter-spacing: -6%;
-    color: var(--black);
-
-  }
-
-  .about-company__stat-desc {
-    font-weight: var(--font-w4);
-    font-size: 18px;
-    line-height: 100%;
-    color: rgb(var(--gray-text));
-  }
-
-  .about-company__map-icon {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  /* map */
-</style>
 <style>
   /* Базовый стиль баннера */
   .about-company__banner {
@@ -212,12 +160,12 @@ $list = [
     gap: 40px;
   }
 
-  /* Модификатор инфо-баннера */
-  .about-company__banner--cta {}
 
   /* Модификатор CTA-баннера */
   .about-company__banner-img {
     position: absolute;
+    height: 100%;
+    width: 100%;
   }
 
   .about-company__banner-img img {
@@ -285,46 +233,92 @@ $list = [
     bottom: 0;
     left: 80px;
     z-index: -1;
+    width: 804px;
+    height: 419px;
   }
 
   /* Цитата/выделенная фраза */
-</style>
 
-<style>
-  .about-company__partnership {
-    background-color: var(--light-gray);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
-    row-gap: 40px;
-    padding: 100px;
+
+
+  @media (max-width: 1280px) {
+    .about-company__banner--main {
+      height: 250px;
+    }
+
+    .about-company__banner-content {
+      gap: 30px;
+    }
+
+    .about-company__banner--info {
+      grid-template-columns: 1fr;
+      padding-block: 120px;
+      gap: 50px;
+    }
+
+    .about-company__info-block {
+      gap: 20px;
+    }
+
+    .about-company__info-text {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    .about-company__info-paragraph {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    .about-company__info-quote {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    .about-company__info-icon {
+      left: 45px;
+      width: calc(100% - 90px);
+      height: auto;
+      max-width: 680px;
+    }
   }
 
-  .about-company__banner--list {
-    margin-top: 50px;
+  @media (max-width: 400px) {
+    .about-company__banner--main {
+      height: 210px;
+    }
+
+    .about-company__banner-content {
+      padding-block: 30px;
+      height: 100%;
+      justify-content: space-between;
+    }
+
+    .about-company__banner--info {
+      padding-block: 80px;
+      gap: 40px;
+    }
+
+    .about-company__info-block {
+      gap: 10px
+    }
+
+    .about-company__info-details {
+      gap: 20px
+    }
+
+    .about-company__info-text,
+    .about-company__info-quote {
+      font-size: 16px;
+    }
+
+    .about-company__info-paragraph {
+      font-size: 14px;
+    }
+
+    .about-company__info-icon {
+      left: 8%;
+      width: 84%;
+    }
   }
-
-  /* Основной контейнер */
-  .about-company__partnership-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 510px;
-  }
-
-  /* Контентная часть */
-  .about-company__partnership-title {
-    color: var(--black);
-  }
-
-  /* Заголовок */
-  .about-company__partnership-text {
-    font-size: 24px;
-    line-height: 100%;
-  }
-
-  /* Текст */
-  .about-company__form {}
-
-  /* Форма */
 </style>

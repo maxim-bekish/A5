@@ -47,6 +47,7 @@ $programLeasingData = [
     "title" => "Легковые \n автомобили с А5",
     "subTitle" => "Быстрое решение для бизнеса в любом городе России!",
     "text" => [
+
       "Мы передаём в лизинг легковые автомобили с различным типом кузова: седан, лифтбек, внедорожник, купе, пикапы, фургоны и др.",
       "Работаем с официальными дилерами на всей территории Российской Федерации."
     ],
@@ -55,30 +56,30 @@ $programLeasingData = [
       "maxLeasingPeriod" => 5,
     ],
     "info" => [
-      'При возвратном лизинге поставщик и лизингополучатель является одним лицом',
-      'Компания продаёт лизинговой компании своё имущество и его же приобретает в лизинг',
-      'Компания продолжает использовать имущество в коммерческих целях',
-      'Компания получает оборотные средства от лизинговой компании, которые можно направить на любые бизнес-цели, как оплату по договору купли-продажи',
-      'Компания зачитывает НДС по лизинговым платежам в соответствие с лизинговым договором'
+      ['subTitle' => 'При возвратном лизинге поставщик и лизингополучатель является одним лицом'],
+      ['subTitle' => 'Компания продаёт лизинговой компании своё имущество и его же приобретает в лизинг'],
+      ['subTitle' => 'Компания продолжает использовать имущество в коммерческих целях'],
+      ['subTitle' => 'Компания получает оборотные средства от лизинговой компании, которые можно направить на любые бизнес-цели, как оплату по договору купли-продажи'],
+      ['subTitle' => 'Компания зачитывает НДС по лизинговым платежам в соответствие с лизинговым договором']
+
+
     ],
     "simpleSolution" => true,
     "requirementsLessees" => [
-      "title" => null,
+      "title" => 'Test',
       "list" => [
         [
-          "title" => "Подберём автомобиль ",
+          "subTitle" => "Подберём автомобиль ",
           "text" => "Не тратьте время и силы на поиски нужного автомобиля — мы сделаем это за вас"
         ],
         [
-          "title" => "Индивидуальные условия сделки ",
+          "subTitle" => "Индивидуальные условия сделки ",
           "text" => "Определите комфортный ежемесячный платёж, сформируйте удобный график лизинговых платежей"
         ],
         [
-          "title" => "Быстрый выход на сделку",
+          "subTitle" => "Быстрый выход на сделку",
           "text" => "Быстрый выход на сделку. Одобрим заявку за пару дней, автомобиль будет доступен в максимально сжатые сроки"
         ],
-
-
       ],
     ],
   ],
@@ -134,7 +135,7 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
         </div>
       </div>
       <?php if (!empty($activeProgram['text']) && is_array($activeProgram['text'])): ?>
-        <div class="program-leasing-page__content--down container">
+        <div class="program-leasing-page__content--down  ">
           <?php foreach ($activeProgram['text'] as $line): ?>
             <p><?= htmlspecialchars($line) ?></p>
           <?php endforeach; ?>
@@ -148,20 +149,11 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
 <?php if (!empty($activeProgram['info'])): ?>
   <section class="grid_0-1 container mt-100px">
 
-    <div class="list">
-      <?php foreach ($activeProgram["info"] as $index => $item): ?>
-        <div class="card-corner__item">
-          <div class="list__content">
-            <h5>
-              <?= htmlspecialchars($item) ?>
-            </h5>
-          </div>
-          <svg class="card-corner__svg" width="75" height="24" viewBox="0 0 75 24" fill="none">
-            <use href="<?php echo SVG_PATH; ?>icons.svg#icon-corner-card"></use>
-          </svg>
-        </div>
-      <?php endforeach; ?>
-    </div>
+
+    <?php
+    require_once 'src/components/ui/corner-list/corner-list.php';
+    echo generateCornerList($activeProgram["info"], 'col-3   subtitle-big')
+    ?>
   </section>
 <?php endif; ?>
 
@@ -225,26 +217,16 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
 
     <div>
       <?php if (!empty($activeProgram['requirementsLessees']['title'])): ?>
-        <h3 class="list__title"><?= htmlspecialchars($activeProgram['requirementsLessees']['title']) ?></h3>
+        <h3 class="program-leasing__title"><?= htmlspecialchars($activeProgram['requirementsLessees']['title']) ?></h3>
       <?php endif; ?>
 
-      <div class="list">
-        <?php foreach ($activeProgram["requirementsLessees"]["list"] as $index => $item): ?>
-          <div class="card-corner__item">
-            <div class="list__content">
-              <h5>
-                <?= htmlspecialchars($item['title']) ?>
-              </h5>
-              <p>
-                <?= htmlspecialchars($item['text']) ?>
-              </p>
-            </div>
-            <svg class="card-corner__svg" width="75" height="24" viewBox="0 0 75 24" fill="none">
-              <use href="<?php echo SVG_PATH; ?>icons.svg#icon-corner-card"></use>
-            </svg>
-          </div>
-        <?php endforeach; ?>
-      </div>
+
+
+      <?php
+      require_once 'src/components/ui/corner-list/corner-list.php';
+      echo generateCornerList($activeProgram["requirementsLessees"]["list"], 'col-3   subtitle-big')
+      ?>
+
     </div>
   <?php endif; ?>
 
