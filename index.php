@@ -21,7 +21,7 @@ $router->add('about-company', function () {
 $router->add('clients', function () {
 	if (!isset($_GET['section'])) {
 		// Если параметров нет, делаем редирект с параметрами по умолчанию
-		header('Location: /clients?section=partners');
+		header('Location: /clients?section=general-conditions');
 		exit();
 	}
 	$content = 'src/components/page/clients/index.php';

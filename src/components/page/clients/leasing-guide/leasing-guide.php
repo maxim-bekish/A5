@@ -41,8 +41,8 @@ $list = [
 <section class="leasing-guide-list">
   <ul>
     <?php foreach ($list as $el) : ?>
-      <li class="row" style="flex-direction: column;">
-        <h3 class="row__title"> <?php echo htmlspecialchars($el['title']); ?></h3>
+      <li class="row leasing-guide-list-item">
+        <h3 class="row__title "> <?php echo htmlspecialchars($el['title']); ?></h3>
         <p class="row__text"><?php echo htmlspecialchars($el['text']); ?></p>
       </li>
     <?php endforeach; ?>
@@ -52,6 +52,14 @@ $list = [
 <style>
   .leasing-guide-list {
     margin-top: 70px;
+  }
+
+  .leasing-guide-list-item {
+    flex-direction: column;
+  }
+
+  .leasing-guide-list-item * {
+    max-width: 1000px;
   }
 
   @media (max-width:1280px) {

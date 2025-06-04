@@ -31,7 +31,7 @@ $activeNavItem = isset($_GET['section']) ? $_GET['section'] : ' ';
         include 'src/components/page/clients/general-conditions/general-conditions.php';
         break;
       case 'partners':
-        include 'src/components/page/clients/partners-program/partners-program.php';
+        include 'src/components/page/clients/support-businesses/support-businesses.php';
         break;
       case 'client-documents':
         include 'src/components/page/clients/client-documents/client-documents.php';
@@ -40,7 +40,7 @@ $activeNavItem = isset($_GET['section']) ? $_GET['section'] : ' ';
         include 'src/components/page/clients/leasing-guide/leasing-guide.php';
         break;
       default:
-        include 'src/components/page/clients/partners-program/partners-program.php';
+        include 'src/components/page/clients/support-businesses/support-businesses.php';
         break;
     }
     ?>
