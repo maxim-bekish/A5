@@ -1,86 +1,92 @@
 .personal-data__table {
-  border-top: 1px solid var(--gray);
-  border-left: 1px solid var(--gray);
-  border-right: 1px solid var(--gray);
-  display: flex;
-  font-size: 18px;
+	border-top: 1px solid rgb(var(--line));
+	border-left: 1px solid rgb(var(--line));
+	border-right: 1px solid rgb(var(--line));
+	display: flex;
+	font-size: 18px;
+}
+
+.personal-data-title {
+	font-size: 70px;
+	line-height: 120%;
+	color: var(--dark-blue);
 }
 
 .personal-data__table:last-child {
-  border-bottom: 1px solid var(--gray);
+	border-bottom: 1px solid rgb(var(--line));
 }
 
 .personal-data__table li {
-  padding: 15px 0px;
-  margin: 0 20px;
-  width: 100%;
+	padding: 15px 0px;
+	margin: 0 20px;
+	width: 100%;
 }
 
 .personal-data__table li:first-child {
-  max-width: 307px;
-  min-width: 126px;
-  border-right: 1px solid var(--gray);
+	max-width: 307px;
+	min-width: 126px;
+	border-right: 1px solid rgb(var(--line));
 }
 
 .personal-data__table li:last-child {
-  list-style-type: disc;
+	list-style-type: disc;
 }
 
 .personal-data__table:not(:first-child) li:last-child {
-  color: var(--gray);
+	color: var(--gray);
 }
 
 .personal-data__table:first-child li:last-child {
-  color: var(--white);
+	color: var(--white);
 }
 
 .personal-data__title h3 {
-  line-height: 85px;
-  margin-bottom: 100px;
-  max-width: 1153px;
+	line-height: 85px;
+	margin-bottom: 100px;
+	max-width: 1153px;
 }
 
 .personal-data__item {
-  padding: 40px 0;
-  border-top: 1px solid var(--gray);
+	padding: 40px 0;
+	border-top: 1px solid rgb(var(--line));
 }
 
 .personal-data__item:last-child {
-  border-bottom: 1px solid var(--gray);
+	border-bottom: 1px solid rgb(var(--line));
 }
 
 .personal-data__item-title {
-  font-size: 20px;
-  line-height: 24.2px;
+	font-size: 20px;
+	line-height: 100%;
+	color: var(--black);
 }
 
 @media (max-width: 1280px) {
-  .personal-data__title h3 {
-    font-size: 50px;
-    line-height: 60px;
-    margin-bottom: 60px;
-    max-width: 723px;
-  }
+	.personal-data__title h3 {
+		font-size: 38px;
+		line-height: 120%;
+		margin-bottom: 40px;
+	}
 
-  .personal-data-description {
-    padding-left: 20px;
-  }
+	.personal-data-description {
+		padding-left: 20px;
+	}
 
-  .personal-data__item {
-    padding: 30px 0;
-  }
+	.personal-data__item {
+		padding: 30px 0 40px 0;
+	}
 }
 
 @media (max-width: 768px) {
-  .personal-data__title h3 {
-    font-size: 28px;
-    line-height: 33.6px;
-    margin-bottom: 40px;
-    max-width: 100%;
-  }
+	.personal-data__title h3 {
+		font-size: 28px;
+		line-height: 33.6px;
+		margin-bottom: 40px;
+		max-width: 100%;
+	}
 
-  .personal-data__item-title {
-    font-size: 18px;
-    line-height: 25px;
-  }
+	.personal-data__item-title {
+		font-size: 18px;
+		line-height: 25px;
+	}
 }

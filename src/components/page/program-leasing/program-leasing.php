@@ -24,15 +24,15 @@ $programLeasingData = [
       "title" => null,
       "list" => [
         [
-          "title" => "Подберём автомобиль ",
+          "subTitle" => "Подберём автомобиль ",
           "text" => "Не тратьте время и силы на поиски нужного автомобиля — мы сделаем это за вас"
         ],
         [
-          "title" => "Индивидуальные условия сделки ",
+          "subTitle" => "Индивидуальные условия сделки ",
           "text" => "Определите комфортный ежемесячный платёж, сформируйте удобный график лизинговых платежей"
         ],
         [
-          "title" => "Быстрый выход на сделку",
+          "subTitle" => "Быстрый выход на сделку",
           "text" => "Быстрый выход на сделку. Одобрим заявку за пару дней, автомобиль будет доступен в максимально сжатые сроки"
         ],
 
@@ -42,31 +42,20 @@ $programLeasingData = [
   ],
   [
     "asideTitle" => "Грузовой автотранспорт и спецтехника",
-    "section" => "freight-vehicles",
+    "section" => "freight-transport",
     "image" => "photo-1.png",
-    "title" => "Легковые \n автомобили с А5",
-    "subTitle" => "Быстрое решение для бизнеса в любом городе России!",
+    "title" => "Выгодный лизинг\nгрузового транспорта\n и спецтехники",
     "text" => [
-
-      "Мы передаём в лизинг легковые автомобили с различным типом кузова: седан, лифтбек, внедорожник, купе, пикапы, фургоны и др.",
-      "Работаем с официальными дилерами на всей территории Российской Федерации."
+      "Вы можете приобрести в лизинг тягачи, самосвалы, рефрижераторы, фургоны, бортовые грузовики и другие виды грузового транспорта и спецтехники, которые мы подберём индивидуально с учётом ваших пожеланий."
     ],
     "obtainingLeasing" => [
       "minAdvance" => 5,
       "maxLeasingPeriod" => 5,
     ],
-    "info" => [
-      ['subTitle' => 'При возвратном лизинге поставщик и лизингополучатель является одним лицом'],
-      ['subTitle' => 'Компания продаёт лизинговой компании своё имущество и его же приобретает в лизинг'],
-      ['subTitle' => 'Компания продолжает использовать имущество в коммерческих целях'],
-      ['subTitle' => 'Компания получает оборотные средства от лизинговой компании, которые можно направить на любые бизнес-цели, как оплату по договору купли-продажи'],
-      ['subTitle' => 'Компания зачитывает НДС по лизинговым платежам в соответствие с лизинговым договором']
 
 
-    ],
-    "simpleSolution" => true,
     "requirementsLessees" => [
-      "title" => 'Test',
+      "title" => null,
       "list" => [
         [
           "subTitle" => "Подберём автомобиль ",
@@ -82,6 +71,91 @@ $programLeasingData = [
         ],
       ],
     ],
+  ],
+  [
+    "asideTitle" => " Оборудование",
+    "section" => "equipment",
+    "image" => "photo-1.png",
+    "title" => "Любое оборудование\nв лизинг",
+    "subTitle" => "От медицинского\nдо телекоммуникационного",
+    "text" => [
+      "Оборудование под специальный запрос: для металлообрабатывающего, пищевого, строительного, деревообрабатывающего, строительного производства. Подберём любое оборудование."
+    ],
+    "obtainingLeasing" => [
+      "minAdvance" => 20,
+      "maxLeasingPeriod" => 5,
+    ],
+
+
+    "requirementsLessees" => [
+      "title" => 'Выберите удобный способ приобретения',
+      "list" => [
+        [
+          "subTitle" => "Финансовый",
+          "text" => "Выкупим оборудование у завода-изготовителя, передадим его в финансовую аренду лизингополучателю. В конце срока лизинга клиент выкупает имущество в собственность"
+        ],
+        [
+          "subTitle" => "Возвратный",
+          "text" => "Выкупим у лизингополучателя оборудование и возвратим его в пользование на условиях лизинга. Лизингополучатель пополняет свои оборотные средства, сохраняя актив во владении"
+        ],
+      ],
+    ],
+  ],
+  [
+    "asideTitle" => "Возвратный лизинг",
+    "section" => "refusal-leasing",
+    "image" => "photo-1.png",
+    "title" => "Возвратный лизинг",
+    "subTitle" => "Максимальный эффект от использования\n  собственных активов компании",
+    "text" => [
+      "Лизинговая компания А5 выкупит у лизингополучателя оборудование и возврат в пользование на условиях лизинга. Это позволит вам пополнить свои оборотные средства, сохраняя актив во владении "
+    ],
+    "obtainingLeasing" => [
+      "minAdvance" => 20,
+      "maxLeasingPeriod" => 5,
+    ],
+    "info" => [
+      ['subTitle' => 'При возвратном лизинге поставщик и лизингополучатель является одним лицом'],
+      ['subTitle' => 'Компания продаёт лизинговой компании своё имущество и его же приобретает в лизинг'],
+      ['subTitle' => 'Компания продолжает использовать имущество в коммерческих целях'],
+      ['subTitle' => 'Компания получает оборотные средства от лизинговой компании, которые можно направить на любые бизнес-цели, как оплату по договору купли-продажи'],
+      ['subTitle' => 'Компания зачитывает НДС по лизинговым платежам в соответствие с лизинговым договором']
+
+
+    ],
+
+    "requirementsLessees" => [
+      "title" => 'Возвратный лизинг — удобно и выгодно',
+      "list" => [
+        [
+          "subTitle" => "Быстрая сделка",
+          "text" => "Лизингополучатель получает имущество, дополнительное обслуживание, пополняет оборотные средства, сохраняет во владении нужный актив"
+        ],
+        [
+          "subTitle" => "Налоговые преимущества",
+          "text" => "НДС можно принять в зачёт, полный лизинговый платёж идёт в расходы, можно сэкономить на налоге на имущество "
+        ],
+      ],
+    ],
+  ],
+  [
+    "asideTitle" => "Недвижимость",
+    "inventory" => true,
+    "section" => "real-estate",
+    "image" => "photo-1.png",
+    "title" => "Недвижимость для\nюридических лиц и ИП",
+    "subTitle" => "Любые помещения и отдельно\n стоящие здания",
+    "text" => [
+      "Лизинговая компания А5 предлагает оформить в лизинг жилую и нежилую недвижимость, при условии её использования в коммерческих целях.",
+      "Глубокая юридическая экспертиза объектов и налоговые выгоды делают приобретение недвижимости в лизинг крайне привлекательным решением.",
+      "Есть вопросы? Свяжитесь с нами сейчас!"
+    ],
+    "obtainingLeasing" => [
+      "minAdvance" => 30,
+      "maxLeasingPeriod" => 5,
+    ],
+    "simpleSolution" => true,
+
   ],
 ];
 
@@ -131,7 +205,9 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
         </div>
         <div class="program-leasing-page__content-up--text">
           <h3><?php echo nl2br(htmlspecialchars($activeProgram['title'])); ?></h3>
-          <p><?php echo htmlspecialchars($activeProgram['subTitle']); ?></p>
+          <?php if (!empty($activeProgram['subTitle'])): ?>
+            <p><?php echo htmlspecialchars($activeProgram['subTitle']); ?></p>
+          <?php endif; ?>
         </div>
       </div>
       <?php if (!empty($activeProgram['text']) && is_array($activeProgram['text'])): ?>
@@ -211,36 +287,57 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
   </section>
 <?php endif; ?>
 
-<section class="grid_0-1 container mt-100px">
+<?php if (!empty($activeProgram['requirementsLessees'])): ?>
+  <section class="grid_0-1 container mt-100px">
 
-  <?php if ($activeProgram) : ?>
+    <?php if ($activeProgram) : ?>
 
+      <div>
+        <?php if (!empty($activeProgram['requirementsLessees']['title'])): ?>
+          <div class="simpleSolution">
+            <h4 class="program-leasing__title">
+              <?= htmlspecialchars($activeProgram['requirementsLessees']['title']) ?>
+            </h4>
+          </div>
+        <?php endif; ?>
+        <?php
+        require_once 'src/components/ui/corner-list/corner-list.php';
+        echo generateCornerList($activeProgram["requirementsLessees"]["list"], 'col-3   subtitle-big')
+        ?>
+
+      </div>
+    <?php endif; ?>
+
+  </section>
+<?php endif; ?>
+
+<?php if (!empty($activeProgram['inventory'])): ?>
+  <section class="grid_0-1 container mt-100px">
     <div>
-      <?php if (!empty($activeProgram['requirementsLessees']['title'])): ?>
-        <h3 class="program-leasing__title"><?= htmlspecialchars($activeProgram['requirementsLessees']['title']) ?></h3>
-      <?php endif; ?>
-
-
-
+      <div class="simpleSolution">
+        <h4 class="program-leasing__title">
+          Продукция
+        </h4>
+      </div>
       <?php
-      require_once 'src/components/ui/corner-list/corner-list.php';
-      echo generateCornerList($activeProgram["requirementsLessees"]["list"], 'col-3   subtitle-big')
+      require_once 'src/components/ui/production/production-items/production-items.php';
       ?>
-
     </div>
-  <?php endif; ?>
+  </section>
+<?php endif; ?>
 
-</section>
 
 <section class="grid_0-1 container mt-100px">
   <div>
-    <div class="program-leasing-calculator-title">
-      <h4 class="program-leasing__title">
-        Лизинговый калькулятор
-      </h4>
-      <p class="">
-        Укажите все параметры и получите точный расчет
-      </p>
+    <div class="simpleSolution">
+      <div class="program-leasing-calculator-title">
+        <h4 class="program-leasing__title">
+          Лизинговый калькулятор
+        </h4>
+        <p class="">
+          Укажите все параметры и получите точный расчет
+        </p>
+      </div>
     </div>
     <div class="program-leasing-calculator">
       <?php

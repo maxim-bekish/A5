@@ -64,8 +64,8 @@ $personalData = [
 	<div class="personal-data__title grid_1-3-box">
 		<div class="personal-data-none"> </div>
 		<div>
-			<h3 class="title-page-h3">
-				Политика обработки персональных данных
+			<h3 class="personal-data-title">
+				Поли тика обработки персональных данных
 			</h3>
 		</div>
 	</div>

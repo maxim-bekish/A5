@@ -10,7 +10,7 @@ function get_breadcrumbs($uri)
 		'personal-data' => 'Политика обработки персональных данных',
 		'inventory' => 'Каталог изъятой техники',
 		'program-leasing' => 'Программы лизинга',
-
+		'freight-vehicles' => 'Легковой автотранспорт test',
 		'passenger-vehicles' => 'Легковой автотранспорт',
 		'freight-transport' => 'Грузовой транспорт',
 		'special-equipment' => 'Спецтехника',

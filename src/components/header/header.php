@@ -10,28 +10,16 @@ $headerListProgram = (object) [
       'link' => '/program-leasing?section=passenger-vehicles'
     ],
     (object) [
-      'name' => 'Грузовой автотранспорт',
+      'name' => 'Грузовой автотранспорт и спецтехника',
       'link' => '/program-leasing?section=freight-transport'
-    ],
-    (object) [
-      'name' => 'Спецтехника',
-      'link' => '/program-leasing?section=special-equipment'
     ],
     (object) [
       'name' => 'Оборудование',
       'link' => '/program-leasing?section=equipment'
     ],
     (object) [
-      'name' => 'Медицинское оборудование',
-      'link' => '/program-leasing?section=medical-equipment'
-    ],
-    (object) [
-      'name' => 'Ресторанное оборудование',
-      'link' => '/program-leasing?section=restaurant-equipment'
-    ],
-    (object) [
-      'name' => 'Б/У продукция',
-      'link' => '/program-leasing?section=used-products'
+      'name' => 'Возвратный лизинг',
+      'link' => '/program-leasing?section=refusal-leasing'
     ],
     (object) [
       'name' => 'Недвижимость',
@@ -156,20 +144,22 @@ function listHeaderBurger($data)
         <img src="<?php echo IMG_PATH; ?>burger.png" alt="">
       </button>
     </div>
-    <div class="leasing ">
+
+    <div class="nav">
       <div class="select select-program"> <?php listHeader($headerListProgram); ?> </div>
-      <div class="select select-leasing"> <?php listHeader($headerListLeasing); ?> </div>
-    </div>
-    <div class="nav ">
+      
+      <div class="underline-box">
+        <a class="nav__item underline-el underline-el-blue" href="/about-company">
+          О компании
+        </a>
+      </div>
       <div class="select select-clients"> <?php listHeader($headerListClients); ?> </div>
       <div class="underline-box">
         <a class="nav__item underline-el underline-el-blue" href="/inventory">
           Каталог изьятой техники
         </a>
       </div>
-      <div class="underline-box">
-        <a class="nav__item underline-el underline-el-blue js-anchor-link" href="#home-calculator">Калькулятор</a>
-      </div>
+
     </div>
     <div class="contacts-header ">
       <button class="underline-box">

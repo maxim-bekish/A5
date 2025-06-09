@@ -173,7 +173,7 @@
 	.program-leasing-calculator {
 		flex-direction: column;
 	}
-	.program-leasing-page__navigation ul li .program__navigation--active {
+	.program-leasing-page__navigation ul li  {
 		color: var(--medium-gray);
 	}
 	.program-leasing-page__navigation {

@@ -7,36 +7,6 @@
     </svg>
   </div>
   <div class="footer__form">
-    <!-- <form class="js-myForm js-popApp-OK">
-      <h4>Получите бесплатную <br> консультацию</h4>
-      <div class="form-items-50 form-blue ">
-        <div class="form-group">
-          <input name="footer-name" id="footer-name" autocomplete="name" type="text" placeholder=" " required>
-          <label for="footer-name">Ваше имя</label>
-        </div>
-        <div class="form-group">
-          <input name="footer-email" id="footer-email" autocomplete="email" type="email" placeholder=" ">
-          <label for="footer-email">Email</label>
-        </div>
-        <div class="form-group">
-          <input name="footer-phone" class="phone" autocomplete="tel" id="footer-phone" type="tel" pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder=" " required>
-          <label for="footer-phone">Телефон</label>
-        </div>
-        <div class="form-group">
-          <input name="footer-company" id="footer-company" autocomplete="organization" type="text" placeholder=" ">
-          <label for="footer-company">Компания</label>
-        </div>
-      </div>
-      <div class="checkbox checkbox--blue">
-        <input class="custom-checkbox " type="checkbox" name="footer-option" id="footer-option" required>
-        <label for="footer-option">
-          Согласен с политикой конфиденциальности
-        </label>
-      </div>
-      <button disabled class="button button--white js-btn-footer js-popUp-submitBtn" type="button">
-        Получить
-      </button>
-    </form> -->
     <?php
     require_once 'src/components/ui/forms/form_1/form.php';
     $formData = [

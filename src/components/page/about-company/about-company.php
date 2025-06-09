@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="src/components/page/about-company/about-company/about-company.css">
-<script src="src/components/page/about-company/about-company/about-company.js"></script>
+<link rel="stylesheet" href="src/components/page/about-company/about-company.css">
+<script src="src/components/page/about-company/about-company.js"></script>
 
 <?php
 
