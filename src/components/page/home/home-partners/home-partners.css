@@ -24,6 +24,7 @@
 .home-partners__form {
   background-color: var(--light-gray);
   padding: 75px;
+  margin-block: auto;
 }
 
 .partners-box__time-value {

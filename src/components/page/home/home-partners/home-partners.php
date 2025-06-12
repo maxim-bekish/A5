@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="src/components/page/home/home-partners/home-partners.css">
-<!-- <script src="src/components/page/home/home-partners/home-partners.js"></script> -->
+ 
 
 
 <section id="partners" class="partners-box mt-160px container">
@@ -26,27 +26,30 @@
         </div>
       </div>
     </div>
-    <div class="home-partners__form" >
-      <?php
-      require_once 'src/components/ui/forms/form_1/form.php';
-      $formData = [
-        'class' => "form-items-100 form-gray ",
-        'id' => 'partners',
-        'variable' => [
-          'name' => true,
-          'phone' => true,
-        ],
-        'checkbox' => [
-          'required' => true,
-          'class' => 'checkbox--white'
-        ],
-        'button' => [
-          'label' => 'Подобрать',
-          'class' => 'button button--blue js-btn-footer js-popUp-submitBtn ',
-        ],
-        'actions' => 'js-myForm js-popApp-OK '
-      ];
-      echo generateDynamicForm($formData);
-      ?></div>
+    <div class="home-partners__form">
+   
+        <?php
+        require_once 'src/components/ui/forms/form_1/form.php';
+        $formData = [
+          'class' => "form-items-100 form-gray ",
+          'id' => 'partners',
+          'variable' => [
+            'name' => true,
+            'phone' => true,
+          ],
+          'checkbox' => [
+            'required' => true,
+            'class' => 'checkbox--white'
+          ],
+          'button' => [
+            'label' => 'Подобрать',
+            'class' => 'button button--blue js-btn-footer js-popUp-submitBtn ',
+          ],
+          'actions' => 'js-myForm js-popApp-OK '
+        ];
+        echo generateDynamicForm($formData);
+        ?>
+      
+    </div>
   </div>
 </section>

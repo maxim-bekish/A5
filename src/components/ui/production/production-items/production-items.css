@@ -17,10 +17,7 @@
   background: var(--light-gray);
   width: 100%;
 }
-/* 
-.production__module-window__checkbox {
-   margin: 20px 0 30px 0;
-} */
+
 
 .production__module-window__form-group {
   margin: 0 !important;

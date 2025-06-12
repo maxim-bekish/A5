@@ -1,157 +1,128 @@
 .popup-ask-tel a {
-  font-size: 50px;
-  font-weight: var(--font-w5);
-  line-height: 52.04px;
-  color: var(--dark-blue);
+	font-size: 50px;
+	font-weight: var(--font-w5);
+	line-height: 52.04px;
+	color: var(--dark-blue);
 }
 
 .popup-ask-info .text-html {
-  font-size: 18px;
-  line-height: 25.2px;
-  margin: 15px 0 40px 0;
-  max-width: 80%;
+	font-size: 18px;
+	line-height: 25.2px;
+	margin: 15px 0 40px 0;
+	max-width: 80%;
 }
 
 .popup-ask-newsletter p {
-  font-size: 18px;
-  line-height: 18.72px;
+	font-size: 18px;
+	line-height: 18.72px;
 }
 
 .popup-ask-tel a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .bottom-select-ask-active {
-  background-color: var(--dark-blue) !important;
-  color: var(--white) !important;
+	background-color: var(--dark-blue) !important;
+	color: var(--white) !important;
 }
 
 .sidebar-ask .popup-ask-map {
-  border: 1px solid var(--black);
-  width: 550px;
-  height: 290px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
+	border: 1px solid var(--black);
+	width: 550px;
+	height: 290px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
 }
 
 .popup-ask-newsletter p {
-  color: var(--medium-gray);
+	color: var(--medium-gray);
 }
-
+.popup-ask-newsletter-form .form-group:last-child {
+	margin-top: 30px;
+}
 .popup-ask-newsletter-form {
-  display: flex;
-  gap: 20px;
-  margin: 40px 0 0px 0;
-  flex-direction: column;
+	margin: 40px 0 0px 0;
 }
 
-.popup-ask-newsletter-form .form-items-100 {
-  margin: 0;
-  gap: 0;
-}
 
-/* .form-items-100 .form-group:nth-child(2) {
-   margin: 15px 0 35px 0;
-} */
-
-.popup-ask-newsletter-form input::placeholder {
-  color: var(--gray);
-}
-
-.popup-ask-newsletter .popup-ask-newsletter-form .button {
-  max-width: 175px;
-  font-size: 16px;
-  font-weight: var(--font-w5);
-  line-height: 19.36px;
-  padding: 15px 0;
-}
 
 .popup-ask-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .popup-ask-buttons .button {
-  height: 50px;
-  font-size: 16px;
-  line-height: 19.36px;
-  padding: 0;
+	height: 50px;
+	font-size: 16px;
+	line-height: 19.36px;
+	padding: 0;
 }
 
 @media (max-width: 1280px) {
-  .popup-ask-info .text-html {
-    font-size: 16px;
-    line-height: 22.4px;
-    margin: 15px 0 30px 0;
-  }
+	.popup-ask-info .text-html {
+		font-size: 16px;
+		line-height: 22.4px;
+		margin: 15px 0 30px 0;
+	}
 
-  .popup-ask-buttons {
-    gap: 15px;
-  }
+	.popup-ask-buttons {
+		gap: 15px;
+	}
+
+	.popup-ask-newsletter-form .form-group:last-child {
+		margin-top: 0px;
+	}
 }
 
 input {
-  background-color: var(--transparent) !important;
+	background-color: var(--transparent) !important;
 }
 
 @media (max-height: 720px) {
-  .popup-ask-info .text-html {
-    font-size: 14px;
-    line-height: 18px;
-  }
+	.popup-ask-info .text-html {
+		font-size: 14px;
+		line-height: 18px;
+	}
 
-  .popup-ask-info .text-html {
-    margin: 10px 0 15px 0;
-  }
+	.popup-ask-info .text-html {
+		margin: 10px 0 15px 0;
+	}
 
-  .popup-ask-buttons {
-    gap: 15px;
-  }
+	.popup-ask-buttons {
+		gap: 15px;
+	}
 
-  .popup-ask-buttons .button {
-    height: 40px;
-  }
+	.popup-ask-buttons .button {
+		height: 40px;
+	}
 
-  .form-items-100 .form-group:nth-child(2) {
-    margin: 10px 0 15px 0;
-  }
-
-  .popup-ask-newsletter-form {
-    margin: 15px 0 0 0;
-  }
+	.popup-ask-newsletter-form {
+		margin: 15px 0 0 0;
+	}
 }
 
 @media (max-width: 390px) {
-  .popup-ask-buttons .button {
-    height: 50px;
-  }
+	.popup-ask-buttons .button {
+		height: 50px;
+	}
 
-  .popup-ask-buttons {
-    gap: 20px;
-  }
+	.popup-ask-buttons {
+		gap: 20px;
+	}
 
-  .popup-ask-info .text-html {
-    font-size: 14px;
-    line-height: 20px;
-  }
+	.popup-ask-info .text-html {
+		font-size: 14px;
+		line-height: 20px;
+	}
 
-  .popup-ask-info .form-group {
-    height: 42px;
-  }
+	.popup-ask-info .form-group {
+		height: 42px;
+	}
 
-  .js-myForm-popup-ask .popup-ask-newsletter-form,
-  .popup-ask-info .text-html {
-    margin: 0;
-  }
-
-  .form-items-100 .form-group:nth-child(2) {
-    margin: 10px 0 25px 0;
-  }
-
-  .sidebar-ask .popUp__sidebar-box {
-    justify-content: space-between;
-  }
+	.sidebar-ask .popUp__sidebar-box {
+		justify-content: space-between;
+	}
 }

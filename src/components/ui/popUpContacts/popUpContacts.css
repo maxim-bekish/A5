@@ -1,415 +1,399 @@
 /* radio button */
 
 .popup-contacts .popup-contacts-radio {
-  display: flex;
-  gap: 40px;
-  margin: 40px 0;
+	display: flex;
+	gap: 40px;
+	margin: 40px 0;
 }
 
 .radio-button {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .popup-contacts-tel {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .custom-radio {
-  position: relative;
-  padding-left: 26px;
-  cursor: pointer;
-  font-size: 18px;
-  user-select: none;
+	position: relative;
+	padding-left: 26px;
+	cursor: pointer;
+	font-size: 18px;
+	user-select: none;
 }
 
-.custom-radio input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+.custom-radio input[type='radio'] {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
 }
 
-.custom-radio input[type="radio"]:checked ~ .radio-checkmark::after {
-  display: block;
+.custom-radio input[type='radio']:checked ~ .radio-checkmark::after {
+	display: block;
 }
 
-.custom-radio input[type="radio"]:checked ~ .radio-checkmark {
-  border: 2px solid var(--dark-blue);
+.custom-radio input[type='radio']:checked ~ .radio-checkmark {
+	border: 2px solid var(--dark-blue);
 }
 
 .custom-radio span {
-  vertical-align: middle;
+	vertical-align: middle;
 }
-
+.popup-contacts-contacts-office-content {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
 .custom-radio .radio-checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: var(--white);
-  border: 2px solid var(--gray);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: var(--white);
+	border: 2px solid var(--gray);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @media (hover: hover) {
-  /* radio hover внутрений круг */
-  .custom-radio:hover input[type="radio"] ~ .radio-checkmark::before {
-    display: block;
-    background-color: var(--gray);
-    opacity: 0.2;
-  }
+	/* radio hover внутрений круг */
+	.custom-radio:hover input[type='radio'] ~ .radio-checkmark::before {
+		display: block;
+		background-color: var(--gray);
+		opacity: 0.2;
+	}
 
-  /* radio hover+checked внутрений круг */
-  .custom-radio:hover input[type="radio"]:checked ~ .radio-checkmark::before {
-    display: block;
-    background-color: var(--dark-blue);
-    opacity: 0.1;
-  }
+	/* radio hover+checked внутрений круг */
+	.custom-radio:hover input[type='radio']:checked ~ .radio-checkmark::before {
+		display: block;
+		background-color: var(--dark-blue);
+		opacity: 0.1;
+	}
 }
 
 /* radio hover внутрений круг */
-.custom-radio:active input[type="radio"] ~ .radio-checkmark::before {
-  display: block;
-  background-color: var(--gray);
-  opacity: 0.2;
+.custom-radio:active input[type='radio'] ~ .radio-checkmark::before {
+	display: block;
+	background-color: var(--gray);
+	opacity: 0.2;
 }
 
 /* radio hover+checked внутрений круг */
-.custom-radio:active input[type="radio"]:checked ~ .radio-checkmark::before {
-  display: block;
-  background-color: var(--dark-blue);
-  opacity: 0.1;
+.custom-radio:active input[type='radio']:checked ~ .radio-checkmark::before {
+	display: block;
+	background-color: var(--dark-blue);
+	opacity: 0.1;
 }
 
 /* radio checked+disabled  сам элемент*/
-.custom-radio input[type="radio"]:checked:disabled ~ .radio-checkmark {
-  display: block;
-  border: 2px solid var(--silver);
+.custom-radio input[type='radio']:checked:disabled ~ .radio-checkmark {
+	display: block;
+	border: 2px solid var(--silver);
 }
 
 /* radio checked+disabled внутрений круг */
-.custom-radio input[type="radio"]:checked:disabled ~ .radio-checkmark::after {
-  background-color: var(--silver);
+.custom-radio input[type='radio']:checked:disabled ~ .radio-checkmark::after {
+	background-color: var(--silver);
 }
 
 /* radio checked+disabled+hover  внешний груг*/
-.custom-radio:hover
-  input[type="radio"]:checked:disabled
-  ~ .radio-checkmark::before {
-  background-color: var(--transparent);
+.custom-radio:hover input[type='radio']:checked:disabled ~ .radio-checkmark::before {
+	background-color: var(--transparent);
 }
 
 /* radio checked  сам элемент*/
-.custom-radio input[type="radio"]:disabled ~ .radio-checkmark {
-  display: block;
-  border: 2px solid var(--silver);
+.custom-radio input[type='radio']:disabled ~ .radio-checkmark {
+	display: block;
+	border: 2px solid var(--silver);
 }
 
 /* radio checked внутрений круг */
-.custom-radio input[type="radio"]:disabled ~ .radio-checkmark::after {
-  background-color: var(--silver);
+.custom-radio input[type='radio']:disabled ~ .radio-checkmark::after {
+	background-color: var(--silver);
 }
 
 /* radio checked+hover  внешний груг*/
-.custom-radio:hover input[type="radio"]:disabled ~ .radio-checkmark::before {
-  background-color: var(--transparent);
+.custom-radio:hover input[type='radio']:disabled ~ .radio-checkmark::before {
+	background-color: var(--transparent);
 }
 
 .custom-radio .radio-checkmark::after {
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  display: none;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--dark-blue);
+	content: '';
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	display: none;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: var(--dark-blue);
 }
 
 .custom-radio .radio-checkmark::before {
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  display: none;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+	content: '';
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	display: none;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
 }
 
 .custom-radio .text-html {
-  color: var(--medium-gray);
-
-  font-size: 20px;
-
-  line-height: 20.8px;
-  text-align: left;
+	color: var(--black);
+	font-size: 20px;
+	line-height: 104%;
+	text-align: left;
 }
 
 /* radio button */
 
 .max-w-462px {
-  max-width: 462px;
+	max-width: 462px;
 }
 
 .popup-contacts-tel a {
-  font-size: 50px;
-  font-weight: var(--font-w5);
-  line-height: 52.04px;
-  color: var(--dark-blue);
+	font-size: 50px;
+	font-weight: var(--font-w5);
+	line-height: 52.04px;
+	color: var(--dark-blue);
 }
 
 .popup-contacts-contacts {
-  display: flex;
-  gap: 70px;
-  justify-content: space-between;
+	display: flex;
+	gap: 70px;
+	justify-content: space-between;
 }
 
 .popup-contacts-contacts h5 {
-  color: var(--gray);
-  margin-bottom: 20px;
+	color: var(--gray);
+	margin-bottom: 20px;
 }
 
 .popup-contacts-contacts p,
 .popup-contacts-contacts a,
-.popup-contacts-contacts-network a,
+ 
 .popup-contacts-contacts h5,
 .popup-contacts-newsletter p {
-  font-size: 18px;
+	font-size: 18px;
 
-  line-height: 18.72px;
+	line-height: 18.72px;
 }
 
 .popup-contacts-contacts p,
-.popup-contacts-contacts a,
-.popup-contacts-contacts-network a {
-  color: var(--dark-blue);
-  line-height: 24px;
+.popup-contacts-contacts a
+  {
+	color: var(--black);
+	font-size: 16px;
+	line-height: 120%;
 }
 
-.popup-contacts-contacts-office .working-hours {
-  margin: 20px 0 30px 0;
-}
-
-.popup-contacts-contacts-network a {
-  display: block;
-  margin-bottom: 20px;
-}
+ 
 
 .popup-contacts-map {
-  border: 1px solid var(--black);
-  width: 100%;
-  max-height: 290px;
-  min-height: 160px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  margin: 35px 0;
+	border: 1px solid var(--black);
+	width: 100%;
+	max-height: 290px;
+	min-height: 160px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	margin: 35px 0;
 }
 
 .popup-contacts-newsletter p {
-  color: var(--medium-gray);
+  margin-bottom: 20px;
+	color: var(--black);
 }
 
 .popup-contacts-newsletter-form .input {
-  margin: 0;
+	margin: 0;
 }
 
 .popup-contacts-newsletter-form {
-  display: flex;
-  gap: 20px;
-  margin: 20px 0 10px 0;
-  align-items: flex-end;
+	display: flex;
+	gap: 20px;
+	margin: 20px 0 10px 0;
+	align-items: flex-end;
 }
 
 .popup-contacts-newsletter-form input::placeholder {
-  color: var(--gray);
+	color: var(--gray);
 }
 
 .popup-contacts-newsletter .popup-contacts-newsletter-form .button {
-  max-width: 175px;
-  font-size: 16px;
-  font-weight: var(--font-w5);
-  line-height: 19.36px;
-  padding: 15px 0;
+	max-width: 175px;
+	font-size: 16px;
+	font-weight: var(--font-w5);
+	line-height: 19.36px;
+	padding: 15px 0;
 }
 
 @media (max-width: 1280px) {
-  .popup-contacts-tel {
-    margin-bottom: 40px;
-  }
+	.popup-contacts-tel {
+		margin-bottom: 40px;
+	}
 
-  .popup-contacts-tel a {
-    font-size: 40px;
-    line-height: 40px;
-  }
+	.popup-contacts-tel a {
+		font-size: 40px;
+		line-height: 40px;
+	}
 
-  .popup-contacts-map {
-    margin: 20px 0;
-  }
+	.popup-contacts-map {
+		margin: 20px 0;
+	}
 
-  .popup-contacts-contacts p,
-  .popup-contacts-contacts a,
-  .popup-contacts-contacts-network a {
-    font-size: 16px;
-    line-height: 16.64px;
-  }
+	.popup-contacts-contacts p,
+	.popup-contacts-contacts a {
+		font-size: 16px;
+		line-height: 16.64px;
+	}
 
-  .popup-contacts .popup-contacts-radio {
-    margin: 40px 0 50px 0;
-  }
+	.popup-contacts .popup-contacts-radio {
+		margin: 40px 0 50px 0;
+	}
 }
 
 @media (max-width: 700px) {
-  .popup-contacts-contacts p,
-  .popup-contacts-contacts a,
-  .popup-contacts-contacts-network a,
-  .popup-contacts-contacts h5,
-  .popup-contacts-newsletter p {
-    font-size: 16px;
-    line-height: 17px;
-    margin-bottom: 15px;
-  }
+	.popup-contacts-contacts p,
+ 
+	.popup-contacts-contacts h5,
+	.popup-contacts-newsletter p {
+		font-size: 16px;
+		line-height: 17px;
+		margin-bottom: 15px;
+	}
 
-  .popup-contacts-tel {
-    margin-bottom: 25px;
-  }
+	.popup-contacts-tel {
+		margin-bottom: 25px;
+	}
 
-  .custom-radio .radio-checkmark {
-    width: 14px;
-    height: 14px;
-    transform: translate(40%, 15%);
-  }
+	.custom-radio .radio-checkmark {
+		width: 14px;
+		height: 14px;
+		transform: translate(40%, 15%);
+	}
 
-  .custom-radio .radio-checkmark::after {
-    width: 6px;
-    height: 6px;
-  }
+	.custom-radio .radio-checkmark::after {
+		width: 6px;
+		height: 6px;
+	}
 
-  .custom-radio .radio-checkmark::before {
-    width: 23px;
-    height: 23px;
-  }
+	.custom-radio .radio-checkmark::before {
+		width: 23px;
+		height: 23px;
+	}
 }
 
 @media (max-width: 440px) {
-  .popup-contacts-newsletter-form {
-    flex-direction: column;
-    gap: 10px;
-  }
+	.popup-contacts-newsletter-form {
+		flex-direction: column;
+		gap: 10px;
+	}
 
-  .popup-contacts-newsletter .popup-contacts-newsletter-form .button {
-    max-width: 100%;
-  }
+	.popup-contacts-newsletter .popup-contacts-newsletter-form .button {
+		max-width: 100%;
+	}
 
-  .custom-radio .text-html {
-    font-size: 16px;
-    line-height: 16.64px;
-  }
+	.custom-radio .text-html {
+		font-size: 16px;
+		line-height: 16.64px;
+	}
 
-  .popup-contacts .popup-contacts-radio {
-    margin: 15px 0 30px 0;
-  }
+	.popup-contacts .popup-contacts-radio {
+		margin: 15px 0 30px 0;
+	}
 
-  .popup-contacts-contacts-office {
-    max-width: 173px;
-  }
+	.popup-contacts-contacts-office {
+		max-width: 173px;
+	}
 
-  .popup-contacts-contacts {
-    gap: 50px;
-    justify-content: flex-start;
-  }
+	.popup-contacts-contacts {
+		gap: 50px;
+		justify-content: flex-start;
+	}
 
-  .popup-contacts-tel a {
-    font-size: 30px;
-    line-height: 31.2px;
-  }
+	.popup-contacts-tel a {
+		font-size: 30px;
+		line-height: 31.2px;
+	}
 
-  .popup-contacts-tel {
-    margin-bottom: 15px;
-  }
+	.popup-contacts-tel {
+		margin-bottom: 15px;
+	}
 
-  .popup-contacts-contacts h5 {
-    font-size: 16px;
-    line-height: 16.64px;
-    margin-bottom: 20px;
-  }
+	.popup-contacts-contacts h5 {
+		font-size: 16px;
+		line-height: 16.64px;
+		margin-bottom: 20px;
+	}
 
-  .popup-contacts-contacts p,
-  .popup-contacts-contacts a,
-  .popup-contacts-contacts-network a {
-    font-size: 14px;
-    line-height: 14.56px;
-  }
+	.popup-contacts-contacts p,
+	.popup-contacts-contacts a {
+		font-size: 14px;
+		line-height: 14.56px;
+	}
 
-  .popup-contacts-newsletter-form .form-group {
-    height: 40px !important;
-  }
+	.popup-contacts-newsletter-form .form-group {
+		height: 40px !important;
+	}
 
-  .popup-contacts-newsletter-form .form-group input {
-    padding: 0 0 6px 0px;
-  }
+	.popup-contacts-newsletter-form .form-group input {
+		padding: 0 0 6px 0px;
+	}
 
-  .popup-contacts-newsletter-form .form-group input:placeholder-shown + label {
-    top: 19px;
-  }
+	.popup-contacts-newsletter-form .form-group input:placeholder-shown + label {
+		top: 19px;
+	}
 
-  .popup-contacts-map {
-    max-height: 200px;
-    margin: 20px 0 10px 0;
-  }
+	.popup-contacts-map {
+		max-height: 200px;
+		margin: 20px 0 10px 0;
+	}
 
-  .popup-contacts-newsletter p {
-    font-size: 16px;
-    line-height: 20.16px;
-  }
+	.popup-contacts-newsletter p {
+		font-size: 16px;
+		line-height: 20.16px;
+	}
 
-  .popup-contacts-newsletter-form {
-    flex-direction: column;
-  }
+	.popup-contacts-newsletter-form {
+		flex-direction: column;
+	}
 
-  .popup-contacts-newsletter .popup-contacts-newsletter-form .button {
-    max-width: 100%;
-    padding: 12px 0;
-  }
-
-  .popup-contacts-contacts-office .working-hours {
-    margin: 20px 0 20px 0;
-  }
+	.popup-contacts-newsletter .popup-contacts-newsletter-form .button {
+		max-width: 100%;
+		padding: 12px 0;
+	}
 }
 
 @media (max-height: 690px) {
-  .popup-contacts .popup-contacts-radio {
-    margin: 15px 0 20px 0 !important;
-  }
+	.popup-contacts .popup-contacts-radio {
+		margin: 15px 0 20px 0 !important;
+	}
 
-  .popup-contacts .popup-contacts-radio {
-    margin: 15px 0 20px !important;
-  }
+	.popup-contacts .popup-contacts-radio {
+		margin: 15px 0 20px !important;
+	}
 
-  .popup-contacts-contacts-office .working-hours {
-    margin: 15px 0 20px 0 !important;
-  }
+	.popup-contacts-tel a {
+		line-height: auto;
+		font-size: 25px;
+	}
 
-  .popup-contacts-tel a {
-    line-height: auto;
-    font-size: 25px;
-  }
-
-  .popup-contacts-contacts p,
-  .popup-contacts-contacts a,
-  .popup-contacts-contacts-network a,
-  .popup-contacts-contacts h5,
-  .popup-contacts-newsletter p {
-    margin-bottom: 15px;
-  }
+	.popup-contacts-contacts p,
+	.popup-contacts-contacts a,
+ 
+	.popup-contacts-contacts h5,
+	.popup-contacts-newsletter p {
+		margin-bottom: 15px;
+	}
 }

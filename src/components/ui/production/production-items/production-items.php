@@ -61,7 +61,7 @@ require_once 'src/assets/helpers/format.php';
               Согласен с политикой конфиденциальности
             </label>
           </div>
-          <!--js-popUp-submitBtn-->
+    
           <button disabled class="button button--blue js-btn-production js-popUp-submitBtn " type="button">
             Оставить заявку
           </button>

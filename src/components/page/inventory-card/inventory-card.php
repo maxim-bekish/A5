@@ -62,11 +62,15 @@ if ($selectedItem !== null) {
             <?php endforeach; ?>
           </ul>
           <div class="tab-pane tab-pane--description" id="description-tab">
-            <p  ><?php echo nl2br(htmlspecialchars($selectedItem['description'])) ?></p>
+            <p><?php echo nl2br(htmlspecialchars($selectedItem['description'])) ?></p>
           </div>
         </div>
       </div>
-      <button type="button" data-title="Оставить заявку" data-description="true" data-email="false" class="openPopUpButton card__button  button button--blue inventory-card__button ">Оставить заявку</button>
+
+      <?php
+      require_once 'src/components/ui/button-popup/index.php';
+      desiredProduct("Оставить заявку", "button--blue inventory-card__button")
+      ?>
     </div>
   </section>;
 <?php

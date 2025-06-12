@@ -50,43 +50,11 @@
           <li> <a href="mailto:artfin-t@yandex.ru">artfin-t@yandex.ru</a></li>
         </ul>
       </div>
-      <ul class='footer__info-contacts__network'>
-        <li>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <svg class="svg-item" width="inherit" height="inherit" viewBox="0 0 35 35" fill="none">
-              <use href="<?php echo SVG_PATH; ?>icons.svg#icon-vk"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <svg class="svg-item" width="inherit" height="inherit" viewBox="0 0 35 35" fill="none">
-              <use href="<?php echo SVG_PATH; ?>icons.svg#icon-rutube"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <svg class="svg-item" width="inherit" height="inherit" viewBox="0 0 35 35" fill="none">
-              <use href="<?php echo SVG_PATH; ?>icons.svg#icon-youtube"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <svg class="svg-item" width="inherit" height="inherit" viewBox="0 0 35 35" fill="none">
-              <use href="<?php echo SVG_PATH; ?>icons.svg#icon-telegram"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <svg class="svg-item" width="inherit" height="inherit" viewBox="0 0 35 35" fill="none">
-              <use href="<?php echo SVG_PATH; ?>icons.svg#icon-whatsapp"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="footer__info-contacts__network">
+
+        <?php require 'src/components/ui/network/network.php'; ?>
+      </div>
+
     </div>
     <div class="footer__info-menu footer__info-list">
       <h4>Меню</h4>

@@ -86,7 +86,9 @@
 	flex-direction: column;
 	gap: 15px;
 }
-
+.about-company__stat-number{
+  text-wrap: nowrap;
+}
 .about-company__stat-number,
 .about-company__info-highlight {
 	font-size: 90px;
@@ -110,7 +112,6 @@
 	position: relative;
 	z-index: -1;
 	width: 100%;
-	width: 1300px;
 	height: 804px;
 }
 

@@ -1,6 +1,5 @@
 $(document).ready(function () {
 	$('.js-popUp-submitBtn').click(function () {
-		console.log(``);
 		let form = $(this).closest('.js-popApp-OK');
 		if (form[0].checkValidity()) {
 			$('.popUp-end-box').css('display', 'block');
@@ -10,6 +9,7 @@ $(document).ready(function () {
 			form[0].reset();
 			$('.sidebar-ask').removeClass('open');
 			$('.sidebar').removeClass('open');
+			$('#popUpCustom').css('display', 'none');
 			console.log('submitted');
 		} else {
 			console.log('noo');
@@ -28,6 +28,8 @@ $(document).ready(function () {
 	$('.mobile__list-content--item').click(function () {
 		$('.mobile__select .js-open-select svg').toggleClass('rt180');
 		$('.mobile__list-content').toggleClass('mobile__title--open');
+
+ 
 		$('.mobile__title p').text($(this).text());
 	});
 

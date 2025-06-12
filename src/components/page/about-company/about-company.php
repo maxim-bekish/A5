@@ -4,10 +4,10 @@
 <?php
 
 $list = [
-  ['subTitle' => "Сотрудничаем с бизнесом любого масштаба"],
-  ['subTitle' => "Поставляем технику, транспорт, оборудование по всей России"],
-  ['subTitle' => "Лизинг без границ: поставщики из любых стран мира"],
-  ['subTitle' => "Лизинг на индивидуальных условиях, подходящих вашему бизнесу: только адресные предложения с гибкими условиями"],
+  ['title' => "Сотрудничаем с бизнесом любого масштаба"],
+  ['title' => "Поставляем технику, транспорт, оборудование по всей России"],
+  ['title' => "Лизинг без границ: поставщики из любых стран мира"],
+  ['title' => "Лизинг на индивидуальных условиях, подходящих вашему бизнесу: только адресные предложения с гибкими условиями"],
 
 ];
 ?>
@@ -38,10 +38,9 @@ $list = [
       </svg>
     </div>
   </div>
-
   <?php
   require_once 'src/components/ui/corner-list/corner-list.php';
-  echo generateCornerList($list, 'col-4 container subtitle-big')
+  echo generateCornerList($list, 'col-4 container')
   ?>
 </section>
 
@@ -59,9 +58,7 @@ $list = [
 
   <div class="about-company__banner about-company__banner--info container ">
     <div class="about-company__info-block">
-      <!-- <svg class="about-company__info-svg" width="1297" height="696" viewBox="0 0 1297 696" fill="none">
-        <use href="<?php echo SVG_PATH; ?>icons.svg#icon-map"></use>
-      </svg> -->
+   
       <p class="about-company__info-text">Лизинговая компания А5 может предложить <br> бизнесу индивидуальные графики платежей</p>
       <h5 class="about-company__info-highlight">с НДС 20% и 5%</h5>
     </div>
@@ -89,7 +86,10 @@ $list = [
     </div>
     <div class="about-company__banner-content container ">
       <h4 class="about-company__banner-title">Лизинг с А5 – это просто!</h4>
-      <button class="button button--white" type="button">Хочу бесплатную консультацию!</button>
+      <?php
+      require_once 'src/components/ui/button-popup/index.php';
+      freeConsultation("Хочу бесплатную консультацию!", "button--white ")
+      ?>
     </div>
   </div>
 

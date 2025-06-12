@@ -55,16 +55,11 @@
 
 		</div>
 		<?php
-
 		include 'src/components/ui/popUpContacts/popUpContacts.php';
 		include 'src/components/ui/popUpAsk/popUpAsk.php';
 		include 'src/components/ui/popUp/popUp.php';
-		//include 'src/components/ui/popUp/popUp-selection-equipment.php';
-		//include 'src/components/ui/popUp/popUp-consultation.php';
-		//include 'src/components/ui/popUp/popUp-offer.php';
 		include 'src/components/ui/popUp/popUp-end.php';
 		include 'src/components/cookie/cookie.php';
-		popUp();
 		?>
 	</div>
 

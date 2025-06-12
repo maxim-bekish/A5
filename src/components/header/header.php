@@ -27,19 +27,7 @@ $headerListProgram = (object) [
     ],
   ]
 ];
-$headerListLeasing = (object) [
-  'title' => 'О лизинге',
-  'list' => [
-    (object) [
-      'name' => 'Общие условия',
-      'link' => '/about-leasing?section=general-terms'
-    ],
-    (object) [
-      'name' => 'Субсидии малому и среднему бизнесу',
-      'link' => '/about-leasing?section=subsidies'
-    ],
-  ]
-];
+
 $headerHomePage = (object) [
   'title' => 'Главная страница',
   'list' => [
@@ -48,11 +36,19 @@ $headerHomePage = (object) [
       'link' => '#home-calculator'
     ],
     (object) [
-      'name' => 'Партнеры',
+      'name' => 'Сотрудничество',
       'link' => '#partners'
     ],
     (object) [
       'name' => 'Этапы сделки',
+      'link' => '#stages-transaction'
+    ],
+    (object) [
+      'name' => 'Преимущества',
+      'link' => '#partners'
+    ],
+    (object) [
+      'name' => 'Информация для клиентов',
       'link' => '#stages-transaction'
     ],
     (object) [
@@ -114,7 +110,7 @@ function listHeaderBurger($data)
       </svg>
     </div>
 
-    <ul>
+    <ul class="burger-menu-box-list" >
 
       <?php foreach ($data->list as $item) : ?>
         <li class="underline-box js-burger-menu-item">
@@ -147,7 +143,7 @@ function listHeaderBurger($data)
 
     <div class="nav">
       <div class="select select-program"> <?php listHeader($headerListProgram); ?> </div>
-      
+
       <div class="underline-box">
         <a class="nav__item underline-el underline-el-blue" href="/about-company">
           О компании
@@ -155,7 +151,7 @@ function listHeaderBurger($data)
       </div>
       <div class="select select-clients"> <?php listHeader($headerListClients); ?> </div>
       <div class="underline-box">
-        <a class="nav__item underline-el underline-el-blue" href="/inventory">
+        <a class="nav__item underline-el underline-el-blue" href="/inventory?section=Легковой%20автотранспорт">
           Каталог изьятой техники
         </a>
       </div>
@@ -176,11 +172,6 @@ function listHeaderBurger($data)
   <section id="burger-menu" class="burger-menu">
     <div class="burger-menu-header">
 
-      <a href="/" rel="noopener noreferrer">
-        <svg width="76" height="54" viewBox="0 0 76 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <use href="<?php echo SVG_PATH; ?>icons.svg#icon-logo-mini"></use>
-        </svg>
-      </a>
 
       <button id="closed-burger-menu" class="button-closed" type="button">
         <svg width="28" height="28" viewBox="0 0 32 32">
@@ -191,22 +182,18 @@ function listHeaderBurger($data)
     <div class="burger-menu-box burger-menu-box-content ">
 
       <?php listHeaderBurger($headerHomePage); ?>
-      <?php listHeaderBurger($headerListLeasing); ?>
+
       <?php listHeaderBurger($headerListClients); ?>
       <?php listHeaderBurger($headerListProgram); ?>
       <div class="burger-menu-box-item burger-menu-box-item-last">
-        <h5 class="item-title underline-box"> <a class="underline-el underline-el-white" href="/inventory" rel="noopener noreferrer">
-            Каталог изьятой техники
+        <h5 class="item-title underline-box item-title-last"> <a class="underline-el underline-el-white" href="/inventory" rel="noopener noreferrer">
+            О компании
           </a></h5>
 
-      </div>
-      <div class="mobile-open-popup">
-        <div class="burger-menu-box-item open-button-ask">
-          <h5 class="item-title">Задать вопрос</h5>
-        </div>
-        <div class="burger-menu-box-item open-button-contact">
-          <h5 class="item-title">Контакты</h5>
-        </div>
+        <h5 class="item-title underline-box"> <a class="underline-el underline-el-white" href="/inventory?section=Легковой%20автотранспорт" rel="noopener noreferrer">
+            Каталог изьятого имущества
+          </a></h5>
+
       </div>
     </div>
 
@@ -214,7 +201,11 @@ function listHeaderBurger($data)
       <div class="underline-box mob-tel">
         <a class="burger-tel underline-el underline-el-white" href="tel:+73452999999">7 (3452) 99-99-99</a>
       </div>
-      <div class="burger-menu-network">
+      <div>
+
+        <?php require 'src/components/ui/network/network.php'; ?>
+      </div>
+      <!-- <div class="burger-menu-network">
         <a>
           <svg class="svg_items" width="20" height="16" viewBox="0 0 20 16">
             <use href="<?php echo SVG_PATH; ?>icons.svg#icon-telegram"></use>
@@ -234,7 +225,7 @@ function listHeaderBurger($data)
           </svg>
         </a>
 
-      </div>
+      </div> -->
     </div>
   </section>
 </header>

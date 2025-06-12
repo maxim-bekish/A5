@@ -19,7 +19,6 @@
 	$(document).ready(function() {
 		$('.popUp-end-box').click(function() {
 			$('.popUp-end-box').css('display', 'none');
-			//$('.app').removeClass('blurred');
 			$('body').css('overflow', 'auto');
 		});
 	});

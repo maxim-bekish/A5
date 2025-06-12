@@ -33,14 +33,9 @@
 	grid-row-gap: 40px;
 }
 
-.footer__info-contacts__network li {
-	width: 35px;
-	height: 35px;
-}
-
+ 
 .footer__info-contacts__network {
-	display: flex;
-	gap: 10px;
+ 
 	margin-top: 30px;
 }
 
@@ -160,13 +155,9 @@
 	}
 
 	.footer__info-contacts__network {
-		gap: 15px;
 		margin-top: 40px;
 	}
-	.footer__info-contacts__network li {
-		width: 45px;
-		height: 45px;
-	}
+
 	.footer__info-list h4 {
 		font-weight: var(--font-w5);
 		line-height: 130%;
@@ -215,7 +206,6 @@
 	}
 
 	.footer__info-contacts__network {
-		gap: 15px;
 		margin-top: 20px;
 	}
 

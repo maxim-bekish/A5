@@ -1,111 +1,15 @@
-.home-advantages-leasing__item {
-	position: relative;
-	height: auto;
-	min-height: 265px;
-	background-color: var(--light-gray);
-	padding: 25px;
-}
-
-.home-advantages-leasing__item-svg {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-
 .home-advantages-leasing__title {
 	margin-bottom: 50px;
 }
 
-.home-advantages-leasing__list {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 40px;
-}
-
-.home-advantages-leasing__content {
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
-}
-
-.home-advantages-leasing__item-description {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
-
-.home-advantages-leasing__item-title {
-	font-size: 30px;
-	line-height: 100%;
-	font-weight: 400;
-	color: var(--dark-blue);
-}
-
-.home-advantages-leasing__item-subtitle {
-	font-size: 18px;
-	line-height: 100%;
-	font-weight: 400;
-	color: var(--black);
-}
-
-.home-advantages-leasing__item-text {
-	font-size: 18px;
-	line-height: 100%;
-	font-weight: 400;
-	color: rgb(var(--gray-text));
-}
-
 @media (max-width: 1280px) {
-	.home-advantages-leasing__list {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 30px;
-	}
 	.home-advantages-leasing__title {
 		margin-bottom: 40px;
-	}
-	.home-advantages-leasing__item {
-		min-height: 227px;
-	}
-	.home-advantages-leasing__content {
-		gap: 20px;
-	}
-	.home-advantages-leasing__item-title {
-		font-size: 23px;
-		line-height: 115%;
-	}
-
-	.home-advantages-leasing__item-subtitle {
-		line-height: 130%;
-	}
-
-	.home-advantages-leasing__item-text {
-		font-size: 16px;
-		line-height: 130%;
 	}
 }
 
 @media (max-width: 500px) {
-	.home-advantages-leasing__list {
-		grid-template-columns: 1fr;
-		gap: 10px;
-	}
 	.home-advantages-leasing__title {
 		margin-bottom: 30px;
-	}
-	.home-advantages-leasing__item {
-		min-height: 147px;
-	}
-	.home-advantages-leasing__content {
-		gap: 10px;
-	}
-
-	.home-advantages-leasing__item-title {
-		font-size: 19px;
-		line-height: 130%;
-	}
-
-	.home-advantages-leasing__item-subtitle,
-	.home-advantages-leasing__item-text {
-		font-size: 14px;
 	}
 }

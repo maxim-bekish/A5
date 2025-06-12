@@ -7,28 +7,24 @@ $mainSlider = array(
 	array(
 		"image" => "step-one.jpeg",
 		"href" => "program-leasing?section=passenger-vehicles",
-		// "href" => "1",
 		"title" => "Абсолютный лизинг с А5  ",
 		"description" => "Узнайте о том, как получить лизинг на индивидуальных условиях",
 	),
 	array(
 		"image" => "step-two.jpeg",
 		"href" => "program-leasing?section=medical-equipment",
-		// "href" => "2",
 		"title" => "Лизинг медицинского <br> оборудования без НДС",
 		"description" => "с экспресс-оценкой организации",
 	),
 	array(
 		"image" => "step-three.jpeg",
 		"href" => "program-leasing?section=real-estate",
-		// "href" => "3",
 		"title" => "Гибкий график <br> платежей",
 		"description" => "с экспресс-оценкой организации",
 	),
 	array(
 		"image" => "step-four.jpeg",
 		"href" => "program-leasing?section=real-estate",
-		// "href" => "4",
 		"title" => "Возмещение части <br> авансового платежа",
 		"description" => "с экспресс-оценкой организации",
 	),

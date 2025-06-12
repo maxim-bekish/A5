@@ -79,7 +79,6 @@ $(document).ready(function () {
           .addClass("clone")
           .appendTo($sliderContainer);
         $slides.slice(-2).clone().addClass("clone").prependTo($sliderContainer);
-        //flagResize = false;
       } else {
         slideCount = slideCount - 4;
       }

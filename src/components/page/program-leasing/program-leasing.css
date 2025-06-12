@@ -1,40 +1,4 @@
-/* .no-slider__slide-box {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 40px;
-} */
 
-/* .no-slider__slide {
-	max-width: 410px;
-	aspect-ratio: 1;
-} */
-
-/* .program-leasing__slider .slider__buttons {
-	position: absolute;
-	bottom: 0;
-	right: calc(100% + 20px);
-} */
-
-/* .program-leasing__slider .slider__slide {
-	width: 410px;
-	height: 410px;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	margin-right: 40px;
-	background-color: var(--light-gray);
-	justify-content: flex-start;
-	align-items: center;
-	overflow: hidden;
-} */
-
-/* .program-leasing__slider .slider__image {
-	width: 100%;
-	height: 100%;
-} */
-/* ----------------- */
-
-/* ----------------- */
 
 .simpleSolution {
 	display: flex;
@@ -71,10 +35,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 70px;
-	/* font-size: 70px;
-	
-  line-height: 84px;
-  color: var(--dark-blue); */
+ 
 }
 .program-leasing-page__content-up {
 	position: relative;
@@ -173,20 +134,21 @@
 	.program-leasing-calculator {
 		flex-direction: column;
 	}
-	.program-leasing-page__navigation ul li  {
+	.program-leasing-page__navigation ul li {
 		color: var(--medium-gray);
 	}
 	.program-leasing-page__navigation {
 		height: 110px;
 	}
-	.program-leasing-page__navigation .mobile__select {
-		top: 55px;
-	}
+ 
 	.requirements .requirements__title {
 		margin-bottom: 10px;
 	}
 	.production__select {
 		max-width: 100% !important;
+	}
+	.obtaining-leasing__title {
+		margin-bottom: 40px;
 	}
 	.program-leasing-page__content-up--text {
 		bottom: 40px;
@@ -226,26 +188,32 @@
 		gap: 20px;
 		margin-bottom: 60px;
 	}
-
-	/* .program-leasing__slider .slider__slide {
-				width: 300px;
-				margin-right: 20px;
-			} */
-
-	/* .program-leasing__slider .slider__buttons {
-			transform: translate(0px, calc(100% + 20px));
-			right: 0;
-		} */
 }
 
 @media (max-width: 768px) {
 	.program-leasing-calculator-title {
 		gap: 10px;
 	}
-	.program-leasing-page__content h3 {
-		font-size: 30px;
-		line-height: 36px;
-		margin: 30px 0 20px 0;
+	.program-leasing-page__content-up {
+		height: 140px;
+	}
+
+	.program-leasing-page__content-up--text {
+		bottom: 17px;
+		left: 17px;
+		gap: 6px;
+	}
+	.program-leasing-page__content-up--text h3 {
+		font-size: 14px;
+	}
+	.program-leasing-page__content-up--text p {
+		font-size: 9px;
+	}
+	.program-leasing-page__content--down {
+		max-width: 100%;
+	}
+	.program-leasing-page__content--down p {
+		font-size: 14px;
 	}
 	.production__module-window-img {
 		display: none;
@@ -285,14 +253,7 @@
 	.simpleSolution__button {
 		max-width: 100%;
 	}
-	/* .no-slider__slide-box {
-		gap: 10px;
-	} */
-
-	/* .program-leasing__slider .slider__slide {
-		height: 230px;
-	} */
-	/* .program-leasing__slider {
-		margin-bottom: 130px;
-	} */
+	.obtaining-leasing__title {
+		margin-bottom: 30px;
+	}
 }

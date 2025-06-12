@@ -1,11 +1,13 @@
 .underline-box {
   position: relative;
+    opacity: 1 !important;
   /* Нужно для позиционирования псевдоэлемента */
 }
 
 .underline-box .underline-el {
   text-decoration: none;
   position: relative;
+
   /* Нужно для позиционирования псевдоэлемента */
 }
 

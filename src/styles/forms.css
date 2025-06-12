@@ -1,8 +1,6 @@
 /* Общие стили формы */
 .form-group {
 	position: relative;
-	/*margin-bottom: 1.5em;*/
-	/* height: 46px; */
 	width: 100%;
 	display: flex;
 }
@@ -12,7 +10,12 @@
 	flex-direction: column;
 	gap: 30px;
 	width: 100%;
-	/* margin: 15px 0; */
+}
+.form-col {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	width: 100%;
 }
 
 .form-items-50 {
@@ -35,8 +38,6 @@
 	font-size: 16px;
 	line-height: 24px;
 	transition: all 0.3s ease;
-	/* position: absolute; */
-	/* bottom: 0; */
 	outline: 0 !important;
 }
 
@@ -105,7 +106,7 @@
 	cursor: pointer;
 	display: flex;
 	user-select: none;
-	align-items: center;
+	align-items: flex-end;
 	font-size: 14px;
 	font-weight: var(--font-w5);
 	line-height: 14.56px;
@@ -178,7 +179,7 @@
 
 .checkbox--white input:checked + label::before {
 	border: 1px solid transparent;
-	background-color: var(--blue);
+	background-color: var(--dark-blue);
 }
 
 @media (hover: hover) {
@@ -363,9 +364,16 @@ form .form-group input:focus + label {
 	.checkbox label,
 	.checkbox input:checked + label {
 		font-size: 16px;
-		line-height: 15.12px;
+		line-height: 130%;
 	}
 	.form-items-100 {
 		flex-direction: column;
+	}
+}
+@media (max-width: 380px) {
+	.checkbox label,
+	.checkbox input:checked + label {
+		font-size: 12px;
+		line-height: 130%;
 	}
 }

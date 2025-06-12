@@ -1,6 +1,3 @@
-<?php
-//  include 'src/state/state.php'; 
-?>
 
 <?php
 
@@ -539,6 +536,3 @@ $production = [
   ],
 ];
 
-//header
-
-//header

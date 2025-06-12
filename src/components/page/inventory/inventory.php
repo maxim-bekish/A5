@@ -31,7 +31,7 @@ $activeNavItem = isset($_GET['section']) ? $_GET['section'] : '';
 <section class='grid_1-3-box inventory container'>
   <div class="inventory__header">
     <div class="program-leasing-page__navigation ">
-      <h3>Программы лизинга</h3>
+      <h3>Каталог изьятой техники</h3>
       <div class="mobile__select">
         <div class="mobile__title js-open-select">
           <p></p>
@@ -51,7 +51,7 @@ $activeNavItem = isset($_GET['section']) ? $_GET['section'] : '';
 
   </div>
 
-  <div class="inventory__content ">
+  <div class="inventory__content">
     <?php
     include 'src/components/ui/production/production-select/production-select.php';
     ?>

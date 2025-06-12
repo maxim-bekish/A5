@@ -27,6 +27,7 @@ $router->add('clients', function () {
   $content = 'src/components/page/clients/index.php';
   include 'template.php';
 });
+
 $router->add('program-leasing', function () {
   if (!isset($_GET['section'])) {
     // Если параметров нет, делаем редирект с параметрами по умолчанию
@@ -41,22 +42,11 @@ $router->add('program-leasing/card', function () {
   $content = 'src/components/page/inventory-card/inventory-card.php';
   include 'template.php';
 });
+
 $router->add('personal-data', function () {
   $content = 'src/components/page/personal-data/personal-data.php';
   include 'template.php';
 });
-// $router->add('about-leasing', function () {
-
-// 	if (!isset($_GET['section'])) {
-// 		// Если параметров нет, делаем редирект с параметрами по умолчанию
-// 		header('Location: /about-leasing?section=general-terms');
-// 		exit();
-// 	}
-// 	$content = 'src/components/page/about-leasing/index.php';
-// 	include 'template.php';
-// });
-
-
 
 $router->add('inventory', function () {
   $content = 'src/components/page/inventory/inventory.php';
