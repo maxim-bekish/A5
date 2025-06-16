@@ -99,7 +99,7 @@
 	color: var(--dark-blue);
 }
 .program-leasing-page__navigation ul li .program__navigation--active {
-	text-decoration: underline;
+	/* text-decoration: underline; */
 	color: var(--dark-blue);
 }
 .program-leasing-page__navigation h3 {

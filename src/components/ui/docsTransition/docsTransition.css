@@ -14,7 +14,7 @@
 }
 
 .docs-transaction .button {
-	max-width: 500px;
+	max-width: 250px;
 }
 
 .docs-transaction .svg {
@@ -27,9 +27,7 @@
 	.docs-transaction {
 		padding: 40px 20px;
 	}
-	.docs-transaction .button {
-		max-width: 250px;
-	}
+
 	.docs-transaction h4 {
 		font-size: 38px;
 		line-height: 120%;

@@ -2,10 +2,12 @@ $(document).ready(function () {
   let lastScrollTop = 0;
   const $header = $("#header");
   const $main = $(".js-main");
+  const $mainSlider = $("#mainSlider");
 
   function updateHeaderHeight() {
     const headerHeight = $header.outerHeight(); // Получаем полную высоту шапки, включая padding и border
     $main.css("margin-top", headerHeight + "px");
+   $mainSlider.css("height", `calc(100dvh - ${headerHeight}px)`);
     return headerHeight;
   }
 

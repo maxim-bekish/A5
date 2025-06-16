@@ -90,7 +90,7 @@ function listHeader($data)
   <ul class="select-list" style="display: none">
     <?php foreach ($data->list as $item) : ?>
       <li class="underline-box">
-        <a class="underline-el underline-el-blue select-item" href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
+        <a class="  select-item" href="<?php echo htmlspecialchars($item->link); ?>"><?php echo htmlspecialchars($item->name); ?></a>
       </li>
     <?php endforeach; ?>
   </ul>
@@ -145,13 +145,13 @@ function listHeaderBurger($data)
       <div class="select select-program"> <?php listHeader($headerListProgram); ?> </div>
 
       <div class="underline-box">
-        <a class="nav__item underline-el underline-el-blue" href="/about-company">
+        <a class="nav__item " href="/about-company">
           О компании
         </a>
       </div>
       <div class="select select-clients"> <?php listHeader($headerListClients); ?> </div>
       <div class="underline-box">
-        <a class="nav__item underline-el underline-el-blue" href="/inventory?section=Легковой%20автотранспорт">
+        <a class="nav__item" href="/inventory?section=Легковой%20автотранспорт">
           Каталог изьятой техники
         </a>
       </div>

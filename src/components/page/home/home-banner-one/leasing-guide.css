@@ -87,6 +87,7 @@
 	.leasing-guide .mobile__select {
 		width: 100%;
 		transform: translate(0%, 0%);
+		top: -20px;
 	}
 	.leasing-guide {
 		gap: 40px;
@@ -97,7 +98,7 @@
 		gap: 0;
 	}
 	.leasing-guide__list-box {
-		margin-top: 80px;
+		margin-top: 60px;
 	}
 
 	.leasing-guide__buttons--item .leasing-guide__button {
@@ -116,6 +117,12 @@
 }
 
 @media (max-width: 768px) {
+	.leasing-guide .mobile__select {
+		top: 0px;
+	}
+	.leasing-guide__list-box {
+		margin-top: 70px;
+	}
 	.leasing-guide__list-title h4 {
 		font-size: 18px;
 		line-height: 21.6px;

@@ -7,7 +7,7 @@ $mainSlider = array(
 	array(
 		"image" => "step-one.jpeg",
 		"href" => "program-leasing?section=passenger-vehicles",
-		"title" => "Абсолютный лизинг с А5  ",
+		"title" => "Абсолютный лизинг с А5",
 		"description" => "Узнайте о том, как получить лизинг на индивидуальных условиях",
 	),
 	array(
@@ -44,6 +44,7 @@ $mainSlider = array(
 					<h2 class="main-slider__heading">
 						<?php echo $el['title']; ?>
 					</h2>
+          
 					<p class="main-slider__description">
 						<?php echo $el['description'] ?>
 					</p>

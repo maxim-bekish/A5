@@ -51,7 +51,7 @@ button {
 
 	.button--blue:hover,
 	.button--outline:hover {
-		background-color: var(--button-hover);
+		background-color: var(--dark-blue);
 	}
 }
 

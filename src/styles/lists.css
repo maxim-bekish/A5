@@ -53,13 +53,23 @@
 	color: rgb(var(--gray-text));
 }
 
-
+@media (max-width: 1500px) {
+	.list.col-3 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.list.col-4 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
 @media (max-width: 1280px) {
 	.list {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 30px;
 	}
 	.list.col-3 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.list.col-4 {
 		grid-template-columns: repeat(2, 1fr);
 	}
 

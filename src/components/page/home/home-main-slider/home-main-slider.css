@@ -4,7 +4,8 @@
 .main-slider {
 	position: relative;
 	display: flex;
-	height: 790px;
+  height: 100px;
+	/* height: calc(100dvh - 165px); */
 }
 .main-slider__slide {
 	display: flex;
@@ -52,11 +53,10 @@
 	align-items: center;
 	justify-content: center;
 }
- 
 
 .main-slider__cursor .main-slider__cursor-text {
 	font-size: 14px;
-	color: rgba(0, 69, 178, 1);
+	color: var(--dark-blue);
 }
 .main-slider__img {
 	object-fit: cover;
@@ -69,7 +69,7 @@
 	flex-direction: column;
 	gap: 30px;
 	position: absolute;
-	max-width: 600px;
+	max-width: 890px;
 	padding-left: 80px;
 	padding-bottom: 80px;
 }

@@ -16,7 +16,7 @@ header {
 	padding-top: 40px;
 	padding-bottom: 35px;
 	display: grid;
-	grid-template-columns: minmax(290px, 410px) 1fr minmax(290px, 410px);
+	grid-template-columns: minmax(100px, 190px) 1fr minmax(100px, 190px);
 	justify-content: space-between;
 }
 
@@ -53,10 +53,10 @@ header {
 	min-height: 83px;
 }
 
-.leasing,
 .nav {
 	display: flex;
 	gap: 70px;
+	justify-content: center;
 }
 
 .contacts-header {
@@ -85,7 +85,6 @@ header {
 	width: 171px;
 }
 
-.select-leasing,
 .select-clients {
 	width: 94px;
 }
@@ -127,10 +126,8 @@ header {
 .select-list .select-item {
 	color: var(--medium-gray);
 	cursor: pointer;
-
 	font-size: 16px;
 	list-style-type: none;
-
 	line-height: 16.64px;
 	text-align: left;
 	position: relative;
@@ -148,7 +145,7 @@ header {
 	width: 100vw;
 	height: 100vh;
 	min-height: -webkit-fill-available;
-	background-color: rgba(0, 69, 178, 1);
+	background-color: var(--dark-blue);
 	padding: 225px 120px 45px 120px;
 	display: none;
 	flex-direction: column;
@@ -273,7 +270,6 @@ body .js-flex {
 		left: auto;
 	}
 
-	.leasing,
 	.nav {
 		display: none;
 	}
@@ -336,7 +332,7 @@ body .js-flex {
 		left: 50%;
 		width: 100%;
 		transform: translate(-50%, 0px);
-		background-color: rgba(0, 69, 178, 1);
+		background-color: var(--dark-blue);
 	}
 
 	.burger-menu-box-content {
@@ -474,7 +470,6 @@ body .js-flex {
 }
 
 @media (min-width: 1281px) and (max-width: 1440px) {
-	.leasing,
 	.nav,
 	.header,
 	.header__logo {
