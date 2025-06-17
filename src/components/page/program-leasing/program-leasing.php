@@ -310,7 +310,7 @@ $activeProgram = getProgramData($programLeasingData, $activeNavItem);
         <?php endif; ?>
         <?php
         require_once 'src/components/ui/corner-list/corner-list.php';
-        echo generateCornerList($activeProgram["requirementsLessees"]["list"], 'col-4')
+        echo generateCornerList($activeProgram["requirementsLessees"]["list"], 'col-3')
         ?>
 
       </div>

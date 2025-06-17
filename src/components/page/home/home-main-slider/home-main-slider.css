@@ -5,7 +5,6 @@
 	position: relative;
 	display: flex;
   height: 100px;
-	/* height: calc(100dvh - 165px); */
 }
 .main-slider__slide {
 	display: flex;
@@ -137,10 +136,9 @@
 	.main-slider__container {
 		cursor: pointer;
 	}
-	.main-slider__img {
-		height: 750px;
-	}
+
 	.main-slider__content {
+    margin-bottom: 140px;
 		position: static;
 		gap: 25px;
 		padding-top: 40px;
@@ -167,9 +165,7 @@
 	.main-slider {
 		height: 575px;
 	}
-	.main-slider__img {
-		height: 350px;
-	}
+
 	.main-slider__content {
 		position: static;
 		gap: 10px;
